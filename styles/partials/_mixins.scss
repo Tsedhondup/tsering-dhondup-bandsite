@@ -1,0 +1,6 @@
+// CENTERS ELEMETN BOTH VERTICALLY AND HORIZONTALLY WITHIN THE CONTAINER
+@mixin absolute-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
