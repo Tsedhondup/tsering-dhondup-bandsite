@@ -4,19 +4,28 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+//  SCREEN MAX-WIDTH OF 320PX OR LOWER []
 .header {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background-color: yellowgreen;
   // TOP-BANDSITE-LOGO
-//   &__brand-name-container {
-//   }
+  &__brand-name-container {
+    display: flex;
+    justify-content: center;
+  }
   // TOP-NAVIGATION
   &__top-nav-container {
     .top-navigations {
       display: flex;
+      justify-content: space-between;
       // LIST
       &__list {
         list-style: none;
+        text-align: center;
+        flex: 1;
         // LINK
         .top-navigation__list--link {
           text-decoration: none;
