@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  // TOP-BANDSITE-LOGO
+//   &__brand-name-container {
+//   }
+  // TOP-NAVIGATION
+  &__top-nav-container {
+    .top-navigations {
+      display: flex;
+      // LIST
+      &__list {
+        list-style: none;
+        // LINK
+        .top-navigation__list--link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
