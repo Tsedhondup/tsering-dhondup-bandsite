@@ -115,4 +115,11 @@
   height: 165px;
   display: block;
   margin: auto;
+}
+.about__artist-statement, .about__artist-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #323232;
+  padding-top: 16px;
 }/*# sourceMappingURL=bio.css.map */

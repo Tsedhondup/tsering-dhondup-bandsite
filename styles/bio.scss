@@ -120,7 +120,7 @@
 /* ABOUT SECTION */
 .about {
   padding: 16px;
-  // TITLE
+  // ABOUT TITLE
   &__title {
     font-size: 24px;
     font-weight: 600;
@@ -129,11 +129,23 @@
     width: 100%;
     padding: 24px 0px 16px 0px;
   }
-  // IMAGE
+  // ABOUT IMAGE
   &__hero {
     width: 100%;
     height: 165px;
     display: block;
     margin: auto;
+  }
+  // ABOUT STATEMENT
+  &__artist-statement {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: colors.$bandSiteBlack;
+    padding-top: 16px;
+  }
+  // ARTIST NAME
+  &__artist-name{
+    @extend .about__artist-statement;
   }
 }
