@@ -1,24 +1,23 @@
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-  font-weight: normal;
+  font-weight: 400;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-  font-weight: bold;
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Avenir";
-  font-weight: normal;
 }
 
 /* HEADER */
@@ -74,4 +73,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.main-hero-bio__title {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 600;
 }/*# sourceMappingURL=bio.css.map */

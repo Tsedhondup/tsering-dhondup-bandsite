@@ -7,17 +7,17 @@
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-  font-weight: normal;
+  font-weight: 400 ;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-  font-weight: bold;
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
 }
 
 * {
@@ -26,7 +26,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Avenir";
-  font-weight: normal;
 }
 
 //-----------------------------------------------------------------------------//
@@ -68,7 +67,6 @@
           padding-bottom: 14px;
           @include mixins.flex-absolute-center;
           color: colors.$primary-silver;
-          // padding: 0px 0px 16px 0px;
         }
         // BIO-LINK
         #bio-link {
@@ -91,4 +89,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  // TITLE
+  &__title {
+    color: colors.$primary-white;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
 }
