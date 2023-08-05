@@ -1,11 +1,6 @@
 // IMPORTED FILES
-// @use "./partials/mixins";
-// MIXIN MUST BE IN SEPARATE FILES
-@mixin absolute-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@use "./partials/mixins";
+
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +16,7 @@
   background-color: yellowgreen;
   // TOP-BANDSITE-LOGO
   &__brand-name-container {
-    @include absolute-center;
+    @include mixins.flex-absolute-center;
   }
   // TOP-NAVIGATION
   &__top-nav-container {
@@ -32,7 +27,7 @@
       &__list {
         list-style: none;
         flex: 1;
-        @include absolute-center;
+        @include mixins.flex-absolute-center;
 
         // LINK
         .top-navigation__list--link {
