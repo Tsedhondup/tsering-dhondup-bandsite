@@ -21,6 +21,7 @@
   font-weight: normal;
 }
 
+/* HEADER */
 .header {
   display: flex;
   flex-direction: column;
@@ -61,4 +62,16 @@
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
   font-weight: 600;
+}
+
+/* MAIN HERO SECTION */
+.main-hero {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=bio.css.map */
