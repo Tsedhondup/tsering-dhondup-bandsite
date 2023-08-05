@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #323232;
+  background-color: colors.$bandSiteBlack;
   // TOP-BANDSITE-LOGO
   &__brand-name-container {
     @include mixins.flex-absolute-center;
@@ -66,12 +66,12 @@
           width: 100%;
           padding-bottom: 14px;
           @include mixins.flex-absolute-center;
-          color: colors.$primary-silver;
+          color: colors.$silver;
         }
         // BIO-LINK
         #bio-link {
-          color: colors.$primary-white;
-          border-bottom: 3px solid colors.$primary-white;
+          color: colors.$white;
+          border-bottom: 3px solid colors.$white;
           font-weight: 600;
         }
       }
@@ -92,7 +92,7 @@
   position: relative;
   // TITLE
   &__title {
-    color: colors.$primary-white;
+    color: colors.$white;
     text-transform: capitalize;
     font-weight: 600;
     padding: 0px 16px;
@@ -104,7 +104,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: colors.$primary-black;
+    background-color: colors.$badnSiteDarkBlack;
     opacity: 0.5;
     z-index: 1;
   }
