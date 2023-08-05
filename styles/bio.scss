@@ -60,10 +60,12 @@
         // LINK
         .top-navigation__list--link {
           text-decoration: none;
+          text-transform: capitalize;
           display: block;
           width: 100%;
           @include mixins.flex-absolute-center;
           color: colors.$primary-silver;
+          // padding: 0px 0px 16px 0px;
         }
         // BIO-LINK
         #bio-link {
