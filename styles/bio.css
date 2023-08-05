@@ -99,9 +99,13 @@
 }
 
 /* ABOUT SECTION */
+.about {
+  padding: 16px;
+}
 .about__title {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
   color: #323232;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */
