@@ -1,11 +1,32 @@
-// IMPORTED FILES
+// IMPORT FILES **
+// MIXINS
 @use "./partials/mixins";
+// VARIABLES
 @use "./partials/colors";
+//FONTS
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: bold;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Avenir";
+  font-weight: normal;
 }
 
 //  SCREEN MAX-WIDTH OF 320PX OR LOWER []
@@ -39,14 +60,16 @@
         // LINK
         .top-navigation__list--link {
           text-decoration: none;
+          display: block;
+          width: 100%;
+          @include mixins.flex-absolute-center;
+          color: colors.$primary-silver;
         }
         // BIO-LINK
         #bio-link {
           color: colors.$primary-white;
-        }
-        // SHOWS-LINK
-        #shows-link{
-          color: colors.$primary-silver;
+          border-bottom: 3px solid colors.$primary-white;
+          font-weight: 600;
         }
       }
     }
