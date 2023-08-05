@@ -104,6 +104,7 @@
     padding: 0px 16px;
     position: relative;
     z-index: 2;
+    font-size: 24px;
   }
   // OVERLAY
   &__overlay {
@@ -113,5 +114,15 @@
     background-color: colors.$badnSiteDarkBlack;
     opacity: 0.5;
     z-index: 1;
+  }
+}
+//-----------------------------------------------------------------------------//
+/* ABOUT SECTION */
+.about {
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: colors.$bandSiteBlack;
   }
 }
