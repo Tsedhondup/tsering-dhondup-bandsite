@@ -31,4 +31,10 @@
 }
 .header__top-nav-container .top-navigations__list .top-navigation__list--link {
   text-decoration: none;
+}
+.header__top-nav-container .top-navigations__list #bio-link {
+  color: #ffffff;
+}
+.header__top-nav-container .top-navigations__list #shows-link {
+  color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */

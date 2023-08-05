@@ -40,6 +40,14 @@
         .top-navigation__list--link {
           text-decoration: none;
         }
+        // BIO-LINK
+        #bio-link {
+          color: colors.$primary-white;
+        }
+        // SHOWS-LINK
+        #shows-link{
+          color: colors.$primary-silver;
+        }
       }
     }
   }
