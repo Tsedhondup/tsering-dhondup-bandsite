@@ -13,10 +13,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: yellowgreen;
+  background-color: #323232;
   // TOP-BANDSITE-LOGO
   &__brand-name-container {
     @include mixins.flex-absolute-center;
+    // LINK
+    //  &--link{
+    //   // LOGO
+    //   #bandsite-logo-header{
+    //     color: #323232;
+    //   }
+    //  }
   }
   // TOP-NAVIGATION
   &__top-nav-container {
