@@ -67,12 +67,18 @@
           padding-bottom: 14px;
           @include mixins.flex-absolute-center;
           color: colors.$silver;
+          border-bottom: 3px solid colors.$bandSiteBlack;
         }
         // BIO-LINK
         #bio-link {
           color: colors.$white;
           border-bottom: 3px solid colors.$white;
           font-weight: 600;
+        }
+        // HOVER
+        .top-navigation__list--link:hover {
+          color: colors.$alabaster;
+          border-bottom: 3px solid colors.$alabaster;
         }
       }
     }
