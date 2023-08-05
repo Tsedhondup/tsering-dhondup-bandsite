@@ -73,9 +73,21 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 .main-hero-bio__title {
   color: #ffffff;
   text-transform: capitalize;
   font-weight: 600;
+  padding: 0px 16px;
+  position: relative;
+  z-index: 2;
+}
+.main-hero-bio__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  opacity: 0.5;
+  z-index: 1;
 }/*# sourceMappingURL=bio.css.map */
