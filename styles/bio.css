@@ -15,6 +15,9 @@
   justify-content: center;
   align-items: center;
 }
+.header__brand-name-container--link #bandsite-logo-header {
+  padding: 24px 0px 16px 0px;
+}
 .header__top-nav-container .top-navigations {
   display: flex;
   justify-content: space-between;

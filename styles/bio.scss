@@ -1,6 +1,6 @@
 // IMPORTED FILES
 @use "./partials/mixins";
-
+@use "./partials/colors";
 * {
   padding: 0;
   margin: 0;
@@ -18,12 +18,12 @@
   &__brand-name-container {
     @include mixins.flex-absolute-center;
     // LINK
-    //  &--link{
-    //   // LOGO
-    //   #bandsite-logo-header{
-    //     color: #323232;
-    //   }
-    //  }
+    &--link {
+      // LOGO
+      #bandsite-logo-header {
+        padding: 24px 0px 16px 0px;
+      }
+    }
   }
   // TOP-NAVIGATION
   &__top-nav-container {
