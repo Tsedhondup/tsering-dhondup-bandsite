@@ -150,6 +150,7 @@
 }
 .photo-gallery__image-container .photo-gallery-img {
   width: 100%;
+  display: block;
   padding-top: 16px;
 }
 
