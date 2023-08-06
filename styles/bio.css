@@ -184,4 +184,12 @@
   line-height: 18px;
   color: #fafafa;
   padding-top: 16px;
+}
+.footer__band-stakeholders-container .footer-stakeholders__email {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fafafa;
+  display: block;
+  padding-top: 16px;
 }/*# sourceMappingURL=bio.css.map */
