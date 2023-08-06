@@ -100,12 +100,11 @@
 
 /* ABOUT SECTION */
 .about {
-  padding: 16px;
+  padding: 0px 16px;
 }
 .about__title {
   font-size: 24px;
   font-weight: 600;
-  line-height: 32px;
   color: #323232;
   width: 100%;
   padding: 24px 0px 16px 0px;
