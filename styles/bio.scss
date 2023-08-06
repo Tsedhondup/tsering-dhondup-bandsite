@@ -191,4 +191,16 @@
 }
 //-----------------------------------------------------------------------------//
 // FOOTER
-
+.footer {
+  padding: 0px 16px;
+  // SOCIAL SECTION
+  &__socials-container {
+    // SOCIAL TEXT
+    .footer-social-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: colors.$badnSiteDarkBlack;
+      padding-top: 24px;
+    }
+  }
+}
