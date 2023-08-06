@@ -170,4 +170,10 @@
   height: 23px;
   width: 23px;
   margin-right: 25px;
+}
+.footer__band-stakeholders-container .footer-stakeholders__names {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fafafa;
 }/*# sourceMappingURL=bio.css.map */

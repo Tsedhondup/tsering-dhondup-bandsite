@@ -216,4 +216,17 @@
       }
     }
   }
+  // STAKEHOLDER SECTION
+  &__band-stakeholders-container {
+    // STAKHOLDER-1
+    .footer-stakeholders {
+      // PERSON & ORGANISATION
+      &__names {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+        color: colors.$alabaster;
+      }
+    }
+  }
 }
