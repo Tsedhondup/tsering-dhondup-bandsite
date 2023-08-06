@@ -201,7 +201,7 @@
     .footer-social-text {
       font-size: 24px;
       font-weight: 700;
-      color: colors.$white;
+      color: colors.$alabaster;
       padding-top: 24px;
       padding-bottom: 16px;
     }
@@ -226,6 +226,15 @@
         font-weight: 600;
         line-height: 22px;
         color: colors.$alabaster;
+        padding-top: 16px;
+      }
+      // ADDRESS & LOCATION
+      &__address {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        color: colors.$alabaster;
+        padding-top: 16px;
       }
     }
   }
