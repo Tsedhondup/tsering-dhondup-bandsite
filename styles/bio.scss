@@ -201,8 +201,19 @@
     .footer-social-text {
       font-size: 24px;
       font-weight: 700;
-      color: colors.$badnSiteDarkBlack;
+      color: colors.$white;
       padding-top: 24px;
+      padding-bottom: 16px;
+    }
+    // SOCIAL ICONS
+    .footer-socials {
+      &__links {
+        &--logo {
+          height: 23px;
+          width: 23px;
+          margin-right: 25px;
+        }
+      }
     }
   }
 }
