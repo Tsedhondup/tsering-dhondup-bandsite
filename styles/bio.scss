@@ -119,6 +119,7 @@
 //-----------------------------------------------------------------------------//
 /* ABOUT SECTION */
 .about {
+  width: 100%;
   padding: 0px 16px;
   // ABOUT TITLE
   &__title {
@@ -155,5 +156,14 @@
     text-transform: capitalize;
     color: colors.$badnSiteDarkBlack;
     padding-top: 16px;
+  }
+  // BAND DESCRIPTION CONTAINER
+  .band-descriptions {
+    &__para {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      padding-top: 16px;
+    }
   }
 }
