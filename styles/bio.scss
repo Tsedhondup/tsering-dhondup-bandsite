@@ -84,6 +84,12 @@
     }
   }
 }
+//  SCREEN WIDTH BETWEEN 768PX & 1279PX []
+.header {
+  @include mixins.desktop {
+    flex-direction: row;
+  }
+}
 //-----------------------------------------------------------------------------//
 /* MAIN HERO SECTION */
 .main-hero-bio {

@@ -68,6 +68,12 @@
   border-bottom: 3px solid #fafafa;
 }
 
+@media (min-width: 1279px) {
+  .header {
+    flex-direction: row;
+  }
+}
+
 /* MAIN HERO SECTION */
 .main-hero-bio {
   width: 100%;
