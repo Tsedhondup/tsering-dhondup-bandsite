@@ -46,10 +46,18 @@
         padding: 24px 0px 16px 0px;
       }
       //  MEDIA = TABLET = [ ] = 768PX
-      #bandsite-logo-header{
-        @include mixins.tablet{
+      #bandsite-logo-header {
+        @include mixins.tablet {
           padding: 36px;
+          padding-left: 0px;
         }
+      }
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &--link {
+      @include mixins.tablet {
+        display: flex;
+        justify-content: flex-start;
       }
     }
   }
