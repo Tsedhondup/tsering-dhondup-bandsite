@@ -58,6 +58,11 @@
   color: #afafaf;
   border-bottom: 3px solid #323232;
 }
+@media (min-width: 768px) {
+  .header__top-nav-container .top-navigations__list--link {
+    background-color: RED;
+  }
+}
 .header__top-nav-container .top-navigations__list #bio-link {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
@@ -68,9 +73,10 @@
   border-bottom: 3px solid #fafafa;
 }
 
-@media (min-width: 1279px) {
+@media (min-width: 768px) {
   .header {
     flex-direction: row;
+    padding: 0px 36px;
   }
 }
 

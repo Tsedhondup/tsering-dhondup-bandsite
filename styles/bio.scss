@@ -47,6 +47,7 @@
       }
     }
   }
+
   // TOP-NAVIGATION
   &__top-nav-container {
     .top-navigations {
@@ -69,6 +70,12 @@
           color: colors.$silver;
           border-bottom: 3px solid colors.$bandSiteBlack;
         }
+        //  SCREEN WIDTH BETWEEN 768PX & 1279PX [] == TABLET
+        &--link {
+          @include mixins.tablet {
+            background-color: RED;
+          }
+        }
         // BIO-LINK
         #bio-link {
           color: colors.$white;
@@ -84,10 +91,11 @@
     }
   }
 }
-//  SCREEN WIDTH BETWEEN 768PX & 1279PX []
+//  SCREEN WIDTH BETWEEN 768PX & 1279PX [] = TABLET
 .header {
-  @include mixins.desktop {
+  @include mixins.tablet {
     flex-direction: row;
+    padding: 0px 36px;
   }
 }
 //-----------------------------------------------------------------------------//
