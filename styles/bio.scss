@@ -192,6 +192,13 @@
     display: block;
     margin: auto;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__hero {
+    @include mixins.tablet {
+      height: 310px;
+      padding: 0px 60px;
+    }
+  }
   // ABOUT STATEMENT
   &__artist-statement {
     font-size: 14px;

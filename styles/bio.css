@@ -163,6 +163,12 @@
   display: block;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .about__hero {
+    height: 310px;
+    padding: 0px 60px;
+  }
+}
 .about__artist-statement, .about__artist-name {
   font-size: 14px;
   font-weight: 600;
