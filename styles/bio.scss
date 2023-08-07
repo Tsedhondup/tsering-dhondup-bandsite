@@ -50,6 +50,7 @@
 
   // TOP-NAVIGATION
   &__top-nav-container {
+    // UNORDERED LIST
     .top-navigations {
       display: flex;
       justify-content: space-between;
@@ -58,9 +59,8 @@
         list-style: none;
         flex: 1;
         @include mixins.flex-absolute-center;
-
         // LINK
-        .top-navigation__list--link {
+        &--link {
           text-decoration: none;
           text-transform: capitalize;
           display: block;

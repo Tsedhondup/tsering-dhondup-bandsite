@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
 }
-.header__top-nav-container .top-navigations__list .top-navigation__list--link {
+.header__top-nav-container .top-navigations__list--link {
   text-decoration: none;
   text-transform: capitalize;
   display: block;
