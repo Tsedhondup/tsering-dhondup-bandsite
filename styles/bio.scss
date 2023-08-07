@@ -207,6 +207,14 @@
     color: colors.$badnSiteDarkBlack;
     padding-top: 16px;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__artist-statement {
+    @include mixins.tablet {
+      font-size: 24px;
+      line-height: 32px;
+      padding-top: 48px;
+    }
+  }
   // ARTIST NAME
   &__artist-name {
     @extend .about__artist-statement;
