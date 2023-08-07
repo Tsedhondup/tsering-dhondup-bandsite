@@ -89,7 +89,7 @@
         &--link {
           @include mixins.tablet {
             padding-bottom: 0px;
-            margin-right: 36px;
+            margin-left: 60px;
             height: 100%;
             // display of absolute centre was removed
           }
@@ -101,7 +101,7 @@
           font-weight: 600;
         }
         // HOVER
-        .top-navigation__list--link:hover {
+        &--link:hover {
           color: colors.$alabaster;
           border-bottom: 3px solid colors.$alabaster;
         }
