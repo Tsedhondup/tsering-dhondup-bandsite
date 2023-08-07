@@ -115,6 +115,13 @@
   z-index: 2;
   font-size: 24px;
 }
+@media (min-width: 768px) {
+  .main-hero-bio__title {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 600;
+  }
+}
 .main-hero-bio__overlay {
   position: absolute;
   width: 100%;

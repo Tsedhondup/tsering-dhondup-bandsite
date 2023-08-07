@@ -138,6 +138,14 @@
     z-index: 2;
     font-size: 24px;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      font-size: 60px;
+      line-height: 68px;
+      font-weight: 600;
+    }
+  }
   // OVERLAY
   &__overlay {
     position: absolute;
