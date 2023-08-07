@@ -148,6 +148,12 @@
     z-index: 1;
   }
 }
+//  MEDIA = TABLET = [ ] = 768PX
+.main-hero-bio {
+  @include mixins.tablet {
+    height: 450px;
+  }
+}
 //-----------------------------------------------------------------------------//
 /* ABOUT SECTION */
 .about {

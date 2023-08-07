@@ -124,6 +124,12 @@
   z-index: 1;
 }
 
+@media (min-width: 768px) {
+  .main-hero-bio {
+    height: 450px;
+  }
+}
+
 /* ABOUT SECTION */
 .about {
   width: 100%;
