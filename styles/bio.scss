@@ -81,7 +81,7 @@
         &--link {
           @include mixins.tablet {
             padding-bottom: 0px;
-            margin-left: 48px;
+            margin-right: 36px;
             height: 100%;
             @include mixins.flex-absolute-center;
           }

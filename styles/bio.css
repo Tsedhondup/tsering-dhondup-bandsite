@@ -67,7 +67,7 @@
 @media (min-width: 768px) {
   .header__top-nav-container .top-navigations__list--link {
     padding-bottom: 0px;
-    margin-left: 48px;
+    margin-right: 36px;
     height: 100%;
     display: flex;
     justify-content: center;
