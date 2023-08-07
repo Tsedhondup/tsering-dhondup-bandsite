@@ -37,8 +37,7 @@
 }
 @media (min-width: 768px) {
   .header__brand-name-container--link #bandsite-logo-header {
-    padding: 36px;
-    padding-left: 0px;
+    padding: 22px 0px 22px 0px;
   }
 }
 @media (min-width: 768px) {
@@ -76,9 +75,6 @@
     padding-bottom: 0px;
     margin-right: 36px;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 .header__top-nav-container .top-navigations__list #bio-link {
