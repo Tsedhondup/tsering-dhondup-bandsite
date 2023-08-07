@@ -30,7 +30,7 @@
 
 //-----------------------------------------------------------------------------//
 /* HEADER */
-//  SCREEN MAX-WIDTH OF 320PX OR LOWER []
+//  MEDIA = MOBILE = [ ] = 320PX
 .header {
   display: flex;
   flex-direction: column;
@@ -45,6 +45,12 @@
       #bandsite-logo-header {
         padding: 24px 0px 16px 0px;
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      #bandsite-logo-header{
+        @include mixins.tablet{
+          padding: 36px;
+        }
+      }
     }
   }
 
@@ -54,6 +60,7 @@
     .top-navigations {
       display: flex;
       justify-content: space-between;
+      height: 100%;
       // LIST
       &__list {
         list-style: none;
@@ -70,10 +77,13 @@
           color: colors.$silver;
           border-bottom: 3px solid colors.$bandSiteBlack;
         }
-        //  SCREEN WIDTH BETWEEN 768PX & 1279PX [] == TABLET
+        //  MEDIA = TABLET = [ ] = 768PX
         &--link {
           @include mixins.tablet {
-            background-color: RED;
+            padding-bottom: 0px;
+            margin-left: 48px;
+            height: 100%;
+            @include mixins.flex-absolute-center;
           }
         }
         // BIO-LINK
@@ -91,7 +101,7 @@
     }
   }
 }
-//  SCREEN WIDTH BETWEEN 768PX & 1279PX [] = TABLET
+//  MEDIA = TABLET = [ ] = 768PX
 .header {
   @include mixins.tablet {
     flex-direction: row;

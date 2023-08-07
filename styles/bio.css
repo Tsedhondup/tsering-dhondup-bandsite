@@ -35,9 +35,15 @@
 .header__brand-name-container--link #bandsite-logo-header {
   padding: 24px 0px 16px 0px;
 }
+@media (min-width: 768px) {
+  .header__brand-name-container--link #bandsite-logo-header {
+    padding: 36px;
+  }
+}
 .header__top-nav-container .top-navigations {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 .header__top-nav-container .top-navigations__list {
   list-style: none;
@@ -60,7 +66,12 @@
 }
 @media (min-width: 768px) {
   .header__top-nav-container .top-navigations__list--link {
-    background-color: RED;
+    padding-bottom: 0px;
+    margin-left: 48px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .header__top-nav-container .top-navigations__list #bio-link {
