@@ -314,7 +314,7 @@
     //  MEDIA = TABLET = [ ] = 768PX
     .photo-gallery-img {
       @include mixins.tablet {
-        flex: 30%;
+        width: 30%;
       }
     }
   }
@@ -322,6 +322,7 @@
   &__image-container {
     @include mixins.tablet {
       display: flex;
+      flex-wrap: wrap;
       max-width: 800px;
       margin: auto;
       padding-top: 36px;
