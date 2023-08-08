@@ -209,6 +209,12 @@
   padding-top: 16px;
 }
 @media (min-width: 768px) {
+  .about .band-descriptions__para {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 768px) {
   .about .band-descriptions {
     display: flex;
     gap: 36px;

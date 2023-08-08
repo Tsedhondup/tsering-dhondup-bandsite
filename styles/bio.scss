@@ -248,6 +248,12 @@
       line-height: 18px;
       padding-top: 16px;
     }
+    &__para {
+      @include mixins.tablet {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
   }
   //  MEDIA = TABLET = [ ] = 768PX
   .band-descriptions {
