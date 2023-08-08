@@ -375,6 +375,15 @@
       }
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__socials-container {
+    @include mixins.tablet {
+      display: flex;
+      gap: 36px;
+      padding-top: 48px;
+      padding-bottom: 36px;
+    }
+  }
   // STAKEHOLDER SECTION
   &__band-stakeholders-container {
     // STAKHOLDER-1
@@ -429,6 +438,7 @@
     }
   }
 }
+//  MEDIA = TABLET = [ ] = 768PX
 .footer {
   @include mixins.tablet {
     padding: 0px 36px;

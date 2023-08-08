@@ -312,6 +312,14 @@
   width: 23px;
   margin-right: 25px;
 }
+@media (min-width: 768px) {
+  .footer__socials-container {
+    display: flex;
+    gap: 36px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 .footer__band-stakeholders-container .footer-stakeholders__names {
   font-size: 14px;
   font-weight: 600;
