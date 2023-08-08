@@ -312,6 +312,14 @@
       padding-top: 16px;
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__image-container {
+    @include mixins.tablet {
+      display: flex;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
 }
 //  MEDIA = TABLET = [ ] = 768PX
 .photo-gallery {

@@ -262,6 +262,13 @@
   display: block;
   padding-top: 16px;
 }
+@media (min-width: 768px) {
+  .photo-gallery__image-container {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+  }
+}
 
 @media (min-width: 768px) {
   .photo-gallery {
