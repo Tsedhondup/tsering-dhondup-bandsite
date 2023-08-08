@@ -303,6 +303,16 @@
     color: colors.$badnSiteDarkBlack;
     padding-top: 24px;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      font-size: 36px;
+      padding: 48px 0px 0px 0px;
+      line-height: 44px;
+      max-width: 900px;
+      margin: auto;
+    }
+  }
   // PHOTO GALLERY IMAGE CONTAINER
   &__image-container {
     // IMAGES

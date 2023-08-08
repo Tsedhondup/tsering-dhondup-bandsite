@@ -257,6 +257,15 @@
   color: #000000;
   padding-top: 24px;
 }
+@media (min-width: 768px) {
+  .photo-gallery__title {
+    font-size: 36px;
+    padding: 48px 0px 0px 0px;
+    line-height: 44px;
+    max-width: 900px;
+    margin: auto;
+  }
+}
 .photo-gallery__image-container .photo-gallery-img {
   width: 100%;
   display: block;
