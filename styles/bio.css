@@ -211,6 +211,7 @@
 @media (min-width: 768px) {
   .about .band-descriptions {
     display: flex;
+    gap: 36px;
   }
 }
 

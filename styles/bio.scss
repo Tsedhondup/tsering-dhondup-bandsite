@@ -253,6 +253,7 @@
   .band-descriptions {
     @include mixins.tablet {
       display: flex;
+      gap: 36px;
     }
   }
 }
