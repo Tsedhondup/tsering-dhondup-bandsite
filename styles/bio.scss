@@ -311,6 +311,12 @@
       display: block;
       padding-top: 16px;
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .photo-gallery-img {
+      @include mixins.tablet {
+        flex: 30%;
+      }
+    }
   }
   //  MEDIA = TABLET = [ ] = 768PX
   &__image-container {
