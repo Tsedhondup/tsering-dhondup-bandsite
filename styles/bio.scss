@@ -322,7 +322,9 @@
   &__image-container {
     @include mixins.tablet {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 36px;
       max-width: 800px;
       margin: auto;
       padding-top: 36px;
