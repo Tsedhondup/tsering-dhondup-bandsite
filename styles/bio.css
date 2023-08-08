@@ -263,6 +263,13 @@
   padding-top: 16px;
 }
 
+@media (min-width: 768px) {
+  .photo-gallery {
+    padding: 0px 36px;
+    padding-bottom: 36px;
+  }
+}
+
 .footer {
   padding: 0px 16px;
   background-color: #323232;

@@ -313,6 +313,13 @@
     }
   }
 }
+//  MEDIA = TABLET = [ ] = 768PX
+.photo-gallery {
+  @include mixins.tablet {
+    padding: 0px 36px;
+    padding-bottom: 36px;
+  }
+}
 //-----------------------------------------------------------------------------//
 // FOOTER
 .footer {
