@@ -240,6 +240,18 @@
     color: colors.$badnSiteDarkBlack;
     padding-top: 16px;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__band-name {
+    @include mixins.tablet {
+      font-size: 24px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 48px;
+      line-height: 32px;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
   // BAND DESCRIPTION CONTAINER
   .band-descriptions {
     &__para {
@@ -248,6 +260,7 @@
       line-height: 18px;
       padding-top: 16px;
     }
+    //  MEDIA = TABLET = [ ] = 768PX
     &__para {
       @include mixins.tablet {
         font-size: 14px;
@@ -260,6 +273,8 @@
     @include mixins.tablet {
       display: flex;
       gap: 36px;
+      max-width: 800px;
+      padding: 0px 60px;
     }
   }
 }
