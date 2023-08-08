@@ -429,3 +429,8 @@
     }
   }
 }
+.footer {
+  @include mixins.tablet {
+    padding: 0px 36px;
+  }
+}

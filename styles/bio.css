@@ -350,4 +350,10 @@
   padding-bottom: 16px;
   color: #fafafa;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0px 36px;
+  }
 }/*# sourceMappingURL=bio.css.map */
