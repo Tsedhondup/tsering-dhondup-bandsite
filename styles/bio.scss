@@ -195,8 +195,9 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__hero {
     @include mixins.tablet {
-      height: 310px;
+      height: 350px;
       padding: 0px 60px;
+      max-width: 800px;
     }
   }
   // ABOUT STATEMENT

@@ -165,8 +165,9 @@
 }
 @media (min-width: 768px) {
   .about__hero {
-    height: 310px;
+    height: 350px;
     padding: 0px 60px;
+    max-width: 800px;
   }
 }
 .about__artist-statement, .about__artist-name {
