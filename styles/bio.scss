@@ -315,6 +315,7 @@
     .photo-gallery-img {
       @include mixins.tablet {
         width: 30%;
+        padding-top: 0px;
       }
     }
   }

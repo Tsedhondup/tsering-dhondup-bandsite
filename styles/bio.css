@@ -265,6 +265,7 @@
 @media (min-width: 768px) {
   .photo-gallery__image-container .photo-gallery-img {
     width: 30%;
+    padding-top: 0px;
   }
 }
 @media (min-width: 768px) {
