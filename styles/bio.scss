@@ -364,6 +364,15 @@
       padding-top: 24px;
       padding-bottom: 16px;
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-social-text {
+      @include mixins.tablet {
+        font-size: 36px;
+        font-weight: 600;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
     // SOCIAL ICONS
     .footer-socials {
       &__links {
