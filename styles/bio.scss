@@ -430,6 +430,7 @@
           text-transform: capitalize;
         }
       }
+
       // ADDRESS & LOCATION
       &__address {
         font-size: 13px;
@@ -456,6 +457,7 @@
       display: flex;
       max-width: 800px;
       margin: auto;
+      gap: 50px;
     }
   }
 

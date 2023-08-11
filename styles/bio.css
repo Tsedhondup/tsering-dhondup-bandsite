@@ -379,6 +379,7 @@
     display: flex;
     max-width: 800px;
     margin: auto;
+    gap: 50px;
   }
 }
 .footer__copy-right--website-name {
