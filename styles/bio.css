@@ -420,6 +420,8 @@
     padding-top: 36px;
     padding-bottom: 36px;
     position: relative;
+    max-width: 800px;
+    margin: auto;
   }
 }
 
