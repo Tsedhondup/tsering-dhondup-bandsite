@@ -342,6 +342,16 @@
   display: none;
 }
 @media (min-width: 768px) {
+  .footer__socials-container .footer-socials__logo-one-container--logo {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .footer__socials-container .footer-socials__logo-one-container {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
   .footer__socials-container .footer-socials {
     display: flex;
   }

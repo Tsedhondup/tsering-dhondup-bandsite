@@ -403,13 +403,19 @@
         &--logo {
           display: none;
         }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--logo {
+          @include mixins.tablet {
+            display: block;
+          }
+        }
       }
-      // //  MEDIA = TABLET = [ ] = 768PX
-      // &__logo-one-container {
-      //   @include mixins.tablet {
-      //     display: block;
-      //   }
-      // }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__logo-one-container {
+        @include mixins.tablet {
+          display: block;
+        }
+      }
     }
     //  MEDIA = TABLET = [ ] = 768PX
     .footer-socials {
