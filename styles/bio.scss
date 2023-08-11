@@ -492,7 +492,7 @@
     //  MEDIA = TABLET = [ ] = 768PX
     &--website-name {
       @include mixins.tablet {
-        position: absolute;
+        display: none;
       }
     }
     // COPY RIGHT INFO
