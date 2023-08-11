@@ -369,8 +369,8 @@
       @include mixins.tablet {
         font-size: 36px;
         font-weight: 600;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 48px;
+        padding-bottom: 36px;
       }
     }
     // SOCIAL ICONS
@@ -410,8 +410,6 @@
     @include mixins.tablet {
       display: flex;
       gap: 36px;
-      // padding-top: 48px;
-      // padding-bottom: 36px;
     }
   }
   // STAKEHOLDER SECTION
