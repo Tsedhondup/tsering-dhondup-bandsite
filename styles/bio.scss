@@ -450,6 +450,15 @@
       }
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__band-stakeholders-container {
+    @include mixins.tablet {
+      display: flex;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+
   // COPY RIGHT SECTION
   &__copy-right {
     //  WEBSITE NAME

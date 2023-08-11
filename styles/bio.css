@@ -374,6 +374,13 @@
   padding-top: 16px;
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .footer__band-stakeholders-container {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+  }
+}
 .footer__copy-right--website-name {
   display: block;
   padding-top: 24px;
