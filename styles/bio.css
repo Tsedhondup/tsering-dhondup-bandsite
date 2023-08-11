@@ -402,6 +402,11 @@
   padding-top: 24px;
   padding-bottom: 16px;
 }
+@media (min-width: 768px) {
+  .footer__copy-right--website-name {
+    position: absolute;
+  }
+}
 .footer__copy-right #copy-right-info {
   font-size: 10px;
   font-weight: 400;

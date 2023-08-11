@@ -486,7 +486,14 @@
       display: block;
       padding-top: 24px;
       padding-bottom: 16px;
-    } // COPY RIGHT INFO
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &--website-name {
+      @include mixins.tablet {
+        position: absolute;
+      }
+    }
+    // COPY RIGHT INFO
     #copy-right-info {
       font-size: 10px;
       font-weight: 400;
