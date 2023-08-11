@@ -496,6 +496,13 @@
       text-transform: capitalize;
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__copy-right {
+    @include mixins.tablet {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }
 }
 //  MEDIA = TABLET = [ ] = 768PX
 .footer {
