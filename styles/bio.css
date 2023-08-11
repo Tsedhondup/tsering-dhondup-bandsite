@@ -324,6 +324,12 @@
   margin-right: 25px;
 }
 @media (min-width: 768px) {
+  .footer__socials-container .footer-socials__links--logo {
+    height: 24px;
+    width: 24px;
+  }
+}
+@media (min-width: 768px) {
   .footer__socials-container .footer-socials__links {
     display: flex;
     align-items: center;

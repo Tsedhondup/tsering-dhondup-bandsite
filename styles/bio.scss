@@ -382,6 +382,13 @@
           width: 23px;
           margin-right: 25px;
         }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--logo {
+          @include mixins.tablet {
+            height: 24px;
+            width: 24px;
+          }
+        }
       }
       //  MEDIA = TABLET = [ ] = 768PX
       &__links {
