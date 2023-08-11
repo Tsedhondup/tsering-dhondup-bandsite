@@ -375,12 +375,26 @@
     }
     // SOCIAL ICONS
     .footer-socials {
+      display: flex;
       &__links {
         &--logo {
           height: 23px;
           width: 23px;
           margin-right: 25px;
         }
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__links {
+        @include mixins.tablet {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-socials {
+      @include mixins.tablet {
+        display: flex;
       }
     }
   }

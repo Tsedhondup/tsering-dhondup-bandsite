@@ -315,10 +315,24 @@
     padding-bottom: 0px;
   }
 }
+.footer__socials-container .footer-socials {
+  display: flex;
+}
 .footer__socials-container .footer-socials__links--logo {
   height: 23px;
   width: 23px;
   margin-right: 25px;
+}
+@media (min-width: 768px) {
+  .footer__socials-container .footer-socials__links {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .footer__socials-container .footer-socials {
+    display: flex;
+  }
 }
 @media (min-width: 768px) {
   .footer__socials-container {
