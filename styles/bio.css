@@ -335,6 +335,12 @@
     align-items: center;
   }
 }
+.footer__socials-container .footer-socials__logo-one-container {
+  display: none;
+}
+.footer__socials-container .footer-socials__logo-one-container--logo {
+  display: none;
+}
 @media (min-width: 768px) {
   .footer__socials-container .footer-socials {
     display: flex;
