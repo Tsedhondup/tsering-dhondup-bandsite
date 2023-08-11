@@ -428,6 +428,12 @@
           text-transform: capitalize;
         }
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__names {
+        @include mixins.tablet {
+          padding-top: 0px;
+        }
+      }
 
       // ADDRESS & LOCATION
       &__address {
@@ -436,6 +442,13 @@
         line-height: 18px;
         color: colors.$alabaster;
         padding-top: 16px;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__address {
+        @include mixins.tablet {
+          padding-top: 36px;
+          line-height: 20px;
+        }
       }
       // EMAIL
       &__email {
@@ -446,6 +459,13 @@
         display: block;
         padding-top: 16px;
         text-decoration: none;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__email {
+        @include mixins.tablet {
+          padding-top: 36px;
+          line-height: 20px;
+        }
       }
     }
   }
