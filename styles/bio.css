@@ -344,6 +344,8 @@
   .footer__socials-container {
     display: flex;
     gap: 36px;
+    max-width: 800px;
+    margin: auto;
   }
 }
 .footer__band-stakeholders-container .footer-stakeholders__names {

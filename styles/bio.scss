@@ -410,6 +410,8 @@
     @include mixins.tablet {
       display: flex;
       gap: 36px;
+      max-width: 800px;
+      margin: auto;
     }
   }
   // STAKEHOLDER SECTION
