@@ -508,6 +508,7 @@
     @include mixins.tablet {
       padding-top: 36px;
       padding-bottom: 36px;
+      position: relative;
     }
   }
 }
