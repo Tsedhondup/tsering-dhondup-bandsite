@@ -300,9 +300,6 @@
   padding: 0px 16px;
   background-color: #323232;
 }
-.footer__socials-container {
-  background-color: green;
-}
 .footer__socials-container .footer-social-text {
   font-size: 24px;
   font-weight: 700;
@@ -439,6 +436,11 @@
   padding-bottom: 16px;
   color: #fafafa;
   text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  .footer__copy-right #copy-right-info {
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) {
   .footer__copy-right {

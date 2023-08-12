@@ -357,7 +357,6 @@
   // SOCIAL SECTION
   &__socials-container {
     // SOCIAL TEXT
-    background-color: green;
     .footer-social-text {
       font-size: 24px;
       font-weight: 700;
@@ -527,6 +526,12 @@
       padding-bottom: 16px;
       color: colors.$alabaster;
       text-transform: capitalize;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    #copy-right-info {
+      @include mixins.tablet {
+        font-size: 14px;
+      }
     }
   }
   //  MEDIA = TABLET = [ ] = 768PX
