@@ -440,6 +440,7 @@
 @media (min-width: 768px) {
   .footer__copy-right #copy-right-info {
     font-size: 14px;
+    line-height: 20px;
   }
 }
 @media (min-width: 768px) {
