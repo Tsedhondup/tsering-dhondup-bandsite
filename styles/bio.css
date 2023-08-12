@@ -358,8 +358,9 @@
 @media (min-width: 768px) {
   .footer__socials-container .footer-logo-one-container {
     display: flex;
-    flex: 27%;
-    background-color: red;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 10%;
   }
 }
 @media (min-width: 768px) {

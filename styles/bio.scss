@@ -423,8 +423,9 @@
     .footer-logo-one-container {
       @include mixins.tablet {
         display: flex;
-        flex: 27%;
-        background-color: red;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 10%;
       }
     }
   }
