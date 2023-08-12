@@ -357,6 +357,7 @@
   // SOCIAL SECTION
   &__socials-container {
     // SOCIAL TEXT
+    background-color: green;
     .footer-social-text {
       font-size: 24px;
       font-weight: 700;
@@ -413,7 +414,9 @@
       //  MEDIA = TABLET = [ ] = 768PX
       &__logo-one-container {
         @include mixins.tablet {
-          display: block;
+          display: flex;
+          flex: 27%;
+          background-color: red;
         }
       }
     }

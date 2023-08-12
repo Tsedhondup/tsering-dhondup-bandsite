@@ -300,6 +300,9 @@
   padding: 0px 16px;
   background-color: #323232;
 }
+.footer__socials-container {
+  background-color: green;
+}
 .footer__socials-container .footer-social-text {
   font-size: 24px;
   font-weight: 700;
@@ -348,7 +351,9 @@
 }
 @media (min-width: 768px) {
   .footer__socials-container .footer-socials__logo-one-container {
-    display: block;
+    display: flex;
+    flex: 27%;
+    background-color: red;
   }
 }
 @media (min-width: 768px) {
