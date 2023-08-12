@@ -398,32 +398,32 @@
           align-items: center;
         }
       }
-      // BANDSITE LOGO FOR: MAX-WIDTH = 768PX
-      &__logo-one-container {
-        display: none;
-        &--logo {
-          display: none;
-        }
-        //  MEDIA = TABLET = [ ] = 768PX
-        &--logo {
-          @include mixins.tablet {
-            display: block;
-          }
-        }
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__logo-one-container {
-        @include mixins.tablet {
-          display: flex;
-          flex: 27%;
-          background-color: red;
-        }
-      }
     }
     //  MEDIA = TABLET = [ ] = 768PX
     .footer-socials {
       @include mixins.tablet {
         display: flex;
+      }
+    }
+    // BANDSITE LOGO FOR: MAX-WIDTH = 768PX
+    .footer-logo-one-container {
+      display: none;
+      &__logo {
+        display: none;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__logo {
+        @include mixins.tablet {
+          display: block;
+        }
+      }
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-logo-one-container {
+      @include mixins.tablet {
+        display: flex;
+        flex: 27%;
+        background-color: red;
       }
     }
   }
