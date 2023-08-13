@@ -21,11 +21,13 @@
 }
 
 /* HEADER */
+.header {
+  background-color: #323232;
+}
 .header__content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #323232;
 }
 .header__content .header-brand-name-container {
   display: flex;
@@ -90,6 +92,12 @@
   .header__content {
     flex-direction: row;
     padding: 0px 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .header__content {
+    max-width: 1020px;
+    margin: auto;
   }
 }
 

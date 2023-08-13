@@ -32,12 +32,12 @@
 /* HEADER */
 //  MEDIA = MOBILE = [ ] = 320PX
 .header {
+  background-color: colors.$bandSiteBlack;
   // HEADER-CONTENT
   &__content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: colors.$bandSiteBlack;
     // TOP-BANDSITE-LOGO
     .header-brand-name-container {
       @include mixins.flex-absolute-center;
@@ -116,16 +116,15 @@
       flex-direction: row;
       padding: 0px 36px;
     }
+  } //  MEDIA = TABLET = [ ] = 1280PX
+  &__content {
+    @include mixins.desktop {
+      max-width: 1020px;
+      margin: auto;
+    }
   }
 }
 
-// //  MEDIA = TABLET = [ ] = 1280PX
-// .header {
-//   @include mixins.desktop {
-//     max-width: 1020px;
-//     margin: auto;
-//   }
-// }
 //-----------------------------------------------------------------------------//
 /* MAIN HERO SECTION */
 .main-hero-bio {
