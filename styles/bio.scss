@@ -32,90 +32,93 @@
 /* HEADER */
 //  MEDIA = MOBILE = [ ] = 320PX
 .header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: colors.$bandSiteBlack;
-  // TOP-BANDSITE-LOGO
-  &__brand-name-container {
-    @include mixins.flex-absolute-center;
-    // LINK
-    &--link {
-      // LOGO
-      #bandsite-logo-header {
-        padding: 24px 0px 16px 0px;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      #bandsite-logo-header {
-        @include mixins.tablet {
-          // padding: 36px;
-          padding: 22px 0px 22px 0px;
-        }
-      }
-    }
-    //  MEDIA = TABLET = [ ] = 768PX
-    &--link {
-      @include mixins.tablet {
-        display: flex;
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  // TOP-NAVIGATION
-  &__top-nav-container {
-    // UNORDERED LIST
-    .top-navigations {
-      display: flex;
-      justify-content: space-between;
-      height: 100%;
-      // LIST
-      &__list {
-        list-style: none;
-        flex: 1;
-        @include mixins.flex-absolute-center;
-        // LINK
-        &--link {
-          text-decoration: none;
-          text-transform: capitalize;
-          display: block;
-          width: 100%;
-          padding-bottom: 14px;
-          @include mixins.flex-absolute-center;
-          color: colors.$silver;
-          border-bottom: 3px solid colors.$bandSiteBlack;
+  // HEADER-CONTENT
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: colors.$bandSiteBlack;
+    // TOP-BANDSITE-LOGO
+    .header-brand-name-container {
+      @include mixins.flex-absolute-center;
+      // LINK
+      &__link {
+        // LOGO
+        #bandsite-logo-header {
+          padding: 24px 0px 16px 0px;
         }
         //  MEDIA = TABLET = [ ] = 768PX
-        &--link {
+        #bandsite-logo-header {
           @include mixins.tablet {
-            padding-bottom: 0px;
-            margin-left: 60px;
-            height: 100%;
-            // display of absolute centre was removed
+            // padding: 36px;
+            padding: 22px 0px 22px 0px;
           }
         }
-        // BIO-LINK
-        #bio-link {
-          color: colors.$white;
-          border-bottom: 3px solid colors.$white;
-          font-weight: 600;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__link {
+        @include mixins.tablet {
+          display: flex;
+          justify-content: flex-start;
         }
-        // HOVER
-        &--link:hover {
-          color: colors.$alabaster;
-          border-bottom: 3px solid colors.$alabaster;
+      }
+    }
+    // TOP-NAVIGATION
+    .header-top-nav-container {
+      // UNORDERED LIST
+      &__navigations {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        // LIST
+        &--list {
+          list-style: none;
+          flex: 1;
+          @include mixins.flex-absolute-center;
+          // LINK
+          .top-navigation-link {
+            text-decoration: none;
+            text-transform: capitalize;
+            display: block;
+            width: 100%;
+            padding-bottom: 14px;
+            @include mixins.flex-absolute-center;
+            color: colors.$silver;
+            border-bottom: 3px solid colors.$bandSiteBlack;
+          }
+          //  MEDIA = TABLET = [ ] = 768PX
+          .top-navigation-link {
+            @include mixins.tablet {
+              padding-bottom: 0px;
+              margin-left: 60px;
+              height: 100%;
+              // display of absolute centre was removed
+            }
+          }
+          // BIO-LINK
+          #bio-link {
+            color: colors.$white;
+            border-bottom: 3px solid colors.$white;
+            font-weight: 600;
+          }
+          // HOVER
+          .top-navigation-link:hover {
+            color: colors.$alabaster;
+            border-bottom: 3px solid colors.$alabaster;
+          }
         }
       }
     }
   }
-}
-//  MEDIA = TABLET = [ ] = 768PX
-.header {
-  @include mixins.tablet {
-    flex-direction: row;
-    padding: 0px 36px;
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__content {
+    @include mixins.tablet {
+      flex-direction: row;
+      padding: 0px 36px;
+    }
   }
 }
+
 // //  MEDIA = TABLET = [ ] = 1280PX
 // .header {
 //   @include mixins.desktop {

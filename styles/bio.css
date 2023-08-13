@@ -21,44 +21,44 @@
 }
 
 /* HEADER */
-.header {
+.header__content {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: #323232;
 }
-.header__brand-name-container {
+.header__content .header-brand-name-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__brand-name-container--link #bandsite-logo-header {
+.header__content .header-brand-name-container__link #bandsite-logo-header {
   padding: 24px 0px 16px 0px;
 }
 @media (min-width: 768px) {
-  .header__brand-name-container--link #bandsite-logo-header {
+  .header__content .header-brand-name-container__link #bandsite-logo-header {
     padding: 22px 0px 22px 0px;
   }
 }
 @media (min-width: 768px) {
-  .header__brand-name-container--link {
+  .header__content .header-brand-name-container__link {
     display: flex;
     justify-content: flex-start;
   }
 }
-.header__top-nav-container .top-navigations {
+.header__content .header-top-nav-container__navigations {
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
-.header__top-nav-container .top-navigations__list {
+.header__content .header-top-nav-container__navigations--list {
   list-style: none;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__top-nav-container .top-navigations__list--link {
+.header__content .header-top-nav-container__navigations--list .top-navigation-link {
   text-decoration: none;
   text-transform: capitalize;
   display: block;
@@ -71,24 +71,23 @@
   border-bottom: 3px solid #323232;
 }
 @media (min-width: 768px) {
-  .header__top-nav-container .top-navigations__list--link {
+  .header__content .header-top-nav-container__navigations--list .top-navigation-link {
     padding-bottom: 0px;
     margin-left: 60px;
     height: 100%;
   }
 }
-.header__top-nav-container .top-navigations__list #bio-link {
+.header__content .header-top-nav-container__navigations--list #bio-link {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
   font-weight: 600;
 }
-.header__top-nav-container .top-navigations__list--link:hover {
+.header__content .header-top-nav-container__navigations--list .top-navigation-link:hover {
   color: #fafafa;
   border-bottom: 3px solid #fafafa;
 }
-
 @media (min-width: 768px) {
-  .header {
+  .header__content {
     flex-direction: row;
     padding: 0px 36px;
   }
