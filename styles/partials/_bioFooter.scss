@@ -1,3 +1,8 @@
+// IMPORT FILES **
+// MIXINS
+@use "./mixins";
+// VARIABLES
+@use "./colors";
 // FOOTER
 .footer {
   padding: 0px 16px;

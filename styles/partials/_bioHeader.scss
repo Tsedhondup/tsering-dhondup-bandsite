@@ -1,3 +1,8 @@
+// IMPORT FILES **
+// MIXINS
+@use "./mixins";
+// VARIABLES
+@use "./colors";
 /* HEADER */
 //  MEDIA = MOBILE = [ ] = 320PX
 .header {
