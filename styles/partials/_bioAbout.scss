@@ -1,0 +1,125 @@
+/* ABOUT SECTION */
+.about {
+  width: 100%;
+  padding: 0px 16px;
+  padding-bottom: 16px;
+
+  // ABOUT TITLE
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: colors.$badnSiteDarkBlack;
+    width: 100%;
+    padding: 24px 0px 16px 0px;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      font-size: 36px;
+      padding: 48px 0px 36px 0px;
+      line-height: 44px;
+      max-width: 900px;
+      margin: auto;
+    }
+  }
+  // ABOUT IMAGE
+  &__hero {
+    width: 100%;
+    height: 165px;
+    display: block;
+    margin: auto;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__hero {
+    @include mixins.tablet {
+      height: 350px;
+      padding: 0px 60px;
+      max-width: 800px;
+    }
+  }
+  // ABOUT STATEMENT
+  &__artist-statement {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: colors.$badnSiteDarkBlack;
+    padding-top: 16px;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__artist-statement {
+    @include mixins.tablet {
+      font-size: 24px;
+      line-height: 32px;
+      padding: 0px 60px;
+      padding-top: 48px;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+  // ARTIST NAME
+  &__artist-name {
+    @extend .about__artist-statement;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__artist-name {
+    @include mixins.tablet {
+      font-size: 16px;
+      padding-top: 5px;
+      line-height: 32px;
+    }
+  }
+  // BAND NAME
+  &__band-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: colors.$badnSiteDarkBlack;
+    padding-top: 16px;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__band-name {
+    @include mixins.tablet {
+      font-size: 24px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 48px;
+      line-height: 32px;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+  // BAND DESCRIPTION CONTAINER
+  .band-descriptions {
+    &__para {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      padding-top: 16px;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &__para {
+      @include mixins.tablet {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  .band-descriptions {
+    @include mixins.tablet {
+      display: flex;
+      gap: 36px;
+      max-width: 800px;
+      margin: auto;
+      padding: 0px 60px;
+    }
+  }
+}
+//  MEDIA = TABLET = [ ] = 768PX
+.about {
+  @include mixins.tablet {
+    padding: 0px 36px;
+    padding-bottom: 36px;
+  }
+}

@@ -1,0 +1,46 @@
+/* MAIN HERO SECTION */
+.main-hero-bio {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  // TITLE
+  &__title {
+    color: colors.$white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0px 16px;
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      font-size: 60px;
+      line-height: 68px;
+      font-weight: 600;
+      padding: 0px 36px;
+    }
+  }
+  // OVERLAY
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$badnSiteDarkBlack;
+    opacity: 0.5;
+    z-index: 1;
+  }
+}
+//  MEDIA = TABLET = [ ] = 768PX
+.main-hero-bio {
+  @include mixins.tablet {
+    height: 450px;
+  }
+}
