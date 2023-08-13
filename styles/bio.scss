@@ -324,7 +324,7 @@
     //  MEDIA = TABLET = [ ] = 768PX
     .photo-gallery-img {
       @include mixins.tablet {
-        width: 33.3%;
+        width: 30%;
         padding-top: 0px;
       }
     }
@@ -531,7 +531,7 @@
     #copy-right-info {
       @include mixins.tablet {
         font-size: 14px;
-        line-height: 20px;;
+        line-height: 20px;
       }
     }
   }
