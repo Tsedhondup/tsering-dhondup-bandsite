@@ -172,6 +172,12 @@
     height: 450px;
   }
 }
+//  MEDIA = TABLET = [ ] = 1280PX
+.main-hero-bio {
+  @include mixins.desktop{
+    min-height: 600px;
+  }
+}
 //-----------------------------------------------------------------------------//
 /* ABOUT SECTION */
 .about {

@@ -145,6 +145,12 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .main-hero-bio {
+    min-height: 600px;
+  }
+}
+
 /* ABOUT SECTION */
 .about {
   width: 100%;
