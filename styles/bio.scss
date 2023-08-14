@@ -350,6 +350,12 @@
       margin: auto;
     }
   }
+  //  MEDIA = TABLET = [ ] = 1280PX
+  &__title {
+    @include mixins.tablet {
+      max-width: 1130px;
+    }
+  }
   // PHOTO GALLERY IMAGE CONTAINER
   &__image-container {
     // IMAGES
