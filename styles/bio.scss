@@ -147,6 +147,7 @@
     position: relative;
     z-index: 2;
     font-size: 24px;
+    width: 100%;
   }
   //  MEDIA = TABLET = [ ] = 768PX
   &__title {
@@ -160,7 +161,6 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
-      width: 100%;
       max-width: 1130px;
       margin: auto;
       // background-color: red;
