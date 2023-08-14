@@ -130,6 +130,13 @@
     padding: 0px 36px;
   }
 }
+@media (min-width: 1280px) {
+  .main-hero-bio__title {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+  }
+}
 .main-hero-bio__overlay {
   position: absolute;
   width: 100%;

@@ -116,7 +116,8 @@
       flex-direction: row;
       padding: 0px 36px;
     }
-  } //  MEDIA = TABLET = [ ] = 1280PX
+  }
+  //  MEDIA = TABLET = [ ] = 1280PX
   &__content {
     @include mixins.desktop {
       max-width: 1280px;
@@ -156,6 +157,15 @@
       padding: 0px 36px;
     }
   }
+  //  MEDIA = TABLET = [ ] = 1280PX
+  &__title {
+    @include mixins.desktop {
+      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      // background-color: red;
+    }
+  }
   // OVERLAY
   &__overlay {
     position: absolute;
@@ -174,7 +184,7 @@
 }
 //  MEDIA = TABLET = [ ] = 1280PX
 .main-hero-bio {
-  @include mixins.desktop{
+  @include mixins.desktop {
     min-height: 600px;
   }
 }
