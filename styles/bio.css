@@ -200,7 +200,8 @@
 }
 @media (min-width: 768px) {
   .about__hero {
-    max-width: 900px;
+    max-width: 1000px;
+    height: 500px;
   }
 }
 .about__artist-statement, .about__artist-name {

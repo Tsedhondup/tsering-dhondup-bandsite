@@ -234,10 +234,11 @@
       max-width: 800px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = TABLET = [ ] = 1280PX
   &__hero {
     @include mixins.tablet {
-      max-width: 900px;
+      max-width: 1000px;
+      height: 500px;
     }
   }
   // ABOUT STATEMENT
