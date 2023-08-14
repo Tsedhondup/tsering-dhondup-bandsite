@@ -161,7 +161,7 @@
   &__title {
     @include mixins.desktop {
       width: 100%;
-      max-width: 1280px;
+      max-width: 1130px;
       margin: auto;
       // background-color: red;
     }
@@ -216,7 +216,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
-      max-width: 1280px;
+      max-width: 1130px;
     }
   }
   // ABOUT IMAGE
