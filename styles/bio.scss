@@ -213,6 +213,12 @@
       margin: auto;
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.desktop {
+      max-width: 1280px;
+    }
+  }
   // ABOUT IMAGE
   &__hero {
     width: 100%;
