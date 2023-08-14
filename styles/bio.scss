@@ -120,7 +120,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__content {
     @include mixins.desktop {
-      max-width: 1280px;
+      max-width: 1130px;
       margin: auto;
     }
   }
@@ -213,7 +213,7 @@
       margin: auto;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
       max-width: 1280px;
@@ -232,6 +232,12 @@
       height: 350px;
       padding: 0px 60px;
       max-width: 800px;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__hero {
+    @include mixins.tablet {
+      max-width: 900px;
     }
   }
   // ABOUT STATEMENT
