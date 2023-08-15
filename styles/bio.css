@@ -401,7 +401,11 @@
   .footer__socials-container {
     display: flex;
     gap: 36px;
-    max-width: 800px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__socials-container {
+    max-width: 1040px;
     margin: auto;
   }
 }

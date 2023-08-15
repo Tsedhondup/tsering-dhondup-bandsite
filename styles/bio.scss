@@ -477,7 +477,12 @@
     @include mixins.tablet {
       display: flex;
       gap: 36px;
-      max-width: 800px;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 1280PX
+  &__socials-container {
+    @include mixins.desktop {
+      max-width: 1040px;
       margin: auto;
     }
   }
