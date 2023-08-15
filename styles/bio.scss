@@ -161,9 +161,9 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
-      max-width: 1130px;
+      width: 1130px;
+      padding: 0px 0px;
       margin: auto;
-      // background-color: red;
     }
   }
   // OVERLAY
@@ -209,8 +209,6 @@
       font-size: 36px;
       padding: 48px 0px 36px 0px;
       line-height: 44px;
-      // max-width: 900px;
-      // margin: auto;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX

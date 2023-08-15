@@ -133,7 +133,8 @@
 }
 @media (min-width: 1280px) {
   .main-hero-bio__title {
-    max-width: 1130px;
+    width: 1130px;
+    padding: 0px 0px;
     margin: auto;
   }
 }
