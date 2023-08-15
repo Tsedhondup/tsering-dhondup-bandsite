@@ -222,7 +222,8 @@
   // ABOUT IMAGE
   &__hero {
     width: 100%;
-    height: 165px;
+    // height: 165px;
+    object-fit: cover;
     display: block;
     margin: auto;
   }
