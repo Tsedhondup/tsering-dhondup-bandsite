@@ -209,14 +209,15 @@
       font-size: 36px;
       padding: 48px 0px 36px 0px;
       line-height: 44px;
-      max-width: 900px;
-      margin: auto;
+      // max-width: 900px;
+      // margin: auto;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
       max-width: 1130px;
+      margin: auto;
     }
   }
   // ABOUT IMAGE

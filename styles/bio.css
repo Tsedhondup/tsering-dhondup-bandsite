@@ -176,13 +176,12 @@
     font-size: 36px;
     padding: 48px 0px 36px 0px;
     line-height: 44px;
-    max-width: 900px;
-    margin: auto;
   }
 }
 @media (min-width: 1280px) {
   .about__title {
     max-width: 1130px;
+    margin: auto;
   }
 }
 .about__hero {
