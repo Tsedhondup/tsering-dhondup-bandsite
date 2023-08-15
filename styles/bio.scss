@@ -120,7 +120,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__content {
     @include mixins.desktop {
-      max-width: 1130px;
+      max-width: 1040px;
       padding: 0px 0px;
       margin: auto;
     }
@@ -162,7 +162,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
-      width: 1130px;
+      max-width: 1040px;
       padding: 0px 0px;
       margin: auto;
     }
@@ -215,7 +215,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
-      max-width: 1130px;
+      max-width: 1040px;
       margin: auto;
     }
   }
@@ -354,7 +354,7 @@
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
     @include mixins.tablet {
-      max-width: 1130px;
+      max-width: 1040px;
     }
   }
   // PHOTO GALLERY IMAGE CONTAINER
