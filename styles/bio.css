@@ -97,6 +97,7 @@
 @media (min-width: 1280px) {
   .header__content {
     max-width: 1130px;
+    padding: 0px 0px;
     margin: auto;
   }
 }
