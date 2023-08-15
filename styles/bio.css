@@ -451,9 +451,13 @@
 @media (min-width: 768px) {
   .footer__band-stakeholders-container {
     display: flex;
-    max-width: 800px;
-    margin: auto;
     gap: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__band-stakeholders-container {
+    max-width: 1040px;
+    margin: auto;
   }
 }
 .footer__copy-right--website-name {

@@ -542,9 +542,14 @@
   &__band-stakeholders-container {
     @include mixins.tablet {
       display: flex;
-      max-width: 800px;
-      margin: auto;
       gap: 50px;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 1280PX
+  &__band-stakeholders-container {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
     }
   }
 
