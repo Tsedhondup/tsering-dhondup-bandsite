@@ -493,7 +493,11 @@
     padding-top: 36px;
     padding-bottom: 36px;
     position: relative;
-    max-width: 800px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__copy-right {
+    max-width: 1040px;
     margin: auto;
   }
 }

@@ -595,7 +595,12 @@
       padding-top: 36px;
       padding-bottom: 36px;
       position: relative;
-      max-width: 800px;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 1280PX
+  &__copy-right {
+    @include mixins.desktop {
+      max-width: 1040px;
       margin: auto;
     }
   }
