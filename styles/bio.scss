@@ -369,7 +369,7 @@
     //  MEDIA = TABLET = [ ] = 768PX
     .photo-gallery-img {
       @include mixins.tablet {
-        width: 33.3%;
+        width: calc(33.3% - 1rem);
         padding-top: 0px;
       }
     }
@@ -380,6 +380,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      gap: 1.5rem;
       padding-top: 36px;
     }
   }
