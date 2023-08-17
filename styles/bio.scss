@@ -261,14 +261,14 @@
       margin: auto;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
-  // &__artist-statement {
-  //   @include mixins.desktop {
-  //     max-width: 1000px;
-  //     padding-right: 230px;
-  //     margin: auto;
-  //   }
-  // }
+  // MEDIA = TABLET = [ ] = 1280PX
+  &__artist-statement {
+    @include mixins.desktop {
+      max-width: 1000px;
+      padding-right: 230px;
+      margin: auto;
+    }
+  }
 
   // ARTIST NAME
   &__artist-name {

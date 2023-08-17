@@ -223,6 +223,13 @@
     margin: auto;
   }
 }
+@media (min-width: 1280px) {
+  .about__artist-statement, .about__artist-name {
+    max-width: 1000px;
+    padding-right: 230px;
+    margin: auto;
+  }
+}
 @media (min-width: 768px) {
   .about__artist-name {
     font-size: 16px;
