@@ -187,23 +187,23 @@
   }
 }
 .about__hero {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   margin: auto;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .about__hero {
-    height: 350px;
+    height: 320px;
     padding: 0px 60px;
     max-width: 800px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .about__hero {
     max-width: 1000px;
-    height: 500px;
+    height: 430px;
   }
 }
 .about__artist-statement, .about__artist-name {
