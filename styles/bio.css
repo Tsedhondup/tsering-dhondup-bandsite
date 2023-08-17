@@ -270,6 +270,11 @@
     padding: 0px 60px;
   }
 }
+@media (min-width: 1280px) {
+  .about .band-descriptions {
+    max-width: 1000px;
+  }
+}
 
 @media (min-width: 768px) {
   .about {

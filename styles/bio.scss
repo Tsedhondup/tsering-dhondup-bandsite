@@ -261,6 +261,15 @@
       margin: auto;
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  // &__artist-statement {
+  //   @include mixins.desktop {
+  //     max-width: 1000px;
+  //     padding-right: 230px;
+  //     margin: auto;
+  //   }
+  // }
+
   // ARTIST NAME
   &__artist-name {
     @extend .about__artist-statement;
@@ -318,6 +327,12 @@
       max-width: 800px;
       margin: auto;
       padding: 0px 60px;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  .band-descriptions {
+    @include mixins.desktop {
+      max-width: 1000px;
     }
   }
 }
