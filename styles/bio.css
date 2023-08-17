@@ -261,6 +261,11 @@
     margin: auto;
   }
 }
+@media (min-width: 1280px) {
+  .about__band-name {
+    max-width: 1000px;
+  }
+}
 .about .band-descriptions__para {
   font-size: 13px;
   font-weight: 400;

@@ -309,6 +309,12 @@
       margin: auto;
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__band-name {
+    @include mixins.desktop {
+      max-width: 1000px;
+    }
+  }
   // BAND DESCRIPTION CONTAINER
   .band-descriptions {
     &__para {
