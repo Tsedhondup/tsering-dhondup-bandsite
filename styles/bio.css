@@ -237,6 +237,11 @@
     line-height: 32px;
   }
 }
+@media (min-width: 1280px) {
+  .about__artist-name {
+    padding-right: 60px;
+  }
+}
 .about__band-name {
   font-size: 14px;
   font-weight: 600;
