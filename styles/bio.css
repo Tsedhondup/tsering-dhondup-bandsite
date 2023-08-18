@@ -399,8 +399,7 @@
   .footer__socials-container .footer-social-text {
     font-size: 34px;
     font-weight: 600;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding: 0px;
   }
 }
 .footer__socials-container .footer-socials {
