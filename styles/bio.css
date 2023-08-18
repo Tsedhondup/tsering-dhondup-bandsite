@@ -489,10 +489,10 @@
   }
 }
 .footer__band-stakeholders-container .footer-stakeholders__email {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: #fafafa;
+  color: #e1e1e1;
   display: block;
   padding-top: 16px;
   text-decoration: none;
@@ -530,7 +530,7 @@
   font-weight: 400;
   line-height: 20px;
   padding-bottom: 16px;
-  color: #fafafa;
+  color: #e1e1e1;
   text-transform: capitalize;
 }
 @media (min-width: 768px) {
