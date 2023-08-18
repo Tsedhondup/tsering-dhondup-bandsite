@@ -8,7 +8,13 @@
 // MEDIA QUERIES MIXINS
 // MOBILE
 @mixin mobile {
-  @media (min-width:465px) {
+  @media (min-width: 465px) {
+    @content;
+  }
+}
+// MOBILE
+@mixin mobile2 {
+  @media (min-width: 610px) {
     @content;
   }
 }
