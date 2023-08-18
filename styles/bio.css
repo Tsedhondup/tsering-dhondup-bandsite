@@ -148,6 +148,12 @@
   z-index: 1;
 }
 
+@media (min-width: 365px) {
+  .bio-hero {
+    height: 300px;
+  }
+}
+
 @media (min-width: 768px) {
   .bio-hero {
     height: 450px;

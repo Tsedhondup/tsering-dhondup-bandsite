@@ -177,6 +177,12 @@
     z-index: 1;
   }
 }
+//  MEDIA = TABLET = [ ] = 466PX
+.bio-hero {
+  @include mixins.mobile {
+    height: 300px;
+  }
+}
 //  MEDIA = TABLET = [ ] = 768PX
 .bio-hero {
   @include mixins.tablet {
