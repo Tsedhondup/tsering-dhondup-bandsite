@@ -103,7 +103,7 @@
 }
 
 /* MAIN HERO SECTION */
-.main-hero-bio {
+.bio-hero {
   width: 100%;
   height: 200px;
   display: flex;
@@ -114,7 +114,7 @@
   background-size: cover;
   position: relative;
 }
-.main-hero-bio__title {
+.bio-hero__title {
   color: #ffffff;
   text-transform: capitalize;
   font-weight: 600;
@@ -125,7 +125,7 @@
   width: 100%;
 }
 @media (min-width: 768px) {
-  .main-hero-bio__title {
+  .bio-hero__title {
     font-size: 60px;
     line-height: 68px;
     font-weight: 600;
@@ -133,13 +133,13 @@
   }
 }
 @media (min-width: 1280px) {
-  .main-hero-bio__title {
+  .bio-hero__title {
     max-width: 1040px;
     padding: 0px 0px;
     margin: auto;
   }
 }
-.main-hero-bio__overlay {
+.bio-hero__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -149,13 +149,13 @@
 }
 
 @media (min-width: 768px) {
-  .main-hero-bio {
+  .bio-hero {
     height: 450px;
   }
 }
 
 @media (min-width: 1280px) {
-  .main-hero-bio {
+  .bio-hero {
     min-height: 600px;
   }
 }

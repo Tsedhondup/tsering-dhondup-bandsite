@@ -129,7 +129,7 @@
 
 //-----------------------------------------------------------------------------//
 /* MAIN HERO SECTION */
-.main-hero-bio {
+.bio-hero {
   width: 100%;
   height: 200px;
   display: flex;
@@ -178,13 +178,13 @@
   }
 }
 //  MEDIA = TABLET = [ ] = 768PX
-.main-hero-bio {
+.bio-hero {
   @include mixins.tablet {
     height: 450px;
   }
 }
 //  MEDIA = TABLET = [ ] = 1280PX
-.main-hero-bio {
+.bio-hero {
   @include mixins.desktop {
     min-height: 600px;
   }
