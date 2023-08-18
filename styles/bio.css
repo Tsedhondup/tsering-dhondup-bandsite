@@ -291,7 +291,6 @@
 }
 @media (min-width: 768px) {
   .about .band-descriptions__para {
-    font-size: 14px;
     line-height: 22px;
   }
 }

@@ -345,7 +345,6 @@
     //  MEDIA = TABLET = [ ] = 768PX
     &__para {
       @include mixins.tablet {
-        font-size: 14px;
         line-height: 22px;
       }
     }
