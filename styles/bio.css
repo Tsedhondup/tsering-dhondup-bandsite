@@ -330,6 +330,9 @@
   width: 100%;
   display: block;
   padding-top: 16px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
 }
 @media (min-width: 768px) {
   .photo-gallery__image-container .photo-gallery-img {
