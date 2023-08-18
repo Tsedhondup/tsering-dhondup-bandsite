@@ -395,6 +395,13 @@
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
+      transition: 0.3s;
+    }
+    // PSEUDO CLASS : HOVER
+    .photo-gallery-img:hover {
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
     }
     //  MEDIA = TABLET = [ ] = 768PX
     .photo-gallery-img {
