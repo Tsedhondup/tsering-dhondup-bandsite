@@ -553,8 +553,8 @@
     .footer-stakeholders {
       // PERSON & ORGANISATION
       &__names {
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight:400;
         line-height: 22px;
         color: colors.$alabaster;
         padding-top: 16px;
@@ -572,7 +572,7 @@
 
       // ADDRESS & LOCATION
       &__address {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 18px;
         color: colors.$alabaster;
