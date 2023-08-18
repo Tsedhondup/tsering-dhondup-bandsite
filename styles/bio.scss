@@ -79,12 +79,14 @@
           .top-navigation-link {
             text-decoration: none;
             text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 400;
             display: block;
             width: 100%;
             padding-bottom: 14px;
-            @include mixins.flex-absolute-center;
             color: colors.$silver;
             border-bottom: 3px solid colors.$bandSiteBlack;
+            @include mixins.flex-absolute-center;
           }
           //  MEDIA = TABLET = [ ] = 768PX
           .top-navigation-link {
@@ -99,7 +101,6 @@
           #bio-link {
             color: colors.$white;
             border-bottom: 3px solid colors.$white;
-            font-weight: 600;
           }
           // HOVER
           .top-navigation-link:hover {

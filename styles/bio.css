@@ -63,14 +63,16 @@
 .header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link {
   text-decoration: none;
   text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
   display: block;
   width: 100%;
   padding-bottom: 14px;
+  color: #afafaf;
+  border-bottom: 3px solid #323232;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #afafaf;
-  border-bottom: 3px solid #323232;
 }
 @media (min-width: 768px) {
   .header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link {
@@ -82,7 +84,6 @@
 .header__nav-bar .header-top-nav-container__navigations--list #bio-link {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
-  font-weight: 600;
 }
 .header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link:hover {
   color: #fafafa;
