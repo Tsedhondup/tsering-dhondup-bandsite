@@ -6,12 +6,7 @@
 }
 
 // MEDIA QUERIES MIXINS
-// MOBILE
-@mixin mobile {
-  @media (min-width: 320px) {
-    @content;
-  }
-}
+
 // TABLET
 @mixin tablet {
   @media (min-width: 768px) {
