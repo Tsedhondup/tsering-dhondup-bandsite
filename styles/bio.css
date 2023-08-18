@@ -485,7 +485,7 @@
 }
 @media (min-width: 768px) {
   .footer__band-stakeholders-container .footer-stakeholders__address {
-    padding-top: 36px;
+    padding-top: 25px;
     line-height: 20px;
   }
 }
@@ -501,7 +501,7 @@
 @media (min-width: 768px) {
   .footer__band-stakeholders-container .footer-stakeholders__email {
     font-size: 13px;
-    padding-top: 36px;
+    padding-top: 25px;
     line-height: 20px;
   }
 }

@@ -583,7 +583,7 @@
       //  MEDIA = TABLET = [ ] = 768PX
       &__address {
         @include mixins.tablet {
-          padding-top: 36px;
+          padding-top: 25px;
           line-height: 20px;
         }
       }
@@ -601,7 +601,7 @@
       &__email {
         @include mixins.tablet {
           font-size: 13px;
-          padding-top: 36px;
+          padding-top: 25px;
           line-height: 20px;
         }
       }
