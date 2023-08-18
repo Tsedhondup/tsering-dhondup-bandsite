@@ -34,7 +34,7 @@
 .header {
   background-color: colors.$bandSiteBlack;
   // HEADER-CONTENT
-  &__content {
+  &__nav-bar {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -111,14 +111,14 @@
     }
   }
   //  MEDIA = TABLET = [ ] = 768PX
-  &__content {
+  &__nav-bar {
     @include mixins.tablet {
       flex-direction: row;
       padding: 0px 36px;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
-  &__content {
+  &__nav-bar {
     @include mixins.desktop {
       max-width: 1040px;
       padding: 0px 0px;

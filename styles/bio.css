@@ -24,43 +24,43 @@
 .header {
   background-color: #323232;
 }
-.header__content {
+.header__nav-bar {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.header__content .header-brand-name-container {
+.header__nav-bar .header-brand-name-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__content .header-brand-name-container__link #bandsite-logo-header {
+.header__nav-bar .header-brand-name-container__link #bandsite-logo-header {
   padding: 24px 0px 16px 0px;
 }
 @media (min-width: 768px) {
-  .header__content .header-brand-name-container__link #bandsite-logo-header {
+  .header__nav-bar .header-brand-name-container__link #bandsite-logo-header {
     padding: 22px 0px 22px 0px;
   }
 }
 @media (min-width: 768px) {
-  .header__content .header-brand-name-container__link {
+  .header__nav-bar .header-brand-name-container__link {
     display: flex;
     justify-content: flex-start;
   }
 }
-.header__content .header-top-nav-container__navigations {
+.header__nav-bar .header-top-nav-container__navigations {
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
-.header__content .header-top-nav-container__navigations--list {
+.header__nav-bar .header-top-nav-container__navigations--list {
   list-style: none;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__content .header-top-nav-container__navigations--list .top-navigation-link {
+.header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link {
   text-decoration: none;
   text-transform: capitalize;
   display: block;
@@ -73,29 +73,29 @@
   border-bottom: 3px solid #323232;
 }
 @media (min-width: 768px) {
-  .header__content .header-top-nav-container__navigations--list .top-navigation-link {
+  .header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link {
     padding-bottom: 0px;
     margin-left: 60px;
     height: 100%;
   }
 }
-.header__content .header-top-nav-container__navigations--list #bio-link {
+.header__nav-bar .header-top-nav-container__navigations--list #bio-link {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
   font-weight: 600;
 }
-.header__content .header-top-nav-container__navigations--list .top-navigation-link:hover {
+.header__nav-bar .header-top-nav-container__navigations--list .top-navigation-link:hover {
   color: #fafafa;
   border-bottom: 3px solid #fafafa;
 }
 @media (min-width: 768px) {
-  .header__content {
+  .header__nav-bar {
     flex-direction: row;
     padding: 0px 36px;
   }
 }
 @media (min-width: 1280px) {
-  .header__content {
+  .header__nav-bar {
     max-width: 1040px;
     padding: 0px 0px;
     margin: auto;
