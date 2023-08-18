@@ -239,6 +239,12 @@
       height: 260px;
     }
   }
+  //  MEDIA = TABLET = [ ] = 610PX
+  &__hero {
+    @include mixins.mobile2 {
+      height: 290px;
+    }
+  }
   //  MEDIA = TABLET = [ ] = 768PX
   &__hero {
     @include mixins.tablet {

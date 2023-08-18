@@ -204,6 +204,11 @@
     height: 260px;
   }
 }
+@media (min-width: 610px) {
+  .about__hero {
+    height: 290px;
+  }
+}
 @media (min-width: 768px) {
   .about__hero {
     height: 320px;
