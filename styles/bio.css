@@ -148,7 +148,7 @@
   z-index: 1;
 }
 
-@media (min-width: 365px) {
+@media (min-width: 465px) {
   .bio-hero {
     height: 300px;
   }
