@@ -451,6 +451,8 @@
   .footer__socials-container {
     display: flex;
     gap: 36px;
+    padding-top: 45px;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 1280px) {

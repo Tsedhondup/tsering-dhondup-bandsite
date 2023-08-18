@@ -538,8 +538,8 @@
     @include mixins.tablet {
       display: flex;
       gap: 36px;
-      // padding-top: 16px;
-      // padding-bottom: 36px;
+      padding-top: 45px;
+      padding-bottom: 36px;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
