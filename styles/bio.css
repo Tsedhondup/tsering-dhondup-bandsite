@@ -199,6 +199,11 @@
   margin: auto;
   width: 100%;
 }
+@media (min-width: 465px) {
+  .about__hero {
+    height: 260px;
+  }
+}
 @media (min-width: 768px) {
   .about__hero {
     height: 320px;
