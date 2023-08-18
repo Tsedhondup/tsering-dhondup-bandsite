@@ -391,14 +391,13 @@
 }
 .footer__socials-container .footer-social-text {
   font-size: 24px;
-  font-weight: 700;
   color: #fafafa;
   padding-top: 24px;
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   .footer__socials-container .footer-social-text {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 600;
     padding-top: 48px;
     padding-bottom: 36px;
