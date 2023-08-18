@@ -490,8 +490,8 @@
         //  MEDIA = TABLET = [ ] = 768PX
         &--logo {
           @include mixins.tablet {
-            height: 24px;
-            width: 24px;
+            height: 22px;
+            width: 22px;
           }
         }
       }
