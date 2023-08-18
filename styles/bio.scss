@@ -464,6 +464,7 @@
     // SOCIAL TEXT
     .footer-social-text {
       font-size: 24px;
+      font-weight: 600;
       color: colors.$alabaster;
       padding-top: 24px;
       padding-bottom: 16px;
@@ -472,7 +473,6 @@
     .footer-social-text {
       @include mixins.tablet {
         font-size: 34px;
-        font-weight: 600;
         padding: 0px;
         // padding-top: 48px;
         // padding-bottom: 36px;
