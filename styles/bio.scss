@@ -382,7 +382,7 @@
   // TITLE
   &__title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 32px;
     color: colors.$badnSiteDarkBlack;
     padding-top: 24px;
@@ -390,7 +390,7 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__title {
     @include mixins.tablet {
-      font-size: 36px;
+      font-size: 34px;
       padding: 48px 0px 0px 0px;
       line-height: 44px;
       max-width: 900px;
