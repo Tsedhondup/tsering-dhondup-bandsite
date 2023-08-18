@@ -272,7 +272,7 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__artist-statement {
     @include mixins.tablet {
-      font-size: 24px;
+      font-size: 19px;
       line-height: 32px;
       padding: 0px 60px;
       padding-top: 48px;
@@ -296,7 +296,7 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__artist-name {
     @include mixins.tablet {
-      font-size: 16px;
+      font-size: 13px;
       padding-top: 5px;
       line-height: 32px;
     }

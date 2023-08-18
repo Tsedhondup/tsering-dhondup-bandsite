@@ -232,7 +232,7 @@
 }
 @media (min-width: 768px) {
   .about__artist-statement, .about__artist-name {
-    font-size: 24px;
+    font-size: 19px;
     line-height: 32px;
     padding: 0px 60px;
     padding-top: 48px;
@@ -249,7 +249,7 @@
 }
 @media (min-width: 768px) {
   .about__artist-name {
-    font-size: 16px;
+    font-size: 13px;
     padding-top: 5px;
     line-height: 32px;
   }
