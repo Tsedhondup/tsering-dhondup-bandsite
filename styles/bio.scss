@@ -357,7 +357,7 @@
 }
 //-----------------------------------------------------------------------------//
 // PHOTO GALLERY
-.photo-gallery {
+.gallery {
   padding: 0px 16px;
   padding-bottom: 16px;
   background-color: colors.$alabaster;
@@ -388,7 +388,7 @@
   // PHOTO GALLERY IMAGE CONTAINER
   &__image-container {
     // IMAGES
-    .photo-gallery-img {
+    .gallery-img {
       width: 100%;
       display: block;
       padding-top: 16px;
@@ -398,13 +398,13 @@
       transition: 0.3s;
     }
     // PSEUDO CLASS : HOVER
-    .photo-gallery-img:hover {
+    .gallery-img:hover {
       filter: grayscale(0%);
       -webkit-filter: grayscale(0%);
       -moz-filter: grayscale(0%);
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .photo-gallery-img {
+    .gallery-img {
       @include mixins.tablet {
         width: calc(33.3% - 1rem);
         padding-top: 0px;
@@ -430,7 +430,7 @@
   }
 }
 //  MEDIA = TABLET = [ ] = 768PX
-.photo-gallery {
+.gallery {
   @include mixins.tablet {
     padding: 0px 36px;
     padding-bottom: 36px;
