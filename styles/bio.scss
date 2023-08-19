@@ -512,16 +512,6 @@
     // BANDSITE LOGO FOR: MAX-WIDTH = 768PX
     .footer-logo-one-container {
       display: none;
-      &__logo {
-        display: none;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__logo {
-        @include mixins.tablet {
-          display: inline;
-          height: 19px;
-        }
-      }
     }
     //  MEDIA = TABLET = [ ] = 768PX
     .footer-logo-one-container {

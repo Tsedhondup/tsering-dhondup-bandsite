@@ -430,15 +430,6 @@
 .footer__socials-container .footer-logo-one-container {
   display: none;
 }
-.footer__socials-container .footer-logo-one-container__logo {
-  display: none;
-}
-@media (min-width: 768px) {
-  .footer__socials-container .footer-logo-one-container__logo {
-    display: inline;
-    height: 19px;
-  }
-}
 @media (min-width: 768px) {
   .footer__socials-container .footer-logo-one-container {
     display: flex;
