@@ -39,7 +39,7 @@
     flex-direction: column;
     width: 100%;
     // TOP-BANDSITE-LOGO
-    .header-brand-name-container {
+    .header-logo-container {
       @include mixins.flex-absolute-center;
       // LINK
       &__link {
