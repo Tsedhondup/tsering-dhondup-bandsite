@@ -541,7 +541,7 @@
   // LABEL SECTION
   &__labels-container {
     // STAKHOLDER-1
-    .footer-stakeholders {
+    .footer-labels {
       // PERSON & ORGANISATION
       &__names {
         font-size: 13px;
@@ -550,7 +550,7 @@
         color: colors.$alabaster;
         padding-top: 16px;
         // GROUP NAME
-        .footer-stakeholders-group-name {
+        .footer-labels-group-name {
           text-transform: capitalize;
         }
       }

@@ -452,22 +452,22 @@
     margin: auto;
   }
 }
-.footer__labels-container .footer-stakeholders__names {
+.footer__labels-container .footer-labels__names {
   font-size: 13px;
   font-weight: 400;
   line-height: 22px;
   color: #fafafa;
   padding-top: 16px;
 }
-.footer__labels-container .footer-stakeholders__names .footer-stakeholders-group-name {
+.footer__labels-container .footer-labels__names .footer-labels-group-name {
   text-transform: capitalize;
 }
 @media (min-width: 768px) {
-  .footer__labels-container .footer-stakeholders__names {
+  .footer__labels-container .footer-labels__names {
     padding-top: 0px;
   }
 }
-.footer__labels-container .footer-stakeholders__address {
+.footer__labels-container .footer-labels__address {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -475,12 +475,12 @@
   padding-top: 16px;
 }
 @media (min-width: 768px) {
-  .footer__labels-container .footer-stakeholders__address {
+  .footer__labels-container .footer-labels__address {
     padding-top: 25px;
     line-height: 20px;
   }
 }
-.footer__labels-container .footer-stakeholders__email {
+.footer__labels-container .footer-labels__email {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -490,7 +490,7 @@
   text-decoration: none;
 }
 @media (min-width: 768px) {
-  .footer__labels-container .footer-stakeholders__email {
+  .footer__labels-container .footer-labels__email {
     font-size: 13px;
     padding-top: 25px;
     line-height: 20px;
