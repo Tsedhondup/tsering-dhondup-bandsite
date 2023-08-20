@@ -450,7 +450,7 @@
       padding-top: 36px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__image-container {
     @include mixins.tablet {
       max-width: 1040px;
