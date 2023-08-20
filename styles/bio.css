@@ -508,13 +508,13 @@
     margin: auto;
   }
 }
-.footer__copy-right--website-name {
+.footer__copy-right--link {
   display: block;
   padding-top: 60px;
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .footer__copy-right--website-name {
+  .footer__copy-right--link {
     display: none;
   }
 }

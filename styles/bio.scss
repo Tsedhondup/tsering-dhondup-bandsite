@@ -614,13 +614,13 @@
   // COPY RIGHT SECTION
   &__copy-right {
     //  WEBSITE NAME
-    &--website-name {
+    &--link {
       display: block;
       padding-top: 60px;
       padding-bottom: 16px;
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    &--website-name {
+    &--link {
       @include mixins.tablet {
         display: none;
       }
