@@ -389,7 +389,7 @@
   padding: 0px 16px;
   background-color: #323232;
 }
-.footer__links .footer-social-text {
+.footer__links .footer-link-text {
   font-size: 24px;
   font-weight: 600;
   color: #fafafa;
@@ -397,7 +397,7 @@
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .footer__links .footer-social-text {
+  .footer__links .footer-link-text {
     font-size: 34px;
     padding: 0px;
   }
