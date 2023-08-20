@@ -71,7 +71,7 @@
         justify-content: space-between;
         height: 100%;
         // LIST
-        &--list {
+        &--item {
           list-style: none;
           flex: 1;
           @include mixins.flex-absolute-center;
