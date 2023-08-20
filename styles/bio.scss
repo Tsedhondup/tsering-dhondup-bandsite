@@ -478,7 +478,7 @@
       }
     }
     // SOCIAL ICONS
-    .footer-socials {
+    .footer-link-socials {
       display: flex;
       &__links {
         &--logo {
@@ -503,7 +503,7 @@
       }
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .footer-socials {
+    .footer-link-socials {
       @include mixins.tablet {
         display: flex;
       }
