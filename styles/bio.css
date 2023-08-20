@@ -34,11 +34,11 @@
   justify-content: center;
   align-items: center;
 }
-.header__nav-bar .header-logo-container__link #bandsite-logo-header {
+.header__nav-bar .header-logo-container__link--img {
   padding: 24px 0px 16px 0px;
 }
 @media (min-width: 768px) {
-  .header__nav-bar .header-logo-container__link #bandsite-logo-header {
+  .header__nav-bar .header-logo-container__link--img {
     padding: 22px 0px 22px 0px;
   }
 }

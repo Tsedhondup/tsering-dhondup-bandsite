@@ -44,13 +44,12 @@
       // LINK
       &__link {
         // LOGO
-        #bandsite-logo-header {
+        &--img {
           padding: 24px 0px 16px 0px;
         }
         //  MEDIA = TABLET = [ ] = 768PX
-        #bandsite-logo-header {
+        &--img {
           @include mixins.tablet {
-            // padding: 36px;
             padding: 22px 0px 22px 0px;
           }
         }
