@@ -405,7 +405,7 @@
   // PHOTO GALLERY IMAGE CONTAINER
   &__image-container {
     // IMAGES
-    .gallery-img {
+    &--img {
       width: 100%;
       display: block;
       padding-top: 16px;
@@ -415,13 +415,13 @@
       transition: 0.3s;
     }
     // PSEUDO CLASS : HOVER
-    .gallery-img:hover {
+    &--img:hover {
       filter: grayscale(0%);
       -webkit-filter: grayscale(0%);
       -moz-filter: grayscale(0%);
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .gallery-img {
+    &--img {
       @include mixins.tablet {
         width: calc(33.3% - 1rem);
         padding-top: 0px;

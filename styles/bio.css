@@ -342,7 +342,7 @@
     max-width: 1040px;
   }
 }
-.gallery__image-container .gallery-img {
+.gallery__image-container--img {
   width: 100%;
   display: block;
   padding-top: 16px;
@@ -351,13 +351,13 @@
   -moz-filter: grayscale(100%);
   transition: 0.3s;
 }
-.gallery__image-container .gallery-img:hover {
+.gallery__image-container--img:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
 }
 @media (min-width: 768px) {
-  .gallery__image-container .gallery-img {
+  .gallery__image-container--img {
     width: calc(33.3% - 1rem);
     padding-top: 0px;
   }
