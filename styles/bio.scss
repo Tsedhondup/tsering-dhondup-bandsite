@@ -461,7 +461,7 @@
   // SOCIAL SECTION
   &__links {
     // SOCIAL TEXT
-    .footer-link-text {
+    .footer-links-text {
       font-size: 24px;
       font-weight: 600;
       color: colors.$alabaster;
@@ -469,7 +469,7 @@
       padding-bottom: 16px;
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .footer-link-text {
+    .footer-links-text {
       @include mixins.tablet {
         font-size: 34px;
         padding: 0px;
@@ -478,7 +478,7 @@
       }
     }
     // SOCIAL ICONS
-    .footer-link-socials {
+    .footer-links-socials {
       display: flex;
       &__link {
         &--logo {
@@ -503,7 +503,7 @@
       }
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .footer-link-socials {
+    .footer-links-socials {
       @include mixins.tablet {
         display: flex;
       }
