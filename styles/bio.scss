@@ -538,8 +538,8 @@
       margin: auto;
     }
   }
-  // STAKEHOLDER SECTION
-  &__band-stakeholders-container {
+  // LABEL SECTION
+  &__labels-container {
     // STAKHOLDER-1
     .footer-stakeholders {
       // PERSON & ORGANISATION
@@ -597,14 +597,14 @@
     }
   }
   //  MEDIA = TABLET = [ ] = 768PX
-  &__band-stakeholders-container {
+  &__labels-container {
     @include mixins.tablet {
       display: flex;
       gap: 50px;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
-  &__band-stakeholders-container {
+  &__labels-container {
     @include mixins.desktop {
       max-width: 1040px;
       margin: auto;
