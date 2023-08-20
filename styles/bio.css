@@ -344,11 +344,10 @@
     font-size: 34px;
     padding: 48px 0px 0px 0px;
     line-height: 44px;
-    max-width: 900px;
     margin: auto;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .gallery__title {
     max-width: 1040px;
   }

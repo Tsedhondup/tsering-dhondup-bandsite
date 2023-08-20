@@ -403,13 +403,13 @@
       font-size: 34px;
       padding: 48px 0px 0px 0px;
       line-height: 44px;
-      max-width: 900px;
+      // max-width: 900px;
       margin: auto;
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
   &__title {
-    @include mixins.tablet {
+    @include mixins.desktop {
       max-width: 1040px;
     }
   }
