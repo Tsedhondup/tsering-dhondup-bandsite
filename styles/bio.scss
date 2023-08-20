@@ -459,7 +459,7 @@
   padding: 0px 16px;
   background-color: colors.$bandSiteBlack;
   // SOCIAL SECTION
-  &__links {
+  &__links-container {
     // SOCIAL TEXT
     .footer-links-text {
       font-size: 24px;
@@ -523,7 +523,7 @@
     }
   }
   //  MEDIA = TABLET = [ ] = 768PX
-  &__links {
+  &__links-container {
     @include mixins.tablet {
       display: flex;
       gap: 36px;
@@ -532,7 +532,7 @@
     }
   }
   //  MEDIA = TABLET = [ ] = 1280PX
-  &__links {
+  &__links-container {
     @include mixins.desktop {
       max-width: 1040px;
       margin: auto;
