@@ -427,11 +427,11 @@
     display: flex;
   }
 }
-.footer__links .footer-logo-one-container {
+.footer__links .footer-links-logo-one-container {
   display: none;
 }
 @media (min-width: 768px) {
-  .footer__links .footer-logo-one-container {
+  .footer__links .footer-links-logo-one-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;

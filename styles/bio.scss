@@ -508,12 +508,12 @@
         display: flex;
       }
     }
-    // BANDSITE LOGO FOR: MAX-WIDTH = 768PX
-    .footer-logo-one-container {
+    // FOOTER - BANDSITE LOGO-ONE
+    .footer-links-logo-one-container {
       display: none;
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    .footer-logo-one-container {
+    .footer-links-logo-one-container {
       @include mixins.tablet {
         display: flex;
         justify-content: flex-end;
