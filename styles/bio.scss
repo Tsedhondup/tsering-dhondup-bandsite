@@ -119,7 +119,7 @@
       padding: 0px 36px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__nav-bar {
     @include mixins.desktop {
       max-width: 1040px;
@@ -162,7 +162,7 @@
       padding: 0px 36px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
       max-width: 1040px;
@@ -181,7 +181,7 @@
     z-index: 1;
   }
 }
-//  MEDIA = MOBILE2 = [ ] = 465PX
+//  MEDIA = MOBILE-2 = [ ] = 465PX
 .bio-hero {
   @include mixins.mobile {
     height: 300px;
@@ -193,7 +193,7 @@
     height: 450px;
   }
 }
-//  MEDIA = TABLET = [ ] = 1280PX
+//  MEDIA = DESKTOP = [ ] = 1280PX
 .bio-hero {
   @include mixins.desktop {
     min-height: 600px;
@@ -223,7 +223,7 @@
       line-height: 44px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
       max-width: 1040px;
@@ -239,13 +239,13 @@
     width: 100%;
     // height: 165px;
   }
-  //  MEDIA = TABLET = [ ] = 465PX
+  //  MEDIA = MOBILE-1 = [ ] = 465PX
   &__hero {
     @include mixins.mobile {
       height: 260px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 610PX
+  //  MEDIA = MOBILE-2 = [ ] = 610PX
   &__hero {
     @include mixins.mobile2 {
       height: 290px;
@@ -259,7 +259,7 @@
       max-width: 800px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__hero {
     @include mixins.desktop {
       max-width: 1000px;
@@ -286,7 +286,7 @@
       margin: auto;
     }
   }
-  // MEDIA = TABLET = [ ] = 1280PX
+  // MEDIA = DESKTOP = [ ] = 1280PX
   &__artist-statement {
     @include mixins.desktop {
       max-width: 1000px;
@@ -307,7 +307,7 @@
       line-height: 32px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__artist-name {
     @include mixins.desktop {
       padding-right: 60px;
@@ -335,7 +335,7 @@
       margin: auto;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__band-name {
     @include mixins.desktop {
       max-width: 1000px;
@@ -367,7 +367,7 @@
       padding: 0px 60px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 768PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   .band-descriptions {
     @include mixins.desktop {
       max-width: 1000px;
@@ -403,11 +403,10 @@
       font-size: 34px;
       padding: 48px 0px 0px 0px;
       line-height: 44px;
-      // max-width: 900px;
       margin: auto;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__title {
     @include mixins.desktop {
       max-width: 1040px;
@@ -545,7 +544,7 @@
       padding-bottom: 36px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__links-container {
     @include mixins.desktop {
       max-width: 1040px;
@@ -618,7 +617,7 @@
       gap: 50px;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__labels-container {
     @include mixins.desktop {
       max-width: 1040px;
@@ -665,7 +664,7 @@
       position: relative;
     }
   }
-  //  MEDIA = TABLET = [ ] = 1280PX
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__copy-right {
     @include mixins.desktop {
       max-width: 1040px;
