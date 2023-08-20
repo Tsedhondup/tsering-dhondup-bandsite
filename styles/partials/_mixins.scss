@@ -7,7 +7,7 @@
 
 // MEDIA QUERIES MIXINS
 // MOBILE
-@mixin mobile {
+@mixin mobileOne {
   @media (min-width: 465px) {
     @content;
   }

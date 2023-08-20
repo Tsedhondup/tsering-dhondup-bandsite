@@ -183,7 +183,7 @@
 }
 //  MEDIA = MOBILE-2 = [ ] = 465PX
 .bio-hero {
-  @include mixins.mobile {
+  @include mixins.mobileOne {
     height: 300px;
   }
 }
@@ -241,7 +241,7 @@
   }
   //  MEDIA = MOBILE-1 = [ ] = 465PX
   &__hero {
-    @include mixins.mobile {
+    @include mixins.mobileOne {
       height: 260px;
     }
   }
