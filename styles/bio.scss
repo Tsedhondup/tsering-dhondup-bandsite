@@ -480,7 +480,7 @@
     // SOCIAL ICONS
     .footer-link-socials {
       display: flex;
-      &__links {
+      &__link {
         &--logo {
           height: 23px;
           width: 23px;
@@ -495,7 +495,7 @@
         }
       }
       //  MEDIA = TABLET = [ ] = 768PX
-      &__links {
+      &__link {
         @include mixins.tablet {
           display: flex;
           align-items: center;
