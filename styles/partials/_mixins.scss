@@ -13,7 +13,7 @@
   }
 }
 // MOBILE
-@mixin mobile2 {
+@mixin mobileTwo {
   @media (min-width: 610px) {
     @content;
   }

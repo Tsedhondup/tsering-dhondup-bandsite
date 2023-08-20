@@ -247,7 +247,7 @@
   }
   //  MEDIA = MOBILE-2 = [ ] = 610PX
   &__hero {
-    @include mixins.mobile2 {
+    @include mixins.mobileTwo {
       height: 290px;
     }
   }
