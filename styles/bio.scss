@@ -452,7 +452,7 @@
   }
   //  MEDIA = DESKTOP = [ ] = 1280PX
   &__image-container {
-    @include mixins.tablet {
+    @include mixins.desktop {
       max-width: 1040px;
       margin: auto;
     }

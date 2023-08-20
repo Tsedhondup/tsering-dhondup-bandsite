@@ -382,7 +382,7 @@
     padding-top: 36px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .gallery__image-container {
     max-width: 1040px;
     margin: auto;
