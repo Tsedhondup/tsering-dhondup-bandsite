@@ -26,9 +26,9 @@ let comments = [
   },
 ];
 
-//  INVOKES IMMEDIATELY AFTER PAGE IS LOADED
+//  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 
 // CREATING DOM ELEMENTS
-const createElements = () => {};
+const createElements = (key) => {};
 // DISPLAY COMMENTS - RENDERING INTO DOM
-const displayComment = () => {};
+const displayComment = (comments) => {};
