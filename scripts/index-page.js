@@ -25,3 +25,10 @@ let comments = [
     Let us appreciate this for what it is and what it contains. `,
   },
 ];
+
+//  INVOKES IMMEDIATELY AFTER PAGE IS LOADED
+
+// CREATING DOM ELEMENTS
+const createElements = () => {};
+// DISPLAY COMMENTS - RENDERING INTO DOM
+const displayComment = () => {};
