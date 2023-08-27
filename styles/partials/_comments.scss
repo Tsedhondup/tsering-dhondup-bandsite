@@ -103,6 +103,9 @@
     .comment-content {
       border-bottom: 1px solid colors.$mercury;
       padding: 14px 0px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
       // IMAGE-CONTAINER
       &__img-container {
         &--img-base {

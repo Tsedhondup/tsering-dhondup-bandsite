@@ -113,6 +113,9 @@
 .comments__comments-container .comment-content {
   border-bottom: 1px solid #e1e1e1;
   padding: 14px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 .comments__comments-container .comment-content__img-container--img-base {
   width: 36px;
