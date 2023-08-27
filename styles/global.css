@@ -16,6 +16,11 @@
 .comments {
   padding: 0px 16px;
 }
+.comments__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
 .comments__form {
   display: flex;
 }

@@ -2,6 +2,10 @@
 @use "./font";
 .comments {
   padding: 0px 16px;
+  // TITLE
+  &__title {
+    @include mixins.sectionHeader320;
+  }
   // FORM
   &__form {
     display: flex;
