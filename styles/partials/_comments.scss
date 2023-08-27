@@ -1,7 +1,7 @@
 @use "./mixins";
 @use "./font";
 .comments {
-  padding: 0px 16px;
+  padding: 24px 16px 0px 16px;
   // TITLE
   &__title {
     @include mixins.sectionHeader320;
@@ -29,6 +29,21 @@
     // INPUT SECTION
     .input-elements {
       flex: 80%;
+      // LABEL
+      &__label {
+        display: block;
+        width: 100%;
+      }
+      // INPUT
+      &__name-inputs {
+        display: block;
+        width: 100%;
+      }
+      // SUBMIT  BUTTON
+      &__submit-btn {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }

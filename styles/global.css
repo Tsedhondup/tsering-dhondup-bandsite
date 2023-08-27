@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 .comments {
-  padding: 0px 16px;
+  padding: 24px 16px 0px 16px;
 }
 .comments__title {
   font-size: 24px;
@@ -42,4 +42,16 @@
 }
 .comments__form .input-elements {
   flex: 80%;
+}
+.comments__form .input-elements__label {
+  display: block;
+  width: 100%;
+}
+.comments__form .input-elements__name-inputs {
+  display: block;
+  width: 100%;
+}
+.comments__form .input-elements__submit-btn {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */
