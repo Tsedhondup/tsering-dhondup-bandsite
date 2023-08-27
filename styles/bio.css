@@ -471,8 +471,6 @@
   line-height: 22px;
   color: #fafafa;
   padding-top: 16px;
-}
-.footer__labels-container .footer-labels__names .footer-labels-group-name {
   text-transform: capitalize;
 }
 @media (min-width: 768px) {
