@@ -5,8 +5,8 @@
   align-items: center;
 }
 
-// SECTION HEADER
-@mixin sectionHeader {
+// SECTION HEADER - MIN-WIDTH:768PX [] TABLET & DESKTOP
+@mixin sectionHeader768 {
   font-size: 34px;
   font-weight: 600;
   line-height: 44px;
