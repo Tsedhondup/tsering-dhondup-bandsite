@@ -12,4 +12,10 @@
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
   font-weight: 700;
+}
+.comments__form .profile-image-container__img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }/*# sourceMappingURL=global.css.map */
