@@ -27,4 +27,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
+}
+.comments__form .input-elements {
+  flex: 80%;
 }/*# sourceMappingURL=global.css.map */
