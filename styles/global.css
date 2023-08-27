@@ -56,7 +56,7 @@
   padding-bottom: 10px;
 }
 .comments__form .input-elements #label-comment {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 .comments__form .input-elements__name-input {
   display: block;
@@ -69,10 +69,11 @@
 .comments__form .input-elements__comments-input {
   display: block;
   width: 100%;
-  height: 75px;
+  height: 80px;
   padding: 16px;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  text-align: left;
 }
 .comments__form .input-elements__submit-btn {
   display: block;
