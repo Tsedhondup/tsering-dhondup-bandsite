@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+// SECTION HEADER
+@mixin sectionHeader {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+}
 // MEDIA QUERIES MIXINS
 // MOBILE-1
 @mixin mobileOne {
