@@ -13,6 +13,9 @@
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
   font-weight: 700;
 }
+.comments__form {
+  display: flex;
+}
 .comments__form .profile-image-container__img {
   display: block;
   width: 36px;

@@ -3,6 +3,7 @@
 .comments {
   // FORM
   &__form {
+    display: flex;
     // IMAGE CONTAINER
     .profile-image-container {
       // IMAGE
@@ -13,7 +14,9 @@
         border-radius: 50%;
       }
     }
-
     // INPUT SECTION
+    // .input-elements{
+
+    // }
   }
 }
