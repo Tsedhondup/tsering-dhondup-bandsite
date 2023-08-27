@@ -100,9 +100,18 @@
   // COMMENTS ADDS DYNAMICALLY BY JavaScript
   &__comments-container {
     // COMMENTS-CONTENT
-    .comments-content {
+    .comment-content {
       border-bottom: 1px solid colors.$mercury;
       padding: 14px 0px;
+      // IMAGE-CONTAINER
+      &__img-container {
+        &--img-base {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: colors.$mercury;
+        }
+      }
     }
   }
 }

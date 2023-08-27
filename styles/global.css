@@ -110,7 +110,13 @@
 .comments__form .input-elements__submit-btn:hover {
   background-color: #000000;
 }
-.comments__comments-container .comments-content {
+.comments__comments-container .comment-content {
   border-bottom: 1px solid #e1e1e1;
   padding: 14px 0px;
+}
+.comments__comments-container .comment-content__img-container--img-base {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
 }/*# sourceMappingURL=global.css.map */

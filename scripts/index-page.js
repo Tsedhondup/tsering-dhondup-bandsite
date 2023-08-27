@@ -36,7 +36,7 @@ const createEl = (comments) => {
   comments.forEach((element) => {
     // COMMENT-CONTENT/CONTAINER
     let commentsContainerEl = document.createElement("div");
-    commentsContainerEl.classList.add("comments-content");
+    commentsContainerEl.classList.add("comment-content");
 
     // IMAGE-CONTAINTER
     let imgContainerEl = document.createElement("div");
