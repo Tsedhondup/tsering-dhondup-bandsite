@@ -55,6 +55,9 @@
   color: #afafaf;
   padding-bottom: 10px;
 }
+.comments__form .input-elements #label-comment {
+  padding-top: 16px;
+}
 .comments__form .input-elements__name-input {
   display: block;
   width: 100%;
