@@ -30,7 +30,8 @@
 }
 .comments__form {
   display: flex;
-  padding-top: 16px;
+  padding: 16px 0px;
+  border-bottom: 1px solid #e1e1e1;
 }
 .comments__form .profile-image-container {
   flex: 17%;

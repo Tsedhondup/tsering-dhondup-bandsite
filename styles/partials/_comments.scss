@@ -16,7 +16,8 @@
   // FORM
   &__form {
     display: flex;
-    padding-top: 16px;
+    padding: 16px 0px;
+    border-bottom: 1px solid colors.$mercury;
     // IMAGE CONTAINER
     .profile-image-container {
       flex: 17%;
