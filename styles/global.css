@@ -42,12 +42,17 @@
 }
 .comments__form .input-elements {
   flex: 80%;
+  background-color: bisque;
 }
 .comments__form .input-elements__label {
   display: block;
   width: 100%;
 }
-.comments__form .input-elements__name-inputs {
+.comments__form .input-elements__name-input {
+  display: block;
+  width: 100%;
+}
+.comments__form .input-elements__comments-input {
   display: block;
   width: 100%;
 }

@@ -26,20 +26,26 @@
         border-radius: 50%;
       }
     }
-    // INPUT SECTION
+    // INPUT-SECTION
     .input-elements {
       flex: 80%;
+      background-color: bisque;
       // LABEL
       &__label {
         display: block;
         width: 100%;
       }
-      // INPUT
-      &__name-inputs {
+      // NAME-INPUT
+      &__name-input {
         display: block;
         width: 100%;
       }
-      // SUBMIT  BUTTON
+      // COMMENT-INPUT
+      &__comments-input {
+        display: block;
+        width: 100%;
+      }
+      // SUBMIT-BUTTON
       &__submit-btn {
         display: block;
         width: 100%;
