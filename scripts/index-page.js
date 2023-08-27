@@ -43,8 +43,8 @@ const createEl = (comments) => {
     imgContainerEl.classList.add("comment-content__img-container");
 
     // IMAGE
-    let imgEl = document.createElement("img");
-    imgEl.classList.add("comment-content__img-container--img");
+    let imgEl = document.createElement("div");
+    imgEl.classList.add("comment-content__img-container--img-base");
     imgContainerEl.appendChild(imgEl);
 
     commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
