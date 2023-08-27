@@ -1,8 +1,11 @@
 @use "./mixins";
 @use "./font";
 .comments {
+  // FORM
   &__form {
+    // IMAGE CONTAINER
     .profile-image-container {
+      // IMAGE
       &__img {
         display: block;
         width: 36px;
@@ -10,5 +13,7 @@
         border-radius: 50%;
       }
     }
+
+    // INPUT SECTION
   }
 }
