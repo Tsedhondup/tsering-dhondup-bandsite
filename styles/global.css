@@ -32,7 +32,7 @@
   display: flex;
 }
 .comments__form .profile-image-container {
-  flex: 20%;
+  flex: 17%;
 }
 .comments__form .profile-image-container__img-base {
   height: 36px;
@@ -44,8 +44,7 @@
   border-radius: 50%;
 }
 .comments__form .input-elements {
-  flex: 80%;
-  background-color: bisque;
+  flex: 83%;
 }
 .comments__form .input-elements__label {
   display: block;

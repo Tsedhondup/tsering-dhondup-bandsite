@@ -17,7 +17,7 @@
     display: flex;
     // IMAGE CONTAINER
     .profile-image-container {
-      flex: 20%;
+      flex: 17%;
       // IMAGE-BASE
       &__img-base {
         height: 36px;
@@ -28,19 +28,10 @@
         background-size: cover;
         border-radius: 50%;
       }
-      // IMAGE
-      //   &__img {
-      //     display: block;
-      //     object-fit: cover;
-      //     // width: 70%;
-      //     margin: auto;
-      //     // border-radius: 50%;
-      //   }
     }
     // INPUT-SECTION
     .input-elements {
-      flex: 80%;
-      background-color: bisque;
+      flex: 83%;
       // LABEL
       &__label {
         display: block;
