@@ -19,12 +19,13 @@
     .profile-image-container {
       flex: 20%;
       // IMAGE
-      &__img {
-        display: block;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-      }
+      //   &__img {
+      //     display: block;
+      //     object-fit: cover;
+      //     // width: 70%;
+      //     margin: auto;
+      //     // border-radius: 50%;
+      //   }
     }
     // INPUT-SECTION
     .input-elements {
