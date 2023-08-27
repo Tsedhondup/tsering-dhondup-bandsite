@@ -109,4 +109,8 @@
 }
 .comments__form .input-elements__submit-btn:hover {
   background-color: #000000;
+}
+.comments__comments-container .comments-content {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 14px;
 }/*# sourceMappingURL=global.css.map */

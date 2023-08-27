@@ -97,4 +97,12 @@
       }
     }
   }
+  // COMMENTS ADDS DYNAMICALLY BY JAVASCRIPT
+  &__comments-container {
+    // COMMENTS-CONTENT
+    .comments-content {
+      border-bottom: 1px solid colors.$mercury;
+      padding-bottom: 14px;
+    }
+  }
 }
