@@ -91,6 +91,9 @@
         border-width: 0px;
         margin-top: 16px;
       }
+      &__submit-btn:hover {
+        background-color: colors.$badnSiteDarkBlack;
+      }
     }
   }
 }
