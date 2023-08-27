@@ -49,8 +49,9 @@
 .comments__form .input-elements__label {
   display: block;
   width: 100%;
-  font-size: 13px;
+  font-size: 10px;
   text-transform: uppercase;
+  color: #afafaf;
 }
 .comments__form .input-elements__name-input {
   display: block;

@@ -37,8 +37,9 @@
       &__label {
         display: block;
         width: 100%;
-        font-size: 13px;
+        font-size: 10px;
         text-transform: uppercase;
+        color: colors.$silver;
       }
       // NAME-INPUT
       &__name-input {
