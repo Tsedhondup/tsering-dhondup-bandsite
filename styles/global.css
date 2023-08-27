@@ -34,6 +34,15 @@
 .comments__form .profile-image-container {
   flex: 20%;
 }
+.comments__form .profile-image-container__img-base {
+  height: 36px;
+  width: 36px;
+  background-image: url("../../assets/images/Mohan-muruge.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
 .comments__form .input-elements {
   flex: 80%;
   background-color: bisque;
