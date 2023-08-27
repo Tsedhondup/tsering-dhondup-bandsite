@@ -1,11 +1,13 @@
 @use "./mixins";
 @use "./font";
 .comments {
+  padding: 0px 16px;
   // FORM
   &__form {
     display: flex;
     // IMAGE CONTAINER
     .profile-image-container {
+      flex: 20%;
       // IMAGE
       &__img {
         display: block;
