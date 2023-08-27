@@ -56,13 +56,12 @@
         padding: 16px;
         border: 1px solid colors.$mercury;
         border-radius: 4px;
+        color: colors.$badnSiteDarkBlack;
       }
-      //   &__name-input:hover {
-      //     border-color: #d22d2d;
-      //   }
-      //   &__name-input:focus{
-      //     border-width: 0.5px;
-      //   }
+      &__name-input::placeholder {
+        color: colors.$bandSiteBlack;
+        font-size: 12px;
+      }
       // COMMENT-INPUT
       &__comments-input {
         display: block;
@@ -72,6 +71,10 @@
         border: 1px solid colors.$mercury;
         border-radius: 4px;
         text-align: left;
+      }
+      &__comments-input::placeholder {
+        color: colors.$bandSiteBlack;
+        font-size: 12px;
       }
       // SUBMIT-BUTTON
       &__submit-btn {
