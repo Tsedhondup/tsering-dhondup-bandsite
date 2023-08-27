@@ -6,6 +6,12 @@
   &__title {
     @include mixins.sectionHeader320;
   }
+  // MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      @include mixins.sectionHeader768;
+    }
+  }
   // FORM
   &__form {
     display: flex;

@@ -21,6 +21,13 @@
   font-weight: 600;
   line-height: 32px;
 }
+@media (min-width: 768px) {
+  .comments__title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}
 .comments__form {
   display: flex;
 }
