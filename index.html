@@ -168,24 +168,27 @@
         </div>
         <!-- INPUT SECTION -->
         <div class="input-elements">
-          <!-- NAME -->
+          <!-- NAME-LABEL -->
           <label for="name" class="input-elements__label">name</label>
+          <!-- NAME-INPUT -->
           <input
             type="text"
             id="name"
             class="input-elements__name-input"
             placeholder="Enter your name"
           />
-          <!-- COMMENTS -->
+          <!-- COMMENTS-LABEL -->
           <label for="comment" class="input-elements__label" id="label-comment"
             >comment</label
           >
-          <input
-            type="text"
-            id="comment"
+          <!-- COMMENT-INPUT -->
+          <textarea
+            name=""
             class="input-elements__comments-input"
+            id="comment"
             placeholder="Add a new comment"
-          />
+          ></textarea>
+          <!-- SUBMIT-BUTTON -->
           <button class="input-elements__submit-btn" type="submit">
             comment
           </button>
