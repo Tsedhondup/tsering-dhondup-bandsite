@@ -57,6 +57,7 @@
         border: 1px solid colors.$mercury;
         border-radius: 4px;
         color: colors.$badnSiteDarkBlack;
+        font-size: 12px;
       }
       &__name-input::placeholder {
         color: colors.$bandSiteBlack;
@@ -71,6 +72,7 @@
         border: 1px solid colors.$mercury;
         border-radius: 4px;
         text-align: left;
+        font-size: 12px;
       }
       &__comments-input::placeholder {
         color: colors.$bandSiteBlack;

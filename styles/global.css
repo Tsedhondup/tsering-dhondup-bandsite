@@ -67,6 +67,7 @@
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   color: #000000;
+  font-size: 12px;
 }
 .comments__form .input-elements__name-input::-moz-placeholder {
   color: #323232;
@@ -84,6 +85,7 @@
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   text-align: left;
+  font-size: 12px;
 }
 .comments__form .input-elements__comments-input::-moz-placeholder {
   color: #323232;
