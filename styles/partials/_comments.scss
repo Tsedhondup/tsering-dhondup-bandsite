@@ -112,6 +112,14 @@
           background-color: colors.$mercury;
         }
       }
+      // TEXT-CONTAINER
+      &__text-container {
+        //NAME & TIME CONTAINER
+        .name-time-container {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

@@ -119,4 +119,8 @@
   height: 36px;
   border-radius: 50%;
   background-color: #e1e1e1;
+}
+.comments__comments-container .comment-content__text-container .name-time-container {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=global.css.map */
