@@ -46,11 +46,17 @@
       &__name-input {
         display: block;
         width: 100%;
+        height: 36px;
+        border: 1px solid colors.$mercury;
+        border-radius: 4px;
       }
       // COMMENT-INPUT
       &__comments-input {
         display: block;
         width: 100%;
+        height: 75px;
+        border: 1px solid colors.$mercury;
+        border-radius: 4px;
       }
       // SUBMIT-BUTTON
       &__submit-btn {
