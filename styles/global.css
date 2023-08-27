@@ -53,6 +53,7 @@
   font-size: 10px;
   text-transform: uppercase;
   color: #afafaf;
+  padding-bottom: 10px;
 }
 .comments__form .input-elements__name-input {
   display: block;
