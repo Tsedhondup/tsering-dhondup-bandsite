@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+// SECTION HEADER - MAX-WIDTH: 320PX
+@mixin sectionHeader320 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
 // SECTION HEADER - MIN-WIDTH:768PX [] TABLET & DESKTOP
 @mixin sectionHeader768 {
   font-size: 34px;
