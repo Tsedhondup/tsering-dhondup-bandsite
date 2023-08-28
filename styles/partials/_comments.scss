@@ -135,6 +135,10 @@
             color: colors.$silver;
           }
         }
+        // COMMENT-TEXT
+        &--comments {
+          font-size: 13px;
+        }
       }
     }
   }

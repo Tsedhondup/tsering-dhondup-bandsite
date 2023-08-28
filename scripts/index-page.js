@@ -67,7 +67,7 @@ const createEl = (comments) => {
     // TEXT-CONTAINER PART-2 : COMMENT
     let commentTextEl = document.createElement("p");
     commentTextEl.innerText = element.commentText;
-    commentTextEl.classList.add("comments-conten__text-container--comments");
+    commentTextEl.classList.add("comment-content__text-container--comments");
     textContainerEl.appendChild(commentTextEl); // APPENDING TO textContainerEl
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TEXT-CONTAINER INTO commentContainerEl
