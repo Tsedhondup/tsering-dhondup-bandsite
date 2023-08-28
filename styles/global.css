@@ -134,6 +134,12 @@
   background-color: #000000;
 }
 @media (min-width: 768px) {
+  .comments__form .input-elements__submit-btn {
+    width: 150px;
+    padding: 11.67px 32px;
+  }
+}
+@media (min-width: 768px) {
   .comments__form {
     max-width: 560px;
     margin: auto;

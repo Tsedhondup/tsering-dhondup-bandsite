@@ -110,6 +110,12 @@
       &__submit-btn:hover {
         background-color: colors.$badnSiteDarkBlack;
       }
+      &__submit-btn {
+        @include mixins.tablet {
+          width: 150px;
+          padding: 11.67px 32px;
+        }
+      }
     }
   }
   //  MEDIA = TABLET = [ ] = 768PX
