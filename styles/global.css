@@ -127,7 +127,7 @@
 }
 @media (min-width: 768px) {
   .comments__form {
-    max-width: 600px;
+    max-width: 560px;
     margin: auto;
   }
 }
