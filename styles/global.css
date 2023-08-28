@@ -110,6 +110,9 @@
 .comments__form .input-elements__submit-btn:hover {
   background-color: #000000;
 }
+.comments__comments-container {
+  padding-bottom: 16px;
+}
 .comments__comments-container .comment-content {
   border-bottom: 1px solid #e1e1e1;
   padding: 14px 0px;
