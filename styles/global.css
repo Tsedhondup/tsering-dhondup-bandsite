@@ -63,8 +63,7 @@
 }
 @media (min-width: 768px) {
   .comments__form .profile-image-container {
-    display: flex;
-    justify-content: flex-end;
+    flex: 5%;
   }
 }
 .comments__form .input-elements {

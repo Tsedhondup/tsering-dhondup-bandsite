@@ -44,8 +44,7 @@
     //  MEDIA = TABLET = [ ] = 768PX
     .profile-image-container {
       @include mixins.tablet {
-        display: flex;
-        justify-content: flex-end;
+        flex: 5%;
       }
     }
     // INPUT-SECTION
