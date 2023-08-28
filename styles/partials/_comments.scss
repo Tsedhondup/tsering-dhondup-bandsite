@@ -36,6 +36,7 @@
       }
       //  MEDIA = TABLET = [ ] = 768PX
       &__img-base {
+        margin-top: 9px;
         @include mixins.tablet {
           @include mixins.profileImageTablet;
         }

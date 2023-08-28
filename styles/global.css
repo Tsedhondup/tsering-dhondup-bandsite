@@ -54,6 +54,9 @@
   height: 36px;
   border-radius: 50%;
 }
+.comments__form .profile-image-container__img-base {
+  margin-top: 9px;
+}
 @media (min-width: 768px) {
   .comments__form .profile-image-container__img-base {
     width: 48px;
