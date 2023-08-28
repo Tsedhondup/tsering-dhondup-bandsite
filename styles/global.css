@@ -102,6 +102,7 @@
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   color: #000000;
+  background-color: #fafafa;
   font-size: 12px;
 }
 .comments__form .input-elements__name-input::-moz-placeholder {
@@ -120,6 +121,8 @@
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   text-align: left;
+  color: #000000;
+  background-color: #fafafa;
   font-size: 12px;
 }
 .comments__form .input-elements__comments-input::-moz-placeholder {
