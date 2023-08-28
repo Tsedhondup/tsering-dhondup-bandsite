@@ -11,6 +11,7 @@
   }
   // MEDIA = TABLET = [ ] = 768PX
   &__title {
+    padding-top: 48px;
     @include mixins.tablet {
       @include mixins.sectionHeader768;
     }

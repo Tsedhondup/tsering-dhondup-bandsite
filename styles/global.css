@@ -25,6 +25,9 @@
   font-weight: 600;
   line-height: 32px;
 }
+.comments__title {
+  padding-top: 48px;
+}
 @media (min-width: 768px) {
   .comments__title {
     font-size: 34px;
