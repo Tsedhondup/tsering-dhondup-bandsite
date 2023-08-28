@@ -41,6 +41,13 @@
         }
       }
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .profile-image-container {
+      @include mixins.tablet {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
     // INPUT-SECTION
     .input-elements {
       flex: 83%;
