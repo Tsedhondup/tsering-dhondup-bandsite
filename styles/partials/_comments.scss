@@ -121,6 +121,18 @@
         .name-time-container {
           display: flex;
           justify-content: space-between;
+          // NAME
+          &__name {
+            font-size: 13px;
+            font-weight: 600;
+            color: colors.$bandSiteBlack;
+          }
+          // TIME
+          &__time {
+            font-size: 13px;
+            font-weight: 400;
+            color: colors.$silver;
+          }
         }
       }
     }

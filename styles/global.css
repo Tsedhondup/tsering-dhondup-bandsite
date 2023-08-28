@@ -126,4 +126,14 @@
 .comments__comments-container .comment-content__text-container .name-time-container {
   display: flex;
   justify-content: space-between;
+}
+.comments__comments-container .comment-content__text-container .name-time-container__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #323232;
+}
+.comments__comments-container .comment-content__text-container .name-time-container__time {
+  font-size: 13px;
+  font-weight: 400;
+  color: #afafaf;
 }/*# sourceMappingURL=global.css.map */
