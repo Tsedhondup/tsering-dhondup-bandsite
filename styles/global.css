@@ -175,4 +175,10 @@
 .comments__comments-container .comment-content__text-container--comments {
   font-size: 13px;
   line-height: 18px;
+}
+
+@media (min-width: 768px) {
+  .comments {
+    padding: 0px 36px;
+  }
 }/*# sourceMappingURL=global.css.map */

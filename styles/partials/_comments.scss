@@ -165,3 +165,9 @@
     }
   }
 }
+//  MEDIA = TABLET = [ ] = 768PX
+.comments {
+  @include mixins.tablet {
+    padding: 0px 36px;
+  }
+}
