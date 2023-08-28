@@ -35,6 +35,12 @@
     line-height: 44px;
   }
 }
+@media (min-width: 1280px) {
+  .comments__title {
+    max-width: 1040px;
+    margin: auto;
+  }
+}
 .comments__form {
   display: flex;
   padding: 16px 0px;

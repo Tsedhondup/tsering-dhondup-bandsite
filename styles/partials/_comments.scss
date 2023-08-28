@@ -16,6 +16,13 @@
       @include mixins.sectionHeader768;
     }
   }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__title {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
   // FORM
   &__form {
     display: flex;
