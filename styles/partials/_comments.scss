@@ -125,9 +125,7 @@
         //  MEDIA = TABLET = [ ] = 768PX
         &--img-base {
           @include mixins.tablet {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+            @include mixins.profileImageTablet;
           }
         }
       }

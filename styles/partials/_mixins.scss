@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 }
-
+/*----------------------------------------------------------*/
 // SECTION HEADER - MAX-WIDTH: 320PX
 @mixin sectionHeader320 {
   font-size: 24px;
@@ -17,6 +17,7 @@
   font-weight: 600;
   line-height: 44px;
 }
+/*----------------------------------------------------------*/
 // MEDIA QUERIES MIXINS
 // MOBILE-1
 @mixin mobileOne {
@@ -41,4 +42,19 @@
   @media (min-width: 1280px) {
     @content;
   }
+}
+/*----------------------------------------------------------*/
+// PROFILE-IMAGE/PROFILE-IMAGE-BASE DIMENSION
+
+// MOBILE
+@mixin profileImgMobile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+// TABLET
+@mixin profileImgTablet {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
