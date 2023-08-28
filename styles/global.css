@@ -17,9 +17,10 @@
   font-weight: 700;
 }
 .comments {
-  padding: 24px 16px 0px 16px;
+  padding: 0px 16px 0px 16px;
 }
 .comments__title {
+  padding-top: 24px;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;

@@ -1,10 +1,12 @@
 @use "./mixins";
 @use "./font";
 @use "./colors";
+
 .comments {
-  padding: 24px 16px 0px 16px;
+  padding: 0px 16px 0px 16px;
   // TITLE
   &__title {
+    padding-top: 24px;
     @include mixins.sectionHeader320;
   }
   // MEDIA = TABLET = [ ] = 768PX
