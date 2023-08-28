@@ -60,6 +60,12 @@
         color: colors.$silver;
         padding-bottom: 4px;
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__label {
+        @include mixins.tablet {
+          text-align: left;
+        }
+      }
       // LABEL-COMMENT
       #label-comment {
         padding-top: 20px;

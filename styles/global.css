@@ -80,6 +80,11 @@
   color: #afafaf;
   padding-bottom: 4px;
 }
+@media (min-width: 768px) {
+  .comments__form .input-elements__label {
+    text-align: left;
+  }
+}
 .comments__form .input-elements #label-comment {
   padding-top: 20px;
 }
