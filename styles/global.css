@@ -126,6 +126,7 @@
 .comments__comments-container .comment-content__text-container .name-time-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 14px;
 }
 .comments__comments-container .comment-content__text-container .name-time-container__name {
   font-size: 13px;

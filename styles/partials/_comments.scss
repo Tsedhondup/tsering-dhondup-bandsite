@@ -121,6 +121,7 @@
         .name-time-container {
           display: flex;
           justify-content: space-between;
+          padding-bottom: 14px;
           // NAME
           &__name {
             font-size: 13px;
