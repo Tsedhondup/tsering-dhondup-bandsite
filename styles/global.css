@@ -110,6 +110,12 @@
 .comments__form .input-elements__submit-btn:hover {
   background-color: #000000;
 }
+@media (min-width: 768px) {
+  .comments__form {
+    max-width: 600px;
+    margin: auto;
+  }
+}
 .comments__comments-container {
   padding-bottom: 16px;
 }

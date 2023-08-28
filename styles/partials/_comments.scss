@@ -97,6 +97,13 @@
       }
     }
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__form {
+    @include mixins.tablet {
+      max-width: 600px;
+      margin: auto;
+    }
+  }
   // COMMENTS ADDS DYNAMICALLY BY JavaScript
   &__comments-container {
     // COMMENTS-CONTENT
