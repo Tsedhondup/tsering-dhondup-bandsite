@@ -182,6 +182,12 @@
   font-size: 13px;
   line-height: 18px;
 }
+@media (min-width: 768px) {
+  .comments__comments-container {
+    max-width: 560px;
+    margin: auto;
+  }
+}
 
 @media (min-width: 768px) {
   .comments {
