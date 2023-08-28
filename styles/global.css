@@ -140,6 +140,11 @@
   }
 }
 @media (min-width: 768px) {
+  .comments__form .input-elements {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
   .comments__form {
     max-width: 560px;
     margin: auto;

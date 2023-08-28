@@ -117,6 +117,14 @@
         }
       }
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .input-elements {
+      @include mixins.tablet {
+        // style is only meant for submit-btn
+        // rest of the inputs elements are being align-left
+        text-align: right;
+      }
+    }
   }
   //  MEDIA = TABLET = [ ] = 768PX
   &__form {
