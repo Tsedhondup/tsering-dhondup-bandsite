@@ -158,6 +158,12 @@
       margin: auto;
     }
   }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__form {
+    @include mixins.desktop {
+      max-width: 562px;
+    }
+  }
   // COMMENTS ADDS DYNAMICALLY BY JavaScript
   &__comments-container {
     // COMMENTS-CONTENT
@@ -222,6 +228,12 @@
       max-width: 585px;
       margin: auto;
       padding-bottom: 36px;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__comments-container {
+    @include mixins.tablet {
+      max-width: 562px;
     }
   }
 }
