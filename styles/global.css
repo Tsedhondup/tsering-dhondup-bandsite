@@ -123,13 +123,18 @@
   display: block;
   width: 100%;
   height: 80px;
-  padding: 16px;
+  padding: 12px;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   text-align: left;
   color: #000000;
   background-color: #fafafa;
   font-size: 12px;
+}
+@media (min-width: 768px) {
+  .comments__form .input-elements__comments-input {
+    padding: 16px;
+  }
 }
 .comments__form .input-elements__comments-input::-moz-placeholder {
   color: #323232;
