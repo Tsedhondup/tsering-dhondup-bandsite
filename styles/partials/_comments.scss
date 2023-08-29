@@ -31,7 +31,6 @@
     gap: 16px;
     // IMAGE CONTAINER
     .profile-image-container {
-    //   flex: 17%;
       padding-top: 16px;
       // IMAGE-BASE
       &__img-base {
@@ -49,15 +48,9 @@
         }
       }
     }
-    //  MEDIA = TABLET = [ ] = 768PX
-    .profile-image-container {
-      @include mixins.tablet {
-        flex: 5%;
-      }
-    }
+
     // INPUT-SECTION
     .input-elements {
-    //   flex: 83%;
       // LABEL
       &__label {
         display: block;
