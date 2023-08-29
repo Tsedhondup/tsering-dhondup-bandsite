@@ -67,6 +67,9 @@
     border-radius: 50%;
   }
 }
+.comments__form .input-elements {
+  width: 100%;
+}
 .comments__form .input-elements__label {
   display: block;
   width: 100%;
