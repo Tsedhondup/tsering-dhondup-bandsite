@@ -80,6 +80,7 @@
 }
 @media (min-width: 768px) {
   .comments__form .input-elements__label {
+    font-size: 12px;
     text-align: left;
   }
 }

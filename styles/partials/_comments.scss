@@ -51,7 +51,7 @@
 
     // INPUT-SECTION
     .input-elements {
-        width: 100%;
+      width: 100%;
       // LABEL
       &__label {
         display: block;
@@ -64,6 +64,7 @@
       //  MEDIA = TABLET = [ ] = 768PX
       &__label {
         @include mixins.tablet {
+          font-size: 12px;
           text-align: left;
         }
       }
