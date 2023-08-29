@@ -220,6 +220,11 @@
   line-height: 18px;
 }
 @media (min-width: 768px) {
+  .comments__comments-container .comment-content__text-container--comments {
+    line-height: 22px;
+  }
+}
+@media (min-width: 768px) {
   .comments__comments-container .comment-content {
     padding: 24px 0px;
   }

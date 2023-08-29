@@ -213,6 +213,12 @@
           font-size: 13px;
           line-height: 18px;
         }
+        //  MEDIA = TABLET = [ ] = 768PX
+        @include mixins.tablet {
+          &--comments {
+            line-height: 22px;
+          }
+        }
       }
     }
     //  MEDIA = TABLET = [ ] = 768PX
