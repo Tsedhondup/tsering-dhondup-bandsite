@@ -105,6 +105,11 @@
   background-color: #fafafa;
   font-size: 12px;
 }
+@media (min-width: 768px) {
+  .comments__form .input-elements__name-input {
+    height: 48px;
+  }
+}
 .comments__form .input-elements__name-input::-moz-placeholder {
   color: #323232;
   font-size: 12px;

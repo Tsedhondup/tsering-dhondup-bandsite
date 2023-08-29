@@ -89,6 +89,12 @@
         background-color: colors.$alabaster;
         font-size: 12px;
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__name-input {
+        @include mixins.tablet {
+          height: 48px;
+        }
+      }
       &__name-input::placeholder {
         color: colors.$bandSiteBlack;
         font-size: 12px;
