@@ -113,6 +113,7 @@
       &__comments-input {
         @include mixins.tablet {
           padding: 16px;
+          height: 92px;
         }
       }
       &__comments-input::placeholder {
