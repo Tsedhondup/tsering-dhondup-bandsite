@@ -213,6 +213,12 @@
         }
       }
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .comment-content {
+      @include mixins.tablet {
+        padding: 24px 0px;
+      }
+    }
   }
   //  MEDIA = TABLET = [ ] = 768PX
   &__comments-container {
