@@ -171,7 +171,7 @@
 }
 @media (min-width: 768px) {
   .comments__form {
-    max-width: 560px;
+    max-width: 585px;
     margin: auto;
   }
 }
@@ -227,7 +227,7 @@
 }
 @media (min-width: 768px) {
   .comments__comments-container {
-    max-width: 560px;
+    max-width: 585px;
     margin: auto;
     padding-bottom: 36px;
   }

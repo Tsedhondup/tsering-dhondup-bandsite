@@ -158,7 +158,7 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__form {
     @include mixins.tablet {
-      max-width: 560px;
+      max-width: 585px;
       margin: auto;
     }
   }
@@ -223,7 +223,7 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__comments-container {
     @include mixins.tablet {
-      max-width: 560px;
+      max-width: 585px;
       margin: auto;
       padding-bottom: 36px;
     }
