@@ -47,7 +47,6 @@
   border-bottom: 1px solid #e1e1e1;
 }
 .comments__form .profile-image-container {
-  flex: 17%;
   padding-top: 16px;
 }
 .comments__form .profile-image-container__img-base {
@@ -71,9 +70,6 @@
   .comments__form .profile-image-container {
     flex: 5%;
   }
-}
-.comments__form .input-elements {
-  flex: 83%;
 }
 .comments__form .input-elements__label {
   display: block;

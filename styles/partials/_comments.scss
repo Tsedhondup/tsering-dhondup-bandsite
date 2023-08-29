@@ -30,7 +30,7 @@
     border-bottom: 1px solid colors.$mercury;
     // IMAGE CONTAINER
     .profile-image-container {
-      flex: 17%;
+    //   flex: 17%;
       padding-top: 16px;
       // IMAGE-BASE
       &__img-base {
@@ -56,7 +56,7 @@
     }
     // INPUT-SECTION
     .input-elements {
-      flex: 83%;
+    //   flex: 83%;
       // LABEL
       &__label {
         display: block;
