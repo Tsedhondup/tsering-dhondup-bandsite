@@ -8,7 +8,183 @@
     <title>BandSite</title>
   </head>
   <body>
-    <!-- SCRIPT-FILE -->
-    <script src="../scripts/build-shows-page.js"></script>
+    <body>
+      <!-- HEADER SECTION -->
+      <header class="header" id="band-site-header">
+        <nav class="header__nav-bar">
+          <!-- BRAND NAME -->
+          <section class="header-logo-container">
+            <a href="../index.html" class="header-logo-container__link">
+              <img
+                src="./assets/logos/Logo-bandsite.svg"
+                alt="bandsite-logo"
+                id="bandsite-logo-header"
+                class="header-logo-container__link--img"
+              />
+            </a>
+          </section>
+          <!-- PAGE-LINKS -->
+          <section class="header-page-link-container">
+            <ul class="header-page-link-container__list">
+              <li class="header-page-link-container__list--item">
+                <a href="index.html" class="page-link" id="bio-link"
+                  >biography</a
+                >
+              </li>
+              <li class="header-page-link-container__list--item">
+                <a href="shows.html" class="page-link" id="shows-link">shows</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </header>
+
+      <!------------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <!-- HERO-SECTION -->
+      <section class="bio-hero">
+        <h1 class="bio-hero__title">the bees knees</h1>
+        <!-- OVERLAY ELEMENT FOR HERO IMAGE -->
+        <div class="bio-hero__overlay"></div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------------>
+      <footer class="footer">
+        <!-- FOOTER-LINKS-SECTION -->
+        <section class="footer__links-container">
+          <!-- FOOTER-LINKS-TEXT S-->
+          <h1 class="footer-links-text">Get in Touch</h1>
+          <!-- FOOTER-SOCIALS-CONTAINER -->
+          <div class="footer-links-socials">
+            <!-- FOOTER-SOCIAL-LINKS -->
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="footer-links-socials__link"
+            >
+              <img
+                src="./assets/icons/Icon-instagram.svg"
+                alt="instagram-logo"
+                class="footer-links-socials__link--logo"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="footer-links-socials__link"
+            >
+              <img
+                src="./assets/icons/Icon-facebook.svg"
+                alt="facebook-logo"
+                class="footer-links-socials__link--logo"
+              />
+            </a>
+
+            <a
+              href="https://twitter.com/home?lang=en"
+              target="_blank"
+              class="footer-links-socials__link"
+            >
+              <img
+                src="./assets/icons/Icon-twitter.svg"
+                alt="twitter-logo"
+                class="footer-links-socials__link--logo"
+              />
+            </a>
+          </div>
+          <!-- BANDSITE LOGO FOR: MIN-WIDTH = 768PX - REMAIN HIDDEN FOR SCREEN WIDTH BELOW 768PX -->
+          <div class="footer-links-logo-one-container">
+            <!-- LINK -->
+            <a
+              href="#band-site-header"
+              class="footer-links-logo-one-container__link"
+            >
+              <!-- LOGO -->
+              <img src="./assets/logos/Logo-bandsite.svg" alt="band-site-logo"
+            /></a>
+          </div>
+        </section>
+
+        <!------------------------------------------------->
+        <!-- FOOTER-LABELS-SECTION -->
+        <section class="footer__labels-container">
+          <!-- LABE-1 -->
+          <section class="footer-labels">
+            <!-- NAME & GROUP -->
+            <div class="footer-labels__names">
+              <p class="footer-labels-person-name">Cam adams</p>
+              <p class="footer-labels-group-name">The Bees knees management</p>
+            </div>
+            <!-- ADDRESS & LOCATIONS -->
+            <p class="footer-labels__address">
+              503 Broadway Penthouse, <br />
+              New York, NY 10012, USA
+            </p>
+            <!-- EMAIL -->
+            <a href="mailto:info@thebeeskness.com" class="footer-labels__email"
+              >info@thebeeskness.com</a
+            >
+          </section>
+          <!-- LABEL-2 -->
+          <section class="footer-labels">
+            <!-- NAME & GROUP -->
+            <div class="footer-labels__names">
+              <p class="footer-labels-person-name">Pearl gregg</p>
+              <p class="footer-labels-group-name">Limitless artist group</p>
+            </div>
+            <!-- ADDRESS -->
+            <p class="footer-labels__address">
+              Booking Agent for <br />
+              USA/South America/Japan
+            </p>
+            <!-- EMAIL -->
+            <a
+              href="mailto:pearl.greg@limitlessag.com"
+              class="footer-labels__email"
+              >pearl.greg@limitlessag.com</a
+            >
+          </section>
+          <!-- LABEL-3 -->
+          <section class="footer-labels">
+            <!-- NAME & GROUP -->
+            <div class="footer-labels__names">
+              <p class="footer-labels-person-name">Carson Whyte</p>
+              <p class="footer-labels-group-name">ARCH entertainment</p>
+            </div>
+            <!-- ADDRESS -->
+            <p class="footer-labels__address">
+              Booking Agent <br />for UK / EU / AU
+            </p>
+            <!-- EMAIL -->
+            <a
+              href="mailto:cwhyte@archertertainment.com"
+              class="footer-labels__email"
+              >cwhyte@archertertainment.com</a
+            >
+          </section>
+        </section>
+        <!------------------------------------------------->
+        <!-- FOOTER-COPY-RIGHT-SECTION -->
+        <section class="footer__copy-right">
+          <!-- LINK -->
+          <a href="#band-site-header" class="footer__copy-right--link">
+            <!-- LOGO -->
+            <img
+              src="./assets/logos/Logo-bandsite.svg"
+              alt="bandsite-logo"
+              id="#bandsite-logo-footer"
+            />
+          </a>
+          <!-- COPY-RIGHT-INFO -->
+          <p id="copy-right-info">
+            Copyright the bees knees &copy 2021 all right reserved
+          </p>
+        </section>
+      </footer>
+      <!-- SCRIPT FILES  -->
+      <script src="../scripts/build-shows-page.js"></script>
+    </body>
   </body>
 </html>
