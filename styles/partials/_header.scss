@@ -1,3 +1,5 @@
+@use "./colors";
+@use "./mixins";
 /* HEADER */
 .header {
   background-color: colors.$bandSiteBlack;
