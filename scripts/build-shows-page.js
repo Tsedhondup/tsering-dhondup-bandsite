@@ -1,4 +1,5 @@
 // SHOWS-INFO ARRAY
+
 let showsInfo = [
   {
     date: "Mon Sept 06 2021",
@@ -31,3 +32,13 @@ let showsInfo = [
     location: "San Francisco, CA",
   },
 ];
+
+//  DOM RENDERING FUNCTION
+
+let renderingFunction = (headerEl, showsEl) => {
+  let showsContainer = document.querySelector(".shows");
+  // APPENDING SHOW-HEADER
+  showsContainer.appendChild(headerEl);
+  // APPENDING SHOWS-TABLE
+  showsContainer.appendChild(showsEl);
+};
