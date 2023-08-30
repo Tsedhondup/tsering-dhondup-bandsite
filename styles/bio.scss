@@ -3,30 +3,25 @@
 @use "./partials/mixins";
 // COLOR VARIABLES
 @use "./partials/colors";
-//FONTS
-@font-face {
-  font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Avenir";
-  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
-  font-weight: 700;
-}
+//HEADER
+@use "./partials/header";
+// HERO-BIO
+@use "./partials/heroBio";
+// ABOUT
+@use "./partials/about";
+// GALLERY
+@use "./partials/gallery";
+//FOOTER
+@use "./partials/footer"; //FONTS
+
 // GENERAL RULES
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Avenir";
-}
+// * {
+//   padding: 0;
+//   margin: 0;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+//   font-family: "Avenir";
+// }
 
 //-----------------------------------------------------------------------------//
 //-----------------------------------------------------------------------------//
