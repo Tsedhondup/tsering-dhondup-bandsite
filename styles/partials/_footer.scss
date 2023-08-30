@@ -1,0 +1,207 @@
+// FOOTER
+.footer {
+  padding: 0px 16px;
+  background-color: colors.$bandSiteBlack;
+  /*------------------------------------------------*/
+  // SOCIAL-LINKS-SECTION
+  &__links-container {
+    // SOCIAL-LINKS-TEXT
+    .footer-links-text {
+      font-size: 24px;
+      font-weight: 600;
+      color: colors.$alabaster;
+      padding-top: 24px;
+      padding-bottom: 16px;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-links-text {
+      @include mixins.tablet {
+        font-size: 34px;
+        padding: 0px;
+      }
+    }
+    // SOCIAL-LINKS-SOCIALS
+    .footer-links-socials {
+      display: flex;
+      &__link {
+        &--logo {
+          height: 23px;
+          width: 23px;
+          margin-right: 25px;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--logo {
+          @include mixins.tablet {
+            height: 22px;
+            width: 22px;
+          }
+        }
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__link {
+        @include mixins.tablet {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-links-socials {
+      @include mixins.tablet {
+        display: flex;
+      }
+    }
+    // FOOTER-BANDSITE-LOGO-ONE
+    .footer-links-logo-one-container {
+      display: none;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    .footer-links-logo-one-container {
+      @include mixins.tablet {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 10%;
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__links-container {
+    @include mixins.tablet {
+      display: flex;
+      gap: 36px;
+      padding-top: 45px;
+      padding-bottom: 36px;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__links-container {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
+  /*------------------------------------------------*/
+  // LABELS-SECTION
+  &__labels-container {
+    // LABELS
+    .footer-labels {
+      // NAME & GROUP
+      &__names {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 22px;
+        color: colors.$alabaster;
+        padding-top: 16px;
+        text-transform: capitalize;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__names {
+        @include mixins.tablet {
+          padding-top: 0px;
+        }
+      }
+
+      // ADDRESS & LOCATION
+      &__address {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: colors.$mercury;
+        padding-top: 16px;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__address {
+        @include mixins.tablet {
+          padding-top: 25px;
+          line-height: 20px;
+        }
+      }
+      // EMAIL
+      &__email {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: colors.$mercury;
+        display: block;
+        padding-top: 16px;
+        text-decoration: none;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__email {
+        @include mixins.tablet {
+          font-size: 13px;
+          padding-top: 25px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__labels-container {
+    @include mixins.tablet {
+      display: flex;
+      gap: 50px;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__labels-container {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
+  /*------------------------------------------------*/
+  // COPY-RIGHT-SECTION
+  &__copy-right {
+    //  LINK
+    &--link {
+      display: block;
+      padding-top: 60px;
+      padding-bottom: 16px;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &--link {
+      @include mixins.tablet {
+        display: none;
+      }
+    }
+    // COPY RIGHT INFO
+    #copy-right-info {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 20px;
+      padding-bottom: 16px;
+      color: colors.$mercury;
+      text-transform: capitalize;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    #copy-right-info {
+      @include mixins.tablet {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__copy-right {
+    @include mixins.tablet {
+      padding-top: 36px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__copy-right {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
+}
+//  MEDIA = TABLET = [ ] = 768PX
+.footer {
+  @include mixins.tablet {
+    padding: 0px 36px;
+  }
+}

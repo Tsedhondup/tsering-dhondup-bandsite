@@ -1,0 +1,81 @@
+// GALLERY
+.gallery {
+    padding: 0px 16px;
+    padding-bottom: 16px;
+    background-color: colors.$alabaster;
+    /*------------------------------------------------*/
+    // TITLE
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      color: colors.$badnSiteDarkBlack;
+      padding-top: 24px;
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &__title {
+      @include mixins.tablet {
+        font-size: 34px;
+        padding: 48px 0px 0px 0px;
+        line-height: 44px;
+        margin: auto;
+      }
+    }
+    //  MEDIA = DESKTOP = [ ] = 1280PX
+    &__title {
+      @include mixins.desktop {
+        max-width: 1040px;
+      }
+    }
+    /*------------------------------------------------*/
+    // GALLERY IMAGE CONTAINER
+    &__image-container {
+      // IMAGES
+      &--img {
+        width: 100%;
+        display: block;
+        padding-top: 16px;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        transition: 0.3s;
+      }
+      // PSEUDO CLASS:HOVER
+      &--img:hover {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &--img {
+        @include mixins.tablet {
+          width: calc(33.3% - 1rem);
+          padding-top: 0px;
+        }
+      }
+    }
+    //  MEDIA = TABLET = [ ] = 768PX
+    &__image-container {
+      @include mixins.tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 36px;
+      }
+    }
+    //  MEDIA = DESKTOP = [ ] = 1280PX
+    &__image-container {
+      @include mixins.desktop {
+        max-width: 1040px;
+        margin: auto;
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  .gallery {
+    @include mixins.tablet {
+      padding: 0px 36px;
+      padding-bottom: 36px;
+    }
+  }
