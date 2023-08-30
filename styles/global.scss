@@ -1,6 +1,8 @@
 @use "./partials/colors";
 @use "./partials/mixins";
 @use "./partials/comments" as *;
+// BIO-PAGE
+@use "./bio.scss" as *;
 // GENERAL RULES
 * {
   padding: 0;
