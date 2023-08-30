@@ -1,20 +1,20 @@
 // IMPORT FILES **
 // MIXINS
-@use "./partials/mixins";
+@use "./partials/mixins" as *;
 // COLOR VARIABLES
-@use "./partials/colors";
+@use "./partials/colors" as *;
 //HEADER
-@use "./partials/header";
+@use "./partials/header" as *;
 // HERO-BIO
-@use "./partials/heroBio";
+@use "./partials/heroBio" as *;
 // ABOUT
-@use "./partials/about";
+@use "./partials/about" as *;
 // GALLERY
-@use "./partials/gallery";
+@use "./partials/gallery" as *;
 //COMMENTS
-@use "./partials/comments";
+@use "./partials/comments" as *;
 //FOOTER
-@use "./partials/footer"; //FONTS
+@use "./partials/footer" as *; //FONTS
 
 // GENERAL RULES
 // * {
