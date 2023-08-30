@@ -1,1 +1,100 @@
+@use "./partials/colors";
+@use "./partials/mixins";
 @use "./partials/comments" as *;
+/* HEADER */
+.header {
+  background-color: colors.$bandSiteBlack;
+  // HEADER-CONTENT
+  &__nav-bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*------------------------------------------------*/
+    // TOP-BANDSITE-LOGO
+    .header-logo-container {
+      @include mixins.flex-absolute-center;
+      // LINK
+      &__link {
+        // LOGO
+        &--img {
+          padding: 24px 0px 16px 0px;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--img {
+          @include mixins.tablet {
+            padding: 22px 0px 22px 0px;
+          }
+        }
+      }
+      // MEDIA = TABLET = [ ] = 768PX
+      &__link {
+        @include mixins.tablet {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+    }
+    /*------------------------------------------------*/
+    // PAGE-LINKS
+    .header-page-link-container {
+      // UNORDERED LIST
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        // LIST ITEM
+        &--item {
+          list-style: none;
+          flex: 1;
+          @include mixins.flex-absolute-center;
+          // LINK
+          .page-link {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            padding-bottom: 14px;
+            color: colors.$silver;
+            border-bottom: 3px solid colors.$bandSiteBlack;
+            @include mixins.flex-absolute-center;
+          }
+          //  MEDIA = TABLET = [ ] = 768PX
+          .page-link {
+            @include mixins.tablet {
+              padding: 25px 0px;
+              margin-left: 60px;
+              height: 100%;
+            }
+          }
+          // BIO-LINK
+          #bio-link {
+            color: colors.$white;
+            border-bottom: 3px solid colors.$white;
+          }
+          // HOVER
+          .page-link:hover {
+            color: colors.$alabaster;
+            border-bottom: 3px solid colors.$alabaster;
+          }
+        }
+      }
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__nav-bar {
+    @include mixins.tablet {
+      flex-direction: row;
+      padding: 0px 36px;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__nav-bar {
+    @include mixins.desktop {
+      max-width: 1040px;
+      padding: 0px 0px;
+      margin: auto;
+    }
+  }
+}
