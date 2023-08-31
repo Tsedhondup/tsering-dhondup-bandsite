@@ -32,27 +32,7 @@ let showsDatas = [
   },
 ];
 
-/*---------- DOM-RENDERING FUNCTION() ----------*/
-
-// // RENDER-SHOW-TITLE FUNCTION
-// let renderShowTitle = (showTitleEl) => {
-//   let showsContainer = document.querySelector(".shows");
-//   showsContainer.appendChild(showTitleEl);
-// };
-
-// // RENDER-SHOW-HEADER FUNCTION()
-// let renderShowsHeader = (headerEl) => {
-//   let showsContainer = document.querySelector(".shows");
-//   showsContainer.appendChild(headerEl);
-// };
-
-// // RENDER-SHOW-TABLE FUNCTION()
-// let renderShowsTable = (showsTableDataEl) => {
-//   let showsContainer = document.querySelector(".shows");
-//   showsContainer.appendChild(showsTableDataEl);
-// };
-
-// COMMAN-RENDER-FUNCTION
+// SHOW-TABLE-RENDERING-FUNCTION
 
 let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
