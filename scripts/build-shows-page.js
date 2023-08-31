@@ -56,7 +56,6 @@ let renderShowsTable = (showsTableDataEl) => {
 
 // CREATING SHOW TITLE ELMENTS
 let createShowTitleElements = () => {
-  // SHOWS__TITLE - " to be passed as an argument for renderShowHeader() "
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
   showsTitleEl.innerText = "Shows";
@@ -67,12 +66,6 @@ let createShowTitleElements = () => {
 
 // CREATING SHOW HEADER ELEMENTS
 let createShowHeaderElements = () => {
-  // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderShowTable() "
-  let showsTableContainerEl = document.createElement("div");
-  // showsTableContainerEl.classList.add("shows__table-container");
-
-  // SECTION -1 : SHOWS-TABLE-HEADERS-CONTAINER
-
   let headerEl = document.createElement("div");
   headerEl.classList.add("shows-table-headers-container");
   showsTableContainerEl.appendChild(headerEl); // APPENDING TO SHOW-TABLE-CONTAINER
@@ -94,6 +87,9 @@ let createShowHeaderElements = () => {
   headerLocationEl.classList.add("shows-table-headers-container__name");
   headerDateEl.innerText = "Location";
   headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
+
+  // RETURNS SHOW HEADER-EL
+  return headerEl;
 };
 
 // CREATING SHOW DATA ELEMENTS
