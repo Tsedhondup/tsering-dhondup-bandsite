@@ -42,7 +42,7 @@ let renderShowsHeader = (headerEl) => {
   showsContainer.appendChild(headerEl);
 };
 // renderShowsTable()
-let renderShowsTable = (headerEl, showsEl) => {
+let renderShowsTable = (showsEl) => {
   let showsContainer = document.querySelector(".shows");
   // APPENDING SHOWS-TABLE
   showsContainer.appendChild(showsEl);
@@ -54,6 +54,9 @@ let createShowEl = (datas) => {
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
   showsTitleEl.innerText = "Shows";
+
+  // INVOKING RENDER-SHOW-HEADER FUNCTION()
+  renderShowsHeader(showsTitleEl);
 
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
   showsDatas.forEach((element) => {
@@ -120,8 +123,8 @@ let createShowEl = (datas) => {
     venueEl.innerText = element.venue;
     locationEl.innerText = element.location;
 
-    // INVOKING REDERING-FUNCTION()
-    renderingFunction(showsTitleEl, showsTableContainerEl);
+    // INVOKING REDER-SHOW-TABLE FUNCTION()
+    renderShowsTable(showsTableContainerEl);
   });
 };
 
