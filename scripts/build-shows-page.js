@@ -43,16 +43,16 @@ let renderShowTitle = (showTitle) => {
 // RENDER-SHOW-HEADER FUNCTION()
 let renderShowsHeader = (headerEl) => {
   let showsContainer = document.querySelector(".shows");
-  // APPENDING SHOW-HEADER
   showsContainer.appendChild(headerEl);
 };
 
 // RENDER-SHOW-TABLE FUNCTION()
 let renderShowsTable = (showsEl) => {
   let showsContainer = document.querySelector(".shows");
-  // APPENDING SHOWS-TABLE
   showsContainer.appendChild(showsEl);
 };
+
+/*---------- ELEMENT-CREATING FUNCTION() ----------*/
 
 // CREATING SHOW TITLE ELMENTS
 let createShowTitleElements = () => {
