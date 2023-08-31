@@ -35,9 +35,9 @@ let showsDatas = [
 /*---------- DOM-RENDERING FUNCTION() ----------*/
 
 // RENDER-SHOW-TITLE FUNCTION
-let renderShowTitle = (showTitle) => {
+let renderShowTitle = (showTitleEl) => {
   let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(showTitle);
+  showsContainer.appendChild(showTitleEl);
 };
 
 // RENDER-SHOW-HEADER FUNCTION()
@@ -47,9 +47,9 @@ let renderShowsHeader = (headerEl) => {
 };
 
 // RENDER-SHOW-TABLE FUNCTION()
-let renderShowsTable = (showsEl) => {
+let renderShowsTable = (showsTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(showsEl);
+  showsContainer.appendChild(showsTableDataEl);
 };
 
 /*---------- ELEMENT-CREATING FUNCTION() ----------*/
