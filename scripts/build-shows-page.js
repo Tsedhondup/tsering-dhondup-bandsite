@@ -133,6 +133,3 @@ let createShowDataElements = (datas) => {
   // RETURN TABLE-DATA-CONTAINER-EL
   return tableDataContainerEl;
 };
-
-// INVOKING CREATE-ELEMENTS-FUNCTION
-createShowEl(showsDatas);
