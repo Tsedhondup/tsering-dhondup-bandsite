@@ -94,13 +94,11 @@ let createShowHeaderElements = () => {
 
 // CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
+  let tableDataContainerEl = document.createElement("div");
+  tableDataContainerEl.classList.add("shows-table-data-container");
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
   showsDatas.forEach((element) => {
     // SECTION -2 : SHOWS-TABLE-DATA-CONTAINER
-
-    let tableDataContainerEl = document.createElement("div");
-    tableDataContainerEl.classList.add("shows-table-data-container");
-    showsTableContainerEl.appendChild(tableDataContainerEl); // APPENDING TO SHOW-TABLE-CONTAINER
 
     // SHOW-TABLE-DATA-CONTENT
     let tableDataContentEl = document.createElement("div");
@@ -130,10 +128,10 @@ let createShowDataElements = (datas) => {
     dateEl.innerText = element.date;
     venueEl.innerText = element.venue;
     locationEl.innerText = element.location;
-
-    // INVOKING REDER-SHOW-TABLE FUNCTION()
-    renderShowsTable(showsTableContainerEl);
   });
+
+  // RETURN TABLE-DATA-CONTAINER-EL
+  return tableDataContainerEl;
 };
 
 // INVOKING CREATE-ELEMENTS-FUNCTION
