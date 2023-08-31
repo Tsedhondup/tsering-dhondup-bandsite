@@ -1,5 +1,4 @@
 // SHOWS-INFO ARRAY
-
 let showsDatas = [
   {
     date: "Mon Sept 06 2021",
@@ -35,13 +34,13 @@ let showsDatas = [
 
 //  DOM-RENDERING FUNCTION()
 
-// renderShowsHeader()
+// RENDER-SHOW-HEADER FUNCTION()
 let renderShowsHeader = (headerEl) => {
   let showsContainer = document.querySelector(".shows");
   // APPENDING SHOW-HEADER
   showsContainer.appendChild(headerEl);
 };
-// renderShowsTable()
+// RENDER-SHOW-TABLE FUNCTION()
 let renderShowsTable = (showsEl) => {
   let showsContainer = document.querySelector(".shows");
   // APPENDING SHOWS-TABLE
