@@ -49,7 +49,7 @@ let renderShowsTable = (showsEl) => {
 
 // CREATE-ELEMENTS FUNCTION()
 let createShowEl = (datas) => {
-  // SHOWS__TITLE - " to be passed as an argument for renderingFunction() "
+  // SHOWS__TITLE - " to be passed as an argument for renderShowHeader() "
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
   showsTitleEl.innerText = "Shows";
@@ -59,7 +59,7 @@ let createShowEl = (datas) => {
 
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
   showsDatas.forEach((element) => {
-    // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderingFunction() "
+    // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderShowTable() "
     let showsTableContainerEl = document.createElement("div");
     showsTableContainerEl.classList.add("shows__table-container");
 
