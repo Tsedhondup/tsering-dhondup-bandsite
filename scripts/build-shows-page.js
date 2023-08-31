@@ -34,23 +34,23 @@ let showsDatas = [
 
 /*---------- DOM-RENDERING FUNCTION() ----------*/
 
-// RENDER-SHOW-TITLE FUNCTION
-let renderShowTitle = (showTitleEl) => {
-  let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(showTitleEl);
-};
+// // RENDER-SHOW-TITLE FUNCTION
+// let renderShowTitle = (showTitleEl) => {
+//   let showsContainer = document.querySelector(".shows");
+//   showsContainer.appendChild(showTitleEl);
+// };
 
-// RENDER-SHOW-HEADER FUNCTION()
-let renderShowsHeader = (headerEl) => {
-  let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(headerEl);
-};
+// // RENDER-SHOW-HEADER FUNCTION()
+// let renderShowsHeader = (headerEl) => {
+//   let showsContainer = document.querySelector(".shows");
+//   showsContainer.appendChild(headerEl);
+// };
 
-// RENDER-SHOW-TABLE FUNCTION()
-let renderShowsTable = (showsTableDataEl) => {
-  let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(showsTableDataEl);
-};
+// // RENDER-SHOW-TABLE FUNCTION()
+// let renderShowsTable = (showsTableDataEl) => {
+//   let showsContainer = document.querySelector(".shows");
+//   showsContainer.appendChild(showsTableDataEl);
+// };
 
 // COMMAN-RENDER-FUNCTION
 
@@ -76,7 +76,6 @@ let createShowTitleElements = () => {
 let createShowHeaderElements = () => {
   let headerEl = document.createElement("div");
   headerEl.classList.add("shows-table-headers-container");
-  showsTableContainerEl.appendChild(headerEl); // APPENDING TO SHOW-TABLE-CONTAINER
 
   // SHOWS-TABLE-HEADER__NAME - DATE
   let headerDateEl = document.createElement("h3");
@@ -141,3 +140,10 @@ let createShowDataElements = (datas) => {
   // RETURN TABLE-DATA-CONTAINER-EL
   return tableDataContainerEl;
 };
+
+// INVOKING RENDER-DOM FUNCTION
+renderDOM(
+  createShowTitleElements(),
+  createShowHeaderElements(),
+  createShowDataElements()
+);
