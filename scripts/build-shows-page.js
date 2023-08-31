@@ -84,7 +84,7 @@ let createShowDataElements = (datas) => {
   let tableDataContainerEl = document.createElement("div");
   tableDataContainerEl.classList.add("shows-table-data-container");
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
-  showsDatas.forEach((element) => {
+  datas.forEach((element) => {
     // SECTION -2 : SHOWS-TABLE-DATA-CONTAINER
 
     // SHOW-TABLE-DATA-CONTENT
@@ -125,5 +125,5 @@ let createShowDataElements = (datas) => {
 renderDOM(
   createShowTitleElements(),
   createShowHeaderElements(),
-  createShowDataElements()
+  createShowDataElements(showsDatas)
 );
