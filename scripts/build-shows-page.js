@@ -54,6 +54,7 @@ let createShowTitleElements = () => {
 
 // CREATING SHOW HEADER ELEMENTS
 let createShowHeaderElements = () => {
+  // HEADERS-CONTAINER
   let headerEl = document.createElement("div");
   headerEl.classList.add("shows-table-headers-container");
 
@@ -81,13 +82,12 @@ let createShowHeaderElements = () => {
 
 // CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
+  // TABLE-DATA-CONTAINER
   let tableDataContainerEl = document.createElement("div");
   tableDataContainerEl.classList.add("shows-table-data-container");
-  // LOOPING THROUGH THE SHOWS-DATAS ARRAY
-  datas.forEach((element) => {
-    // SECTION -2 : SHOWS-TABLE-DATA-CONTAINER
 
-    // SHOW-TABLE-DATA-CONTENT
+  datas.forEach((element) => {
+    // SHOW-TABLE-DATA-CONTENT 'CONTAINER FOR INDIVIDUAL SHOWS ITEM'
     let tableDataContentEl = document.createElement("div");
     tableDataContentEl.classList.add("shows-table-data-container__content");
     tableDataContainerEl.appendChild(tableDataContentEl); // APPENDING TO SHOW-TABLE-DATA-CONTAINER
