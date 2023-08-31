@@ -32,10 +32,13 @@ let showsDatas = [
   },
 ];
 
-//  DOM-RENDERING FUNCTION()
+/*---------- DOM-RENDERING FUNCTION() ----------*/
 
 // RENDER-SHOW-TITLE FUNCTION
-let renderShowTitle = () => {};
+let renderShowTitle = (showTitle) => {
+  let showsContainer = document.querySelector(".shows");
+  showsContainer.appendChild(showTitle);
+};
 
 // RENDER-SHOW-HEADER FUNCTION()
 let renderShowsHeader = (headerEl) => {
