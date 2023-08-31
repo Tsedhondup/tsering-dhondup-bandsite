@@ -47,6 +47,10 @@ let renderShowsTable = (showsEl) => {
   showsContainer.appendChild(showsEl);
 };
 
+// CREATING SHOW TITLE ELMENTS
+let createShowTitleElements = () => {};
+// CREATING SHOW HEADER ELEMENTS
+let createShowHeaderElements = () => {};
 // CREATE-ELEMENTS FUNCTION()
 let createShowEl = (datas) => {
   // SHOWS__TITLE - " to be passed as an argument for renderShowHeader() "
@@ -70,22 +74,22 @@ let createShowEl = (datas) => {
     showsTableContainerEl.appendChild(headerEl); // APPENDING TO SHOW-TABLE-CONTAINER
 
     // SHOWS-TABLE-HEADER__NAME - DATE
-    let headersDateEl = document.createElement("h3");
-    headersDateEl.classList.add("shows-table-headers-container__name");
-    headersDateEl.innerText = "Date";
-    headerEl.appendChild(headersDateEl); // APPENDING TO SHOW-HEADERS
+    let headerDateEl = document.createElement("h3");
+    headerDateEl.classList.add("shows-table-headers-container__name");
+    headerDateEl.innerText = "Date";
+    headerEl.appendChild(headerDateEl); // APPENDING TO SHOW-HEADERS
 
     // SHOWS-TABLE-HEADER__NAME - VENUE
-    let headersVenueEl = document.createElement("h3");
-    headersVenueEl.classList.add("shows-table-headers-container__name");
-    headersDateEl.innerText = "Venue";
-    headerEl.appendChild(headersVenueEl); // APPENDING TO SHOW-HEADERS
+    let headerVenueEl = document.createElement("h3");
+    headerVenueEl.classList.add("shows-table-headers-container__name");
+    headerDateEl.innerText = "Venue";
+    headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
 
     // SHOWS-TABLE-HEADER__NAME - LOCATION
-    let headersLocationEl = document.createElement("h3");
-    headersLocationEl.classList.add("shows-table-headers-container__name");
-    headersDateEl.innerText = "Location";
-    headerEl.appendChild(headersLocationEl); // APPENDING TO SHOW-HEADERS
+    let headerLocationEl = document.createElement("h3");
+    headerLocationEl.classList.add("shows-table-headers-container__name");
+    headerDateEl.innerText = "Location";
+    headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
 
     // SECTION -2 : SHOWS-TABLE-DATA-CONTAINER
 
