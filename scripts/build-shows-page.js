@@ -52,6 +52,14 @@ let renderShowsTable = (showsTableDataEl) => {
   showsContainer.appendChild(showsTableDataEl);
 };
 
+// COMMAN-RENDER-FUNCTION
+
+let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
+  let showsContainer = document.querySelector(".shows");
+  showsContainer.appendChild(showTitleEl);
+  showsContainer.appendChild(showTableHeaderEl);
+  showsContainer.appendChild(showTableDataEl);
+};
 /*---------- ELEMENT-CREATING FUNCTION() ----------*/
 
 // CREATING SHOW TITLE ELMENTS
@@ -60,8 +68,8 @@ let createShowTitleElements = () => {
   showsTitleEl.classList.add("shows__title");
   showsTitleEl.innerText = "Shows";
 
-  // INVOKING RENDER-SHOW-HEADER FUNCTION()
-  renderShowsHeader(showsTitleEl);
+  // RETURNING-SHOW-TITLE-EL
+  return showsTitleEl;
 };
 
 // CREATING SHOW HEADER ELEMENTS
