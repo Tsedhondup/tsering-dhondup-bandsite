@@ -35,10 +35,15 @@ let showsDatas = [
 
 //  DOM-RENDERING FUNCTION()
 
-let renderingFunction = (headerEl, showsEl) => {
+// renderShowsHeader()
+let renderShowsHeader = (headerEl) => {
   let showsContainer = document.querySelector(".shows");
   // APPENDING SHOW-HEADER
   showsContainer.appendChild(headerEl);
+};
+// renderShowsTable()
+let renderShowsTable = (headerEl, showsEl) => {
+  let showsContainer = document.querySelector(".shows");
   // APPENDING SHOWS-TABLE
   showsContainer.appendChild(showsEl);
 };
@@ -52,8 +57,6 @@ let createShowEl = (datas) => {
 
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
   showsDatas.forEach((element) => {
-    /*-------------------------------------*/
-
     // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderingFunction() "
     let showsTableContainerEl = document.createElement("div");
     showsTableContainerEl.classList.add("shows__table-container");
