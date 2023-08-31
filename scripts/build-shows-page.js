@@ -34,12 +34,16 @@ let showsDatas = [
 
 //  DOM-RENDERING FUNCTION()
 
+// RENDER-SHOW-TITLE FUNCTION
+let renderShowTitle = () => {};
+
 // RENDER-SHOW-HEADER FUNCTION()
 let renderShowsHeader = (headerEl) => {
   let showsContainer = document.querySelector(".shows");
   // APPENDING SHOW-HEADER
   showsContainer.appendChild(headerEl);
 };
+
 // RENDER-SHOW-TABLE FUNCTION()
 let renderShowsTable = (showsEl) => {
   let showsContainer = document.querySelector(".shows");
@@ -48,11 +52,7 @@ let renderShowsTable = (showsEl) => {
 };
 
 // CREATING SHOW TITLE ELMENTS
-let createShowTitleElements = () => {};
-// CREATING SHOW HEADER ELEMENTS
-let createShowHeaderElements = () => {};
-// CREATE-ELEMENTS FUNCTION()
-let createShowEl = (datas) => {
+let createShowTitleElements = () => {
   // SHOWS__TITLE - " to be passed as an argument for renderShowHeader() "
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
@@ -60,37 +60,43 @@ let createShowEl = (datas) => {
 
   // INVOKING RENDER-SHOW-HEADER FUNCTION()
   renderShowsHeader(showsTitleEl);
+};
 
+// CREATING SHOW HEADER ELEMENTS
+let createShowHeaderElements = () => {
+  // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderShowTable() "
+  let showsTableContainerEl = document.createElement("div");
+  // showsTableContainerEl.classList.add("shows__table-container");
+
+  // SECTION -1 : SHOWS-TABLE-HEADERS-CONTAINER
+
+  let headerEl = document.createElement("div");
+  headerEl.classList.add("shows-table-headers-container");
+  showsTableContainerEl.appendChild(headerEl); // APPENDING TO SHOW-TABLE-CONTAINER
+
+  // SHOWS-TABLE-HEADER__NAME - DATE
+  let headerDateEl = document.createElement("h3");
+  headerDateEl.classList.add("shows-table-headers-container__name");
+  headerDateEl.innerText = "Date";
+  headerEl.appendChild(headerDateEl); // APPENDING TO SHOW-HEADERS
+
+  // SHOWS-TABLE-HEADER__NAME - VENUE
+  let headerVenueEl = document.createElement("h3");
+  headerVenueEl.classList.add("shows-table-headers-container__name");
+  headerDateEl.innerText = "Venue";
+  headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
+
+  // SHOWS-TABLE-HEADER__NAME - LOCATION
+  let headerLocationEl = document.createElement("h3");
+  headerLocationEl.classList.add("shows-table-headers-container__name");
+  headerDateEl.innerText = "Location";
+  headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
+};
+
+// CREATING SHOW DATA ELEMENTS
+let createShowDataElements = (datas) => {
   // LOOPING THROUGH THE SHOWS-DATAS ARRAY
   showsDatas.forEach((element) => {
-    // SHOW-TABLE-CONTAINER - " to be passed as an argument for renderShowTable() "
-    let showsTableContainerEl = document.createElement("div");
-    showsTableContainerEl.classList.add("shows__table-container");
-
-    // SECTION -1 : SHOWS-TABLE-HEADERS-CONTAINER
-
-    let headerEl = document.createElement("div");
-    headerEl.classList.add("shows-table-headers-container");
-    showsTableContainerEl.appendChild(headerEl); // APPENDING TO SHOW-TABLE-CONTAINER
-
-    // SHOWS-TABLE-HEADER__NAME - DATE
-    let headerDateEl = document.createElement("h3");
-    headerDateEl.classList.add("shows-table-headers-container__name");
-    headerDateEl.innerText = "Date";
-    headerEl.appendChild(headerDateEl); // APPENDING TO SHOW-HEADERS
-
-    // SHOWS-TABLE-HEADER__NAME - VENUE
-    let headerVenueEl = document.createElement("h3");
-    headerVenueEl.classList.add("shows-table-headers-container__name");
-    headerDateEl.innerText = "Venue";
-    headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
-
-    // SHOWS-TABLE-HEADER__NAME - LOCATION
-    let headerLocationEl = document.createElement("h3");
-    headerLocationEl.classList.add("shows-table-headers-container__name");
-    headerDateEl.innerText = "Location";
-    headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
-
     // SECTION -2 : SHOWS-TABLE-DATA-CONTAINER
 
     let tableDataContainerEl = document.createElement("div");
