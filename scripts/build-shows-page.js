@@ -86,13 +86,13 @@ let createShowHeaderElements = () => {
   // SHOWS-TABLE-HEADER__NAME - VENUE
   let headerVenueEl = document.createElement("h3");
   headerVenueEl.classList.add("shows-table-headers-container__name");
-  headerDateEl.innerText = "Venue";
+  headerVenueEl.innerText = "Venue";
   headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
 
   // SHOWS-TABLE-HEADER__NAME - LOCATION
   let headerLocationEl = document.createElement("h3");
   headerLocationEl.classList.add("shows-table-headers-container__name");
-  headerDateEl.innerText = "Location";
+  headerLocationEl.innerText = "Location";
   headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
 
   // RETURNS SHOW HEADER-EL
