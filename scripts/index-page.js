@@ -49,7 +49,6 @@ const createEl = (comments) => {
 
     // CHECKING IF USER HAS UPLOAED IMG
     if (element.profileImg) {
-      // IF "TRUE" - ADD IMG
       imgEl.style.backgroundImage = element.profileImg;
       imgContainerEl.appendChild(imgEl);
       commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER TO COMMENT-CONTAINER-El
