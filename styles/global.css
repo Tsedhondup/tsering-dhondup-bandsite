@@ -568,6 +568,7 @@
 .comments__comments-container .comment-content__text-container .name-time-container__name {
   font-size: 13px;
   font-weight: 600;
+  text-transform: capitalize;
   color: #323232;
 }
 .comments__comments-container .comment-content__text-container .name-time-container__time {
