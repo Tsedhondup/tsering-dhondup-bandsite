@@ -33,7 +33,9 @@ const displayComment = (element) => {
 // CREATING COMMENT ELEMENTS
 const createEl = (comments) => {
   comments.forEach((element) => {
-    // COMMENT-CONTENT/CONTAINER - WILL BE ADDED AS CHILD OF 'COMMENTS__COMMENTS-CONTAINER' IN BIO-PAGE
+    /* COMMENT-CONTENT/CONTAINER */
+    // WILL BE ADDED AS CHILD OF 'COMMENTS__COMMENTS-CONTAINER' IN BIO-PAGE
+    // HAS TWO SECTIONS**
     let commentsContainerEl = document.createElement("div");
     commentsContainerEl.classList.add("comment-content");
 
