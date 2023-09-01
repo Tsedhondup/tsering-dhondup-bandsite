@@ -65,7 +65,7 @@ const createEl = (comments) => {
     textContainerEl.appendChild(commentTextEl); // APPENDING TO textContainerEl
 
     // INVOKING displayComment FUNCTION
-    displayComment(commentsContainerEl);
+    displayComment(imgContainerEl, textContainerEl);
   });
 };
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
