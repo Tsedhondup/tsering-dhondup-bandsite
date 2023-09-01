@@ -82,8 +82,7 @@ const createEl = (comments) => {
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 createEl(comments);
 
-// CALLBACK FOR FOR FORM SUBMISSION
-
+// CALLBACK FOR FOR FORM SUBMISSION ***
 let onSubmit = (event) => {
   // STOPING FORM FROM SUBMITING
   event.preventDefault();
@@ -130,7 +129,7 @@ let onSubmit = (event) => {
   createEl(comments);
 };
 
-// ADDING EVENT-LISTENER TO FORM-ELEMENT
+// ADDING EVENT-LISTENER TO FORM-ELEMENT **
 let formEl = document.querySelector(".comments__form");
 formEl.addEventListener("submit", (event) => {
   // INVOKING ON SUBMIT
