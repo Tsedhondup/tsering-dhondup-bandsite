@@ -80,31 +80,33 @@ createEl(comments);
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT
 
-// let formEl = document.querySelector(".comments__form");
-// formEl.addEventListener("submit", (event) => {
-//   event.preventDefault();
+let formEl = document.querySelector(".comments__form");
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-//   // VARIABLE TO STORE NAME AND COMMENTS
-//   let nameVal;
-//   let commentVal;
-//   // GETTING NAME-INPUT
-//   let nameInput = document.querySelector("#name");
-//   nameVal = nameInput.value;
-//   console.group(nameVal);
-//   // GETTING COMMENT-INPUT
-//   let commentInput = document.querySelector("#comment");
-//   commentVal = commentInput.value;
-//   console.log(commentVal);
+  // VARIABLE TO STORE NAME AND COMMENTS
+  let nameVal;
+  let commentVal;
+  // GETTING NAME-INPUT
+  let nameInput = document.querySelector("#name");
+  nameVal = nameInput.value;
+  // GETTING COMMENT-INPUT
+  let commentInput = document.querySelector("#comment");
+  commentVal = commentInput.value;
 
-//   // CREATING COMMENT-OBJECT
-//   let commentOBj = {
-//     name: nameVal,
-//     timestamp: new Date(),
-//     commentText: commentVal,
-//   };
+  // CREATING COMMENT-OBJECT
+  let commentOBj = {
+    name: nameVal,
+    timestamp: new Date(),
+    commentText: commentVal,
+  };
 
-//   // PUSHING/ADDING TO BEGINING OF COMMENTS ARRAY
-//   comments.unshift(commentOBj);
+  // PUSHING/ADDING TO BEGINING OF COMMENTS ARRAY
+  comments.unshift(commentOBj);
 
-//   // CALLING DISPLAY-COMMENT-FUNCTION 
-// });
+  // EMPTYING COMMENTS FOR NEW-INJECTION
+  document.querySelector(".comments__comments-container").innerHTML = "";
+
+  // INVOKING-CREATE-EL-FUNCTION
+  createEl(comments);
+});
