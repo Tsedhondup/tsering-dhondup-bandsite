@@ -77,3 +77,8 @@ const createEl = (comments) => {
 };
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 createEl(comments);
+
+// ADDING EVENT-LISTENER TO FORM-ELEMENT
+
+let formEl = document.querySelector(".comments__form");
+formEl.addEventListener("submit", () => {});
