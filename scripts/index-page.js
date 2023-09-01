@@ -78,13 +78,13 @@ const createEl = (comments) => {
     displayComment(commentsContainerEl);
   });
 };
+
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 createEl(comments);
 
-// ADDING EVENT-LISTENER TO FORM-ELEMENT
+// CALLBACK FOR FOR FORM SUBMISSION
 
-let formEl = document.querySelector(".comments__form");
-formEl.addEventListener("submit", (event) => {
+let onSubmit = (event) => {
   // STOPING FORM FROM SUBMITING
   event.preventDefault();
 
@@ -128,4 +128,11 @@ formEl.addEventListener("submit", (event) => {
 
   // INVOKING-CREATE-EL-FUNCTION
   createEl(comments);
+};
+
+// ADDING EVENT-LISTENER TO FORM-ELEMENT
+let formEl = document.querySelector(".comments__form");
+formEl.addEventListener("submit", (event) => {
+  // INVOKING ON SUBMIT
+  onSubmit(event);
 });
