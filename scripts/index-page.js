@@ -114,7 +114,7 @@ formEl.addEventListener("submit", (event) => {
     name: nameVal,
     timestamp: new Date().toLocaleDateString(),
     commentText: commentVal,
-    img: profileImg,
+    profileImg: img,
   };
 
   // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
