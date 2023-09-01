@@ -20,7 +20,7 @@ let comments = [
   },
 ];
 // DISPLAY COMMENTS - RENDERING INTO DOM
-const displayComment = (imgEl, TextEL) => {
+const displayComment = (element) => {
   let el = document.querySelector(".comments__comments-container");
   el.appendChild(element);
 };
@@ -28,6 +28,10 @@ const displayComment = (imgEl, TextEL) => {
 // CREATING DOM ELEMENTS
 const createEl = (comments) => {
   comments.forEach((element) => {
+    // COMMENT-CONTENT/CONTAINER
+    let commentsContainerEl = document.createElement("div");
+    commentsContainerEl.classList.add("comment-content");
+
     // IMAGE-CONTAINTER
     let imgContainerEl = document.createElement("div");
     imgContainerEl.classList.add("comment-content__img-container");
@@ -36,6 +40,8 @@ const createEl = (comments) => {
     let imgEl = document.createElement("div");
     imgEl.classList.add("comment-content__img-container--img-base");
     imgContainerEl.appendChild(imgEl);
+
+    commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
 
     // TEXT-CONTAINER
     let textContainerEl = document.createElement("div");
@@ -64,14 +70,15 @@ const createEl = (comments) => {
     commentTextEl.classList.add("comment-content__text-container--comments");
     textContainerEl.appendChild(commentTextEl); // APPENDING TO textContainerEl
 
+    commentsContainerEl.appendChild(textContainerEl); // APPENDING TEXT-CONTAINER INTO commentContainerEl
     // INVOKING displayComment FUNCTION
-    displayComment(imgContainerEl, textContainerEl);
+    displayComment(commentsContainerEl);
   });
 };
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 createEl(comments);
 
-// // ADDING EVENT-LISTENER TO FORM-ELEMENT
+// ADDING EVENT-LISTENER TO FORM-ELEMENT
 
 // let formEl = document.querySelector(".comments__form");
 // formEl.addEventListener("submit", (event) => {
@@ -83,9 +90,11 @@ createEl(comments);
 //   // GETTING NAME-INPUT
 //   let nameInput = document.querySelector("#name");
 //   nameVal = nameInput.value;
+//   console.group(nameVal);
 //   // GETTING COMMENT-INPUT
 //   let commentInput = document.querySelector("#comment");
 //   commentVal = commentInput.value;
+//   console.log(commentVal);
 
 //   // CREATING COMMENT-OBJECT
 //   let commentOBj = {
@@ -97,6 +106,5 @@ createEl(comments);
 //   // PUSHING/ADDING TO BEGINING OF COMMENTS ARRAY
 //   comments.unshift(commentOBj);
 
-//   // CALLING CREATE-EL FUNCTION
-//   createEl(comments);
+//   // CALLING DISPLAY-COMMENT-FUNCTION 
 // });
