@@ -78,7 +78,32 @@ const createEl = (comments) => {
 //  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
 createEl(comments);
 
-// ADDING EVENT-LISTENER TO FORM-ELEMENT
+// // ADDING EVENT-LISTENER TO FORM-ELEMENT
 
-let formEl = document.querySelector(".comments__form");
-formEl.addEventListener("submit", () => {});
+// let formEl = document.querySelector(".comments__form");
+// formEl.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   // VARIABLE TO STORE NAME AND COMMENTS
+//   let nameVal;
+//   let commentVal;
+//   // GETTING NAME-INPUT
+//   let nameInput = document.querySelector("#name");
+//   nameVal = nameInput.value;
+//   // GETTING COMMENT-INPUT
+//   let commentInput = document.querySelector("#comment");
+//   commentVal = commentInput.value;
+
+//   // CREATING COMMENT-OBJECT
+//   let commentOBj = {
+//     name: nameVal,
+//     timestamp: new Date(),
+//     commentText: commentVal,
+//   };
+
+//   // PUSHING/ADDING TO BEGINING OF COMMENTS ARRAY
+//   comments.unshift(commentOBj);
+
+//   // CALLING CREATE-EL FUNCTION
+//   createEl(comments);
+// });
