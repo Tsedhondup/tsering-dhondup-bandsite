@@ -78,10 +78,12 @@ const createEl = (comments) => {
     nameTimeContainerEl.appendChild(timeEl);
 
     // TEXT-CONTAINER : PART-2 = COMMENT-CONTAINER
-    let commentTextEl = document.createElement("p");
-    commentTextEl.innerText = element.commentText;
-    commentTextEl.classList.add("comment-content__text-container--comments");
-    textContainerEl.appendChild(commentTextEl); // APPENDING TO TEXT-CONTAINER-El
+    let commentContainerEl = document.createElement("p");
+    commentContainerEl.innerText = element.commentText;
+    commentContainerEl.classList.add(
+      "comment-content__text-container--comments"
+    );
+    textContainerEl.appendChild(commentContainerEl); // APPENDING TO TEXT-CONTAINER-El
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
