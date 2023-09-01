@@ -28,10 +28,6 @@ const displayComment = (element) => {
 // CREATING DOM ELEMENTS
 const createEl = (comments) => {
   comments.forEach((element) => {
-    // COMMENT-CONTENT/CONTAINER
-    let commentsContainerEl = document.createElement("div");
-    commentsContainerEl.classList.add("comment-content");
-
     // IMAGE-CONTAINTER
     let imgContainerEl = document.createElement("div");
     imgContainerEl.classList.add("comment-content__img-container");
@@ -40,8 +36,6 @@ const createEl = (comments) => {
     let imgEl = document.createElement("div");
     imgEl.classList.add("comment-content__img-container--img-base");
     imgContainerEl.appendChild(imgEl);
-
-    commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
 
     // TEXT-CONTAINER
     let textContainerEl = document.createElement("div");
@@ -70,7 +64,6 @@ const createEl = (comments) => {
     commentTextEl.classList.add("comment-content__text-container--comments");
     textContainerEl.appendChild(commentTextEl); // APPENDING TO textContainerEl
 
-    commentsContainerEl.appendChild(textContainerEl); // APPENDING TEXT-CONTAINER INTO commentContainerEl
     // INVOKING displayComment FUNCTION
     displayComment(commentsContainerEl);
   });
