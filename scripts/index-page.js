@@ -84,9 +84,10 @@ let formEl = document.querySelector(".comments__form");
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // VARIABLE TO STORE NAME AND COMMENTS
+  // VARIABLE TO STORE NAME, COMMENTS & PROFILE-IMG
   let nameVal;
   let commentVal;
+  let profileImg;
   // GETTING NAME-INPUT
   let nameInput = document.querySelector("#name");
   nameVal = nameInput.value;
