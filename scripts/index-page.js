@@ -1,5 +1,5 @@
 // COMMENT ARRAY
-let comments = [
+let commentArray = [
   {
     name: "Connor Walton",
     timestamp: "02/17/2021",
@@ -79,8 +79,16 @@ const createEl = (comments) => {
   });
 };
 
-//  INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED
-createEl(comments);
+// FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE
+let isCommentArrayEmpty = (comments) => {
+  // CREAT-EL FUNCTION WILL ONLY GET INVOKED IF THE COMMENT-ARRAY HAS VALUE
+  if (comments.length > 0) {
+    createEl(comments);
+  }
+};
+
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
+isCommentArrayEmpty(commentArray);
 
 // CALLBACK FOR FOR FORM SUBMISSION ***
 let onSubmit = (event) => {
@@ -120,13 +128,13 @@ let onSubmit = (event) => {
   };
 
   // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
-  comments.unshift(commentOBj);
+  commentArray.unshift(commentOBj);
 
   // EMPTYING COMMENTS FOR NEW-INJECTION
   document.querySelector(".comments__comments-container").innerHTML = "";
 
   // INVOKING-CREATE-EL-FUNCTION
-  createEl(comments);
+  createEl(commentArray);
 };
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
