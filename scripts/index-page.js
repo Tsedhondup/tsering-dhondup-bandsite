@@ -82,27 +82,42 @@ createEl(comments);
 
 let formEl = document.querySelector(".comments__form");
 formEl.addEventListener("submit", (event) => {
+  // STOPING FORM FROM SUBMITING
   event.preventDefault();
 
-  // VARIABLE TO STORE NAME, COMMENTS & PROFILE-IMG
+  // VARIABLES TO STORE NAME, COMMENTS & IMG
   let nameVal;
   let commentVal;
-  let profileImg;
+  let img;
+
   // GETTING NAME-INPUT
   let nameInput = document.querySelector("#name");
   nameVal = nameInput.value;
+
   // GETTING COMMENT-INPUT
   let commentInput = document.querySelector("#comment");
   commentVal = commentInput.value;
+
+  // GETTING IMG
+  let profileImgBase = document.querySelector(
+    ".profile-image-container__img-base"
+  );
+
+  // GETTING IMG COMPUTED-STYLES
+  let profileImgBaseStyles = getComputedStyle(profileImgBase);
+
+  // STORING IMG-URL IN IMG VARIABLE
+  img = profileImgBaseStyles.backgroundImage;
 
   // CREATING COMMENT-OBJECT
   let commentOBj = {
     name: nameVal,
     timestamp: new Date().toLocaleDateString(),
     commentText: commentVal,
+    img: profileImg,
   };
 
-  // PUSHING/ADDING TO BEGINING OF COMMENTS ARRAY
+  // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
   comments.unshift(commentOBj);
 
   // EMPTYING COMMENTS FOR NEW-INJECTION
