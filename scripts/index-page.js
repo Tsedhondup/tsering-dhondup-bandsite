@@ -97,7 +97,7 @@ formEl.addEventListener("submit", (event) => {
   // CREATING COMMENT-OBJECT
   let commentOBj = {
     name: nameVal,
-    timestamp: new Date(),
+    timestamp: new Date().toLocaleDateString(),
     commentText: commentVal,
   };
 
