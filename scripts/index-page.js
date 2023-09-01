@@ -20,7 +20,7 @@ let comments = [
   },
 ];
 // DISPLAY COMMENTS - RENDERING INTO DOM
-const displayComment = (element) => {
+const displayComment = (imgEl, TextEL) => {
   let el = document.querySelector(".comments__comments-container");
   el.appendChild(element);
 };
