@@ -42,9 +42,18 @@ const createEl = (comments) => {
     // IMAGE
     let imgEl = document.createElement("div");
     imgEl.classList.add("comment-content__img-container--img-base");
-    imgContainerEl.appendChild(imgEl);
+    // imgContainerEl.appendChild(imgEl);
 
-    commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
+    // CHECKING IF USER HAS UPLOAED IMG
+    if (element.profileImg) {
+      // IF "TRUE" - ADD IMG
+      imgEl.style.backgroundImage = element.profileImg;
+      imgContainerEl.appendChild(imgEl);
+      commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
+    } else {
+      imgContainerEl.appendChild(imgEl);
+      commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER INTO commentContainerEl
+    }
 
     // TEXT-CONTAINER
     let textContainerEl = document.createElement("div");
