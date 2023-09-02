@@ -32,6 +32,8 @@ let showsDatas = [
   },
 ];
 
+/*------------------------------------------------------------------------------------------*/
+
 // SHOW-TABLE RENDERING-FUNCTION
 
 let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
@@ -40,6 +42,9 @@ let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   showsContainer.appendChild(showTableHeaderEl);
   showsContainer.appendChild(showTableDataEl);
 };
+
+/*------------------------------------------------------------------------------------------*/
+
 /* 
   # FUNCTIONS FOR CREATING CONCERT-TABLE ELEMENTS 
   # EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN SEPARATE VARIABLES
@@ -131,6 +136,8 @@ renderDOM(
   createShowDataElements(showsDatas)
 );
 
+/*------------------------------------------------------------------------------------------*/
+
 /*
 # ADDING EVENT-LISTENER TO INDIVIDUAL CONCERT TABLE-ROW
 - INSTRUCTIONS ARE BEING PLACED INTO TWO SEPARATED FUNCTIONS
@@ -156,3 +163,5 @@ let checkingConcertTableRow = () => {
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 checkingConcertTableRow();
+
+/*------------------------------------------------------------------------------------------*/
