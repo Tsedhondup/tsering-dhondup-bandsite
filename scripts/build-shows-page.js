@@ -147,13 +147,13 @@ renderDOM(
 */
 
 // ADDING AND REMOVING CLASSES
-let togglingConcertTableRowClasses = (tableRowList) => {
-  // REMOVED JS_TABLE-ROW-SELECTED CLASS FROM NODE-LIST
-  // tableRowList.forEach((element) => {
-  //   element.classList.remove("js_table-row-selected");
-  // });
-  // console.log(tableRowList);
-  // ADD JS_TABLE-ROW-SELECTED CLASS TO CLICKED ROW
+let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
+  // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
+  tableRowList.forEach((element) => {
+    element.classList.remove("js_table-row-selected");
+  });
+  // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
+  closestParent.classList.add("js_table-row-selected");
 };
 
 // CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
@@ -177,7 +177,7 @@ let checkingConcertTableRow = () => {
         );
 
         // INVOKING TOGGLING-CONCERT-TABLE-ROW-CLASSES FUNCTION
-        togglingConcertTableRowClasses(closetParent);
+        togglingConcertTableRowClasses(concertTableRow, closetParent);
       });
     });
   }
