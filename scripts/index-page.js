@@ -128,15 +128,15 @@ isCommentArrayEmpty(commentArray);
 // VALIDATE NAME-INPUT
 let validateNameInput = () => {
   let nameWarningEl = document.querySelector(".input-elements__warning-msg");
-  nameWarningEl.innerText = "Invalid name!"; // inserting warning message
   nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding class
+  nameWarningEl.innerText = "Invalid name!"; // inserting warning message
 };
 
 // VALIDATE COMMENT-INPUT
 let validateCommentInput = () => {
   let commentWarningEl = document.querySelector(".input-elements__warning-msg");
-  commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
   commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding class
+  commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
 };
 
 // VALIDATING FORM INPUTS ON-SUBMISSION
