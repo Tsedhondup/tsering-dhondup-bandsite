@@ -153,7 +153,25 @@ let togglingConcertTableRowClasses = (clickedRow) => {};
 let concertTableRowOnClick = (concertTableRow) => {
   concertTableRow.forEach((element) => {
     element.addEventListener("click", (event) => {
-      console.log("clicked");
+      // STOPPING BUBBLING-EFFECT
+      event.stopPropagation();
+
+      // TABLE-ROW NODE-LIST
+      let tableRow = document.querySelectorAll(
+        ".shows-table-data-container__content"
+      );
+
+      // // CLICKED ROW
+      // let clickedEl = event.srcElement;
+
+      // // CLICKED-EL IMMEDIATE PARENT-ELEMENT
+      // // let rowEl = clickedEl.parentElement;
+
+      // console.log("clicked el: " + clickedEl);
+      // // console.log("parent el: " + rowEl);
+
+      // INVOKING TOGGLING-CONCERT-TABLE-ROW-CLASSES FUNCTION
+      togglingConcertTableRowClasses(tableRow);
     });
   });
 };
