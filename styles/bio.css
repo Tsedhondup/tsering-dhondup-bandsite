@@ -498,6 +498,11 @@
   color: #323232;
   font-size: 12px;
 }
+.comments__form .input-elements__warning-msg {
+  color: #d22d2d;
+  font: 12px;
+  padding-bottom: 16px;
+}
 .comments__form .input-elements__submit-btn {
   width: 100%;
   font-size: 14px;

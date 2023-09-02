@@ -119,6 +119,13 @@
         color: colors.$bandSiteBlack;
         font-size: 12px;
       }
+
+      // WARNING-MESSAGES
+      &__warning-msg {
+        color: #d22d2d;
+        font: 12px;
+        padding-bottom: 16px;
+      }
       // SUBMIT-BUTTON
       &__submit-btn {
         width: 100%;
