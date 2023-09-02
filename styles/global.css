@@ -777,6 +777,9 @@
   }
 }
 
+.shows {
+  padding: 0px 16px;
+}
 .shows__title {
   font-size: 36px;
 }
