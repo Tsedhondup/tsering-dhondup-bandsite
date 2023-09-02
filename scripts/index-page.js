@@ -131,6 +131,10 @@ let emptyForm = () => {
   document.querySelector(".input-elements__comment-warning-msg").innerText = ""; // comment-warning-msg
 };
 
+// VALIDATING FORM-INPUTS DURING INTERACTION
+// let nameInputHanlder = () => {
+
+// };
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
 // VALIDATE NAME-INPUT
 let validateNameInput = () => {
@@ -210,13 +214,23 @@ let onSubmit = (event) => {
 };
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
+let addingEventHandlerToFormEls = () => {
+  let form = document.querySelector(".comments__form");
+  let nameInput = document.querySelector(".input-elements__name-input"); // name-input
+  let commentInput = document.querySelector(".input-elements__comments-input"); // comment-input
 
-// ADDING EVENT HANDLER TO FORM ELEMENTS
-let formEl = document.querySelector(".comments__form");
-formEl.addEventListener("submit", (event) => {
-  // INVOKING ON SUBMIT
-  onSubmit(event);
-});
+  form.addEventListener("submit", (event) => {
+    onSubmit(event); // invoking on-submit function
+  });
+  nameInput.addEventListener("input", () => {
+    console.log("hey");
+  });
+  commentInput.addEventListener("input", () => {
+    console.log("hey");
+  });
+};
 
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
+addingEventHandlerToFormEls();
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
