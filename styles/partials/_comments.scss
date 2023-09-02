@@ -120,15 +120,25 @@
         font-size: 12px;
       }
 
-      // WARNING-MESSAGES
-      &__warning-msg {
+      // STYLES FOR WARNING MESSAGES
+
+      // FOR NAME
+      &__name-warning-msg {
         color: colors.$pink;
         font-size: 12px;
         text-align: left;
         padding-top: 4px;
         display: none;
       }
-      // CLASS WILL BE ADDED DYNAMICALLY VIA DOM MANIPULATION
+      // FOR COMMENT
+      &__comment-warning-msg {
+        color: colors.$pink;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 4px;
+        display: none;
+      }
+      // THIS CLASS WILL BE ADDED DYNAMICALLY VIA DOM MANIPULATION
       &__warning-msg-display {
         display: block;
       }

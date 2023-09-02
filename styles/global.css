@@ -498,7 +498,14 @@
   color: #323232;
   font-size: 12px;
 }
-.comments__form .input-elements__warning-msg {
+.comments__form .input-elements__name-warning-msg {
+  color: #d22d2d;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 4px;
+  display: none;
+}
+.comments__form .input-elements__comment-warning-msg {
   color: #d22d2d;
   font-size: 12px;
   text-align: left;
