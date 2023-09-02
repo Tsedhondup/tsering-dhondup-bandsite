@@ -130,11 +130,14 @@ let validateNameInput = () => {};
 // COMMENT-INPUT
 let validateCommentInput = () => {};
 
-/* VALIDATING FORM INPUTS ON-SUBMISSION */
+// VALIDATING FORM INPUTS ON-SUBMISSION
 let validateFormOnSubmit = (nameInput, commentInput) => {
-  // VALIDATING FOR NAME-INPUT
   if (!nameInput) {
-    let n;
+    validateNameInput(); // invoke validate-name-input
+  }
+
+  if (!commentInput) {
+    validateCommentInput(); // invoke validate-comment-input
   }
 };
 
