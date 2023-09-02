@@ -37,7 +37,7 @@ let showsDatas = [
 
 // SHOW-TABLE RENDERING-FUNCTION
 
-let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
+let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
   showsContainer.appendChild(showTitleEl);
   showsContainer.appendChild(showTableHeaderEl);
@@ -133,7 +133,7 @@ let createShowDataElements = (datas) => {
 };
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
-renderDOM(
+renderShowsInfo(
   createShowTitleElements(),
   createShowHeaderElements(),
   createShowDataElements(showsDatas)
