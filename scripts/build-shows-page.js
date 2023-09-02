@@ -90,7 +90,7 @@ let createShowHeaderElements = () => {
 
 // CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
-  // TABLE-DATA-CONTAINER
+  // TABLE-DATA-CONTAINER - SHOW TABLE-ROWS ARE BEING WRAPPEND IN SINGLE CONTAINER
   let tableDataContainerEl = document.createElement("div");
   tableDataContainerEl.classList.add("shows-table-data-container");
 
