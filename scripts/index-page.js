@@ -202,9 +202,8 @@ let onSubmit = (event) => {
     document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     createEl(commentArray); // invoking create-el function
 
-    // EMPTYING FORM FIELD
-    nameInput.value = ""; // name-input field
-    commentInput.value = ""; // comment-input field
+    // INVOKING-EMPTY-FORM FUNCTION TO CLEAR FORM
+    emptyForm();
   } else {
     validateFormOnSubmit(nameVal, commentVal); // invoking validate-form-on-submit function
   }
