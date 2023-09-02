@@ -124,9 +124,10 @@ isCommentArrayEmpty(commentArray);
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-/* VALIDATION FORM INPUTS WHILE BEFORE-SUBMISSION */
+/* VALIDATION FORM INPUTS BEFORE-SUBMISSION */
 // NAME-INPUT
 let validateNameInput = () => {};
+
 // COMMENT-INPUT
 let validateCommentInput = () => {};
 
@@ -143,58 +144,46 @@ let validateFormOnSubmit = (nameInput, commentInput) => {
 
 /* CALLBACK FOR FOR FORM ON-SUBMISSION */
 let onSubmit = (event) => {
-  // STOPING FORM FROM SUBMITING
-  event.preventDefault();
+  event.preventDefault(); // stoping form from submitting
 
   // VARIABLES TO STORE NAME, COMMENTS & IMG
   let nameVal;
   let commentVal;
-  let img;
+  let imgUrl;
 
-  /* STORING FORM VALUES  */
-  // NAME-INPUT
+  // STORING FORM VALUES
   let nameInput = document.querySelector("#name");
-  nameVal = nameInput.value;
+  nameVal = nameInput.value; // name-input value
 
-  // COMMENT-INPUT
   let commentInput = document.querySelector("#comment");
-  commentVal = commentInput.value;
+  commentVal = commentInput.value; // comment-input value
 
-  // IMG
-  let profileImgBase = document.querySelector(
-    ".profile-image-container__img-base"
-  );
-
-  // GETTING IMG COMPUTED-STYLES
-  let profileImgBaseStyles = getComputedStyle(profileImgBase);
-  // STORING IMG-URL IN IMG VARIABLE
-  imgUrl = profileImgBaseStyles.backgroundImage;
+  let imgBase = document.querySelector(".profile-image-container__img-base");
+  let profileImgBaseStyles = getComputedStyle(imgBase); // getting computed-styles for imgBase
+  imgUrl = profileImgBaseStyles.backgroundImage; // img-url
 
   /*
-  # INVOKING VALIDATE-FORM-INPUT-ON-SUBMIT
-  - CREATING OF COMMENT OBJ AND PUSHING INTO COMMENT ARRAY WILL STOP 
-  - UNLESS THE VALID INPUTS ARE INSERT
+  # FORM INPUTS VALUES WILL BE VALIDATE BEFORE BEFORE
+   - CREATING FORM/COMMENTS OBJECT 
+   - ADDING TO COMMENT-ARRAY
+   - RENDER INTO DOM VIA DISPLAY-COMMENT FUNCTION
   */
 
+  // VALIDATING FORM INPUTS VALUES
   if (nameVal && commentVal) {
-    // CREATING COMMENT-OBJECT
+    // CREATING COMMENT-OBJECT IF NAME & COMMENT INPUTS WERE TRUE
     let commentObj = {
       name: nameVal,
       timestamp: new Date().toLocaleDateString(),
       commentText: commentVal,
       profileImg: imgUrl,
     };
-    // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
-    commentArray.unshift(commentObj);
 
-    // EMPTYING COMMENTS FOR DOM NEW-INJECTION
-    document.querySelector(".comments__comments-container").innerHTML = "";
-
-    // INVOKING-CREATE-EL FUNCTION
-    createEl(commentArray);
+    commentArray.unshift(commentObj); // adding comment-object at the begining of comment-array
+    document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
+    createEl(commentArray); // invoking create-el function
   } else {
-    // INVOKING VALIDATE-FORM-ON-SUBMIT
-    validateFormOnSubmit(nameInput, commentInput);
+    validateFormOnSubmit(nameInput, commentInput); // invoking validate-form-on-submit function
   }
 };
 
