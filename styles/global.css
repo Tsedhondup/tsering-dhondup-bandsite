@@ -777,6 +777,18 @@
   }
 }
 
+.shows__title {
+  font-size: 36px;
+}
+.shows .shows-table-headers-container {
+  display: flex;
+}
+.shows .shows-table-data-container__content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");

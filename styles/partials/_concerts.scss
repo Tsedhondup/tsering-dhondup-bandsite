@@ -1,0 +1,19 @@
+.shows {
+  // TITLE
+  &__title {
+    font-size: 36px;
+  }
+  // SHOWS-TABLE-HEADER
+  .shows-table-headers-container {
+    display: flex;
+  }
+  // SHOWS-TABLE-DATA-CONTAINER
+  .shows-table-data-container {
+    // SHOW-TABLE-DATA-CONTAINER__CONTENT
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+    }
+  }
+}
