@@ -103,16 +103,19 @@ let createShowDataElements = (datas) => {
     // SHOWS-TABLE-DATAS__DATE
     let dateEl = document.createElement("p");
     dateEl.classList.add("shows-table-data__content--name");
+    dateEl.innerText = element.date;
     tableDataContentEl.appendChild(dateEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
     // SHOWS-TABLE-DATAS__VENUE
     let venueEl = document.createElement("p");
     venueEl.classList.add("shows-table-data__content--venue");
+    venueEl.innerText = element.venue;
     tableDataContentEl.appendChild(venueEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
     // SHOWS-TABLE-DATAS__LOCATION
     let locationEl = document.createElement("p");
     locationEl.classList.add("shows-table-data__content--location");
+    locationEl.innerText = element.location;
     tableDataContentEl.appendChild(locationEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
     // SHOWS-TABLE-DATAS__BUTTON
@@ -120,9 +123,6 @@ let createShowDataElements = (datas) => {
     locationEl.classList.add("shows-table-data__content--btn");
     buttonEl.innerText = "Buy Ticket";
     tableDataContentEl.appendChild(buttonEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
-    dateEl.innerText = element.date;
-    venueEl.innerText = element.venue;
-    locationEl.innerText = element.location;
   });
 
   // RETURN TABLE-DATA-CONTAINER-EL
@@ -152,7 +152,7 @@ let togglingConcertTableRowClasses = (tableRowList) => {
   tableRowList.forEach((element) => {
     element.classList.remove("js_table-row-selected");
   });
-  console.log(tableRowList);
+  // console.log(tableRowList);
   // ADD JS_TABLE-ROW-SELECTED CLASS TO CLICKED ROW
 };
 
@@ -162,7 +162,7 @@ let concertTableRowOnClick = (concertTableRow) => {
     element.addEventListener("click", (event) => {
       // STOPPING BUBBLING-EFFECT
       event.stopPropagation();
-      // console.log(event.target);
+      console.log(event.target);
       // TABLE-ROW NODE-LIST
       let tableRow = document.querySelectorAll(
         ".shows-table-data-container__content"
