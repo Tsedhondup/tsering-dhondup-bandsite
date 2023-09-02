@@ -130,3 +130,26 @@ renderDOM(
   createShowHeaderElements(),
   createShowDataElements(showsDatas)
 );
+
+/*
+# ADDING EVENT-LISTENER TO INDIVIDUAL CONCERT TABLE-ROW
+- INSTRUCTIONS ARE BEING PLACED INTO TWO SEPARATED FUNCTIONS
+- (1) ADDING EVENT-LISTENER
+- (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW
+*/
+
+// ADDING EVENT-LISTENER
+let concertTableRowOnClick = (concertTableRow) => {
+  concertTableRow.addEventListener("click", () => {});
+};
+
+// CHECKING THE PRESENCE OF CONCERT TABLE-ROW
+let checkingConcertTableRow = () => {
+  let tableRow = document.querySelectorAll(
+    ".shows-table-data-container__content"
+  );
+  // VERIFYING
+  if (tableRow) {
+    concertTableRowOnClick();
+  }
+};
