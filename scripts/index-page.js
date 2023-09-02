@@ -124,9 +124,18 @@ isCommentArrayEmpty(commentArray);
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
+/* VALIDATION FORM INPUTS WHILE BEFORE-SUBMISSION */
+// NAME-INPUT
+let validateNameInput = () => {};
+// COMMENT-INPUT
+let validateCommentInput = () => {};
+
 /* VALIDATING FORM INPUTS ON-SUBMISSION */
 let validateFormOnSubmit = (nameInput, commentInput) => {
-  console.log("your comment is empty");
+  // VALIDATING FOR NAME-INPUT
+  if (!nameInput) {
+    let n;
+  }
 };
 
 /* CALLBACK FOR FOR FORM ON-SUBMISSION */
