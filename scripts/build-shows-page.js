@@ -149,34 +149,11 @@ renderDOM(
 // ADDING AND REMOVING CLASSES
 let togglingConcertTableRowClasses = (tableRowList) => {
   // REMOVED JS_TABLE-ROW-SELECTED CLASS FROM NODE-LIST
-  tableRowList.forEach((element) => {
-    element.classList.remove("js_table-row-selected");
-  });
+  // tableRowList.forEach((element) => {
+  //   element.classList.remove("js_table-row-selected");
+  // });
   // console.log(tableRowList);
   // ADD JS_TABLE-ROW-SELECTED CLASS TO CLICKED ROW
-};
-
-// ADDING EVENT-LISTENER
-let concertTableRowOnClick = (concertTableRow) => {
-  concertTableRow.forEach((element) => {
-    element.addEventListener("click", (event) => {
-      // STOPPING BUBBLING-EFFECT
-      event.stopPropagation();
-      console.log(event.target);
-      // TABLE-ROW NODE-LIST
-      let tableRow = document.querySelectorAll(
-        ".shows-table-data-container__content"
-      );
-
-      // CLICKED ROW
-      let clickedEl = event.srcElement;
-
-      // CLICKED-EL IMMEDIATE PARENT-ELEMENT
-      let rowEl = clickedEl.parentElement;
-
-      console.log("clicked el: " + clickedEl);
-    });
-  });
 };
 
 // CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
