@@ -149,10 +149,10 @@ renderDOM(
 let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
   // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
   tableRowList.forEach((element) => {
-    element.classList.remove("shows-table-container__content-selected");
+    element.classList.remove("shows-table-data-container__content-selected");
   });
   // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
-  closestParent.classList.add("shows-table-container__content-selected");
+  closestParent.classList.add("shows-table-data-container__content-selected");
 };
 
 // CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
