@@ -97,14 +97,20 @@ const createEl = (comments) => {
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
-    // INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION
+    /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
     displayComment(commentsContainerEl);
   });
 };
 
-// FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE
+/* 
+# FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE. 
+- IF ALL COMMENTS ARE DELETED AND COMMENT-ARRAY IS EMTPY 
+ (1) CREATE-EL FUNCTION WILL NOT GET INVOKE
+ (2) DISPLAY-COMMENT FUNCTION NOT GET INVOKE
+*/
+
+// IS CREATING IS-COMMENT-ARRAY-EMPTY FUNCTION
 let isCommentArrayEmpty = (comments) => {
-  // CREAT-EL FUNCTION WILL ONLY GET INVOKED IF THE COMMENT-ARRAY HAS VALUE
   if (comments.length > 0) {
     createEl(comments);
   }
@@ -114,6 +120,8 @@ let isCommentArrayEmpty = (comments) => {
 isCommentArrayEmpty(commentArray);
 
 /*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
 // CALLBACK FOR FOR FORM SUBMISSION ***
 let onSubmit = (event) => {
   // STOPING FORM FROM SUBMITING
