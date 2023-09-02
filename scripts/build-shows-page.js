@@ -151,7 +151,11 @@ let togglingConcertTableRowClasses = (clickedRow) => {};
 
 // ADDING EVENT-LISTENER
 let concertTableRowOnClick = (concertTableRow) => {
-  concertTableRow.addEventListener("click", () => {});
+  concertTableRow.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      console.log("clicked");
+    });
+  });
 };
 
 // CHECKING THE PRESENCE OF CONCERT TABLE-ROW
@@ -161,7 +165,7 @@ let checkingConcertTableRow = () => {
   );
   // VERIFYING
   if (tableRow) {
-    concertTableRowOnClick();
+    concertTableRowOnClick(tableRow);
   }
 };
 
