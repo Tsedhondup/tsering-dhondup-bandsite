@@ -182,7 +182,7 @@ let onSubmit = (event) => {
     createEl(commentArray);
   } else {
     // INVOKING VALIDATE-FORM-ON-SUBMIT
-    validateFormOnSubmit("x", "y");
+    validateFormOnSubmit(nameInput, commentInput);
   }
 };
 
