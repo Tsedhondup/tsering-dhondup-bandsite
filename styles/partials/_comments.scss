@@ -123,8 +123,14 @@
       // WARNING-MESSAGES
       &__warning-msg {
         color: #d22d2d;
-        font: 12px;
-        padding-bottom: 16px;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 4px;
+        display: none;
+      }
+      // CLASS WILL BE ADDED DYNAMICALLY VIA DOM MANIPULATION
+      &__warning-msg-display {
+        display: block;
       }
       // SUBMIT-BUTTON
       &__submit-btn {

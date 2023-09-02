@@ -500,8 +500,13 @@
 }
 .comments__form .input-elements__warning-msg {
   color: #d22d2d;
-  font: 12px;
-  padding-bottom: 16px;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 4px;
+  display: none;
+}
+.comments__form .input-elements__warning-msg-display {
+  display: block;
 }
 .comments__form .input-elements__submit-btn {
   width: 100%;
