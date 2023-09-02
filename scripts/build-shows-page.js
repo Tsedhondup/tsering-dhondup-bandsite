@@ -46,8 +46,8 @@ let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
 /*------------------------------------------------------------------------------------------*/
 
 /* 
-  # FUNCTIONS FOR CREATING CONCERT-TABLE ELEMENTS 
-  # EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN SEPARATE VARIABLES
+# FUNCTIONS FOR CREATING CONCERT-TABLE ELEMENTS 
+# EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN SEPARATE VARIABLES
 */
 
 // CREATING SHOW TITLE ELMENTS
@@ -60,7 +60,7 @@ let createShowTitleElements = () => {
   return showsTitleEl;
 };
 
-// CREATING SHOW HEADER ELEMENTS
+// CREATING SHOW-TABLE HEADER ELEMENTS
 let createShowHeaderElements = () => {
   // HEADERS-CONTAINER
   let headerEl = document.createElement("div");
@@ -140,20 +140,19 @@ renderDOM(
 
 /*
 # ADDING EVENT-LISTENER TO INDIVIDUAL CONCERT TABLE-ROW
-- INSTRUCTIONS ARE BEING PLACED INTO THREE SEPARATED FUNCTIONS
+- INSTRUCTIONS ARE BEING PLACED INTO TWO SEPARATED FUNCTIONS
 - (1) ADDING AND REMOVING CLASS NAME FROM SELECTED CONCERT TABLE-ROW
-- (2) ADDING EVENT-LISTENER
-- (3) CHECKING THE PRESENCE OF CONCERT TABLE-ROW
+- (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW AND ADDING EVENT-HANDLER
 */
 
-// ADDING AND REMOVING CLASSES
+/* (1) ADDING AND REMOVING CLASSES */
 let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
   // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
   tableRowList.forEach((element) => {
-    element.classList.remove("js_table-row-selected");
+    element.classList.remove("shows-table-container__content-selected");
   });
   // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
-  closestParent.classList.add("js_table-row-selected");
+  closestParent.classList.add("shows-table-container__content-selected");
 };
 
 // CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
