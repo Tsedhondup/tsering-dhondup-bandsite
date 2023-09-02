@@ -177,7 +177,7 @@ let checkingConcertTableRow = () => {
         );
 
         // INVOKING TOGGLING-CONCERT-TABLE-ROW-CLASSES FUNCTION
-        togglingConcertTableRowClasses(event);
+        togglingConcertTableRowClasses(closetParent);
       });
     });
   }
