@@ -168,29 +168,41 @@ let concertTableRowOnClick = (concertTableRow) => {
         ".shows-table-data-container__content"
       );
 
-      // // CLICKED ROW
-      // let clickedEl = event.srcElement;
+      // CLICKED ROW
+      let clickedEl = event.srcElement;
 
-      // // CLICKED-EL IMMEDIATE PARENT-ELEMENT
-      // // let rowEl = clickedEl.parentElement;
+      // CLICKED-EL IMMEDIATE PARENT-ELEMENT
+      let rowEl = clickedEl.parentElement;
 
-      // console.log("clicked el: " + clickedEl);
-      // // console.log("parent el: " + rowEl);
-
-      // INVOKING TOGGLING-CONCERT-TABLE-ROW-CLASSES FUNCTION
-      togglingConcertTableRowClasses(tableRow);
+      console.log("clicked el: " + clickedEl);
     });
   });
 };
 
-// CHECKING THE PRESENCE OF CONCERT TABLE-ROW
+// CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
 let checkingConcertTableRow = () => {
-  let tableRow = document.querySelectorAll(
+  // GETTING CONCERT TABLE-ROW NODE-LIST
+  let concertTableRow = document.querySelectorAll(
     ".shows-table-data-container__content"
   );
-  // VERIFYING
-  if (tableRow) {
-    concertTableRowOnClick(tableRow);
+  // VERIFYING CONCERT TABLE-ROW NODE-LIST
+  if (concertTableRow) {
+    // ADDING EVENT-HANDLER TO CONCERT TABLE-RAW NODE-LIST
+    concertTableRow.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        // STOPPING BUBBLING-EFFECT
+        event.stopPropagation();
+        // GETTING EVENT-TARGET
+        let eTarget = event.target;
+        // GETTING CLOSEST-PARENT WITH MATCHING 'SELELCTOR'
+        let closetParent = eTarget.closest(
+          ".shows-table-data-container__content"
+        );
+
+        // INVOKING TOGGLING-CONCERT-TABLE-ROW-CLASSES FUNCTION
+        togglingConcertTableRowClasses(event);
+      });
+    });
   }
 };
 
