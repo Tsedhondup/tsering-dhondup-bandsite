@@ -32,7 +32,7 @@ let showsDatas = [
   },
 ];
 
-// SHOW-TABLE-RENDERING-FUNCTION
+// SHOW-TABLE RENDERING-FUNCTION
 
 let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
@@ -40,7 +40,10 @@ let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   showsContainer.appendChild(showTableHeaderEl);
   showsContainer.appendChild(showTableDataEl);
 };
-/*---------- ELEMENT-CREATING FUNCTION() ----------*/
+/* 
+  # FUNCTIONS FOR CREATING CONCERT-TABLE ELEMENTS 
+  # EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN SEPARATE VARIABLES
+*/
 
 // CREATING SHOW TITLE ELMENTS
 let createShowTitleElements = () => {
@@ -121,7 +124,7 @@ let createShowDataElements = (datas) => {
   return tableDataContainerEl;
 };
 
-// INVOKING RENDER-DOM FUNCTION
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 renderDOM(
   createShowTitleElements(),
   createShowHeaderElements(),
