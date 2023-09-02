@@ -123,8 +123,15 @@ isCommentArrayEmpty(commentArray);
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
+// EMPTYING FORM FIELD AND MESSAGES AFTER SUCCESSFUL FORM SUBMISION
+let emptyForm = () => {
+  document.querySelector(".input-elements__name-input").value = ""; // name-input
+  document.querySelector(".input-elements__comments-input").value = ""; // comment-input
+  document.querySelector(".input-elements__name-warning-msg").innerText = ""; // name-warning-msg
+  document.querySelector(".input-elements__name-warning-msg").innerText = ""; // comment-warning-msg
+};
 
-/* VALIDATION FORM INPUTS BEFORE-SUBMISSION */
+// VALIDATION FORM INPUTS BEFORE-SUBMISSION
 // VALIDATE NAME-INPUT
 let validateNameInput = () => {
   let nameWarningEl = document.querySelector(
@@ -154,7 +161,7 @@ let validateFormOnSubmit = (nameInput, commentInput) => {
   }
 };
 
-/* CALLBACK FOR FOR FORM ON-SUBMISSION */
+// CALLBACK FOR FOR FORM ON-SUBMISSION
 let onSubmit = (event) => {
   event.preventDefault(); // stoping form from submitting
 
@@ -204,6 +211,8 @@ let onSubmit = (event) => {
 };
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
+
+// ADDING EVENT HANDLER TO FORM ELEMENTS
 let formEl = document.querySelector(".comments__form");
 formEl.addEventListener("submit", (event) => {
   // INVOKING ON SUBMIT
