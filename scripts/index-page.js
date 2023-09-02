@@ -155,12 +155,12 @@ let validateCommentInput = () => {
 };
 
 // VALIDATING FORM INPUTS ON-SUBMISSION
-let validateFormOnSubmit = (nameInput, commentInput) => {
-  if (!nameInput) {
+let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
+  if (!nameVal) {
     validateNameInput(); // invoke validate-name-input
   }
 
-  if (!commentInput) {
+  if (!commentVal) {
     validateCommentInput(); // invoke validate-comment-input
   }
 };
