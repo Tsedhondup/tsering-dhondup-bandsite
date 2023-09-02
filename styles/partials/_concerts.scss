@@ -26,5 +26,10 @@
     &__content:hover {
       background-color: colors.$mercury;
     }
+
+    // CLASS IS DYNAMICALLY CREATED USING JAVASCRIPT
+    .js_content-selected {
+      background-color: colors.$mercury;
+    }
   }
 }

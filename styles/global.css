@@ -795,6 +795,9 @@
 .shows .shows-table-data-container__content:hover {
   background-color: #e1e1e1;
 }
+.shows .shows-table-data-container .js_content-selected {
+  background-color: #e1e1e1;
+}
 
 @font-face {
   font-family: "Avenir";
