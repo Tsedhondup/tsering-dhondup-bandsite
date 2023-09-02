@@ -27,9 +27,11 @@ let commentArray = [
 /*------------------------------------------------------------------------------------------*/
 
 // RENDERING COMMENTS INTO DOM
-const displayComment = (element) => {
-  let el = document.querySelector(".comments__comments-container");
-  el.appendChild(element);
+const displayComment = (commentEl) => {
+  let commentContainer = document.querySelector(
+    ".comments__comments-container"
+  );
+  commentContainer.appendChild(commentEl);
 };
 
 /*------------------------------------------------------------------------------------------*/
