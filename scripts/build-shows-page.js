@@ -147,7 +147,14 @@ renderDOM(
 */
 
 // ADDING AND REMOVING CLASSES
-let togglingConcertTableRowClasses = (clickedRow) => {};
+let togglingConcertTableRowClasses = (tableRowList) => {
+  // REMOVED JS_TABLE-ROW-SELECTED CLASS FROM NODE-LIST
+  tableRowList.forEach((element) => {
+    element.classList.remove("js_table-row-selected");
+  });
+  console.log(tableRowList);
+  // ADD JS_TABLE-ROW-SELECTED CLASS TO CLICKED ROW
+};
 
 // ADDING EVENT-LISTENER
 let concertTableRowOnClick = (concertTableRow) => {
@@ -155,7 +162,7 @@ let concertTableRowOnClick = (concertTableRow) => {
     element.addEventListener("click", (event) => {
       // STOPPING BUBBLING-EFFECT
       event.stopPropagation();
-
+      // console.log(event.target);
       // TABLE-ROW NODE-LIST
       let tableRow = document.querySelectorAll(
         ".shows-table-data-container__content"
