@@ -128,7 +128,7 @@ let emptyForm = () => {
   document.querySelector(".input-elements__name-input").value = ""; // name-input
   document.querySelector(".input-elements__comments-input").value = ""; // comment-input
   document.querySelector(".input-elements__name-warning-msg").innerText = ""; // name-warning-msg
-  document.querySelector(".input-elements__name-warning-msg").innerText = ""; // comment-warning-msg
+  document.querySelector(".input-elements__comment-warning-msg").innerText = ""; // comment-warning-msg
 };
 
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
