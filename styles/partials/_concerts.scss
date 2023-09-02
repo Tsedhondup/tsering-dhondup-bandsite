@@ -1,3 +1,10 @@
+/* IMPORTS */
+
+// COLORS
+@use "./colors";
+// MIXINS
+@use "./mixins";
+
 .shows {
   padding: 0px 16px;
   // TITLE
@@ -15,6 +22,9 @@
       display: flex;
       justify-content: space-between;
       padding-top: 16px;
+    }
+    &__content:hover {
+      background-color: colors.$mercury;
     }
   }
 }

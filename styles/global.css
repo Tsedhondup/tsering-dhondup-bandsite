@@ -777,6 +777,7 @@
   }
 }
 
+/* IMPORTS */
 .shows {
   padding: 0px 16px;
 }
@@ -790,6 +791,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
+}
+.shows .shows-table-data-container__content:hover {
+  background-color: #e1e1e1;
 }
 
 @font-face {
