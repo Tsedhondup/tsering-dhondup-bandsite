@@ -194,6 +194,10 @@ let onSubmit = (event) => {
     commentArray.unshift(commentObj); // adding comment-object at the begining of comment-array
     document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     createEl(commentArray); // invoking create-el function
+
+    // EMPTYING FORM FIELD
+    nameInput.value = ""; // name-input field
+    commentInput.value = ""; // comment-input field
   } else {
     validateFormOnSubmit(nameVal, commentVal); // invoking validate-form-on-submit function
   }
