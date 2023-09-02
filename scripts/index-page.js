@@ -111,7 +111,7 @@ const createEl = (comments) => {
  (2) DISPLAY-COMMENT FUNCTION NOT GET INVOKE
 */
 
-// IS CREATING IS-COMMENT-ARRAY-EMPTY FUNCTION
+// CREATING IS-COMMENT-ARRAY-EMPTY FUNCTION
 let isCommentArrayEmpty = (comments) => {
   if (comments.length > 0) {
     createEl(comments);
