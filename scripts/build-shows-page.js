@@ -33,6 +33,7 @@ let showsDatas = [
 ];
 
 /*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 // SHOW-TABLE RENDERING-FUNCTION
 
@@ -44,13 +45,14 @@ let renderDOM = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
 };
 
 /*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 /* 
-# FUNCTIONS FOR CREATING CONCERT-TABLE ELEMENTS 
-# EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN SEPARATE VARIABLES
+# THREE FUNCTION ARE BEING USED FOR CREATING CONCERT-TABLE ELEMENTS 
+# EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN VARIABLES
 */
 
-// CREATING SHOW TITLE ELMENTS
+// (1) - CREATING SHOW TITLE ELMENTS
 let createShowTitleElements = () => {
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
@@ -60,25 +62,25 @@ let createShowTitleElements = () => {
   return showsTitleEl;
 };
 
-// CREATING SHOW-TABLE HEADER ELEMENTS
+// (2) - CREATING SHOW-TABLE HEADER ELEMENTS
 let createShowHeaderElements = () => {
   // HEADERS-CONTAINER
   let headerEl = document.createElement("div");
   headerEl.classList.add("shows-table-headers-container");
 
-  // SHOWS-TABLE-HEADER__NAME - DATE
+  // SHOWS-TABLE-HEADER - DATE
   let headerDateEl = document.createElement("h3");
   headerDateEl.classList.add("shows-table-headers-container__name");
   headerDateEl.innerText = "Date";
   headerEl.appendChild(headerDateEl); // APPENDING TO SHOW-HEADERS
 
-  // SHOWS-TABLE-HEADER__NAME - VENUE
+  // SHOWS-TABLE-HEADER - VENUE
   let headerVenueEl = document.createElement("h3");
   headerVenueEl.classList.add("shows-table-headers-container__name");
   headerVenueEl.innerText = "Venue";
   headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
 
-  // SHOWS-TABLE-HEADER__NAME - LOCATION
+  // SHOWS-TABLE-HEADER - LOCATION
   let headerLocationEl = document.createElement("h3");
   headerLocationEl.classList.add("shows-table-headers-container__name");
   headerLocationEl.innerText = "Location";
@@ -88,9 +90,9 @@ let createShowHeaderElements = () => {
   return headerEl;
 };
 
-// CREATING SHOW DATA ELEMENTS
+// (3) - CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
-  // TABLE-DATA-CONTAINER - SHOW TABLE-ROWS ARE BEING WRAPPEND IN SINGLE CONTAINER
+  // TABLE-DATA-CONTAINER - SHOW TABLE-ROWS ARE BEING WRAPPEND AS CHILDREN IN SINGLE CONTAINER
   let tableDataContainerEl = document.createElement("div");
   tableDataContainerEl.classList.add("shows-table-data-container");
 
@@ -100,25 +102,25 @@ let createShowDataElements = (datas) => {
     tableDataContentEl.classList.add("shows-table-data-container__content");
     tableDataContainerEl.appendChild(tableDataContentEl); // APPENDING TO SHOW-TABLE-DATA-CONTAINER
 
-    // SHOWS-TABLE-DATAS__DATE
+    // SHOWS-TABLE-DATAS - DATE
     let dateEl = document.createElement("p");
     dateEl.classList.add("shows-table-data__content--name");
     dateEl.innerText = element.date;
     tableDataContentEl.appendChild(dateEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
-    // SHOWS-TABLE-DATAS__VENUE
+    // SHOWS-TABLE-DATAS - VENUE
     let venueEl = document.createElement("p");
     venueEl.classList.add("shows-table-data__content--venue");
     venueEl.innerText = element.venue;
     tableDataContentEl.appendChild(venueEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
-    // SHOWS-TABLE-DATAS__LOCATION
+    // SHOWS-TABLE-DATAS - LOCATION
     let locationEl = document.createElement("p");
     locationEl.classList.add("shows-table-data__content--location");
     locationEl.innerText = element.location;
     tableDataContentEl.appendChild(locationEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
-    // SHOWS-TABLE-DATAS__BUTTON
+    // SHOWS-TABLE-DATAS - BUTTON
     let buttonEl = document.createElement("button");
     locationEl.classList.add("shows-table-data__content--btn");
     buttonEl.innerText = "Buy Ticket";
@@ -137,15 +139,16 @@ renderDOM(
 );
 
 /*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 /*
-# ADDING EVENT-LISTENER TO INDIVIDUAL CONCERT TABLE-ROW
-- INSTRUCTIONS ARE BEING PLACED INTO TWO SEPARATED FUNCTIONS
-- (1) ADDING AND REMOVING CLASS NAME FROM SELECTED CONCERT TABLE-ROW
-- (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW AND ADDING EVENT-HANDLER
+# TWO FUNCTION ARE BEING USED TO ADD & REMOVE CLASSES FROM CONCERT TABLE-ROW ELEMENT
+(1) ADDING AND REMOVING CLASS-NAME FROM CONCERT TABLE-ROW
+(2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE IF THE DOM-REDERING WAS SUCCESSFUL 
+    AND ADDING EVENT-HANDLER 
 */
 
-/* (1) ADDING AND REMOVING CLASSES */
+// (1) ADDING AND REMOVING CLASSES
 let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
   // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
   tableRowList.forEach((element) => {
@@ -155,7 +158,7 @@ let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
   closestParent.classList.add("shows-table-data-container__content-selected");
 };
 
-// CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE DOM-REDERING WAS SUCCESSFUL
+// (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW
 let checkingConcertTableRow = () => {
   // GETTING CONCERT TABLE-ROW NODE-LIST
   let concertTableRow = document.querySelectorAll(
@@ -170,7 +173,7 @@ let checkingConcertTableRow = () => {
         event.stopPropagation();
         // GETTING EVENT-TARGET
         let eTarget = event.target;
-        // GETTING CLOSEST-PARENT WITH MATCHING 'SELELCTOR'
+        // GETTING CLOSEST-PARENT WITH MATCHING 'SELECTOR'
         let closetParent = eTarget.closest(
           ".shows-table-data-container__content"
         );
@@ -185,4 +188,5 @@ let checkingConcertTableRow = () => {
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 checkingConcertTableRow();
 
+/*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
