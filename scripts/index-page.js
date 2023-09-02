@@ -124,7 +124,12 @@ isCommentArrayEmpty(commentArray);
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-// CALLBACK FOR FOR FORM SUBMISSION ***
+/* VALIDATING FORM INPUTS ON-SUBMISSION */
+let validateFormOnSubmit = (nameInput, commentInput) => {
+  console.log("your comment is empty");
+};
+
+/* CALLBACK FOR FOR FORM ON-SUBMISSION */
 let onSubmit = (event) => {
   // STOPING FORM FROM SUBMITING
   event.preventDefault();
@@ -134,41 +139,51 @@ let onSubmit = (event) => {
   let commentVal;
   let img;
 
-  // GETTING NAME-INPUT
+  /* STORING FORM VALUES  */
+  // NAME-INPUT
   let nameInput = document.querySelector("#name");
   nameVal = nameInput.value;
 
-  // GETTING COMMENT-INPUT
+  // COMMENT-INPUT
   let commentInput = document.querySelector("#comment");
   commentVal = commentInput.value;
 
-  // GETTING IMG
+  // IMG
   let profileImgBase = document.querySelector(
     ".profile-image-container__img-base"
   );
 
   // GETTING IMG COMPUTED-STYLES
   let profileImgBaseStyles = getComputedStyle(profileImgBase);
-
   // STORING IMG-URL IN IMG VARIABLE
-  img = profileImgBaseStyles.backgroundImage;
+  imgUrl = profileImgBaseStyles.backgroundImage;
 
-  // CREATING COMMENT-OBJECT
-  let commentOBj = {
-    name: nameVal,
-    timestamp: new Date().toLocaleDateString(),
-    commentText: commentVal,
-    profileImg: img,
-  };
+  /*
+  # INVOKING VALIDATE-FORM-INPUT-ON-SUBMIT
+  - CREATING OF COMMENT OBJ AND PUSHING INTO COMMENT ARRAY WILL STOP 
+  - UNLESS THE VALID INPUTS ARE INSERT
+  */
 
-  // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
-  commentArray.unshift(commentOBj);
+  if (nameVal && commentVal) {
+    // CREATING COMMENT-OBJECT
+    let commentObj = {
+      name: nameVal,
+      timestamp: new Date().toLocaleDateString(),
+      commentText: commentVal,
+      profileImg: imgUrl,
+    };
+    // PUSHING/ADDING TO THE BEGINING OF COMMENTS-ARRAY
+    commentArray.unshift(commentObj);
 
-  // EMPTYING COMMENTS FOR NEW-INJECTION
-  document.querySelector(".comments__comments-container").innerHTML = "";
+    // EMPTYING COMMENTS FOR DOM NEW-INJECTION
+    document.querySelector(".comments__comments-container").innerHTML = "";
 
-  // INVOKING-CREATE-EL-FUNCTION
-  createEl(commentArray);
+    // INVOKING-CREATE-EL FUNCTION
+    createEl(commentArray);
+  } else {
+    // INVOKING VALIDATE-FORM-ON-SUBMIT
+    validateFormOnSubmit("x", "y");
+  }
 };
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
@@ -177,3 +192,6 @@ formEl.addEventListener("submit", (event) => {
   // INVOKING ON SUBMIT
   onSubmit(event);
 });
+
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
