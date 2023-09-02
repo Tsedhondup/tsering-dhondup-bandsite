@@ -209,7 +209,7 @@ let onSubmit = (event) => {
     // INVOKING-EMPTY-FORM FUNCTION TO CLEAR FORM
     emptyForm();
   } else {
-    validateFormOnSubmit(nameVal, commentVal); // invoking validate-form-on-submit function
+    validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
   }
 };
 
