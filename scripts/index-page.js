@@ -24,22 +24,33 @@ let commentArray = [
 ];
 
 /*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
 // RENDERING COMMENTS INTO DOM
 const displayComment = (element) => {
   let el = document.querySelector(".comments__comments-container");
   el.appendChild(element);
 };
 
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
+/*
+# CREATING COMMENT ELEMENTS  
+- EACH 'COMMENT ELEMENT' CREATED WILL BE ADDED AS A CHILD OF COMMENTS_COMMENTS-CONTAINER IN BIO-PAGE
+- EACH 'COMMENT ELEMENT' HAS TWO SECTION 
+  (1) IMAGE
+  (2) TEXT 'NAME, DATE AND COMMENT INPUTS
+*/
+
 // CREATING COMMENT ELEMENTS
 const createEl = (comments) => {
   comments.forEach((element) => {
-    /* COMMENT-CONTENT/CONTAINER */
-    // WILL BE ADDED AS CHILD OF 'COMMENTS__COMMENTS-CONTAINER' IN BIO-PAGE
-    // HAS TWO SECTIONS**
+    // A COMMENT ELEMENT
     let commentsContainerEl = document.createElement("div");
     commentsContainerEl.classList.add("comment-content");
 
-    // SECTION - 1 : IMAGE-CONTAINTER
+    /* SECTION - 1 : IMAGE-CONTAINTER */
     let imgContainerEl = document.createElement("div");
     imgContainerEl.classList.add("comment-content__img-container");
 
@@ -49,7 +60,7 @@ const createEl = (comments) => {
 
     // CHECKING IF USER HAS UPLOAED IMG
     if (element.profileImg) {
-      imgEl.style.backgroundImage = element.profileImg;
+      imgEl.style.backgroundImage = element.profileImg; // USE EXTERNAL CSS
       imgContainerEl.appendChild(imgEl);
       commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER TO COMMENT-CONTAINER-El
     } else {
@@ -57,11 +68,11 @@ const createEl = (comments) => {
       commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER TO COMMENT-CONTAINER-El
     }
 
-    // SECTION - 2 : TEXT-CONTAINER
+    /* SECTION - 2 : TEXT-CONTAINER */
     let textContainerEl = document.createElement("div");
     textContainerEl.classList.add("comment-content__text-container");
 
-    // TEXT-CONTAINER : PART-1 =  NAME-TIME-CONTAINER
+    // TEXT-CONTAINER : PART-1 =  NAME & TIME-CONTAINER
     let nameTimeContainerEl = document.createElement("div");
     nameTimeContainerEl.classList.add("name-time-container");
     textContainerEl.appendChild(nameTimeContainerEl); // APPENDING TEXT-CONTAINER-El
@@ -78,13 +89,11 @@ const createEl = (comments) => {
     timeEl.innerText = element.timestamp;
     nameTimeContainerEl.appendChild(timeEl);
 
-    // TEXT-CONTAINER : PART-2 = COMMENT-CONTAINER
-    let commentContainerEl = document.createElement("p");
-    commentContainerEl.innerText = element.commentText;
-    commentContainerEl.classList.add(
-      "comment-content__text-container--comments"
-    );
-    textContainerEl.appendChild(commentContainerEl); // APPENDING TO TEXT-CONTAINER-El
+    // TEXT-CONTAINER : PART-2 = COMMENTS
+    let commentEl = document.createElement("p");
+    commentEl.innerText = element.commentText;
+    commentEl.classList.add("comment-content__text-container--comments");
+    textContainerEl.appendChild(commentEl); // APPENDING TO TEXT-CONTAINER-El
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
