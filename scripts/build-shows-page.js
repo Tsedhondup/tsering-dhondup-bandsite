@@ -153,3 +153,6 @@ let checkingConcertTableRow = () => {
     concertTableRowOnClick();
   }
 };
+
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
+checkingConcertTableRow();
