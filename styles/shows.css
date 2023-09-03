@@ -98,13 +98,19 @@
 }
 .show-hero__album-title {
   color: #ffffff;
+  position: relative;
+  z-index: 3;
 }
 .show-hero__song-title {
   color: #ffffff;
+  position: relative;
+  z-index: 3;
 }
 .show-hero__embedded-song {
   width: 100%;
   height: 166px;
+  position: relative;
+  z-index: 3;
 }
 @media (min-width: 768px) {
   .show-hero__title {
