@@ -813,6 +813,10 @@
 .show-hero__song-title {
   color: #ffffff;
 }
+.show-hero__embedded-song {
+  width: 100%;
+  height: 166px;
+}
 @media (min-width: 768px) {
   .show-hero__title {
     font-size: 60px;

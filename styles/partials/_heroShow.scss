@@ -16,6 +16,10 @@
   &__song-title {
     color: colors.$white;
   }
+  &__embedded-song {
+    width: 100%;
+    height: 166px;
+  }
   //  MEDIA = TABLET = [ ] = 768PX
   &__title {
     @include mixins.tablet {
