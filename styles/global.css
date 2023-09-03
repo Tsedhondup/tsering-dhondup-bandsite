@@ -805,6 +805,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  padding: 0px 16px;
   /*------------------------------------------------*/
 }
 .show-hero__album-title {

@@ -8,6 +8,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  padding: 0px 16px;
   // ALBUN-TITLE
   &__album-title {
     color: colors.$white;
@@ -15,7 +16,7 @@
     font-size: 14px;
     font-weight: 400;
     position: relative;
-    padding-top:33px;
+    padding-top: 33px;
     z-index: 3;
   }
   // SONG-TITLE
