@@ -132,7 +132,7 @@ let emptyForm = () => {
 };
 
 // VALIDATING FORM-INPUTS DURING INTERACTION
-// let nameInputHanlder = () => {
+// let nameInputHanlder = (nameInput, NameInputVal) => {
 
 // };
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
@@ -157,10 +157,12 @@ let validateCommentInput = () => {
 // VALIDATING FORM INPUTS ON-SUBMISSION
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
   if (!nameVal) {
+    nameInput.classList.add("input-elements__pink-border"); // adding class
     validateNameInput(); // invoke validate-name-input
   }
 
   if (!commentVal) {
+    commentInput.classList.add("input-elements__pink-border"); // adding class
     validateCommentInput(); // invoke validate-comment-input
   }
 };
