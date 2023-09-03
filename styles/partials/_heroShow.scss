@@ -8,16 +8,13 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  // TITLE
-  &__title {
+  // ALBUN-TITLE
+  &__album-title {
     color: colors.$white;
-    text-transform: capitalize;
-    font-weight: 600;
-    padding: 0px 16px;
-    position: relative;
-    z-index: 2;
-    font-size: 24px;
-    width: 100%;
+  }
+  // SONG-TITLE
+  &__song-title {
+    color: colors.$white;
   }
   //  MEDIA = TABLET = [ ] = 768PX
   &__title {
@@ -45,6 +42,8 @@
     background-color: colors.$badnSiteDarkBlack;
     opacity: 0.5;
     z-index: 1;
+    left: 0;
+    top: 0;
   }
 }
 //  MEDIA = MOBILE-ONE = [ ] = 465PX

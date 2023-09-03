@@ -807,15 +807,11 @@
   position: relative;
   /*------------------------------------------------*/
 }
-.show-hero__title {
+.show-hero__album-title {
   color: #ffffff;
-  text-transform: capitalize;
-  font-weight: 600;
-  padding: 0px 16px;
-  position: relative;
-  z-index: 2;
-  font-size: 24px;
-  width: 100%;
+}
+.show-hero__song-title {
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .show-hero__title {
@@ -839,6 +835,8 @@
   background-color: #000000;
   opacity: 0.5;
   z-index: 1;
+  left: 0;
+  top: 0;
 }
 
 @media (min-width: 465px) {
