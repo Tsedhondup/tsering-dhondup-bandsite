@@ -1,0 +1,69 @@
+@use "./colors";
+@use "./mixins";
+.show-hero {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/images/hero-shows.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  // TITLE
+  &__title {
+    color: colors.$white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0px 16px;
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    width: 100%;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      font-size: 60px;
+      line-height: 68px;
+      font-weight: 600;
+      padding: 0px 36px;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__title {
+    @include mixins.desktop {
+      max-width: 1040px;
+      padding: 0px 0px;
+      margin: auto;
+    }
+  }
+  /*------------------------------------------------*/
+  // OVERLAY
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$badnSiteDarkBlack;
+    opacity: 0.5;
+    z-index: 1;
+  }
+}
+//  MEDIA = MOBILE-ONE = [ ] = 465PX
+.show-hero {
+  @include mixins.mobileOne {
+    height: 300px;
+  }
+}
+//  MEDIA = TABLET = [ ] = 768PX
+.show-hero {
+  @include mixins.tablet {
+    height: 450px;
+  }
+}
+//  MEDIA = DESKTOP = [ ] = 1280PX
+.show-hero {
+  @include mixins.desktop {
+    min-height: 600px;
+  }
+}
