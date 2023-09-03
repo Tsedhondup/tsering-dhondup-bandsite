@@ -125,8 +125,14 @@ isCommentArrayEmpty(commentArray);
 /*------------------------------------------------------------------------------------------*/
 // EMPTYING FORM FIELD AND MESSAGES AFTER SUCCESSFUL FORM SUBMISION
 let defaultForm = () => {
-  document.querySelector(".input-elements__name-input").value = ""; // name-input
-  document.querySelector(".input-elements__comments-input").value = ""; // comment-input
+  let nameInput = document.querySelector(".input-elements__name-input"); // name-input
+  nameInput.value = ""; // empting field
+  nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+
+  let commentInput = document.querySelector(".input-elements__comments-input"); // comment-input
+  commentInput.value = ""; // empting field
+  commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+
   document.querySelector(".input-elements__name-warning-msg").innerText = ""; // name-warning-msg
   document.querySelector(".input-elements__comment-warning-msg").innerText = ""; // comment-warning-msg
 };
