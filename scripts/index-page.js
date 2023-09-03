@@ -124,7 +124,7 @@ isCommentArrayEmpty(commentArray);
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 // EMPTYING FORM FIELD AND MESSAGES AFTER SUCCESSFUL FORM SUBMISION
-let emptyForm = () => {
+let defaultForm = () => {
   document.querySelector(".input-elements__name-input").value = ""; // name-input
   document.querySelector(".input-elements__comments-input").value = ""; // comment-input
   document.querySelector(".input-elements__name-warning-msg").innerText = ""; // name-warning-msg
@@ -208,8 +208,8 @@ let onSubmit = (event) => {
     document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     createEl(commentArray); // invoking create-el function
 
-    // INVOKING-EMPTY-FORM FUNCTION TO CLEAR FORM
-    emptyForm();
+    // INVOKING-EMPTY-FORM FUNCTION TO CLEAR INPUTS AND DEFAULT FORM
+    defaultForm();
   } else {
     validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
   }
