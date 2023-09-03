@@ -139,33 +139,37 @@ let defaultForm = () => {
 
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
 // VALIDATE NAME-INPUT
-let validateNameInput = () => {
+let validateNameInput = (nameInput) => {
   let nameWarningEl = document.querySelector(
     ".input-elements__name-warning-msg"
   );
   nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
   nameWarningEl.innerText = "Invalid name!"; // inserting warning message
+
+  // ADDING PINK-BORDER CLASS
+  nameInput.classList.add("input-elements__pink-border");
 };
 
 // VALIDATE COMMENT-INPUT
-let validateCommentInput = () => {
+let validateCommentInput = (commentInput) => {
   let commentWarningEl = document.querySelector(
     ".input-elements__comment-warning-msg"
   );
   commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
   commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
+
+  // ADDING PINK-BORDER CLASS
+  commentInput.classList.add("input-elements__pink-border");
 };
 
 // VALIDATING FORM INPUTS ON-SUBMISSION
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
   if (!nameVal) {
-    nameInput.classList.add("input-elements__pink-border"); // adding pink-border class
-    validateNameInput(); // invoke validate-name-input
+    validateNameInput(nameInput); // invoke validate-name-input
   }
 
   if (!commentVal) {
-    commentInput.classList.add("input-elements__pink-border"); // adding pink-border class
-    validateCommentInput(); // invoke validate-comment-input
+    validateCommentInput(commentInput); // invoke validate-comment-input
   }
 };
 
@@ -233,7 +237,7 @@ let addingEventHandlerToFormEls = () => {
     event.stopPropagation(); // stoping bubbling-effect
     //VALIDATING NAME-INPUT VALUE
     if (!nameInput.value) {
-      validateNameInput(); // invoking validate-name-input
+      validateNameInput(nameInput); // invoking validate-name-input
     }
   });
 
@@ -242,7 +246,7 @@ let addingEventHandlerToFormEls = () => {
     event.stopPropagation(); // stoping bubbling-effect
     //VALIDATING NAME-INPUT VALUE
     if (!commentInput.value) {
-      validateCommentInput(); // invoking validate-comment-input
+      validateCommentInput(commentInput); // invoking validate-comment-input
     }
   });
 };
