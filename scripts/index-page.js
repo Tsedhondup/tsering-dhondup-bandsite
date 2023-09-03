@@ -238,6 +238,24 @@ let addingEventHandlerToFormEls = () => {
     //VALIDATING NAME-INPUT VALUE
     if (!nameInput.value) {
       validateNameInput(nameInput); // invoking validate-name-input
+    } else {
+      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
+      nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+      document.querySelector(".input-elements__name-warning-msg").innerText =
+        ""; // removing warning-msg
+    }
+  });
+
+  nameInput.addEventListener("blur", (event) => {
+    event.stopPropagation(); // stoping bubbling-effect
+    //VALIDATING NAME-INPUT VALUE
+    if (!nameInput.value) {
+      validateNameInput(nameInput); // invoking validate-name-input
+    } else {
+      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
+      nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+      document.querySelector(".input-elements__name-warning-msg").innerText =
+        ""; // removing warning-msg
     }
   });
 
@@ -247,6 +265,23 @@ let addingEventHandlerToFormEls = () => {
     //VALIDATING NAME-INPUT VALUE
     if (!commentInput.value) {
       validateCommentInput(commentInput); // invoking validate-comment-input
+    } else {
+      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
+      commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+      document.querySelector(".input-elements__comment-warning-msg").innerText =
+        ""; // removing warning-msg
+    }
+  });
+  commentInput.addEventListener("blur", (event) => {
+    event.stopPropagation(); // stoping bubbling-effect
+    //VALIDATING NAME-INPUT VALUE
+    if (!commentInput.value) {
+      validateCommentInput(commentInput); // invoking validate-comment-input
+    } else {
+      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
+      commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+      document.querySelector(".input-elements__comment-warning-msg").innerText =
+        ""; // removing warning-msg
     }
   });
 };
