@@ -515,6 +515,9 @@
 .comments__form .input-elements__warning-msg-display {
   display: block;
 }
+.comments__form .input-elements__pink-border {
+  border: 1px solid #d22d2d;
+}
 .comments__form .input-elements__submit-btn {
   width: 100%;
   font-size: 14px;
