@@ -11,7 +11,11 @@
   // ALBUN-TITLE
   &__album-title {
     color: colors.$white;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 400;
     position: relative;
+    padding-top:33px;
     z-index: 3;
   }
   // SONG-TITLE
