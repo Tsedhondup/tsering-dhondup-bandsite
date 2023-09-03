@@ -137,17 +137,13 @@ let defaultForm = () => {
   document.querySelector(".input-elements__comment-warning-msg").innerText = ""; // comment-warning-msg
 };
 
-// VALIDATING FORM-INPUTS DURING INTERACTION
-// let nameInputHanlder = (nameInput, NameInputVal) => {
-
-// };
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
 // VALIDATE NAME-INPUT
 let validateNameInput = () => {
   let nameWarningEl = document.querySelector(
     ".input-elements__name-warning-msg"
   );
-  nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding class
+  nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
   nameWarningEl.innerText = "Invalid name!"; // inserting warning message
 };
 
@@ -156,19 +152,19 @@ let validateCommentInput = () => {
   let commentWarningEl = document.querySelector(
     ".input-elements__comment-warning-msg"
   );
-  commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding class
+  commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
   commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
 };
 
 // VALIDATING FORM INPUTS ON-SUBMISSION
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
   if (!nameVal) {
-    nameInput.classList.add("input-elements__pink-border"); // adding class
+    nameInput.classList.add("input-elements__pink-border"); // adding pink-border class
     validateNameInput(); // invoke validate-name-input
   }
 
   if (!commentVal) {
-    commentInput.classList.add("input-elements__pink-border"); // adding class
+    commentInput.classList.add("input-elements__pink-border"); // adding pink-border class
     validateCommentInput(); // invoke validate-comment-input
   }
 };
@@ -227,14 +223,27 @@ let addingEventHandlerToFormEls = () => {
   let nameInput = document.querySelector(".input-elements__name-input"); // name-input
   let commentInput = document.querySelector(".input-elements__comments-input"); // comment-input
 
+  // FORM
   form.addEventListener("submit", (event) => {
     onSubmit(event); // invoking on-submit function
   });
-  nameInput.addEventListener("input", () => {
-    console.log("hey");
+
+  // NAME-INPUT
+  nameInput.addEventListener("input", (event) => {
+    event.stopPropagation(); // stoping bubbling-effect
+    //VALIDATING NAME-INPUT VALUE
+    if (!nameInput.value) {
+      validateNameInput(); // invoking validate-name-input
+    }
   });
-  commentInput.addEventListener("input", () => {
-    console.log("hey");
+
+  // COMMENT-INPUT
+  commentInput.addEventListener("input", (event) => {
+    event.stopPropagation(); // stoping bubbling-effect
+    //VALIDATING NAME-INPUT VALUE
+    if (!commentInput.value) {
+      validateCommentInput(); // invoking validate-comment-input
+    }
   });
 };
 
