@@ -797,6 +797,12 @@
   }
 }
 
+/* HEADER */
+.header__nav-bar .header-page-link-container__list--item #shows-page-link {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
 .show-hero {
   width: 100%;
   height: 260px;
