@@ -1,5 +1,9 @@
 //HEADER
 @use "./partials/header" as *;
+
+// HEADER-SHOW - SEPARATE STYLES TO INDICATE CURRENT PAGE LOCATION = 'SHOWS-PAGE'
+@use "./partials/headerBio" as *;
+
 // HERO-BIO
 @use "./partials/heroBio" as *;
 // ABOUT

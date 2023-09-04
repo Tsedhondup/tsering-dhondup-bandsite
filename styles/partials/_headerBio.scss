@@ -1,0 +1,21 @@
+@use "./colors";
+/* HEADER */
+.header {
+  // NAVIGATION-BAR
+  &__nav-bar {
+    // UN-ORDERED LIST
+    .header-page-link-container {
+      // LIST-ITEMS
+      &__list {
+        // PAGE-LINK
+        &--item {
+          // SHOWS-PAGE-LINK
+          #bio-page-link {
+            color: colors.$white;
+            border-bottom: 3px solid colors.$white;
+          }
+        }
+      }
+    }
+  }
+}
