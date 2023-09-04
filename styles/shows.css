@@ -64,10 +64,6 @@
     height: 100%;
   }
 }
-.header__nav-bar .header-page-link-container__list--item #bio-link {
-  color: #ffffff;
-  border-bottom: 3px solid #ffffff;
-}
 .header__nav-bar .header-page-link-container__list--item .page-link:hover {
   color: #fafafa;
   border-bottom: 3px solid #fafafa;
