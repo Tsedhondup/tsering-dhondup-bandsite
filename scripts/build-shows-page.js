@@ -105,7 +105,7 @@ let createShowDataElements = (datas) => {
 
     // SHOWS-TABLE-DATAS - DATE
     let dateEl = document.createElement("p");
-    dateEl.classList.add("shows-table-data__content--name");
+    dateEl.classList.add("shows-table-data__content--date");
     dateEl.innerText = element.date;
     tableDataContentEl.appendChild(dateEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
 
@@ -123,7 +123,7 @@ let createShowDataElements = (datas) => {
 
     // SHOWS-TABLE-DATAS - BUTTON
     let buttonEl = document.createElement("button");
-    locationEl.classList.add("shows-table-data__content--btn");
+    buttonEl.classList.add("shows-table-data__content--btn");
     buttonEl.innerText = "Buy Ticket";
     tableDataContentEl.appendChild(buttonEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
   });
