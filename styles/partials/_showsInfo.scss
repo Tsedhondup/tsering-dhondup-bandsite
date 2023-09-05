@@ -11,9 +11,15 @@
   &__title {
     @include mixins.sectionHeader320;
   }
-  // SHOWS-TABLE-HEADER
+  // SHOWS TABLE HEADERS CONTAINER
   .shows-table-headers-container {
-    display: flex;
+    // SHOWS TABLE HEADER NAME
+    &__name {
+      color: colors.$silver;
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
   }
   // SHOWS-TABLE-DATA-CONTAINER
   .shows-table-data-container {

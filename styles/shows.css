@@ -178,8 +178,11 @@
   font-weight: 600;
   line-height: 32px;
 }
-.shows .shows-table-headers-container {
-  display: flex;
+.shows .shows-table-headers-container__name {
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 .shows .shows-table-data-container__content {
   display: flex;
