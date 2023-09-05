@@ -6,10 +6,10 @@
 @use "./mixins";
 
 .shows {
-  padding: 0px 16px;
+  padding: 36px 16px 16px 16px;
   // TITLE
   &__title {
-    font-size: 36px;
+    @include mixins.sectionHeader320;
   }
   // SHOWS-TABLE-HEADER
   .shows-table-headers-container {

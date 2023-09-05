@@ -888,10 +888,12 @@
 
 /* IMPORTS */
 .shows {
-  padding: 0px 16px;
+  padding: 36px 16px 16px 16px;
 }
 .shows__title {
-  font-size: 36px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
 }
 .shows .shows-table-headers-container {
   display: flex;
