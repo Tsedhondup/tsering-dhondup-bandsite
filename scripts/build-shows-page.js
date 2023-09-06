@@ -42,17 +42,14 @@ let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
 
   // SHOWS-TITLE-CONTAINER
   let showsTitleContainer = document.querySelector(".shows__title-container");
-  showsTitleContainer.appendChild(showTitleEl);
+  showsTitleContainer.appendChild(showTitleEl); // appending title
+
   // SHOWS-HEADER-DATA-CONTAINER
   let showsHeaderDataContainer = document.querySelector(
     ".shows__header-data-container"
   );
-  showsHeaderDataContainer.appendChild(showTableHeaderEl);
-  showsHeaderDataContainer.appendChild(showTableDataEl);
-
-  // showsContainer.appendChild(showTitleEl);
-  // showsContainer.appendChild(showTableHeaderEl);
-  // showsContainer.appendChild(showTableDataEl);
+  showsHeaderDataContainer.appendChild(showTableHeaderEl); // appending shows-headers
+  showsHeaderDataContainer.appendChild(showTableDataEl); // appending shows-data
 };
 
 /*------------------------------------------------------------------------------------------*/
@@ -67,7 +64,7 @@ let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
 // (1) - CREATING SHOWS TITLE ELMENTS
 let createShowTitleElements = () => {
   let showsTitleEl = document.createElement("h1");
-  showsTitleEl.classList.add("shows__title");
+  showsTitleEl.classList.add("shows__title-container--title");
   showsTitleEl.innerText = "Shows";
 
   // RETURNING-SHOWS-TITLE-EL
