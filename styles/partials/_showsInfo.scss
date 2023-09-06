@@ -13,10 +13,17 @@
     padding: 0px 16px 7px 16px;
     padding-bottom: 7px;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    @include mixins.tablet {
+      padding: 0px 36px 36px 36px;
+      @include mixins.sectionHeader768;
+    }
+  }
+
   // SHOWS TABLE HEADERS CONTAINER
   .shows-table-headers-container {
     display: none;
-    padding: 0px 16px;
     // SHOWS TABLE HEADER NAME
     &__header {
       color: colors.$silver;
@@ -41,6 +48,7 @@
   @include mixins.tablet {
     .shows-table-headers-container {
       display: flex;
+      padding: 0px 36px 15px 36px;
     }
   }
 

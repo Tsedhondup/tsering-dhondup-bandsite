@@ -898,9 +898,16 @@
   padding: 0px 16px 7px 16px;
   padding-bottom: 7px;
 }
+@media (min-width: 768px) {
+  .shows__title {
+    padding: 0px 36px 36px 36px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}
 .shows .shows-table-headers-container {
   display: none;
-  padding: 0px 16px;
 }
 .shows .shows-table-headers-container__header {
   color: #afafaf;
@@ -920,6 +927,7 @@
 @media (min-width: 768px) {
   .shows .shows-table-headers-container {
     display: flex;
+    padding: 0px 36px 15px 36px;
   }
 }
 .shows .shows-table-data-container__content {
