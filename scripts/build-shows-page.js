@@ -39,9 +39,20 @@ let showsDatas = [
 
 let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
-  showsContainer.appendChild(showTitleEl);
-  showsContainer.appendChild(showTableHeaderEl);
-  showsContainer.appendChild(showTableDataEl);
+
+  // SHOWS-TITLE-CONTAINER
+  let showsTitleContainer = document.querySelector(".shows__title-container");
+  showsTitleContainer.appendChild(showTitleEl);
+  // SHOWS-HEADER-DATA-CONTAINER
+  let showsHeaderDataContainer = document.querySelector(
+    ".shows__header-data-container"
+  );
+  showsHeaderDataContainer.appendChild(showTableHeaderEl);
+  showsHeaderDataContainer.appendChild(showTableDataEl);
+
+  // showsContainer.appendChild(showTitleEl);
+  // showsContainer.appendChild(showTableHeaderEl);
+  // showsContainer.appendChild(showTableDataEl);
 };
 
 /*------------------------------------------------------------------------------------------*/
