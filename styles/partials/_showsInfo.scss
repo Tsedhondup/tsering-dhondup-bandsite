@@ -24,10 +24,6 @@
       font-size: 11px;
       text-transform: uppercase;
     }
-  }
-  //  MEDIA = TABLET = [ ] = 768PX
-  .shows-table-headers-container {
-    display: flex;
     // DATE
     &__header-date {
       flex: 25%;
@@ -39,6 +35,12 @@
     // LOCATION
     &__header-location {
       flex: 50%;
+    }
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  @include mixins.tablet {
+    .shows-table-headers-container {
+      display: flex;
     }
   }
 

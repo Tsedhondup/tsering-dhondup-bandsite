@@ -908,9 +908,6 @@
   font-size: 11px;
   text-transform: uppercase;
 }
-.shows .shows-table-headers-container {
-  display: flex;
-}
 .shows .shows-table-headers-container__header-date {
   flex: 25%;
 }
@@ -919,6 +916,11 @@
 }
 .shows .shows-table-headers-container__header-location {
   flex: 50%;
+}
+@media (min-width: 768px) {
+  .shows .shows-table-headers-container {
+    display: flex;
+  }
 }
 .shows .shows-table-data-container__content {
   padding: 16px;
