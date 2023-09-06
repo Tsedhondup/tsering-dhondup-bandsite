@@ -91,7 +91,7 @@
 
 .shows-hero {
   width: 100%;
-  height: 270px;
+  height: 295px;
   background-image: url("../../assets/images/hero-shows.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -109,10 +109,12 @@
   padding-top: 33px;
   z-index: 3;
 }
-.shows-hero__album-song-container--album-title {
-  font-size: 25px;
-  font-weight: 600;
-  padding-top: 55px;
+@media (min-width: 768px) {
+  .shows-hero__album-song-container--album-title {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 55px;
+  }
 }
 .shows-hero__album-song-container--song-title {
   color: #ffffff;
@@ -134,7 +136,7 @@
 }
 .shows-hero__embedded-song {
   width: 100%;
-  height: 105px;
+  height: 125px;
   position: relative;
   z-index: 3;
   padding-top: 15px;
