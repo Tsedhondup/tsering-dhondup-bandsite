@@ -826,6 +826,10 @@
   padding-top: 33px;
   z-index: 3;
 }
+.show-hero__album-title {
+  font-size: 20px;
+  font-weight: 600;
+}
 .show-hero__song-title {
   color: #ffffff;
   position: relative;
@@ -842,21 +846,6 @@
   position: relative;
   z-index: 3;
   padding-top: 15px;
-}
-@media (min-width: 768px) {
-  .show-hero__title {
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 600;
-    padding: 0px 36px;
-  }
-}
-@media (min-width: 1280px) {
-  .show-hero__title {
-    max-width: 1040px;
-    padding: 0px 0px;
-    margin: auto;
-  }
 }
 .show-hero__overlay {
   position: absolute;
@@ -1000,6 +989,12 @@
 @media (min-width: 768px) {
   .shows__header-data-container .shows-table-data-container {
     padding: 0px 16px 0px 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
   }
 }
 

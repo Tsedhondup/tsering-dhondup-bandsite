@@ -152,3 +152,9 @@
     }
   }
 }
+// MEDIA = DESKTOP = [ ] = 1280PX
+.shows {
+  @include mixins.desktop {
+    display: flex;
+  }
+}

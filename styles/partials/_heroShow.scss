@@ -19,6 +19,11 @@
     padding-top: 33px;
     z-index: 3;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__album-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
   // SONG-TITLE
   &__song-title {
     color: colors.$white;
@@ -36,23 +41,7 @@
     z-index: 3;
     padding-top: 15px;
   }
-  //  MEDIA = TABLET = [ ] = 768PX
-  &__title {
-    @include mixins.tablet {
-      font-size: 60px;
-      line-height: 68px;
-      font-weight: 600;
-      padding: 0px 36px;
-    }
-  }
-  //  MEDIA = DESKTOP = [ ] = 1280PX
-  &__title {
-    @include mixins.desktop {
-      max-width: 1040px;
-      padding: 0px 0px;
-      margin: auto;
-    }
-  }
+
   /*------------------------------------------------*/
   // OVERLAY
   &__overlay {
