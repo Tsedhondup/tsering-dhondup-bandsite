@@ -54,6 +54,13 @@
       &--location {
         @extend .shows-table-data-container__content--venue;
       }
+      // BUY-BUTTON
+      &--btn {
+        @include mixins.buttonMobile;
+      }
+      &--btn:hover {
+        background-color: colors.$badnSiteDarkBlack;
+      }
     }
     &__content:hover {
       background-color: colors.$mercury;
