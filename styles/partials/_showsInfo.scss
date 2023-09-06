@@ -156,5 +156,7 @@
 .shows {
   @include mixins.desktop {
     display: flex;
+    max-width: 1040px;
+    margin: auto;
   }
 }

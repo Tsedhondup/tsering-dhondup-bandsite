@@ -1034,6 +1034,8 @@
 @media (min-width: 1280px) {
   .shows {
     display: flex;
+    max-width: 1040px;
+    margin: auto;
   }
 }
 
