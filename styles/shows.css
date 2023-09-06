@@ -174,7 +174,7 @@
 .shows {
   padding: 36px 0px 16px 0px;
 }
-.shows__title {
+.shows__title-container--title {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
@@ -182,7 +182,7 @@
   padding-bottom: 7px;
 }
 @media (min-width: 768px) {
-  .shows__title {
+  .shows__title-container--title {
     padding: 0px 36px 36px 36px;
     font-size: 34px;
     font-weight: 600;
