@@ -112,6 +112,7 @@
 .show-hero__album-title {
   font-size: 20px;
   font-weight: 600;
+  padding-top: 55px;
 }
 .show-hero__song-title {
   color: #ffffff;
@@ -128,6 +129,7 @@
     font-size: 60px;
     line-height: 70px;
     max-width: 550px;
+    padding-top: 12px;
   }
 }
 .show-hero__embedded-song {
