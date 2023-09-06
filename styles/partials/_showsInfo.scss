@@ -28,6 +28,10 @@
       display: flex;
       justify-content: space-between;
       padding-top: 16px;
+      // HEADERS
+      &--inline-header {
+        @include mixins.sectionHeader320;
+      }
     }
     &__content:hover {
       background-color: colors.$mercury;
