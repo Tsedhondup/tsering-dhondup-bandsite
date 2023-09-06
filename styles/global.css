@@ -980,6 +980,7 @@
   .shows .shows-table-data-container__content--btn {
     flex: 25%;
     margin-top: 0px;
+    max-width: 130px;
   }
 }
 @media (min-width: 768px) {
