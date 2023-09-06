@@ -54,9 +54,9 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__embedded-song {
     @include mixins.tablet {
-      padding-top: 36px;
-      max-width: 285px;
-      height: 170px;
+      padding-top: 30px;
+      max-width: 405px;
+      height: 165px;
     }
   }
 

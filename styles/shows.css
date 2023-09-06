@@ -141,9 +141,9 @@
 }
 @media (min-width: 768px) {
   .show-hero__embedded-song {
-    padding-top: 36px;
-    max-width: 285px;
-    height: 170px;
+    padding-top: 30px;
+    max-width: 405px;
+    height: 165px;
   }
 }
 .show-hero__overlay {
