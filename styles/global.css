@@ -914,6 +914,13 @@
   font-weight: 400;
   font-size: 11px;
   text-transform: uppercase;
+  background-color: bisque;
+}
+@media (min-width: 768px) {
+  .shows .shows-table-headers-container__header {
+    padding: 0px 36px 0px 36px;
+    width: 100%;
+  }
 }
 .shows .shows-table-headers-container__header-date {
   flex: 25%;

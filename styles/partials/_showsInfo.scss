@@ -30,7 +30,16 @@
       font-weight: 400;
       font-size: 11px;
       text-transform: uppercase;
+      background-color: bisque;
     }
+    //  MEDIA = TABLET = [ ] = 768PX
+    @include mixins.tablet {
+      &__header {
+        padding: 0px 36px 0px 36px;
+        width: 100%;
+      }
+    }
+
     // DATE
     &__header-date {
       flex: 25%;
