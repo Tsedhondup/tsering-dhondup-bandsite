@@ -867,6 +867,7 @@
 @media (min-width: 768px) {
   .show-hero {
     height: 450px;
+    padding: 0px 36px;
   }
 }
 

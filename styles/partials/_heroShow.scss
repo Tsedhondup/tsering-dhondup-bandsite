@@ -65,6 +65,7 @@
 .show-hero {
   @include mixins.tablet {
     height: 450px;
+    padding: 0px 36px;
   }
 }
 //  MEDIA = DESKTOP = [ ] = 1280PX
