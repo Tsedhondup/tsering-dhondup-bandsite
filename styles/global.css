@@ -900,12 +900,25 @@
 }
 .shows .shows-table-headers-container {
   display: none;
+  padding: 0px 16px;
 }
 .shows .shows-table-headers-container__header {
   color: #afafaf;
   font-weight: 400;
   font-size: 11px;
   text-transform: uppercase;
+}
+.shows .shows-table-headers-container {
+  display: flex;
+}
+.shows .shows-table-headers-container__header-date {
+  flex: 25%;
+}
+.shows .shows-table-headers-container__header-venue {
+  flex: 25%;
+}
+.shows .shows-table-headers-container__header-location {
+  flex: 50%;
 }
 .shows .shows-table-data-container__content {
   padding: 16px;
@@ -940,6 +953,11 @@
 }
 .shows .shows-table-data-container__content--btn:hover {
   background-color: #000000;
+}
+@media (min-width: 768px) {
+  .shows .shows-table-data-container__content {
+    display: flex;
+  }
 }
 .shows .shows-table-data-container__content:hover {
   background-color: #e1e1e1;
