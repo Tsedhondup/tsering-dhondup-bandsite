@@ -219,6 +219,7 @@
 }
 .shows__header-data-container .shows-table-headers-container {
   display: none;
+  background-color: bisque;
   /*----------- STARTS FROM HERE ------------*/
 }
 .shows__header-data-container .shows-table-headers-container__header {
@@ -226,7 +227,6 @@
   font-weight: 400;
   font-size: 11px;
   text-transform: uppercase;
-  background-color: bisque;
 }
 .shows__header-data-container .shows-table-headers-container__header-date {
   flex: 25%;

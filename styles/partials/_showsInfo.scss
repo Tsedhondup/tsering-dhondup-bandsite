@@ -30,13 +30,14 @@
     // SHOWS TABLE HEADERS CONTAINER
     .shows-table-headers-container {
       display: none;
-      // SHOWS TABLE HEADER NAME
+      background-color: bisque;
+
+      // SHOWS TABLE HEADER NAM
       &__header {
         color: colors.$silver;
         font-weight: 400;
         font-size: 11px;
         text-transform: uppercase;
-        background-color: bisque;
       }
       /*----------- STARTS FROM HERE ------------*/
       // //  MEDIA = TABLET = [ ] = 768PX
