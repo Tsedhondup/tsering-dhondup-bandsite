@@ -985,7 +985,6 @@
 @media (min-width: 768px) {
   .shows .shows-table-data-container__content {
     display: flex;
-    padding: 16px 36px 16px 36px;
     align-items: center;
   }
 }
@@ -994,6 +993,11 @@
 }
 .shows .shows-table-data-container__content-selected {
   background-color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  .shows .shows-table-data-container {
+    padding: 0px 16px 0px 16px;
+  }
 }
 
 @font-face {
