@@ -139,6 +139,11 @@
     padding-top: 12px;
   }
 }
+@media (min-width: 1280px) {
+  .shows-hero__music-container .album-song-container__song-title {
+    max-width: 500px;
+  }
+}
 .shows-hero__music-container--embedded-song {
   width: 100%;
   height: 125px;

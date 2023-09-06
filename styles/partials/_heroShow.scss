@@ -56,6 +56,12 @@
           padding-top: 12px;
         }
       }
+      //  MEDIA = DESKTOP = [ ] = 1280PX
+      &__song-title {
+        @include mixins.desktop {
+          max-width: 500px;
+        }
+      }
     }
 
     // EMBEDDED SONG
