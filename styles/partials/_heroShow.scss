@@ -51,12 +51,7 @@
         }
       }
     }
-    .album-song-container {
-      @include mixins.desktop {
-        max-width: 1040px;
-        margin: auto;
-      }
-    }
+
     // EMBEDDED SONG
     &--embedded-song {
       width: 100%;
@@ -77,6 +72,8 @@
   &__music-container {
     @include mixins.desktop {
       display: flex;
+      max-width: 1040px;
+      margin: auto;
     }
   }
 

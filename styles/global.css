@@ -851,12 +851,6 @@
     padding-top: 12px;
   }
 }
-@media (min-width: 1280px) {
-  .shows-hero__music-container .album-song-container {
-    max-width: 1040px;
-    margin: auto;
-  }
-}
 .shows-hero__music-container--embedded-song {
   width: 100%;
   height: 125px;
@@ -874,6 +868,8 @@
 @media (min-width: 1280px) {
   .shows-hero__music-container {
     display: flex;
+    max-width: 1040px;
+    margin: auto;
   }
 }
 .shows-hero__overlay {
