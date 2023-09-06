@@ -927,7 +927,7 @@
 @media (min-width: 768px) {
   .shows .shows-table-headers-container {
     display: flex;
-    padding: 0px 36px 15px 36px;
+    padding: 0px 36px 30px 36px;
   }
 }
 .shows .shows-table-data-container__content {
@@ -977,6 +977,7 @@
 @media (min-width: 768px) {
   .shows .shows-table-data-container__content {
     display: flex;
+    padding: 0px 36px 16px 36px;
   }
 }
 .shows .shows-table-data-container__content:hover {

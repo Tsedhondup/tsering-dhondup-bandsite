@@ -48,7 +48,7 @@
   @include mixins.tablet {
     .shows-table-headers-container {
       display: flex;
-      padding: 0px 36px 15px 36px;
+      padding: 0px 36px 30px 36px;
     }
   }
 
@@ -106,6 +106,7 @@
     &__content {
       @include mixins.tablet {
         display: flex;
+        padding: 0px 36px 16px 36px;
       }
     }
     &__content:hover {
