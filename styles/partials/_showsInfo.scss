@@ -66,12 +66,24 @@
         text-transform: uppercase;
         padding-bottom: 10px;
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &--inline-header {
+        @include mixins.tablet {
+          display: none;
+        }
+      }
       // DATE
       &--date {
         font-size: 14px;
         font-weight: 600;
         color: colors.$badnSiteDarkBlack;
         padding-bottom: 16px;
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &--date {
+        @include mixins.tablet {
+          flex: 25%;
+        }
       }
       // VENUE - PARTIAL EXTENDED TO 'DATE'
       &--venue {

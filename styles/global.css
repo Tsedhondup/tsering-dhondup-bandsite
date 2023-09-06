@@ -941,11 +941,21 @@
   text-transform: uppercase;
   padding-bottom: 10px;
 }
+@media (min-width: 768px) {
+  .shows .shows-table-data-container__content--inline-header {
+    display: none;
+  }
+}
 .shows .shows-table-data-container__content--date, .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
   font-size: 14px;
   font-weight: 600;
   color: #000000;
   padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .shows .shows-table-data-container__content--date, .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
+    flex: 25%;
+  }
 }
 .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
   font-weight: 400;
