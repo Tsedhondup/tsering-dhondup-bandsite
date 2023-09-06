@@ -35,7 +35,7 @@ let showsDatas = [
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-// SHOW-TABLE RENDERING-FUNCTION
+// SHOWS-TABLE RENDERING-FUNCTION
 
 let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
   let showsContainer = document.querySelector(".shows");
@@ -53,17 +53,17 @@ let renderShowsInfo = (showTitleEl, showTableHeaderEl, showTableDataEl) => {
 - EACH FUNCTION RETURNS ELEMENT AND THEY ARE STORE IN VARIABLES
 */
 
-// (1) - CREATING SHOW TITLE ELMENTS
+// (1) - CREATING SHOWS TITLE ELMENTS
 let createShowTitleElements = () => {
   let showsTitleEl = document.createElement("h1");
   showsTitleEl.classList.add("shows__title");
   showsTitleEl.innerText = "Shows";
 
-  // RETURNING-SHOW-TITLE-EL
+  // RETURNING-SHOWS-TITLE-EL
   return showsTitleEl;
 };
 
-// (2) - CREATING SHOW-TABLE HEADER ELEMENTS
+// (2) - CREATING SHOWS-TABLE HEADER ELEMENTS TO USE ON TOP OF THE SHOWS-DATA TABLE
 let createShowHeaderElements = () => {
   // HEADERS-CONTAINER
   let headerEl = document.createElement("div");
@@ -73,59 +73,60 @@ let createShowHeaderElements = () => {
   let headerDateEl = document.createElement("h3");
   headerDateEl.classList.add("shows-table-headers-container__name");
   headerDateEl.innerText = "Date";
-  headerEl.appendChild(headerDateEl); // APPENDING TO SHOW-HEADERS
+  headerEl.appendChild(headerDateEl); // appending to shows-header-container
 
   // SHOWS-TABLE-HEADER - VENUE
   let headerVenueEl = document.createElement("h3");
   headerVenueEl.classList.add("shows-table-headers-container__name");
   headerVenueEl.innerText = "Venue";
-  headerEl.appendChild(headerVenueEl); // APPENDING TO SHOW-HEADERS
+  headerEl.appendChild(headerVenueEl); // appending to shows-header-container
 
   // SHOWS-TABLE-HEADER - LOCATION
   let headerLocationEl = document.createElement("h3");
   headerLocationEl.classList.add("shows-table-headers-container__name");
   headerLocationEl.innerText = "Location";
-  headerEl.appendChild(headerLocationEl); // APPENDING TO SHOW-HEADERS
+  headerEl.appendChild(headerLocationEl); // appending to shows-header-container
 
   // RETURNS SHOW HEADER-EL
   return headerEl;
 };
 
+// CREATING SHOWS-TABLE HEADER ELEMENTS TO USE WITHIN THE SHOWS-DATA TABLE
 // (3) - CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
-  // TABLE-DATA-CONTAINER - SHOW TABLE-ROWS ARE BEING WRAPPEND AS CHILDREN IN SINGLE CONTAINER
+  // TABLE-DATA-CONTAINER - SHOWS TABLE-ROWS ARE BEING WRAPPEND AS CHILDREN IN SINGLE CONTAINER
   let tableDataContainerEl = document.createElement("div");
   tableDataContainerEl.classList.add("shows-table-data-container");
 
   datas.forEach((element) => {
-    // SHOW-TABLE-DATA-CONTENT 'CONTAINER FOR INDIVIDUAL SHOWS ITEM'
+    // SHOWS-TABLE-DATA-CONTENT 'CONTAINER FOR INDIVIDUAL SHOWS ITEM'
     let tableDataContentEl = document.createElement("div");
     tableDataContentEl.classList.add("shows-table-data-container__content");
-    tableDataContainerEl.appendChild(tableDataContentEl); // APPENDING TO SHOW-TABLE-DATA-CONTAINER
+    tableDataContainerEl.appendChild(tableDataContentEl); // appending to shows-table-data-container
 
     // SHOWS-TABLE-DATAS - DATE
     let dateEl = document.createElement("p");
     dateEl.classList.add("shows-table-data__content--date");
     dateEl.innerText = element.date;
-    tableDataContentEl.appendChild(dateEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
+    tableDataContentEl.appendChild(dateEl); // appending to shows-table-data-content
 
     // SHOWS-TABLE-DATAS - VENUE
     let venueEl = document.createElement("p");
     venueEl.classList.add("shows-table-data__content--venue");
     venueEl.innerText = element.venue;
-    tableDataContentEl.appendChild(venueEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
+    tableDataContentEl.appendChild(venueEl); //  appending to shows-table-data-content
 
     // SHOWS-TABLE-DATAS - LOCATION
     let locationEl = document.createElement("p");
     locationEl.classList.add("shows-table-data__content--location");
     locationEl.innerText = element.location;
-    tableDataContentEl.appendChild(locationEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
+    tableDataContentEl.appendChild(locationEl); //  appending to shows-table-data-content
 
     // SHOWS-TABLE-DATAS - BUTTON
     let buttonEl = document.createElement("button");
     buttonEl.classList.add("shows-table-data__content--btn");
     buttonEl.innerText = "Buy Ticket";
-    tableDataContentEl.appendChild(buttonEl); // APPENDING TO SHOW-TABLE-DATA-CONTENT
+    tableDataContentEl.appendChild(buttonEl); //  appending to shows-table-data-content
   });
 
   // RETURN TABLE-DATA-CONTAINER-EL
@@ -147,7 +148,7 @@ renderShowsInfo(
 - TWO FUNCTION ARE BEING USED TO ADD & REMOVE CLASSES FROM CONCERT TABLE-ROW ELEMENT
  (1) ADDING AND REMOVING CLASS-NAME FROM CONCERT TABLE-ROW
  (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW TO ENSURE IF THE DOM-REDERING WAS SUCCESSFUL 
-    AND ADDING EVENT-HANDLER 
+    AND THEN ADD EVENT-HANDLER 
 */
 
 // (1) ADDING AND REMOVING CLASSES
