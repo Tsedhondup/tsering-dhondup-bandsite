@@ -908,6 +908,7 @@
 }
 .shows .shows-table-headers-container {
   display: none;
+  /*----------- STARTS FROM HERE ------------*/
 }
 .shows .shows-table-headers-container__header {
   color: #afafaf;
@@ -915,12 +916,6 @@
   font-size: 11px;
   text-transform: uppercase;
   background-color: bisque;
-}
-@media (min-width: 768px) {
-  .shows .shows-table-headers-container__header {
-    padding: 0px 36px 0px 36px;
-    width: 100%;
-  }
 }
 .shows .shows-table-headers-container__header-date {
   flex: 25%;
