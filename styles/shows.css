@@ -116,6 +116,11 @@
     padding-top: 55px;
   }
 }
+@media (min-width: 1280px) {
+  .shows-hero__music-container .album-song-container__album-title {
+    padding-top: 0px;
+  }
+}
 .shows-hero__music-container .album-song-container__song-title {
   color: #ffffff;
   position: relative;

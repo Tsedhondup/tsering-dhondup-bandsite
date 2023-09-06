@@ -31,6 +31,12 @@
           padding-top: 55px;
         }
       }
+      //  MEDIA = DESKTOP = [ ] = 1280PX
+      &__album-title {
+        @include mixins.desktop {
+          padding-top: 0px;
+        }
+      }
       // SONG-TITLE
       &__song-title {
         color: colors.$white;
@@ -69,6 +75,7 @@
       }
     }
   }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
   &__music-container {
     @include mixins.desktop {
       display: flex;
