@@ -98,19 +98,19 @@ let createInlineShowHeadersElements = () => {
 
   // SHOWS-TABLE-HEADER - DATE
   let headerDateEl = document.createElement("h3");
-  headerDateEl.classList.add("shows-table-data__content--date-header");
+  headerDateEl.classList.add("shows-table-data__content--inline-header");
   headerDateEl.innerText = "Date";
   inlineShowHeaders.push(headerDateEl); // adding into inlineShowsHeaderArray
 
   // SHOWS-TABLE-HEADER - VENUE
   let headerVenueEl = document.createElement("h3");
-  headerVenueEl.classList.add("shows-table-data__content--venue-header");
+  headerVenueEl.classList.add("shows-table-data__content--inline-header");
   headerVenueEl.innerText = "Venue";
   inlineShowHeaders.push(headerVenueEl); // adding into inlineShowsHeaderArray
 
   // SHOWS-TABLE-HEADER - LOCATION
   let headerLocationEl = document.createElement("h3");
-  headerLocationEl.classList.add("shows-table-data__content--location-header");
+  headerLocationEl.classList.add("shows-table-data__content--inline-header");
   headerLocationEl.innerText = "Location";
   inlineShowHeaders.push(headerLocationEl); // adding into inlineShowsHeaderArray
 
