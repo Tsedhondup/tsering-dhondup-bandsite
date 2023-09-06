@@ -955,6 +955,7 @@
 @media (min-width: 768px) {
   .shows .shows-table-data-container__content--date, .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
     flex: 25%;
+    padding-bottom: 0px;
   }
 }
 .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {

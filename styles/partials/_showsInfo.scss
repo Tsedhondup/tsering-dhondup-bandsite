@@ -80,9 +80,11 @@
         padding-bottom: 16px;
       }
       //  MEDIA = TABLET = [ ] = 768PX
+      // EXTENDED BY VENUE AND LOCATION
       &--date {
         @include mixins.tablet {
           flex: 25%;
+          padding-bottom: 0px;
         }
       }
       // VENUE - PARTIAL EXTENDED TO 'DATE'
