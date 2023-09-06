@@ -915,6 +915,15 @@
   text-transform: uppercase;
   padding-bottom: 10px;
 }
+.shows .shows-table-data-container__content--date, .shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  padding-bottom: 16px;
+}
+.shows .shows-table-data-container__content--venue, .shows .shows-table-data-container__content--location {
+  font-weight: 400;
+}
 .shows .shows-table-data-container__content:hover {
   background-color: #e1e1e1;
 }

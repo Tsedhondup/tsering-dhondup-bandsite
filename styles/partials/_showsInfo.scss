@@ -36,6 +36,22 @@
         text-transform: uppercase;
         padding-bottom: 10px;
       }
+      // DATE
+      &--date {
+        font-size: 14px;
+        font-weight: 600;
+        color: colors.$badnSiteDarkBlack;
+        padding-bottom: 16px;
+      }
+      // VENUE - PARTIAL EXTENDED TO 'DATE'
+      &--venue {
+        @extend .shows-table-data-container__content--date;
+        font-weight: 400;
+      }
+      // LOCATION - 100% EXTENDED 'VENUE'
+      &--location {
+        @extend .shows-table-data-container__content--venue;
+      }
     }
     &__content:hover {
       background-color: colors.$mercury;
