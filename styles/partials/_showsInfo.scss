@@ -14,6 +14,7 @@
   // SHOWS TABLE HEADERS CONTAINER
   .shows-table-headers-container {
     // SHOWS TABLE HEADER NAME
+    display: none;
     &__name {
       color: colors.$silver;
       font-weight: 400;
@@ -25,8 +26,6 @@
   .shows-table-data-container {
     // SHOW-TABLE-DATA-CONTAINER__CONTENT
     &__content {
-      display: flex;
-      justify-content: space-between;
       padding-top: 16px;
       // HEADERS
       &--inline-header {

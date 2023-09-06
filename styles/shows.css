@@ -178,6 +178,9 @@
   font-weight: 600;
   line-height: 32px;
 }
+.shows .shows-table-headers-container {
+  display: none;
+}
 .shows .shows-table-headers-container__name {
   color: #afafaf;
   font-weight: 400;
@@ -185,8 +188,6 @@
   text-transform: uppercase;
 }
 .shows .shows-table-data-container__content {
-  display: flex;
-  justify-content: space-between;
   padding-top: 16px;
 }
 .shows .shows-table-data-container__content--inline-header {

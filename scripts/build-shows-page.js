@@ -71,19 +71,24 @@ let createShowHeaderElements = () => {
 
   // SHOWS-TABLE-HEADER - DATE
   let headerDateEl = document.createElement("h3");
-  headerDateEl.classList.add("shows-table-headers-container__name");
+  headerDateEl.classList.add("shows-table-headers-container__header"); // adding common-class
+  headerDateEl.classList.add("shows-table-headers-container__header-date"); // adding unique class
   headerDateEl.innerText = "Date";
   headerEl.appendChild(headerDateEl); // appending to shows-header-container
 
   // SHOWS-TABLE-HEADER - VENUE
   let headerVenueEl = document.createElement("h3");
-  headerVenueEl.classList.add("shows-table-headers-container__name");
+  headerVenueEl.classList.add("shows-table-headers-container__header"); // adding common-class
+  headerVenueEl.classList.add("shows-table-headers-container__header-venue"); // adding unique class
   headerVenueEl.innerText = "Venue";
   headerEl.appendChild(headerVenueEl); // appending to shows-header-container
 
   // SHOWS-TABLE-HEADER - LOCATION
   let headerLocationEl = document.createElement("h3");
-  headerLocationEl.classList.add("shows-table-headers-container__name");
+  headerLocationEl.classList.add("shows-table-headers-container__header"); // adding common-class
+  headerLocationEl.classList.add(
+    "shows-table-headers-container__header-location"
+  ); // adding unique class
   headerLocationEl.innerText = "Location";
   headerEl.appendChild(headerLocationEl); // appending to shows-header-container
 
@@ -98,19 +103,25 @@ let createInlineShowHeadersElements = () => {
 
   // SHOWS-TABLE-HEADER - DATE
   let headerDateEl = document.createElement("h3");
-  headerDateEl.classList.add("shows-table-data__content--inline-header");
+  headerDateEl.classList.add(
+    "shows-table-data-container__content--inline-header"
+  );
   headerDateEl.innerText = "Date";
   inlineShowHeaders.push(headerDateEl); // adding into inlineShowsHeaderArray
 
   // SHOWS-TABLE-HEADER - VENUE
   let headerVenueEl = document.createElement("h3");
-  headerVenueEl.classList.add("shows-table-data__content--inline-header");
+  headerVenueEl.classList.add(
+    "shows-table-data-container__content--inline-header"
+  );
   headerVenueEl.innerText = "Venue";
   inlineShowHeaders.push(headerVenueEl); // adding into inlineShowsHeaderArray
 
   // SHOWS-TABLE-HEADER - LOCATION
   let headerLocationEl = document.createElement("h3");
-  headerLocationEl.classList.add("shows-table-data__content--inline-header");
+  headerLocationEl.classList.add(
+    "shows-table-data-container__content--inline-header"
+  );
   headerLocationEl.innerText = "Location";
   inlineShowHeaders.push(headerLocationEl); // adding into inlineShowsHeaderArray
 
@@ -135,7 +146,7 @@ let createShowDataElements = (datas) => {
 
     // SHOWS-TABLE-DATA - DATE
     let dateEl = document.createElement("p");
-    dateEl.classList.add("shows-table-data__content--date");
+    dateEl.classList.add("shows-table-data-container__content--date");
     dateEl.innerText = element.date;
     tableDataContentEl.appendChild(dateEl); // appending to shows-table-data-content
 
@@ -144,7 +155,7 @@ let createShowDataElements = (datas) => {
 
     // SHOWS-TABLE-DATA - VENUE
     let venueEl = document.createElement("p");
-    venueEl.classList.add("shows-table-data__content--venue");
+    venueEl.classList.add("shows-table-data-container__content--venue");
     venueEl.innerText = element.venue;
     tableDataContentEl.appendChild(venueEl); //  appending to shows-table-data-content
 
@@ -153,13 +164,13 @@ let createShowDataElements = (datas) => {
 
     // SHOWS-TABLE-DATA - LOCATION
     let locationEl = document.createElement("p");
-    locationEl.classList.add("shows-table-data__content--location");
+    locationEl.classList.add("shows-table-data-container__content--location");
     locationEl.innerText = element.location;
     tableDataContentEl.appendChild(locationEl); //  appending to shows-table-data-content
 
     // SHOWS-TABLE-DATA - BUTTON
     let buttonEl = document.createElement("button");
-    buttonEl.classList.add("shows-table-data__content--btn");
+    buttonEl.classList.add("shows-table-data-container__content--btn");
     buttonEl.innerText = "Buy Ticket";
     tableDataContentEl.appendChild(buttonEl); //  appending to shows-table-data-content
   });
