@@ -37,9 +37,9 @@
   //  MEDIA = TABLET = [ ] = 768PX
   &__song-title {
     @include mixins.tablet {
-      font-size: 42px;
-      line-height: 50px;
-      max-width: 370px;
+      font-size: 60px;
+      line-height: 70px;
+      max-width: 550px;
     }
   }
   &__embedded-song {
