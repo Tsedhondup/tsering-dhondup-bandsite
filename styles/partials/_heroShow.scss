@@ -34,12 +34,28 @@
     // FONT-STYLES
     @include mixins.sectionHeader320;
   }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__song-title {
+    @include mixins.tablet {
+      font-size: 42px;
+      line-height: 50px;
+      max-width: 370px;
+    }
+  }
   &__embedded-song {
     width: 100%;
     height: 105px;
     position: relative;
     z-index: 3;
     padding-top: 15px;
+  }
+  //  MEDIA = TABLET = [ ] = 768PX
+  &__embedded-song {
+    @include mixins.tablet {
+      padding-top: 36px;
+      max-width: 285px;
+      height: 170px;
+    }
   }
 
   /*------------------------------------------------*/
