@@ -25,127 +25,130 @@
     }
   }
 
-  // SHOWS TABLE HEADERS CONTAINER
-  .shows-table-headers-container {
-    display: none;
-    // SHOWS TABLE HEADER NAME
-    &__header {
-      color: colors.$silver;
-      font-weight: 400;
-      font-size: 11px;
-      text-transform: uppercase;
-      background-color: bisque;
-    }
-    /*----------- STARTS FROM HERE ------------*/
-    // //  MEDIA = TABLET = [ ] = 768PX
-    // @include mixins.tablet {
-    //   &__header {
-    //     width: 100%;
-    //   }
-    // }
-
-    // DATE
-    &__header-date {
-      flex: 25%;
-    }
-    // VENUE
-    &__header-venue {
-      flex: 25%;
-    }
-    // LOCATION
-    &__header-location {
-      flex: 50%;
-    }
-  }
-  //  MEDIA = TABLET = [ ] = 768PX
-  @include mixins.tablet {
+  // SHOW-HEADER-DATA-CONTAINER
+  &__header-data-container {
+    // SHOWS TABLE HEADERS CONTAINER
     .shows-table-headers-container {
-      display: flex;
-      padding: 0px 36px 0px 36px;
-    }
-  }
-
-  // SHOWS-TABLE-DATA-CONTAINER
-  .shows-table-data-container {
-    // SHOW-TABLE-DATA-CONTAINER__CONTENT
-    &__content {
-      padding: 16px;
-      border-bottom: 1px solid colors.$mercury;
-      // HEADERS
-      &--inline-header {
-        font-size: 10px;
-        font-weight: 400;
+      display: none;
+      // SHOWS TABLE HEADER NAME
+      &__header {
         color: colors.$silver;
-        text-transform: uppercase;
-        padding-bottom: 10px;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &--inline-header {
-        @include mixins.tablet {
-          display: none;
-        }
-      }
-      // DATE
-      &--date {
-        font-size: 14px;
-        font-weight: 600;
-        color: colors.$badnSiteDarkBlack;
-        padding-bottom: 18px;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      // EXTENDED BY VENUE AND LOCATION
-      &--date {
-        @include mixins.tablet {
-          flex: 25%;
-          padding-bottom: 0px;
-        }
-      }
-      // VENUE - PARTIAL EXTENDED TO 'DATE'
-      &--venue {
-        @extend .shows-table-data-container__content--date;
         font-weight: 400;
+        font-size: 11px;
+        text-transform: uppercase;
+        background-color: bisque;
       }
-      // LOCATION - 100% EXTENDED 'VENUE'
-      &--location {
-        @extend .shows-table-data-container__content--venue;
+      /*----------- STARTS FROM HERE ------------*/
+      // //  MEDIA = TABLET = [ ] = 768PX
+      // @include mixins.tablet {
+      //   &__header {
+      //     width: 100%;
+      //   }
+      // }
+
+      // DATE
+      &__header-date {
+        flex: 25%;
       }
-      // BUY-BUTTON
-      &--btn {
-        @include mixins.buttonMobile;
-        margin-top: 0px;
+      // VENUE
+      &__header-venue {
+        flex: 25%;
       }
-      &--btn:hover {
-        background-color: colors.$badnSiteDarkBlack;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &--btn {
-        @include mixins.tablet {
-          flex: 25%;
-          margin-top: 0px;
-          max-width: 130px;
-        }
+      // LOCATION
+      &__header-location {
+        flex: 50%;
       }
     }
     //  MEDIA = TABLET = [ ] = 768PX
-    &__content {
-      @include mixins.tablet {
+    @include mixins.tablet {
+      .shows-table-headers-container {
         display: flex;
-        align-items: center;
+        padding: 0px 36px 0px 36px;
       }
     }
-    &__content:hover {
-      background-color: colors.$mercury;
-    }
 
-    // CLASS IS DYNAMICALLY CREATED USING JAVASCRIPT
-    &__content-selected {
-      background-color: colors.$mercury;
+    // SHOWS-TABLE-DATA-CONTAINER
+    .shows-table-data-container {
+      // SHOW-TABLE-DATA-CONTAINER__CONTENT
+      &__content {
+        padding: 16px;
+        border-bottom: 1px solid colors.$mercury;
+        // HEADERS
+        &--inline-header {
+          font-size: 10px;
+          font-weight: 400;
+          color: colors.$silver;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--inline-header {
+          @include mixins.tablet {
+            display: none;
+          }
+        }
+        // DATE
+        &--date {
+          font-size: 14px;
+          font-weight: 600;
+          color: colors.$badnSiteDarkBlack;
+          padding-bottom: 18px;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        // EXTENDED BY VENUE AND LOCATION
+        &--date {
+          @include mixins.tablet {
+            flex: 25%;
+            padding-bottom: 0px;
+          }
+        }
+        // VENUE - PARTIAL EXTENDED TO 'DATE'
+        &--venue {
+          @extend .shows-table-data-container__content--date;
+          font-weight: 400;
+        }
+        // LOCATION - 100% EXTENDED 'VENUE'
+        &--location {
+          @extend .shows-table-data-container__content--venue;
+        }
+        // BUY-BUTTON
+        &--btn {
+          @include mixins.buttonMobile;
+          margin-top: 0px;
+        }
+        &--btn:hover {
+          background-color: colors.$badnSiteDarkBlack;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        &--btn {
+          @include mixins.tablet {
+            flex: 25%;
+            margin-top: 0px;
+            max-width: 130px;
+          }
+        }
+      }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &__content {
+        @include mixins.tablet {
+          display: flex;
+          align-items: center;
+        }
+      }
+      &__content:hover {
+        background-color: colors.$mercury;
+      }
+
+      // CLASS IS DYNAMICALLY CREATED USING JAVASCRIPT
+      &__content-selected {
+        background-color: colors.$mercury;
+      }
     }
-  }
-  //  MEDIA = TABLET = [ ] = 768PX
-  .shows-table-data-container {
-    @include mixins.tablet {
-      padding: 0px 16px 0px 16px;
+    //  MEDIA = TABLET = [ ] = 768PX
+    .shows-table-data-container {
+      @include mixins.tablet {
+        padding: 0px 16px 0px 16px;
+      }
     }
   }
 }
