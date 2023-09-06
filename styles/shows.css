@@ -171,12 +171,13 @@
 
 /* IMPORTS */
 .shows {
-  padding: 36px 16px 16px 16px;
+  padding: 36px 0px 16px 0px;
 }
 .shows__title {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
+  padding: 0px 16px 7px 16px;
   padding-bottom: 7px;
 }
 .shows .shows-table-headers-container {
@@ -189,7 +190,8 @@
   text-transform: uppercase;
 }
 .shows .shows-table-data-container__content {
-  padding-top: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #e1e1e1;
 }
 .shows .shows-table-data-container__content--inline-header {
   font-size: 10px;

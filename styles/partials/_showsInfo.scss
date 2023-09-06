@@ -6,10 +6,11 @@
 @use "./mixins";
 
 .shows {
-  padding: 36px 16px 16px 16px;
+  padding: 36px 0px 16px 0px;
   // TITLE
   &__title {
     @include mixins.sectionHeader320;
+    padding: 0px 16px 7px 16px;
     padding-bottom: 7px;
   }
   // SHOWS TABLE HEADERS CONTAINER
@@ -27,7 +28,8 @@
   .shows-table-data-container {
     // SHOW-TABLE-DATA-CONTAINER__CONTENT
     &__content {
-      padding-top: 16px;
+      padding: 16px;
+      border-bottom: 1px solid colors.$mercury;
       // HEADERS
       &--inline-header {
         font-size: 10px;
