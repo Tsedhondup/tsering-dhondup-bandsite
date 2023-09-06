@@ -72,7 +72,10 @@
   &__music-container {
     @include mixins.desktop {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       max-width: 1040px;
+      height: 100%;
       margin: auto;
     }
   }
@@ -106,6 +109,6 @@
 //  MEDIA = DESKTOP = [ ] = 1280PX
 .shows-hero {
   @include mixins.desktop {
-    min-height: 600px;
+    min-height: 550px;
   }
 }

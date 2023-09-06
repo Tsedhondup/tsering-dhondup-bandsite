@@ -151,7 +151,10 @@
 @media (min-width: 1280px) {
   .shows-hero__music-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1040px;
+    height: 100%;
     margin: auto;
   }
 }
@@ -181,7 +184,7 @@
 
 @media (min-width: 1280px) {
   .shows-hero {
-    min-height: 600px;
+    min-height: 550px;
   }
 }
 
