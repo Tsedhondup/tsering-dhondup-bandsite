@@ -10,12 +10,13 @@
   // TITLE
   &__title {
     @include mixins.sectionHeader320;
+    padding-bottom: 7px;
   }
   // SHOWS TABLE HEADERS CONTAINER
   .shows-table-headers-container {
-    // SHOWS TABLE HEADER NAME
     display: none;
-    &__name {
+    // SHOWS TABLE HEADER NAME
+    &__header {
       color: colors.$silver;
       font-weight: 400;
       font-size: 11px;
@@ -29,7 +30,11 @@
       padding-top: 16px;
       // HEADERS
       &--inline-header {
-        @include mixins.sectionHeader320;
+        font-size: 10px;
+        font-weight: 400;
+        color: colors.$silver;
+        text-transform: uppercase;
+        padding-bottom: 10px;
       }
     }
     &__content:hover {
