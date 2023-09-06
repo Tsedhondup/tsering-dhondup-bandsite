@@ -258,6 +258,11 @@
   background-color: #000000;
 }
 @media (min-width: 768px) {
+  .shows .shows-table-data-container__content--btn {
+    flex: 25%;
+  }
+}
+@media (min-width: 768px) {
   .shows .shows-table-data-container__content {
     display: flex;
     padding: 0px 36px 16px 36px;

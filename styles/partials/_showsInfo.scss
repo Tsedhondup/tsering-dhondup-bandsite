@@ -101,6 +101,12 @@
       &--btn:hover {
         background-color: colors.$badnSiteDarkBlack;
       }
+      //  MEDIA = TABLET = [ ] = 768PX
+      &--btn {
+        @include mixins.tablet {
+          flex: 25%;
+        }
+      }
     }
     //  MEDIA = TABLET = [ ] = 768PX
     &__content {
