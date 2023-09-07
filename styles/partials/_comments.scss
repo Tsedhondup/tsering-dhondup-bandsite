@@ -197,6 +197,9 @@
         &--img-base {
           @include mixins.profileImageMobile;
           background-color: colors.$mercury;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
         }
         //  MEDIA = TABLET = [ ] = 768PX
         &--img-base {
