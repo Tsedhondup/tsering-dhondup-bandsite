@@ -99,6 +99,12 @@ const createEl = (comments) => {
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
+    // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
+    let momentEl = document.createElement("p");
+    momentEl.classList.add("comment-content__moment");
+    timeEl.innerText = element.moment;
+    commentsContainerEl.appendChild(momentEl); // APPENDING TO COMMENT-CONTAINER-El
+
     /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
     displayComment(commentsContainerEl);
   });
@@ -290,3 +296,21 @@ let addingEventHandlerToFormEls = () => {
 addingEventHandlerToFormEls();
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
+let currentTime = 0;
+let intervalID;
+
+let trackCommentCycle = () => {
+  intervalID = setInterval(() => {
+    currentTime = currentTime + 1;
+    cancelInterVal();
+  }, 1000);
+};
+
+let cancelInterVal = () => {
+  if (currentTime == 10) {
+    console.log("value is " + currentTime);
+    clearInterval(intervalID);
+  }
+};
+
+// trackCommentCycle();
