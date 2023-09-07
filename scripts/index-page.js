@@ -24,7 +24,6 @@ let commentArray = [
 ];
 
 /*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
 
 // RENDERING COMMENTS INTO DOM
 const displayComment = (commentEl) => {
@@ -34,7 +33,6 @@ const displayComment = (commentEl) => {
   commentContainer.appendChild(commentEl);
 };
 
-/*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
 /*
@@ -99,16 +97,18 @@ const createEl = (comments) => {
 
     commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
-    // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
-    let momentEl = document.createElement("p");
-    momentEl.classList.add("comment-content__moment");
-    timeEl.innerText = element.moment;
-    commentsContainerEl.appendChild(momentEl); // APPENDING TO COMMENT-CONTAINER-El
+    // // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
+    // let momentEl = document.createElement("p");
+    // momentEl.classList.add("comment-content__moment");
+    // timeEl.innerText = element.moment;
+    // commentsContainerEl.appendChild(momentEl); // APPENDING TO COMMENT-CONTAINER-El
 
     /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
     displayComment(commentsContainerEl);
   });
 };
+
+/*------------------------------------------------------------------------------------------*/
 
 /* 
 # FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE. 
@@ -124,11 +124,8 @@ let isCommentArrayEmpty = (comments) => {
   }
 };
 
-/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
-isCommentArrayEmpty(commentArray);
+/*------------------------------------------------------------------------------------------*/
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
 // EMPTYING FORM FIELD AND MESSAGES AFTER SUCCESSFUL FORM SUBMISION
 let defaultForm = () => {
   let nameInput = document.querySelector(".input-elements__name-input"); // name-input
@@ -143,6 +140,8 @@ let defaultForm = () => {
   document.querySelector(".input-elements__comment-warning-msg").innerText = ""; // comment-warning-msg
 };
 
+/*------------------------------------------------------------------------------------------*/
+
 // VALIDATION FORM INPUTS BEFORE-SUBMISSION
 // VALIDATE NAME-INPUT
 let validateNameInput = (nameInput) => {
@@ -156,6 +155,8 @@ let validateNameInput = (nameInput) => {
   nameInput.classList.add("input-elements__pink-border");
 };
 
+/*------------------------------------------------------------------------------------------*/
+
 // VALIDATE COMMENT-INPUT
 let validateCommentInput = (commentInput) => {
   let commentWarningEl = document.querySelector(
@@ -168,6 +169,8 @@ let validateCommentInput = (commentInput) => {
   commentInput.classList.add("input-elements__pink-border");
 };
 
+/*------------------------------------------------------------------------------------------*/
+
 // VALIDATING FORM INPUTS ON-SUBMISSION
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
   if (!nameVal) {
@@ -178,6 +181,8 @@ let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
     validateCommentInput(commentInput); // invoke validate-comment-input
   }
 };
+
+/*------------------------------------------------------------------------------------------*/
 
 // CALLBACK FOR FOR FORM ON-SUBMISSION
 let onSubmit = (event) => {
@@ -226,6 +231,8 @@ let onSubmit = (event) => {
     validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
   }
 };
+
+/*------------------------------------------------------------------------------------------*/
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
 let addingEventHandlerToFormEls = () => {
@@ -278,6 +285,8 @@ let addingEventHandlerToFormEls = () => {
         ""; // removing warning-msg
     }
   });
+
+  // WHEN USER LEAVE-INPUT-WITH EMPTY FIELD
   commentInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
     //VALIDATING NAME-INPUT VALUE
@@ -293,24 +302,8 @@ let addingEventHandlerToFormEls = () => {
 };
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
+isCommentArrayEmpty(commentArray);
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 addingEventHandlerToFormEls();
+
 /*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-let currentTime = 0;
-let intervalID;
-
-let trackCommentCycle = () => {
-  intervalID = setInterval(() => {
-    currentTime = currentTime + 1;
-    cancelInterVal();
-  }, 1000);
-};
-
-let cancelInterVal = () => {
-  if (currentTime == 10) {
-    console.log("value is " + currentTime);
-    clearInterval(intervalID);
-  }
-};
-
-// trackCommentCycle();
