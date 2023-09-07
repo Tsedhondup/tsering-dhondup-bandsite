@@ -38,9 +38,31 @@ const displayComment = (commentEl) => {
 
 /*------------------------------------------------------------------------------------------*/
 
-// let tractCommentMoment = () => {
-//   let current time
-// };
+let tractCommentMoment = () => {
+  let currentMoment = 0; // in seconds
+  let minute; // minute
+  let moments; // actual moment
+  
+  // SET-INTERVAL
+  setInterval(() => {
+    currentMoment = currentMoment + 1;
+  }, 1000);
+  if (currentMoment < 60000) {
+    moments = currentMoment + "s ago";
+    return moments; // as seconds
+  }
+  if (currentMoment > 60000 && currentMoment < 3600000) {
+    minute = currentMoment / 60; // converting to minutes
+    if (minute < 1) {
+      moments = minute + " ago";
+      return moments; // as a minute
+    }
+    if (minute > 1) {
+      moments = minute + "s ago";
+      moments; // as  minutes
+    }
+  }
+};
 /*------------------------------------------------------------------------------------------*/
 
 /*
@@ -226,6 +248,7 @@ let onSubmit = (event) => {
     let commentObj = {
       name: nameVal,
       timestamp: new Date().toLocaleDateString(),
+      moment: tractCommentMoment(),
       commentText: commentVal,
       profileImg: imgUrl,
     };
