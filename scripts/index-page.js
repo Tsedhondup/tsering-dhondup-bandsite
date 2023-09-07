@@ -38,11 +38,12 @@ const displayComment = (commentEl) => {
 
 /*------------------------------------------------------------------------------------------*/
 
+// ACTUAL TIME FROM MOMENT COMMENT IS BEING ADDED
 let tractCommentMoment = () => {
   let currentMoment = 0; // in seconds
   let minute; // minute
   let moments; // actual moment
-  
+
   // SET-INTERVAL
   setInterval(() => {
     currentMoment = currentMoment + 1;
@@ -92,10 +93,10 @@ const createEl = (comments) => {
     if (element.profileImg) {
       imgEl.style.backgroundImage = element.profileImg; // USE EXTERNAL CSS
       imgContainerEl.appendChild(imgEl);
-      commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER TO COMMENT-CONTAINER-El
+      commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
     } else {
       imgContainerEl.appendChild(imgEl);
-      commentsContainerEl.appendChild(imgContainerEl); // APPENDING IMAGE-CONTAINER TO COMMENT-CONTAINER-El
+      commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
     }
 
     /* SECTION - 2 : TEXT-CONTAINER */
@@ -105,7 +106,7 @@ const createEl = (comments) => {
     // TEXT-CONTAINER : PART-1 =  NAME & TIME-CONTAINER
     let nameTimeContainerEl = document.createElement("div");
     nameTimeContainerEl.classList.add("name-time-container");
-    textContainerEl.appendChild(nameTimeContainerEl); // APPENDING TEXT-CONTAINER-El
+    textContainerEl.appendChild(nameTimeContainerEl); // appending to text-container-el
 
     // NAME
     let nameEl = document.createElement("h3");
@@ -123,16 +124,16 @@ const createEl = (comments) => {
     let commentEl = document.createElement("p");
     commentEl.innerText = element.commentText;
     commentEl.classList.add("comment-content__text-container--comments");
-    textContainerEl.appendChild(commentEl); // APPENDING TO TEXT-CONTAINER-El
+    textContainerEl.appendChild(commentEl); // appending to text-container-el
 
     // TEXT-CONTAINER : PART-3 = MOMENT
     // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
     let momentEl = document.createElement("p");
     momentEl.classList.add("comment-content__text-container--moment");
     momentEl.innerText = element.moment;
-    textContainerEl.appendChild(momentEl); // APPENDING TO TEXT-CONTAINER-El
+    textContainerEl.appendChild(momentEl); // appending to text-container-el
 
-    commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
+    commentsContainerEl.appendChild(textContainerEl); // appending to comment-container el
 
     /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
     displayComment(commentsContainerEl);
@@ -145,7 +146,7 @@ const createEl = (comments) => {
 # FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE. 
 - IF ALL COMMENTS ARE DELETED AND COMMENT-ARRAY IS EMTPY 
  (1) CREATE-EL FUNCTION WILL NOT GET INVOKE
- (2) DISPLAY-COMMENT FUNCTION NOT GET INVOKE
+ (2) DISPLAY-COMMENT FUNCTION WILL NOT GET INVOKE
 */
 
 // CREATING IS-COMMENT-ARRAY-EMPTY FUNCTION
@@ -173,7 +174,8 @@ let defaultForm = () => {
 
 /*------------------------------------------------------------------------------------------*/
 
-// VALIDATION FORM INPUTS BEFORE-SUBMISSION
+// VALIDATION FORM INPUTS DURING INTERACTION & BEFORE-SUBMISSION
+
 // VALIDATE NAME-INPUT
 let validateNameInput = (nameInput) => {
   let nameWarningEl = document.querySelector(
@@ -202,10 +204,10 @@ let validateCommentInput = (commentInput) => {
 
 /*------------------------------------------------------------------------------------------*/
 
-// VALIDATING FORM INPUTS ON-SUBMISSION
+// VALIDATING FORM INPUTS ON-SUBMISSION - VALIDATION ONLY DONE WHEN INPUTS FIELDS ARE EMPTY!
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
   if (!nameVal) {
-    validateNameInput(nameInput); // invoke validate-name-input
+    validateNameInput(nameInput); // invoke validate-name-input only
   }
 
   if (!commentVal) {
@@ -257,8 +259,7 @@ let onSubmit = (event) => {
     document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     createEl(commentArray); // invoking create-el function
 
-    // INVOKING-EMPTY-FORM FUNCTION TO CLEAR INPUTS AND DEFAULT FORM
-    defaultForm();
+    defaultForm(); // invoking defaul-form function set the form to default
   } else {
     validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
   }
@@ -268,43 +269,47 @@ let onSubmit = (event) => {
 
 // ADDING EVENT-LISTENER TO FORM-ELEMENT **
 let addingEventHandlerToFormEls = () => {
-  let form = document.querySelector(".comments__form");
+  let form = document.querySelector(".comments__form"); // form
   let nameInput = document.querySelector(".input-elements__name-input"); // name-input
   let commentInput = document.querySelector(".input-elements__comments-input"); // comment-input
 
-  // FORM
+  // #1 - FORM
+  // ON-SUBMIT
   form.addEventListener("submit", (event) => {
     onSubmit(event); // invoking on-submit function
   });
 
-  // NAME-INPUT
+  /*--------------------------------------------*/
+
+  // #2 NAME-INPUT
+  // WHEN INPUT FIELD CHANGED
   nameInput.addEventListener("input", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    //VALIDATING NAME-INPUT VALUE
     if (!nameInput.value) {
       validateNameInput(nameInput); // invoking validate-name-input
     } else {
-      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
       nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
       document.querySelector(".input-elements__name-warning-msg").innerText =
         ""; // removing warning-msg
     }
   });
 
+  // WHEN USER LEAVE-INPUT FIELD
   nameInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    //VALIDATING NAME-INPUT VALUE
     if (!nameInput.value) {
       validateNameInput(nameInput); // invoking validate-name-input
     } else {
-      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
       nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
       document.querySelector(".input-elements__name-warning-msg").innerText =
         ""; // removing warning-msg
     }
   });
 
-  // COMMENT-INPUT
+  /*--------------------------------------------*/
+
+  // #3 COMMENT-INPUT
+  // WHEN INPUT FIELD CHANGED
   commentInput.addEventListener("input", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
     if (!commentInput.value) {
@@ -316,7 +321,7 @@ let addingEventHandlerToFormEls = () => {
     }
   });
 
-  // WHEN USER LEAVE-INPUT-WITH EMPTY FIELD
+  // WHEN USER LEAVE INPUT FIELD
   commentInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
     if (!commentInput.value) {
