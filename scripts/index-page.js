@@ -3,6 +3,7 @@ let commentArray = [
   {
     name: "Connor Walton",
     timestamp: "02/17/2021",
+    moment: "2 years",
     commentText:
       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains. ",
     profileImg: "",
@@ -10,6 +11,7 @@ let commentArray = [
   {
     name: "Emilie Beach",
     timestamp: "01/09/2021",
+    moment: "2 years",
     commentText:
       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
     profileImg: "",
@@ -17,6 +19,7 @@ let commentArray = [
   {
     name: "Miles Acosta",
     timestamp: "12/20/2020",
+    moment: "3 years",
     commentText:
       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
     profileImg: "",
@@ -149,7 +152,7 @@ let validateNameInput = (nameInput) => {
     ".input-elements__name-warning-msg"
   );
   nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
-  nameWarningEl.innerText = "Invalid name!"; // inserting warning message
+  nameWarningEl.innerText = "Name required! (e.g - Tsering Dhondup)"; // inserting warning message
 
   // ADDING PINK-BORDER CLASS
   nameInput.classList.add("input-elements__pink-border");
