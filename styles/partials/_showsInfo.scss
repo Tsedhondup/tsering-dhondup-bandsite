@@ -43,7 +43,7 @@
     .shows-table-headers-container {
       display: none;
 
-      // SHOWS TABLE HEADER 
+      // SHOWS TABLE HEADER
       &__header {
         color: colors.$silver;
         font-weight: 400;
@@ -195,7 +195,8 @@
   @include mixins.desktop {
     display: flex;
     gap: 10%;
-    max-width: 1040px;
+    max-width: 1072px;
+    padding-left: 16px;
     padding-top: 50px;
     margin: auto;
   }

@@ -1068,7 +1068,8 @@
   .shows {
     display: flex;
     gap: 10%;
-    max-width: 1040px;
+    max-width: 1072px;
+    padding-left: 16px;
     padding-top: 50px;
     margin: auto;
   }
