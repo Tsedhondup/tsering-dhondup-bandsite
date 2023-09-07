@@ -278,11 +278,9 @@ let addingEventHandlerToFormEls = () => {
   // COMMENT-INPUT
   commentInput.addEventListener("input", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    //VALIDATING NAME-INPUT VALUE
     if (!commentInput.value) {
       validateCommentInput(commentInput); // invoking validate-comment-input
     } else {
-      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
       commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
       document.querySelector(".input-elements__comment-warning-msg").innerText =
         ""; // removing warning-msg
@@ -292,11 +290,9 @@ let addingEventHandlerToFormEls = () => {
   // WHEN USER LEAVE-INPUT-WITH EMPTY FIELD
   commentInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    //VALIDATING NAME-INPUT VALUE
     if (!commentInput.value) {
       validateCommentInput(commentInput); // invoking validate-comment-input
     } else {
-      // REMOVE PINK-BORDER CLASS & WARNING MESSAGE
       commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
       document.querySelector(".input-elements__comment-warning-msg").innerText =
         ""; // removing warning-msg
