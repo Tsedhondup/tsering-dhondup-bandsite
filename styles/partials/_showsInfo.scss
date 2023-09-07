@@ -37,13 +37,13 @@
   }
 
   // (2)
-  // SHOW-HEADER-DATA-CONTAINER
+  // SHOW-HEADER & DATA-CONTAINER
   &__header-data-container {
     // SHOWS TABLE HEADERS CONTAINER
     .shows-table-headers-container {
       display: none;
 
-      // SHOWS TABLE HEADER NAM
+      // SHOWS TABLE HEADER 
       &__header {
         color: colors.$silver;
         font-weight: 400;
