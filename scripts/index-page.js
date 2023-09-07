@@ -38,6 +38,11 @@ const displayComment = (commentEl) => {
 
 /*------------------------------------------------------------------------------------------*/
 
+// let tractCommentMoment = () => {
+//   let current time
+// };
+/*------------------------------------------------------------------------------------------*/
+
 /*
 # CREATING COMMENT ELEMENTS  
 - EACH 'COMMENT ELEMENT' CREATED WILL BE ADDED AS A CHILD OF COMMENTS_COMMENTS-CONTAINER IN BIO-PAGE
