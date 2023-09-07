@@ -195,9 +195,9 @@
 .shows {
   @include mixins.desktop {
     display: flex;
-    // justify-content: space-between;
     gap: 10%;
     max-width: 1040px;
+    padding-top: 50px;
     margin: auto;
   }
 }
