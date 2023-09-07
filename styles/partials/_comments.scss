@@ -22,6 +22,7 @@
       margin: auto;
     }
   }
+  /*----------------------------------------------------------*/
   // FORM
   &__form {
     display: flex;
@@ -47,6 +48,7 @@
         }
       }
     }
+    /*----------------------------------------------------------*/
 
     // INPUT-SECTION
     .input-elements {
@@ -182,6 +184,7 @@
       max-width: 562px;
     }
   }
+  /*----------------------------------------------------------*/
   // COMMENTS ADDS DYNAMICALLY BY JavaScript
   &__comments-container {
     // COMMENTS-CONTENT

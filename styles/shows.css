@@ -201,6 +201,7 @@
 /* IMPORTS */
 .shows {
   padding: 36px 0px 16px 0px;
+  /*----------------------------------------------------------*/
 }
 .shows__title-container--title {
   font-size: 24px;
@@ -226,6 +227,9 @@
   .shows__title-container {
     flex: 10%;
   }
+}
+.shows__header-data-container {
+  /*----------------------------------------------------------*/
 }
 .shows__header-data-container .shows-table-headers-container {
   display: none;

@@ -87,20 +87,12 @@ const createEl = (comments) => {
     /* SECTION - 1 : IMAGE-CONTAINTER */
     let imgContainerEl = document.createElement("div");
     imgContainerEl.classList.add("comment-content__img-container");
+    commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
 
     // IMAGE-BASE
     let imgEl = document.createElement("div");
     imgEl.classList.add("comment-content__img-container--img-base");
-
-    // CHECKING IF USER HAS UPLOAED IMG
-    if (element.profileImg) {
-      imgEl.style.backgroundImage = element.profileImg; // USE EXTERNAL CSS
-      imgContainerEl.appendChild(imgEl);
-      commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
-    } else {
-      imgContainerEl.appendChild(imgEl);
-      commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
-    }
+    imgContainerEl.appendChild(imgEl);
 
     /* SECTION - 2 : TEXT-CONTAINER */
     let textContainerEl = document.createElement("div");
@@ -243,8 +235,6 @@ let onSubmit = (event) => {
   commentVal = commentInput.value; // comment-input value
 
   let imgBase = document.querySelector(".profile-image-container__img-base");
-  let profileImgBaseStyles = getComputedStyle(imgBase); // getting computed-styles for imgBase
-  imgUrl = profileImgBaseStyles.backgroundImage; // img-url
 
   /*
   # FORM INPUTS VALUES WILL BE VALIDATE BEFORE BEFORE
@@ -261,7 +251,7 @@ let onSubmit = (event) => {
       timestamp: new Date().toLocaleDateString(),
       moment: tractCommentMoment(),
       commentText: commentVal,
-      profileImg: imgUrl,
+      profileImg: imgBase,
     };
 
     commentArray.unshift(commentObj); // adding comment-object at the begining of comment-array

@@ -380,6 +380,8 @@
 
 .comments {
   padding: 0px 16px;
+  /*----------------------------------------------------------*/
+  /*----------------------------------------------------------*/
 }
 .comments__title {
   padding-top: 24px;
@@ -408,6 +410,7 @@
   padding: 16px 0px;
   border-bottom: 1px solid #e1e1e1;
   gap: 16px;
+  /*----------------------------------------------------------*/
 }
 .comments__form .profile-image-container {
   padding-top: 16px;
@@ -926,6 +929,7 @@
 /* IMPORTS */
 .shows {
   padding: 36px 0px 16px 0px;
+  /*----------------------------------------------------------*/
 }
 .shows__title-container--title {
   font-size: 24px;
@@ -951,6 +955,9 @@
   .shows__title-container {
     flex: 10%;
   }
+}
+.shows__header-data-container {
+  /*----------------------------------------------------------*/
 }
 .shows__header-data-container .shows-table-headers-container {
   display: none;
