@@ -7,7 +7,7 @@
 
 .shows {
   padding: 36px 0px 16px 0px;
-
+  // (1)
   // SHOWS-TITLE-CONTAINER
   &__title-container {
     // TITLE
@@ -23,8 +23,15 @@
         @include mixins.sectionHeader768;
       }
     }
+    // MEDIA = DESKTOP = [ ] = 1280PX
+    &--title {
+      @include mixins.desktop {
+        padding: 0px;
+      }
+    }
   }
 
+  // (2)
   // SHOW-HEADER-DATA-CONTAINER
   &__header-data-container {
     // SHOWS TABLE HEADERS CONTAINER
@@ -140,6 +147,14 @@
           padding: 16px 20px;
         }
       }
+      //  MEDIA = DESKTOP = [ ] = 1280PX
+      // &__content {
+      //   @include mixins.desktop {
+      //     display: flex;
+      //     align-items: center;
+      //     padding: 16px 0px;
+      //   }
+      // }
       &__content:hover {
         background-color: colors.$mercury;
       }
@@ -155,12 +170,19 @@
         padding: 0px 16px 0px 16px;
       }
     }
+    //  MEDIA = DESKTOP = [ ] = 1280PX
+    .shows-table-data-container {
+      @include mixins.desktop {
+        padding: 0px;
+      }
+    }
   }
 }
 // MEDIA = DESKTOP = [ ] = 1280PX
 .shows {
   @include mixins.desktop {
     display: flex;
+    justify-content: space-between;
     max-width: 1040px;
     margin: auto;
   }
