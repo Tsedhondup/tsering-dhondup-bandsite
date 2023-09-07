@@ -177,10 +177,16 @@ let createShowDataElements = (datas) => {
     tableDataContentEl.appendChild(locationEl); //  appending to shows-table-data-content
 
     // SHOWS-TABLE-DATA - BUTTON
-    let buttonEl = document.createElement("button");
-    buttonEl.classList.add("shows-table-data-container__content--btn");
+    // BUY-BUTTON-CONTAINER
+    let buttonContainerEl = document.createElement("div");
+    buttonContainerEl.classList.add("shows-table-data-button-container");
+    tableDataContentEl.appendChild(buttonContainerEl); // appending to shows-table-data-content
+
+    // BUY-BUTTON
+    let buttonEl = document.createElement("button"); // buy-button
+    buttonEl.classList.add("shows-table-data-button-container__btn");
     buttonEl.innerText = "Buy Ticket";
-    tableDataContentEl.appendChild(buttonEl); //  appending to shows-table-data-content
+    buttonContainerEl.appendChild(buttonEl); // appending to button-container
   });
 
   // RETURN TABLE-DATA-CONTAINER-EL

@@ -936,8 +936,6 @@
 }
 .shows__header-data-container .shows-table-headers-container {
   display: none;
-  background-color: bisque;
-  /*----------- STARTS FROM HERE ------------*/
 }
 .shows__header-data-container .shows-table-headers-container__header {
   color: #afafaf;
@@ -1010,7 +1008,7 @@
   .shows__header-data-container .shows-table-data-container__content--btn {
     flex: 25%;
     margin-top: 0px;
-    max-width: 130px;
+    width: 130px;
   }
 }
 @media (min-width: 768px) {

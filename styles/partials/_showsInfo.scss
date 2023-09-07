@@ -30,7 +30,6 @@
     // SHOWS TABLE HEADERS CONTAINER
     .shows-table-headers-container {
       display: none;
-      background-color: bisque;
 
       // SHOWS TABLE HEADER NAM
       &__header {
@@ -39,13 +38,6 @@
         font-size: 11px;
         text-transform: uppercase;
       }
-      /*----------- STARTS FROM HERE ------------*/
-      // //  MEDIA = TABLET = [ ] = 768PX
-      // @include mixins.tablet {
-      //   &__header {
-      //     width: 100%;
-      //   }
-      // }
 
       // DATE
       &__header-date {
@@ -125,7 +117,7 @@
           @include mixins.tablet {
             flex: 25%;
             margin-top: 0px;
-            max-width: 130px;
+            width: 130px;
           }
         }
       }
