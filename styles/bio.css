@@ -605,6 +605,7 @@
 .comments__comments-container .comment-content__text-container--moment {
   color: #afafaf;
   font-size: 11px;
+  padding-top: 4px;
 }
 .comments__comments-container .comment-content__text-container--comments {
   font-size: 13px;

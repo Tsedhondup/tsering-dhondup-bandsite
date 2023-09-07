@@ -103,14 +103,14 @@ const createEl = (comments) => {
     commentEl.classList.add("comment-content__text-container--comments");
     textContainerEl.appendChild(commentEl); // APPENDING TO TEXT-CONTAINER-El
 
-    commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
-
     // TEXT-CONTAINER : PART-3 = MOMENT
     // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
     let momentEl = document.createElement("p");
     momentEl.classList.add("comment-content__text-container--moment");
     momentEl.innerText = element.moment;
-    textContainerEl.appendChild(momentEl); // APPENDING TO COMMENT-CONTAINER-El
+    textContainerEl.appendChild(momentEl); // APPENDING TO TEXT-CONTAINER-El
+
+    commentsContainerEl.appendChild(textContainerEl); // APPENDING TO COMMENT-CONTAINER-El
 
     /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
     displayComment(commentsContainerEl);
