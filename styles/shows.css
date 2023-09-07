@@ -272,7 +272,7 @@
 .shows__header-data-container .shows-table-data-container__content--venue, .shows__header-data-container .shows-table-data-container__content--location {
   font-weight: 400;
 }
-.shows__header-data-container .shows-table-data-container__content--btn {
+.shows__header-data-container .shows-table-data-container__content .shows-table-data-button-container__btn {
   width: 100%;
   font-size: 14px;
   padding: 11.67px 0px;
@@ -284,14 +284,21 @@
   margin-top: 16px;
   margin-top: 0px;
 }
-.shows__header-data-container .shows-table-data-container__content--btn:hover {
+.shows__header-data-container .shows-table-data-container__content .shows-table-data-button-container__btn:hover {
   background-color: #000000;
 }
 @media (min-width: 768px) {
-  .shows__header-data-container .shows-table-data-container__content--btn {
+  .shows__header-data-container .shows-table-data-container__content .shows-table-data-button-container__btn {
+    max-width: 130px;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .shows__header-data-container .shows-table-data-container__content .shows-table-data-button-container {
     flex: 25%;
     margin-top: 0px;
-    width: 130px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 768px) {

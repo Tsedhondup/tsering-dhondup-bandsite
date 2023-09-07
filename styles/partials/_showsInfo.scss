@@ -104,20 +104,31 @@
         &--location {
           @extend .shows-table-data-container__content--venue;
         }
-        // BUY-BUTTON
-        &--btn {
-          @include mixins.buttonMobile;
-          margin-top: 0px;
-        }
-        &--btn:hover {
-          background-color: colors.$badnSiteDarkBlack;
+        // BUY-BUTTON-CONTAINER
+        .shows-table-data-button-container {
+          // BUY-BUTTON
+          &__btn {
+            @include mixins.buttonMobile;
+            margin-top: 0px;
+          }
+          &__btn:hover {
+            background-color: colors.$badnSiteDarkBlack;
+          }
+          //  MEDIA = TABLET = [ ] = 768PX
+          &__btn {
+            @include mixins.tablet {
+              max-width: 130px;
+              margin-top: 0px;
+            }
+          }
         }
         //  MEDIA = TABLET = [ ] = 768PX
-        &--btn {
+        .shows-table-data-button-container {
           @include mixins.tablet {
             flex: 25%;
             margin-top: 0px;
-            width: 130px;
+            display: flex;
+            justify-content: flex-end;
           }
         }
       }
