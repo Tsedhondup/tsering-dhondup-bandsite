@@ -230,6 +230,11 @@
             color: colors.$silver;
           }
         }
+        // MOMENT
+        &--moment {
+          color: colors.$silver;
+          font-size: 11px;
+        }
         // COMMENT-TEXT
         &--comments {
           font-size: 13px;

@@ -602,6 +602,10 @@
   font-weight: 400;
   color: #afafaf;
 }
+.comments__comments-container .comment-content__text-container--moment {
+  color: #afafaf;
+  font-size: 11px;
+}
 .comments__comments-container .comment-content__text-container--comments {
   font-size: 13px;
   line-height: 18px;
