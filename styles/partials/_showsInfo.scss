@@ -30,6 +30,12 @@
       }
     }
   }
+  // MEDIA = DESKTOP = [ ] = 1280PX
+  &__title-container {
+    @include mixins.desktop {
+      flex: 10%;
+    }
+  }
 
   // (2)
   // SHOW-HEADER-DATA-CONTAINER
@@ -175,6 +181,12 @@
       @include mixins.desktop {
         padding: 0px;
       }
+    }
+  }
+  // MEDIA = DESKTOP = [ ] = 1280PX
+  &__header-data-container {
+    @include mixins.desktop {
+      flex: 80%;
     }
   }
 }

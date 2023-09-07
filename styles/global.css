@@ -939,6 +939,11 @@
     padding: 0px;
   }
 }
+@media (min-width: 1280px) {
+  .shows__title-container {
+    flex: 10%;
+  }
+}
 .shows__header-data-container .shows-table-headers-container {
   display: none;
 }
@@ -1044,6 +1049,11 @@
 @media (min-width: 1280px) {
   .shows__header-data-container .shows-table-data-container {
     padding: 0px;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__header-data-container {
+    flex: 80%;
   }
 }
 
