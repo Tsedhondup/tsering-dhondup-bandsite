@@ -1021,7 +1021,7 @@
 }
 @media (min-width: 768px) {
   .shows__header-data-container .shows-table-data-container__content .shows-table-data-button-container__btn {
-    max-width: 130px;
+    max-width: 135px;
     margin-top: 0px;
   }
 }

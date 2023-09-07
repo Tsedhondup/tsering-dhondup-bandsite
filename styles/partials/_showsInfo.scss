@@ -136,7 +136,7 @@
           //  MEDIA = TABLET = [ ] = 768PX
           &__btn {
             @include mixins.tablet {
-              max-width: 130px;
+              max-width: 135px;
               margin-top: 0px;
             }
           }
@@ -159,14 +159,7 @@
           padding: 16px 20px;
         }
       }
-      //  MEDIA = DESKTOP = [ ] = 1280PX
-      // &__content {
-      //   @include mixins.desktop {
-      //     display: flex;
-      //     align-items: center;
-      //     padding: 16px 0px;
-      //   }
-      // }
+
       &__content:hover {
         background-color: colors.$mercury;
       }
