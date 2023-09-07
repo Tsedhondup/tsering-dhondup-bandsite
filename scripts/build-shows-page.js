@@ -71,6 +71,9 @@ let createShowTitleElements = () => {
   return showsTitleEl;
 };
 
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
 // (2) - CREATING SHOWS-TABLE HEADER ELEMENTS TO USE ON TOP OF THE SHOWS-DATA TABLE
 let createShowHeaderElements = () => {
   // HEADERS-CONTAINER
@@ -104,6 +107,9 @@ let createShowHeaderElements = () => {
   return headerEl;
 };
 
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
 // CREATING SHOWS-TABLE HEADER ELEMENTS TO USE WITHIN THE SHOWS-DATA TABLE
 let createInlineShowHeadersElements = () => {
   // ARRAYS TO STORE INLINE-SHOWS-TABLE HEADERS
@@ -136,6 +142,9 @@ let createInlineShowHeadersElements = () => {
   // RETURNING INLINE-SHOWS-HEADERS IN A FORM OF ARRAY
   return inlineShowHeaders;
 };
+
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 // (3) - CREATING SHOW DATA ELEMENTS
 let createShowDataElements = (datas) => {
@@ -193,6 +202,9 @@ let createShowDataElements = (datas) => {
   return tableDataContainerEl;
 };
 
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 renderShowsInfo(
   createShowTitleElements(),
@@ -221,6 +233,9 @@ let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
   // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
   closestParent.classList.add("shows-table-data-container__content-selected");
 };
+
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 // (2) CHECKING THE PRESENCE OF CONCERT TABLE-ROW
 let checkingConcertTableRow = () => {
