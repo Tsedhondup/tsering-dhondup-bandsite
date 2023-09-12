@@ -6,45 +6,76 @@ let myApiKey = () => {
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-// COMMENT ARRAY
-let commentArray = [
-  {
-    name: "Connor Walton",
-    timestamp: "02/17/2021",
-    moment: "2 years ago",
-    commentText:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains. ",
-    profileImg: "",
-  },
-  {
-    name: "Emilie Beach",
-    timestamp: "01/09/2021",
-    moment: "2 years ago",
-    commentText:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    profileImg: "",
-  },
-  {
-    name: "Miles Acosta",
-    timestamp: "12/20/2020",
-    moment: "3 years ago",
-    commentText:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    profileImg: "",
-  },
-];
-
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
 // RENDERING COMMENTS INTO DOM
 const displayComment = (commentEl) => {
-  let commentContainer = document.querySelector(
-    ".comments__comments-container"
-  );
-  commentContainer.appendChild(commentEl);
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a"
+    )
+    .then((response) => {
+      response.data.forEach((commentObject) => {
+        // CREATING ELEMENTS
+
+        let commentContainerEl = document.createElement("div"); // sing-comment-container
+        let imgContainerEl = document.createElement("div"); // image-container
+        let imgEl = document.createElement("div"); // image
+        let textContainerEl = document.createElement("div"); // text-container
+        let nameTimeContainerEl = document.createElement("div"); // name-&-time-container
+        let nameEl = document.createElement("h3"); // name
+        let timeEl = document.createElement("time"); // timestamp
+        let commentEl = document.createElement("p"); // comment
+        let likeDeleteContainerEl = document.createElement("div"); // like-&-delete-container
+        let likeEl = document.createElement("button"); // like-button
+        let deleteEl = document.createElement("button"); // delete-button
+
+        // ADDING CLASSES
+        commentContainerEl.classList.add("comment-content");
+        imgContainerEl.classList.add("comment-content__img-container");
+        imgEl.classList.add("comment-content__img-container--img-base");
+        textContainerEl.classList.add("comment-content__text-container");
+        nameTimeContainerEl.classList.add("name-time-container");
+        nameEl.classList.add("name-time-container__name");
+        timeEl.classList.add("name-time-container__time");
+        commentEl.classList.add("comment-content__text-container--comments");
+        likeDeleteContainerEl.classList.add(
+          "comment-content__like-delete-container"
+        );
+        likeEl.classList.add("comment-content__like-delete-container--like");
+        deleteEl.classList.add(
+          "comment-content__like-delete-container--delete"
+        );
+
+        // ADDING CONTENT/VALUE
+        nameEl.innerText = commentObject.name;
+        timeEl.innerText = commentObject.timestamp;
+        commentEl.innerText = commentObject.comment;
+        likeEl.innerText = commentObject.likes;
+        deleteEl.innerText = "delete";
+
+        // APPENDING TO PARENT-CONTAINER
+        imgContainerEl.appendChild(imgEl); // appendind to image-container
+        nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
+        nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
+        textContainerEl.appendChild(nameTimeContainerEl); // appending to text-container
+        textContainerEl.appendChild(commentEl); // appending to text-container
+        likeDeleteContainerEl.appendChild(likeEl); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(deleteEl); // appending to like-delete-container
+        commentContainerEl.appendChild(imgContainerEl); // appending to comment-container - single comment-element
+        commentContainerEl.appendChild(textContainerEl); // appending to comment-container - single comment-element
+        commentContainerEl.appendChild(likeDeleteContainerEl); // appending to comment-container - single comment-element
+
+        // RENDERING INTO DOM - COMMENT SECTION
+        document
+          .querySelector(".comments__comments-container")
+          .appendChild(commentContainerEl);
+      });
+    });
 };
 
+displayComment();
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
@@ -72,91 +103,6 @@ let tractCommentMoment = () => {
       moments = minute + "s ago";
       moments; // as  minutes
     }
-  }
-};
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-
-/*
-# CREATING COMMENT ELEMENTS  
-- EACH 'COMMENT ELEMENT' CREATED WILL BE ADDED AS A CHILD OF COMMENTS_COMMENTS-CONTAINER IN BIO-PAGE
-- EACH 'COMMENT ELEMENT' HAS TWO SECTION 
-  (1) IMAGE
-  (2) TEXT = [NAME, DATE AND COMMENT INPUTS]
-*/
-
-// CREATING COMMENT ELEMENTS
-const createEl = (comments) => {
-  comments.forEach((element) => {
-    // A COMMENT ELEMENT
-    let commentsContainerEl = document.createElement("div");
-    commentsContainerEl.classList.add("comment-content");
-
-    /* SECTION - 1 : IMAGE-CONTAINTER */
-    let imgContainerEl = document.createElement("div");
-    imgContainerEl.classList.add("comment-content__img-container");
-    commentsContainerEl.appendChild(imgContainerEl); // appending image-container to comment-container-el
-
-    // IMAGE-BASE
-    let imgEl = document.createElement("div");
-    imgEl.classList.add("comment-content__img-container--img-base");
-    imgContainerEl.appendChild(imgEl);
-
-    /* SECTION - 2 : TEXT-CONTAINER */
-    let textContainerEl = document.createElement("div");
-    textContainerEl.classList.add("comment-content__text-container");
-
-    // TEXT-CONTAINER : PART-1 =  NAME & TIME-CONTAINER
-    let nameTimeContainerEl = document.createElement("div");
-    nameTimeContainerEl.classList.add("name-time-container");
-    textContainerEl.appendChild(nameTimeContainerEl); // appending to text-container-el
-
-    // NAME
-    let nameEl = document.createElement("h3");
-    nameEl.classList.add("name-time-container__name");
-    nameEl.innerText = element.name;
-    nameTimeContainerEl.appendChild(nameEl);
-
-    // TIME
-    let timeEl = document.createElement("time");
-    timeEl.classList.add("name-time-container__time");
-    timeEl.innerText = element.timestamp;
-    nameTimeContainerEl.appendChild(timeEl);
-
-    // TEXT-CONTAINER : PART-2 = COMMENTS
-    let commentEl = document.createElement("p");
-    commentEl.innerText = element.commentText;
-    commentEl.classList.add("comment-content__text-container--comments");
-    textContainerEl.appendChild(commentEl); // appending to text-container-el
-
-    // TEXT-CONTAINER : PART-3 = MOMENT
-    // MOMENT - ACTUAL TIME FROM THE MOMENT COMMENT WAS ADDED
-    let momentEl = document.createElement("p");
-    momentEl.classList.add("comment-content__text-container--moment");
-    momentEl.innerText = element.moment;
-    textContainerEl.appendChild(momentEl); // appending to text-container-el
-
-    commentsContainerEl.appendChild(textContainerEl); // appending to comment-container el
-
-    /* INVOKING DISPLAY-COMMENT FUNCTION FOR EACH ITERATION */
-    displayComment(commentsContainerEl);
-  });
-};
-
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-
-/* 
-# FUNCTION TO CHECK IF THE COMMENT-ARRAY HAS VALUE. 
-- IF ALL COMMENTS ARE DELETED AND COMMENT-ARRAY IS EMTPY 
- (1) CREATE-EL FUNCTION WILL NOT GET INVOKE
- (2) DISPLAY-COMMENT FUNCTION WILL NOT GET INVOKE
-*/
-
-// CREATING IS-COMMENT-ARRAY-EMPTY FUNCTION
-let isCommentArrayEmpty = (comments) => {
-  if (comments.length > 0) {
-    createEl(comments);
   }
 };
 
@@ -343,9 +289,16 @@ let addingEventHandlerToFormEls = () => {
 };
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
-isCommentArrayEmpty(commentArray);
+// isCommentArrayEmpty(commentArray);
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 addingEventHandlerToFormEls();
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
+axios
+  .get(
+    `https://project-1-api.herokuapp.com/comments?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a`
+  )
+  .then((response) => {
+    console.log(response.data[0]);
+  });
