@@ -22,12 +22,12 @@ const displayComment = (commentEl) => {
         let commentContainerEl = document.createElement("div"); // sing-comment-container
         let imgContainerEl = document.createElement("div"); // image-container
         let imgEl = document.createElement("div"); // image
-        let textContainerEl = document.createElement("div"); // text-container
-        let nameTimeContainerEl = document.createElement("div"); // name-&-time-container
+        let textAndButtonContainerEl = document.createElement("div"); // text & button container
+        let nameTimeContainerEl = document.createElement("div"); // name & time-container
         let nameEl = document.createElement("h3"); // name
         let timeEl = document.createElement("time"); // timestamp
         let commentEl = document.createElement("p"); // comment
-        let likeDeleteContainerEl = document.createElement("div"); // like-&-delete-container
+        let likeDeleteContainerEl = document.createElement("div"); // like & delete-container
         let likeEl = document.createElement("button"); // like-button
         let deleteEl = document.createElement("button"); // delete-button
 
@@ -35,18 +35,16 @@ const displayComment = (commentEl) => {
         commentContainerEl.classList.add("comment-content");
         imgContainerEl.classList.add("comment-content__img-container");
         imgEl.classList.add("comment-content__img-container--img-base");
-        textContainerEl.classList.add("comment-content__texts-and-buttons"); // __text-container
+        textAndButtonContainerEl.classList.add(
+          "comment-content__texts-and-buttons"
+        );
         nameTimeContainerEl.classList.add("name-time-container");
         nameEl.classList.add("name-time-container__name");
         timeEl.classList.add("name-time-container__time");
         commentEl.classList.add("comment-content__texts-and-buttons--comments");
-        likeDeleteContainerEl.classList.add(
-          "comment-content__like-delete-container"
-        );
-        likeEl.classList.add("comment-content__like-delete-container--like");
-        deleteEl.classList.add(
-          "comment-content__like-delete-container--delete"
-        );
+        likeDeleteContainerEl.classList.add("like-delete-container");
+        likeEl.classList.add("like-delete-container__like");
+        deleteEl.classList.add("like-delete-container__delete");
 
         // ADDING CONTENT/VALUE
         nameEl.innerText = commentObject.name;
@@ -57,15 +55,19 @@ const displayComment = (commentEl) => {
 
         // APPENDING TO PARENT-CONTAINER
         imgContainerEl.appendChild(imgEl); // appendind to image-container
+
         nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
         nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
-        textContainerEl.appendChild(nameTimeContainerEl); // appending to text-container
-        textContainerEl.appendChild(commentEl); // appending to text-container
+
         likeDeleteContainerEl.appendChild(likeEl); // appending to like-delete-container
         likeDeleteContainerEl.appendChild(deleteEl); // appending to like-delete-container
-        commentContainerEl.appendChild(imgContainerEl); // appending to comment-container - single comment-element
-        commentContainerEl.appendChild(textContainerEl); // appending to comment-container - single comment-element
-        commentContainerEl.appendChild(likeDeleteContainerEl); // appending to comment-container - single comment-element
+
+        textAndButtonContainerEl.appendChild(nameTimeContainerEl); // appending to text & button container
+        textAndButtonContainerEl.appendChild(commentEl); // appending to text & button container
+        textAndButtonContainerEl.appendChild(likeDeleteContainerEl); // appending to text & button container
+
+        commentContainerEl.appendChild(imgContainerEl); // appending to comment-container - a single comment-element
+        commentContainerEl.appendChild(textAndButtonContainerEl); // appending to comment-container - a single comment-element
 
         // RENDERING INTO DOM - COMMENT SECTION
         document
