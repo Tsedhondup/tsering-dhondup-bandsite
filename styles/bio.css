@@ -586,36 +586,36 @@
     border-radius: 50%;
   }
 }
-.comments__comments-container .comment-content__text-container {
+.comments__comments-container .comment-content__texts-and-buttons {
   width: 100%;
 }
-.comments__comments-container .comment-content__text-container .name-time-container {
+.comments__comments-container .comment-content__texts-and-buttons .name-time-container {
   display: flex;
   justify-content: space-between;
   padding-bottom: 14px;
 }
-.comments__comments-container .comment-content__text-container .name-time-container__name {
+.comments__comments-container .comment-content__texts-and-buttons .name-time-container__name {
   font-size: 13px;
   font-weight: 600;
   text-transform: capitalize;
   color: #323232;
 }
-.comments__comments-container .comment-content__text-container .name-time-container__time {
+.comments__comments-container .comment-content__texts-and-buttons .name-time-container__time {
   font-size: 13px;
   font-weight: 400;
   color: #afafaf;
 }
-.comments__comments-container .comment-content__text-container--moment {
+.comments__comments-container .comment-content__texts-and-buttons--moment {
   color: #afafaf;
   font-size: 11px;
   padding-top: 4px;
 }
-.comments__comments-container .comment-content__text-container--comments {
+.comments__comments-container .comment-content__texts-and-buttons--comments {
   font-size: 13px;
   line-height: 18px;
 }
 @media (min-width: 768px) {
-  .comments__comments-container .comment-content__text-container--comments {
+  .comments__comments-container .comment-content__texts-and-buttons--comments {
     line-height: 22px;
   }
 }

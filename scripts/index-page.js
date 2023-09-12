@@ -35,11 +35,11 @@ const displayComment = (commentEl) => {
         commentContainerEl.classList.add("comment-content");
         imgContainerEl.classList.add("comment-content__img-container");
         imgEl.classList.add("comment-content__img-container--img-base");
-        textContainerEl.classList.add("comment-content__text-container");
+        textContainerEl.classList.add("comment-content__texts-and-buttons"); // __text-container
         nameTimeContainerEl.classList.add("name-time-container");
         nameEl.classList.add("name-time-container__name");
         timeEl.classList.add("name-time-container__time");
-        commentEl.classList.add("comment-content__text-container--comments");
+        commentEl.classList.add("comment-content__texts-and-buttons--comments");
         likeDeleteContainerEl.classList.add(
           "comment-content__like-delete-container"
         );
