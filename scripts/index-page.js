@@ -1,6 +1,6 @@
 // API KEY
 let myApiKey = () => {
-  return "?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a";
+  return "85d3d688-1b7d-4f06-8841-3230dac7e82a";
 };
 
 /*------------------------------------------------------------------------------------------*/
@@ -10,15 +10,12 @@ let myApiKey = () => {
 /*------------------------------------------------------------------------------------------*/
 
 // RENDERING COMMENTS INTO DOM
-const displayComment = (commentEl) => {
+const displayComment = () => {
   axios
-    .get(
-      "https://project-1-api.herokuapp.com/comments?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a"
-    )
+    .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
     .then((response) => {
       response.data.forEach((commentObject) => {
         // CREATING ELEMENTS
-
         let commentContainerEl = document.createElement("div"); // sing-comment-container
         let imgContainerEl = document.createElement("div"); // image-container
         let imgEl = document.createElement("div"); // image
@@ -181,7 +178,6 @@ let onSubmit = (event) => {
   // VARIABLES TO STORE NAME, COMMENTS & IMG
   let nameVal;
   let commentVal;
-  let imgUrl;
 
   // STORING FORM VALUES
   let nameInput = document.querySelector("#name");
@@ -192,28 +188,24 @@ let onSubmit = (event) => {
 
   let imgBase = document.querySelector(".profile-image-container__img-base");
 
-  /*
-  # FORM INPUTS VALUES WILL BE VALIDATE BEFORE BEFORE
-   - CREATING FORM/COMMENTS OBJECT 
-   - ADDING TO COMMENT-ARRAY
-   - RENDER INTO DOM VIA DISPLAY-COMMENT FUNCTION
-  */
-
   // VALIDATING FORM INPUTS VALUES
   if (nameVal && commentVal) {
     // CREATING COMMENT-OBJECT IF NAME & COMMENT INPUTS WERE TRUE
     let commentObj = {
       name: nameVal,
-      timestamp: new Date().toLocaleDateString(),
-      moment: tractCommentMoment(),
-      commentText: commentVal,
-      profileImg: imgBase,
+      comment: commentVal,
     };
 
-    commentArray.unshift(commentObj); // adding comment-object at the begining of comment-array
+    // POSTING ON-TO SERVER
+    axios
+      .post(
+        `https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`,
+        commentObj
+      )
+      .then((response) => {
+        displayComment();
+      });
     document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
-    createEl(commentArray); // invoking create-el function
-
     defaultForm(); // invoking defaul-form function set the form to default
   } else {
     validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
