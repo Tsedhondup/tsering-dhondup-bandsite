@@ -14,11 +14,12 @@ const displayComment = () => {
   axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
     .then((response) => {
-      response.data.forEach((commentObject) => {
+      response.data.forEach((commentObj) => {
         /*--------------- CREATING ELEMENTS ---------------*/
 
         // COMMENT-CONTAINER
         let commentContainerEl = document.createElement("div"); // sing-comment-container
+        commentContainerEl.setAttribute("id", `${commentObj.id}`);
 
         // IMAGE
         let imgContainerEl = document.createElement("div"); // image-container
@@ -65,10 +66,10 @@ const displayComment = () => {
 
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
-        nameEl.innerText = commentObject.name;
-        timeEl.innerText = commentObject.timestamp;
-        commentEl.innerText = commentObject.comment;
-        likeEl.innerText = commentObject.likes;
+        nameEl.innerText = commentObj.name;
+        timeEl.innerText = commentObj.timestamp;
+        commentEl.innerText = commentObj.comment;
+        likeEl.innerText = commentObj.likes;
         deleteEl.innerText = "delete";
 
         /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
@@ -94,10 +95,46 @@ const displayComment = () => {
           .querySelector(".comments__comments-container")
           .appendChild(commentContainerEl);
       });
+    })
+    .then(() => {
+      let deleteBtns = document.querySelectorAll(
+        ".like-delete-container__delete"
+      );
+      deleteBtns.forEach((deleteBtn) => {
+        deleteBtn.addEventListener("click", (event) => {
+          // STOPPING BUBBLING-EFFECT
+          event.stopPropagation();
+          let eventTarget = event.target;
+          let closestParent = eventTarget.closest(".comment-content");
+          let closestParentId = closestParent.id;
+
+          // SENDING DELETE REQUEST
+          axios
+            .delete(
+              `https://project-1-api.herokuapp.com/comments/${closestParentId}?api_key=${myApiKey()}`
+            )
+            .then((response) => {
+              let deleteCommentId = response.data.id;
+              // GETTING COMMENT NODE-LIST
+              document
+                .querySelectorAll(".comment-content")
+                .forEach((comment) => {
+                  // IF CURRENT COMMENT-ID = DELELTED COMMEND-ID
+                  if (comment.id === deleteCommentId) {
+                    // REMOVED CURRENT COMMENT-ID
+                    comment.remove();
+                  }
+                });
+            });
+        });
+      });
     });
 };
 
 displayComment();
+
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
@@ -275,8 +312,6 @@ let addingEventHandlerToFormEls = () => {
   });
 };
 
-/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
-// isCommentArrayEmpty(commentArray);
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 addingEventHandlerToFormEls();
 
