@@ -197,47 +197,24 @@
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      // IMAGE CONTAINER
-      .profile-image-container {
-        padding-top: 16px;
-        // IMAGE-WRAPPER
-        &__img-wrapper {
+
+      //IMAGE-CONTAINER
+      &__image-container {
+        // IMAGE-BASE
+        &--img-base {
           @include mixins.profileImageMobile;
-          overflow: hidden;
           background-color: colors.$mercury;
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          // IMAGE
-          &--img {
-            height: 100%;
-            margin-left: -5px;
-          }
         }
-
         //  MEDIA = TABLET = [ ] = 768PX
-        &__img-wrapper {
+        &--img-base {
           @include mixins.tablet {
             @include mixins.profileImageTablet;
           }
         }
       }
-      // IMAGE-CONTAINER
-      // &__img-container {
-      //   &--img-base {
-      //     @include mixins.profileImageMobile;
-      //     background-color: colors.$mercury;
-      //     background-repeat: no-repeat;
-      //     background-position: center;
-      //     background-size: cover;
-      //   }
-      //   //  MEDIA = TABLET = [ ] = 768PX
-      //   &--img-base {
-      //     @include mixins.tablet {
-      //       @include mixins.profileImageTablet;
-      //     }
-      //   }
-      // }
       // TEXT-CONTAINER
       &__texts-and-buttons {
         width: 100%;

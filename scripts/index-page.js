@@ -22,8 +22,7 @@ const displayComment = () => {
 
         // IMAGE
         let imgContainerEl = document.createElement("div"); // image-container
-        let imgWrapper = document.createElement("div"); // image-wrapper
-        let imgEl = document.createElement("img"); // img
+        let imgBase = document.createElement("div"); // image-wrapper
 
         // TEXT & BUTTONS
         let textAndButtonContainerEl = document.createElement("div"); // text & button container
@@ -45,9 +44,8 @@ const displayComment = () => {
         commentContainerEl.classList.add("comment-content");
 
         // IMAGE
-        imgContainerEl.classList.add("prfoile-image-container");
-        imgContainerEl.classList.add("profile-image-container__img-wrapper");
-        imgEl.classList.add("profile-image-container__img-wrapper--img");
+        imgContainerEl.classList.add("comment-content__image-container");
+        imgBase.classList.add("comment-content__image-container--img-base");
 
         // TEXT & BUTTONS
         textAndButtonContainerEl.classList.add(
@@ -76,13 +74,7 @@ const displayComment = () => {
         /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
 
         // IMAGE-SOURCE IS CHECKED BEFORE ADDING IMG-EL
-        if (commentObject.src) {
-          imgContainerEl.appendChild(imgWrapper); // appendind to image-container
-          imgWrapper.appendChild(imgEl); // appending to image-wrapper
-        } else {
-          imgContainerEl.appendChild(imgWrapper); // appendind to image-container
-          // * IMAGE-ELEMENT IS IGNORE AND EMPTY PLACEHOLDER IS ADDED *
-        }
+        imgContainerEl.appendChild(imgBase); // appendind to image-container
 
         nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
         nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
@@ -106,35 +98,6 @@ const displayComment = () => {
 };
 
 displayComment();
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-
-// ACTUAL TIME FROM MOMENT COMMENT IS BEING ADDED
-let tractCommentMoment = () => {
-  let currentMoment = 0; // in seconds
-  let minute; // minute
-  let moments; // actual moment
-
-  // SET-INTERVAL
-  setInterval(() => {
-    currentMoment = currentMoment + 1;
-  }, 1000);
-  if (currentMoment < 60000) {
-    moments = currentMoment + "s ago";
-    return moments; // as seconds
-  }
-  if (currentMoment > 60000 && currentMoment < 3600000) {
-    minute = currentMoment / 60; // converting to minutes
-    if (minute < 1) {
-      moments = minute + " ago";
-      return moments; // as a minute
-    }
-    if (minute > 1) {
-      moments = minute + "s ago";
-      moments; // as  minutes
-    }
-  }
-};
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
@@ -207,8 +170,9 @@ let onSubmit = (event) => {
   event.preventDefault(); // stoping form from submitting
 
   // VARIABLES TO STORE NAME, COMMENTS & IMG
-  let nameVal;
-  let commentVal;
+  let nameVal; // name
+  let commentVal; // comment
+  let imgSrc; // image-source
 
   // STORING FORM VALUES
   let nameInput = document.querySelector("#name");
@@ -216,8 +180,6 @@ let onSubmit = (event) => {
 
   let commentInput = document.querySelector("#comment");
   commentVal = commentInput.value; // comment-input value
-
-  let imgBase = document.querySelector(".profile-image-container__img-base");
 
   // VALIDATING FORM INPUTS VALUES
   if (nameVal && commentVal) {
@@ -325,5 +287,5 @@ axios
     `https://project-1-api.herokuapp.com/comments?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a`
   )
   .then((response) => {
-    console.log(response.data[0]);
+    console.log(response);
   });

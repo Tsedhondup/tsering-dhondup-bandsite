@@ -570,25 +570,17 @@
   justify-content: space-between;
   gap: 16px;
 }
-.comments__comments-container .comment-content .profile-image-container {
-  padding-top: 16px;
-}
-.comments__comments-container .comment-content .profile-image-container__img-wrapper {
+.comments__comments-container .comment-content__image-container--img-base {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  overflow: hidden;
   background-color: #e1e1e1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.comments__comments-container .comment-content .profile-image-container__img-wrapper--img {
-  height: 100%;
-  margin-left: -5px;
-}
 @media (min-width: 768px) {
-  .comments__comments-container .comment-content .profile-image-container__img-wrapper {
+  .comments__comments-container .comment-content__image-container--img-base {
     width: 48px;
     height: 48px;
     border-radius: 50%;
