@@ -15,43 +15,74 @@ const displayComment = () => {
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
     .then((response) => {
       response.data.forEach((commentObject) => {
-        // CREATING ELEMENTS
+        /*--------------- CREATING ELEMENTS ---------------*/
+
+        // COMMENT-CONTAINER
         let commentContainerEl = document.createElement("div"); // sing-comment-container
+
+        // IMAGE
         let imgContainerEl = document.createElement("div"); // image-container
-        let imgEl = document.createElement("div"); // image
+        let imgWrapper = document.createElement("div"); // image-wrapper
+        let imgEl = document.createElement("img"); // img
+
+        // TEXT & BUTTONS
         let textAndButtonContainerEl = document.createElement("div"); // text & button container
+
+        // TEXT
         let nameTimeContainerEl = document.createElement("div"); // name & time-container
         let nameEl = document.createElement("h3"); // name
         let timeEl = document.createElement("time"); // timestamp
         let commentEl = document.createElement("p"); // comment
+
+        // BUTTONS
         let likeDeleteContainerEl = document.createElement("div"); // like & delete-container
         let likeEl = document.createElement("button"); // like-button
         let deleteEl = document.createElement("button"); // delete-button
 
-        // ADDING CLASSES
+        /*--------------- ADDING CLASSES ---------------*/
+
+        // COMMENT-CONTAINER
         commentContainerEl.classList.add("comment-content");
-        imgContainerEl.classList.add("comment-content__img-container");
-        imgEl.classList.add("comment-content__img-container--img-base");
+
+        // IMAGE
+        imgContainerEl.classList.add("prfoile-image-container");
+        imgContainerEl.classList.add("profile-image-container__img-wrapper");
+        imgEl.classList.add("profile-image-container__img-wrapper--img");
+
+        // TEXT & BUTTONS
         textAndButtonContainerEl.classList.add(
           "comment-content__texts-and-buttons"
         );
+
+        // TEXT
         nameTimeContainerEl.classList.add("name-time-container");
         nameEl.classList.add("name-time-container__name");
         timeEl.classList.add("name-time-container__time");
         commentEl.classList.add("comment-content__texts-and-buttons--comments");
+
+        // BUTTONS
         likeDeleteContainerEl.classList.add("like-delete-container");
         likeEl.classList.add("like-delete-container__like");
         deleteEl.classList.add("like-delete-container__delete");
 
-        // ADDING CONTENT/VALUE
+        /*--------------- ADDING CONTENTS/VALUES ---------------*/
+
         nameEl.innerText = commentObject.name;
         timeEl.innerText = commentObject.timestamp;
         commentEl.innerText = commentObject.comment;
         likeEl.innerText = commentObject.likes;
         deleteEl.innerText = "delete";
 
-        // APPENDING TO PARENT-CONTAINER
-        imgContainerEl.appendChild(imgEl); // appendind to image-container
+        /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
+
+        // IMAGE-SOURCE IS CHECKED BEFORE ADDING IMG-EL
+        if (commentObject.src) {
+          imgContainerEl.appendChild(imgWrapper); // appendind to image-container
+          imgWrapper.appendChild(imgEl); // appending to image-wrapper
+        } else {
+          imgContainerEl.appendChild(imgWrapper); // appendind to image-container
+          // * IMAGE-ELEMENT IS IGNORE AND EMPTY PLACEHOLDER IS ADDED *
+        }
 
         nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
         nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
