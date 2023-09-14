@@ -14,7 +14,7 @@ const displayComment = () => {
   axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
     .then((response) => {
-      response.data.forEach((commentObj) => {
+      response.data.reverse().forEach((commentObj) => {
         /*--------------- CREATING ELEMENTS ---------------*/
 
         // COMMENT-CONTAINER
@@ -233,9 +233,87 @@ let onSubmit = (event) => {
         commentObj
       )
       .then((response) => {
-        displayComment();
+        /*--------------- CREATING ELEMENTS ---------------*/
+
+        // COMMENT-CONTAINER
+        let commentContainerEl = document.createElement("div"); // sing-comment-container
+        commentContainerEl.setAttribute("id", `${response.data.id}`);
+
+        // IMAGE
+        let imgContainerEl = document.createElement("div"); // image-container
+        let imgBase = document.createElement("div"); // image-wrapper
+
+        // TEXT & BUTTONS
+        let textAndButtonContainerEl = document.createElement("div"); // text & button container
+
+        // TEXT
+        let nameTimeContainerEl = document.createElement("div"); // name & time-container
+        let nameEl = document.createElement("h3"); // name
+        let timeEl = document.createElement("time"); // timestamp
+        let commentEl = document.createElement("p"); // comment
+
+        // BUTTONS
+        let likeDeleteContainerEl = document.createElement("div"); // like & delete-container
+        let likeEl = document.createElement("button"); // like-button
+        let deleteEl = document.createElement("button"); // delete-button
+
+        /*--------------- ADDING CLASSES ---------------*/
+
+        // COMMENT-CONTAINER
+        commentContainerEl.classList.add("comment-content");
+
+        // IMAGE
+        imgContainerEl.classList.add("comment-content__image-container");
+        imgBase.classList.add("comment-content__image-container--img-base");
+
+        // TEXT & BUTTONS
+        textAndButtonContainerEl.classList.add(
+          "comment-content__texts-and-buttons"
+        );
+
+        // TEXT
+        nameTimeContainerEl.classList.add("name-time-container");
+        nameEl.classList.add("name-time-container__name");
+        timeEl.classList.add("name-time-container__time");
+        commentEl.classList.add("comment-content__texts-and-buttons--comments");
+
+        // BUTTONS
+        likeDeleteContainerEl.classList.add("like-delete-container");
+        likeEl.classList.add("like-delete-container__like");
+        deleteEl.classList.add("like-delete-container__delete");
+
+        /*--------------- ADDING CONTENTS/VALUES ---------------*/
+
+        nameEl.innerText = response.data.name;
+        timeEl.innerText = response.data.timestamp;
+        commentEl.innerText = response.data.comment;
+        likeEl.innerText = response.data.likes;
+        deleteEl.innerText = "delete";
+
+        /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
+
+        // IMAGE-SOURCE IS CHECKED BEFORE ADDING IMG-EL
+        imgContainerEl.appendChild(imgBase); // appendind to image-container
+
+        nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
+        nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
+
+        likeDeleteContainerEl.appendChild(likeEl); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(deleteEl); // appending to like-delete-container
+
+        textAndButtonContainerEl.appendChild(nameTimeContainerEl); // appending to text & button container
+        textAndButtonContainerEl.appendChild(commentEl); // appending to text & button container
+        textAndButtonContainerEl.appendChild(likeDeleteContainerEl); // appending to text & button container
+
+        commentContainerEl.appendChild(imgContainerEl); // appending to comment-container - a single comment-element
+        commentContainerEl.appendChild(textAndButtonContainerEl); // appending to comment-container - a single comment-element
+
+        // RENDERING INTO DOM - COMMENT SECTION
+        document
+          .querySelector(".comments__comments-container")
+          .prepend(commentContainerEl);
       });
-    document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
+    // document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     defaultForm(); // invoking defaul-form function set the form to default
   } else {
     validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
