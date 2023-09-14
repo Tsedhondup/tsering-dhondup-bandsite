@@ -32,17 +32,19 @@
     // IMAGE CONTAINER
     .profile-image-container {
       padding-top: 16px;
-      // IMAGE-BASE
-      &__img-base {
-        background-image: url("../../assets/images/Mohan-muruge.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        border-radius: 50%;
+      // IMAGE-WRAPPER
+      &__img-wrapper {
         @include mixins.profileImageMobile;
+        overflow: hidden;
+        // IMAGE
+        &--img {
+          height: 100%;
+          margin-left: -5px;
+        }
       }
+
       //  MEDIA = TABLET = [ ] = 768PX
-      &__img-base {
+      &__img-wrapper {
         @include mixins.tablet {
           @include mixins.profileImageTablet;
         }

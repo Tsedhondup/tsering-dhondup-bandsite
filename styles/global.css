@@ -415,18 +415,18 @@
 .comments__form .profile-image-container {
   padding-top: 16px;
 }
-.comments__form .profile-image-container__img-base {
-  background-image: url("../../assets/images/Mohan-muruge.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
+.comments__form .profile-image-container__img-wrapper {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  overflow: hidden;
+}
+.comments__form .profile-image-container__img-wrapper--img {
+  height: 100%;
+  margin-left: -5px;
 }
 @media (min-width: 768px) {
-  .comments__form .profile-image-container__img-base {
+  .comments__form .profile-image-container__img-wrapper {
     width: 48px;
     height: 48px;
     border-radius: 50%;
