@@ -8,7 +8,9 @@ let myApiKey = () => {
 
 // ADDING EVENT-LISTENER TO DELETE BUTTONS
 let addListenerToDeleteButtons = () => {
-  let deleteBtns = document.querySelectorAll(".like-delete-container__delete");
+  let deleteBtns = document.querySelectorAll(
+    ".like-delete-container__btns-wrapper--delete"
+  );
   deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener("click", (event) => {
       event.stopPropagation(); // stop bubbling-effect
@@ -38,23 +40,30 @@ let addListenerToDeleteButtons = () => {
 
 // ADDING EVENT-LISTENER TO LIKE BUTTON
 let addListenerToLikeButtons = () => {
-  let likeBtns = document.querySelectorAll(".like-delete-container__like");
+  let likeBtns = document.querySelectorAll(
+    ".like-delete-container__btns-wrapper--like"
+  );
+  let eventTarget; // to use on multiple scope or subsequent pomise methods
   likeBtns.forEach((likeBtn) => {
     likeBtn.addEventListener("click", (event) => {
       event.stopPropagation(); // stop bubbling-effect
       // INCREMENT LIKE COUNT BY ONE EVERY 'CLICK'
-      let eventTarget = event.target;
+      eventTarget = event.target;
       let closestParent = eventTarget.closest(".comment-content");
       let closestParentId = closestParent.id;
-      console.log(closestParentId);
 
-      // SENDING DELETE REQUEST
+      // SENDING LIKE REQUEST
       axios
         .put(
           `https://project-1-api.herokuapp.com/comments/${closestParentId}/like?api_key=${myApiKey()}`
         )
         .then((response) => {
-          console.log(response.data.likes);
+          // GET THE CLOSEST PARENT WITH MATCHED SELECTOR
+          let closestParent = eventTarget.closest(".like-delete-container");
+          // GET FIRST-CHILD OF CLOSEST PARENT = WHICH IS LIKE COUNT IN THIS CASE
+          let firstChild = closestParent.firstElementChild;
+          // UPDATE TEXT-CONTENT OF FIRST-CHILD
+          firstChild.innerText = response.data.likes;
         });
     });
   });
@@ -288,6 +297,8 @@ let onSubmit = (event) => {
 
         // BUTTONS
         let likeDeleteContainerEl = document.createElement("div"); // like & delete-container
+        let likeCount = document.createElement("p"); // like count
+        let likeDeleteButtonsWrapper = document.createElement("div"); // like & delete button wrapper
         let likeEl = document.createElement("button"); // like-button
         let deleteEl = document.createElement("button"); // delete-button
 
@@ -313,15 +324,21 @@ let onSubmit = (event) => {
 
         // BUTTONS
         likeDeleteContainerEl.classList.add("like-delete-container");
-        likeEl.classList.add("like-delete-container__like");
-        deleteEl.classList.add("like-delete-container__delete");
+        likeCount.classList.add("like-delete-container__like-counts");
+        likeDeleteButtonsWrapper.classList.add(
+          "like-delete-container__btns-wrapper"
+        );
+        likeEl.classList.add("like-delete-container__btns-wrapper--like");
+        deleteEl.classList.add("like-delete-container__btns-wrapper--delete");
 
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
         nameEl.innerText = response.data.name;
         timeEl.innerText = response.data.timestamp;
         commentEl.innerText = response.data.comment;
-        likeEl.innerText = response.data.likes;
+
+        likeCount.innerText = response.data.likes;
+        likeEl.innerText = "like";
         deleteEl.innerText = "delete";
 
         /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
@@ -332,8 +349,10 @@ let onSubmit = (event) => {
         nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
         nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
 
-        likeDeleteContainerEl.appendChild(likeEl); // appending to like-delete-container
-        likeDeleteContainerEl.appendChild(deleteEl); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(likeCount); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(likeDeleteButtonsWrapper); // appending to like-delete-container
+        likeDeleteButtonsWrapper.appendChild(likeEl); // appending to like-delete-wrapper
+        likeDeleteButtonsWrapper.appendChild(deleteEl); // appending to like-delete-wrapper
 
         textAndButtonContainerEl.appendChild(nameTimeContainerEl); // appending to text & button container
         textAndButtonContainerEl.appendChild(commentEl); // appending to text & button container
