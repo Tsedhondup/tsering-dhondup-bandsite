@@ -1056,7 +1056,7 @@
   }
 }
 .shows__date-container .shows-table-data-container__content:hover {
-  background-color: #e1e1e1;
+  background-color: #fafafa;
 }
 .shows__date-container .shows-table-data-container__content-selected {
   background-color: #e1e1e1;
@@ -1072,7 +1072,7 @@
   }
 }
 @media (min-width: 1280px) {
-  .shows__header-data-container {
+  .shows__date-container {
     flex: 80%;
     padding-top: 20px;
     padding-bottom: 16px;

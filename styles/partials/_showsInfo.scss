@@ -161,7 +161,7 @@
       }
 
       &__content:hover {
-        background-color: colors.$mercury;
+        background-color: colors.$alabaster;
       }
 
       // CLASS IS DYNAMICALLY CREATED USING JAVASCRIPT
@@ -183,7 +183,7 @@
     }
   }
   // MEDIA = DESKTOP = [ ] = 1280PX
-  &__header-data-container {
+  &__date-container {
     @include mixins.desktop {
       flex: 80%;
       padding-top: 20px;
