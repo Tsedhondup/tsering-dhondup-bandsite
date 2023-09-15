@@ -1,11 +1,64 @@
 // API KEY
 let myApiKey = () => {
-  return "85d3d688-1b7d-4f06-8841-3230dac7e82a";
+  return "85204702-0307-4f2b-8c6f-98a3fd6d0b2e";
 };
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
+// ADDING EVENT-LISTENER TO DELETE BUTTONS
+let addListenerToDeleteButtons = () => {
+  let deleteBtns = document.querySelectorAll(".like-delete-container__delete");
+  deleteBtns.forEach((deleteBtn) => {
+    deleteBtn.addEventListener("click", (event) => {
+      event.stopPropagation(); // stop bubbling-effect
+      let eventTarget = event.target;
+      let closestParent = eventTarget.closest(".comment-content");
+      let closestParentId = closestParent.id;
+
+      // SENDING DELETE REQUEST
+      axios
+        .delete(
+          `https://project-1-api.herokuapp.com/comments/${closestParentId}?api_key=${myApiKey()}`
+        )
+        .then((response) => {
+          let deleteCommentId = response.data.id;
+          // GETTING COMMENT NODE-LIST
+          document.querySelectorAll(".comment-content").forEach((comment) => {
+            // IF CURRENT COMMENT-ID = DELELTED COMMEND-ID
+            if (comment.id === deleteCommentId) {
+              // REMOVED CURRENT COMMENT-ID
+              comment.remove();
+            }
+          });
+        });
+    });
+  });
+};
+
+// ADDING EVENT-LISTENER TO LIKE BUTTON
+let addListenerToLikeButtons = () => {
+  let likeBtns = document.querySelectorAll(".like-delete-container__like");
+  likeBtns.forEach((likeBtn) => {
+    likeBtn.addEventListener("click", (event) => {
+      event.stopPropagation(); // stop bubbling-effect
+      // INCREMENT LIKE COUNT BY ONE EVERY 'CLICK'
+      let eventTarget = event.target;
+      let closestParent = eventTarget.closest(".comment-content");
+      let closestParentId = closestParent.id;
+      console.log(closestParentId);
+
+      // SENDING DELETE REQUEST
+      axios
+        .put(
+          `https://project-1-api.herokuapp.com/comments/${closestParentId}/like?api_key=${myApiKey()}`
+        )
+        .then((response) => {
+          console.log(response.data.likes);
+        });
+    });
+  });
+};
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
@@ -97,37 +150,8 @@ const displayComment = () => {
       });
     })
     .then(() => {
-      let deleteBtns = document.querySelectorAll(
-        ".like-delete-container__delete"
-      );
-      deleteBtns.forEach((deleteBtn) => {
-        deleteBtn.addEventListener("click", (event) => {
-          // STOPPING BUBBLING-EFFECT
-          event.stopPropagation();
-          let eventTarget = event.target;
-          let closestParent = eventTarget.closest(".comment-content");
-          let closestParentId = closestParent.id;
-
-          // SENDING DELETE REQUEST
-          axios
-            .delete(
-              `https://project-1-api.herokuapp.com/comments/${closestParentId}?api_key=${myApiKey()}`
-            )
-            .then((response) => {
-              let deleteCommentId = response.data.id;
-              // GETTING COMMENT NODE-LIST
-              document
-                .querySelectorAll(".comment-content")
-                .forEach((comment) => {
-                  // IF CURRENT COMMENT-ID = DELELTED COMMEND-ID
-                  if (comment.id === deleteCommentId) {
-                    // REMOVED CURRENT COMMENT-ID
-                    comment.remove();
-                  }
-                });
-            });
-        });
-      });
+      addListenerToDeleteButtons(); // adding event-listener to delete-buttons after comments are loaded
+      addListenerToLikeButtons(); // adding event-listener to like-buttons after comments are loaded
     });
 };
 
@@ -312,6 +336,10 @@ let onSubmit = (event) => {
         document
           .querySelector(".comments__comments-container")
           .prepend(commentContainerEl);
+      })
+      .then(() => {
+        addListenerToDeleteButtons(); // adding event-listener to delete-buttons after comments are loaded
+        addListenerToLikeButtons(); // adding event-listener to like-buttons after comments are loaded
       });
     // document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     defaultForm(); // invoking defaul-form function set the form to default
@@ -396,9 +424,9 @@ addingEventHandlerToFormEls();
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 axios
-  .get(
-    `https://project-1-api.herokuapp.com/comments?api_key=85d3d688-1b7d-4f06-8841-3230dac7e82a`
-  )
+  .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
   .then((response) => {
-    console.log(response);
+    console.log(response.data);
   });
+
+// ADDING EVENT HANDLER TO DELETE BUTTONS
