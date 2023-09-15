@@ -89,6 +89,8 @@ const displayComment = () => {
 
         // BUTTONS
         let likeDeleteContainerEl = document.createElement("div"); // like & delete-container
+        let likeCount = document.createElement("p"); // like count
+        let likeDeleteButtonsWrapper = document.createElement("div"); // like & delete button wrapper
         let likeEl = document.createElement("button"); // like-button
         let deleteEl = document.createElement("button"); // delete-button
 
@@ -114,15 +116,21 @@ const displayComment = () => {
 
         // BUTTONS
         likeDeleteContainerEl.classList.add("like-delete-container");
-        likeEl.classList.add("like-delete-container__like");
-        deleteEl.classList.add("like-delete-container__delete");
+        likeCount.classList.add("like-delete-container__like-counts");
+        likeDeleteButtonsWrapper.classList.add(
+          "like-delete-container__btns-wrapper"
+        );
+        likeEl.classList.add("like-delete-container__btns-wrapper--like");
+        deleteEl.classList.add("like-delete-container__btns-wrapper--delete");
 
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
         nameEl.innerText = commentObj.name;
         timeEl.innerText = commentObj.timestamp;
         commentEl.innerText = commentObj.comment;
-        likeEl.innerText = commentObj.likes;
+
+        likeCount.innerText = commentObj.likes;
+        likeEl.innerText = "like";
         deleteEl.innerText = "delete";
 
         /* APPENDING TO PARENT RESPECTIVE PARENT CONTAINERS */
@@ -133,8 +141,10 @@ const displayComment = () => {
         nameTimeContainerEl.appendChild(nameEl); // appending to name-time-container
         nameTimeContainerEl.appendChild(timeEl); // appending to name-time-container
 
-        likeDeleteContainerEl.appendChild(likeEl); // appending to like-delete-container
-        likeDeleteContainerEl.appendChild(deleteEl); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(likeCount); // appending to like-delete-container
+        likeDeleteContainerEl.appendChild(likeDeleteButtonsWrapper); // appending to like-delete-container
+        likeDeleteButtonsWrapper.appendChild(likeEl); // appending to like-delete-wrapper
+        likeDeleteButtonsWrapper.appendChild(deleteEl); // appending to like-delete-wrapper
 
         textAndButtonContainerEl.appendChild(nameTimeContainerEl); // appending to text & button container
         textAndButtonContainerEl.appendChild(commentEl); // appending to text & button container
