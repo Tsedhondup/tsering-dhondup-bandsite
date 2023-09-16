@@ -605,19 +605,8 @@
   font-weight: 400;
   color: #afafaf;
 }
-.comments__comments-container .comment-content__texts-and-buttons--moment {
-  color: #afafaf;
-  font-size: 11px;
-  padding-top: 4px;
-}
-.comments__comments-container .comment-content__texts-and-buttons--comments {
-  font-size: 13px;
-  line-height: 18px;
-}
-@media (min-width: 768px) {
-  .comments__comments-container .comment-content__texts-and-buttons--comments {
-    line-height: 22px;
-  }
+.comments__comments-container .comment-content__texts-and-buttons .like-delete-container__like-counts {
+  background-color: red;
 }
 @media (min-width: 768px) {
   .comments__comments-container .comment-content {

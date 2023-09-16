@@ -223,6 +223,7 @@
           display: flex;
           justify-content: space-between;
           padding-bottom: 14px;
+
           // NAME
           &__name {
             font-size: 13px;
@@ -237,22 +238,19 @@
             color: colors.$silver;
           }
         }
-        // MOMENT
-        &--moment {
-          color: colors.$silver;
-          font-size: 11px;
-          padding-top: 4px;
-        }
         // COMMENT-TEXT
-        &--comments {
-          font-size: 13px;
-          line-height: 18px;
-        }
-        //  MEDIA = TABLET = [ ] = 768PX
-        @include mixins.tablet {
-          &--comments {
-            line-height: 22px;
+        // &--comments {
+        //   background-color: red;
+        // }
+        // LIKE & DELETE CONTAINER
+        .like-delete-container {
+          &__like-counts {
+            background-color: red;
           }
+          // LIKE COUNT
+          // LIKE & DELETE BUTTON WRAPPER
+          // LIKE BUTTON
+          // DELETE BUTTON
         }
       }
     }
