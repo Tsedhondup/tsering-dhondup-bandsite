@@ -382,6 +382,7 @@
   padding: 0px 16px;
   /*----------------------------------------------------------*/
   /*----------------------------------------------------------*/
+  /** CHECK CAREFULLY BEFORE DELETING THIS **/
 }
 .comments__title {
   padding-top: 24px;
@@ -605,8 +606,48 @@
   font-weight: 400;
   color: #afafaf;
 }
+.comments__comments-container .comment-content__texts-and-buttons--comments {
+  font-size: 13px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .comments__comments-container .comment-content__texts-and-buttons--comments {
+    line-height: 22px;
+  }
+}
 .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__like-counts {
-  background-color: red;
+  font-size: 13px;
+  color: #323232;
+  line-height: 18px;
+  padding: 16px 0px 5px 0px;
+}
+.comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+.comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete {
+  width: 100%;
+  padding: 11.67px 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  border-width: 0px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #323232;
+}
+.comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like:hover, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete:hover {
+  background-color: #afafaf;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete {
+    width: 150px;
+  }
+}
+.comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete:hover {
+  background-color: #d22d2d;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .comments__comments-container .comment-content {
@@ -618,11 +659,6 @@
     max-width: 585px;
     margin: auto;
     padding-bottom: 36px;
-  }
-}
-@media (min-width: 768px) {
-  .comments__comments-container {
-    max-width: 562px;
   }
 }
 

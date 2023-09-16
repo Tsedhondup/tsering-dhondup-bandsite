@@ -239,18 +239,64 @@
           }
         }
         // COMMENT-TEXT
-        // &--comments {
-        //   background-color: red;
-        // }
+        // COMMENT-TEXT
+        &--comments {
+          font-size: 13px;
+          line-height: 18px;
+        }
+        //  MEDIA = TABLET = [ ] = 768PX
+        @include mixins.tablet {
+          &--comments {
+            line-height: 22px;
+          }
+        }
         // LIKE & DELETE CONTAINER
         .like-delete-container {
-          &__like-counts {
-            background-color: red;
-          }
           // LIKE COUNT
+          &__like-counts {
+            font-size: 13px;
+            color: colors.$bandSiteBlack;
+            line-height: 18px;
+            padding: 16px 0px 5px 0px;
+          }
           // LIKE & DELETE BUTTON WRAPPER
-          // LIKE BUTTON
-          // DELETE BUTTON
+          &__btns-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            // LIKE BUTTON
+            &--like {
+              width: 100%;
+              padding: 11.67px 32px;
+              font-size: 14px;
+              border-radius: 4px;
+              border-width: 0px;
+              text-transform: uppercase;
+              color: colors.$white;
+              background-color: colors.$bandSiteBlack;
+            }
+            // WHEN HOVER
+            &--like:hover {
+              background-color: colors.$silver;
+              color: colors.$badnSiteDarkBlack;
+            }
+            // MEDIA = TABLET = [ ] = 768PX
+            &--like {
+              @include mixins.tablet {
+                width: 150px;
+              }
+            }
+
+            // DELETE BUTTON
+            &--delete {
+              @extend .like-delete-container__btns-wrapper--like;
+            }
+            // WHEN HOVER
+            &--delete:hover {
+              background-color: colors.$pink;
+              color: colors.$white;
+            }
+          }
         }
       }
     }
@@ -269,12 +315,13 @@
       padding-bottom: 36px;
     }
   }
+  /** CHECK CAREFULLY BEFORE DELETING THIS **/
   //  MEDIA = DESKTOP = [ ] = 1280PX
-  &__comments-container {
-    @include mixins.tablet {
-      max-width: 562px;
-    }
-  }
+  // &__comments-container {
+  //   @include mixins.tablet {
+  //     max-width: 562px;
+  //   }
+  // }
 }
 //  MEDIA = TABLET = [ ] = 768PX
 .comments {
