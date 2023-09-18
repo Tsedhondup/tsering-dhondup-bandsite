@@ -164,8 +164,12 @@
         background-color: colors.$alabaster;
       }
 
-      // CLASS IS DYNAMICALLY CREATED USING JAVASCRIPT
+      // CLASS IS DYNAMICALLY GENERATED USING JAVASCRIPT
       &__content-selected {
+        background-color: colors.$mercury;
+      }
+      // CLASS IS DYNAMICALLY GENERATED USING JAVASCRIPT - CONTAINING STYLES OVERIDES HTML CLASSES STYLES
+      &__content-selected:hover {
         background-color: colors.$mercury;
       }
     }
