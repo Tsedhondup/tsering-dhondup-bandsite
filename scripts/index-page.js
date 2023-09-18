@@ -24,12 +24,15 @@ let addListenerToDeleteButtons = () => {
           `https://project-1-api.herokuapp.com/comments/${closestParentId}?api_key=${myApiKey()}`
         )
         .then((response) => {
+          // GETTING DELETED COMMENT-ID FROM RESPONSE-DATA
           let deleteCommentId = response.data.id;
-          // GETTING COMMENT NODE-LIST
+          // GETTING COMMENT NODE-LISTS
           document.querySelectorAll(".comment-content").forEach((comment) => {
-            // IF CURRENT COMMENT-ID = DELELTED COMMEND-ID
-            if (comment.id === deleteCommentId) {
-              // REMOVED CURRENT COMMENT-ID
+            // GETTING ID FROM CURRENT COMMENT-NODE
+            let currentCommentNodeId = comment.id;
+            // IF CURRENT COMMENT-ID = DELELTED COMMENT-ID
+            if (currentCommentNodeId === deleteCommentId) {
+              // REMOVED CURRENT COMMENT-ELEMENT
               comment.remove();
             }
           });
@@ -174,6 +177,7 @@ const displayComment = () => {
     });
 };
 
+/** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 displayComment();
 
 /*------------------------------------------------------------------------------------------*/
@@ -203,14 +207,17 @@ let defaultForm = () => {
 
 // VALIDATE NAME-INPUT
 let validateNameInput = (nameInput) => {
-  let nameWarningEl = document.querySelector(
-    ".input-elements__name-warning-msg"
-  );
-  nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
-  nameWarningEl.innerText = "Name required! (e.g - Tsering Dhondup)"; // inserting warning message
-
-  // ADDING PINK-BORDER CLASS
-  nameInput.classList.add("input-elements__pink-border");
+  if (!nameInput.value) {
+    let nameWarningEl = document.querySelector(
+      ".input-elements__name-warning-msg"
+    );
+    nameWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
+    nameWarningEl.innerText = "Name required! (e.g - Tsering Dhondup)"; // inserting warning message
+    nameInput.classList.add("input-elements__pink-border"); // adding pink-border class
+  } else {
+    nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+    document.querySelector(".input-elements__name-warning-msg").innerText = ""; // removing warning-msg
+  }
 };
 
 /*------------------------------------------------------------------------------------------*/
@@ -218,14 +225,18 @@ let validateNameInput = (nameInput) => {
 
 // VALIDATE COMMENT-INPUT
 let validateCommentInput = (commentInput) => {
-  let commentWarningEl = document.querySelector(
-    ".input-elements__comment-warning-msg"
-  );
-  commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
-  commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
-
-  // ADDING PINK-BORDER CLASS
-  commentInput.classList.add("input-elements__pink-border");
+  if (!commentInput.value) {
+    let commentWarningEl = document.querySelector(
+      ".input-elements__comment-warning-msg"
+    );
+    commentWarningEl.classList.add("input-elements__warning-msg-display"); // adding warning-msg-display class
+    commentWarningEl.innerText = "Cannot submit empty comments!"; // inserting warning message
+    commentInput.classList.add("input-elements__pink-border"); // adding pink-border class
+  } else {
+    document.querySelector(".input-elements__comment-warning-msg").innerText =
+      ""; // removing warning-msg
+    commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
+  }
 };
 
 /*------------------------------------------------------------------------------------------*/
@@ -233,6 +244,7 @@ let validateCommentInput = (commentInput) => {
 
 // VALIDATING FORM INPUTS ON-SUBMISSION - VALIDATION ONLY DONE WHEN INPUTS FIELDS ARE EMPTY!
 let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
+  // NAME-INPUT
   if (!nameVal) {
     let nameWarningEl = document.querySelector(
       ".input-elements__name-warning-msg"
@@ -244,6 +256,7 @@ let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
     nameInput.classList.add("input-elements__pink-border");
   }
 
+  // COMMENT-INPUT
   if (!commentVal) {
     let commentWarningEl = document.querySelector(
       ".input-elements__comment-warning-msg"
@@ -261,26 +274,24 @@ let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
 
 // CALLBACK FOR FOR FORM ON-SUBMISSION
 let onSubmit = (event) => {
-  event.preventDefault(); // stoping form from submitting
+  event.preventDefault();
+  let nameInput = document.querySelector("#name"); // name
+  let commentInput = document.querySelector("#comment"); // comment
 
-  let nameVal; // name
-  let commentVal; // comment
+  let nameVal;
+  let commentVal;
 
-  let nameInput = document.querySelector("#name");
-  nameVal = nameInput.value; // name-input value
-
-  let commentInput = document.querySelector("#comment");
-  commentVal = commentInput.value; // comment-input value
+  nameVal = nameInput.value;
+  commentVal = commentInput.value;
 
   // VALIDATING FORM INPUTS VALUES
   if (nameVal && commentVal) {
-    // CREATING COMMENT-OBJECT IF NAME & COMMENT INPUTS WERE TRUE
     let commentObj = {
       name: nameVal,
       comment: commentVal,
     };
 
-    // POSTING ON-TO SERVER
+    // FORM SUBMISSION/POSTING VIA AXIOS
     axios
       .post(
         `https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`,
@@ -345,7 +356,9 @@ let onSubmit = (event) => {
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
         nameEl.innerText = response.data.name;
-        timeEl.innerText = new Date(response.data.timestamp).toLocaleDateString();
+        timeEl.innerText = new Date(
+          response.data.timestamp
+        ).toLocaleDateString();
         commentEl.innerText = response.data.comment;
 
         likeCount.innerText = response.data.likes;
@@ -381,10 +394,9 @@ let onSubmit = (event) => {
         addListenerToDeleteButtons(); // adding event-listener to delete-buttons after comments are loaded
         addListenerToLikeButtons(); // adding event-listener to like-buttons after comments are loaded
       });
-    // document.querySelector(".comments__comments-container").innerHTML = ""; // emptying comment-container <div> in bio-page
     defaultForm(); // invoking defaul-form function set the form to default
   } else {
-    validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal); // invoking validate-form-on-submit function
+    validateFormOnSubmit(nameInput, nameVal, commentInput, commentVal);
   }
 };
 
@@ -397,64 +409,47 @@ let addingEventHandlerToFormEls = () => {
   let nameInput = document.querySelector(".input-elements__name-input"); // name-input
   let commentInput = document.querySelector(".input-elements__comments-input"); // comment-input
 
-  // #1 - FORM
-  // ON-SUBMIT
+  /* 
+  #1 - FORM
+  - ON-SUBMIT
+  */
   form.addEventListener("submit", (event) => {
     onSubmit(event); // invoking on-submit function
   });
 
-  /*--------------------------------------------*/
+  /* 
+  #2(A) NAME-INPUT
+  - WHEN FIELD CHANGED
+  */
 
-  // #2 NAME-INPUT
-  // WHEN INPUT FIELD CHANGED
   nameInput.addEventListener("input", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    if (!nameInput.value) {
-      validateNameInput(nameInput); // invoking validate-name-input
-    } else {
-      nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
-      document.querySelector(".input-elements__name-warning-msg").innerText =
-        ""; // removing warning-msg
-    }
+    validateNameInput(nameInput);
   });
 
-  // WHEN USER LEAVE-INPUT FIELD
-  nameInput.addEventListener("blur", (event) => {
+  /* 
+  #2(B) NAME-INPUT
+  - WHEN USER LEAVE INPUT FIELD 
+  */ nameInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    if (!nameInput.value) {
-      validateNameInput(nameInput); // invoking validate-name-input
-    } else {
-      nameInput.classList.remove("input-elements__pink-border"); // removing pink-border class
-      document.querySelector(".input-elements__name-warning-msg").innerText =
-        ""; // removing warning-msg
-    }
+    validateNameInput(nameInput);
   });
 
-  /*--------------------------------------------*/
-
-  // #3 COMMENT-INPUT
-  // WHEN INPUT FIELD CHANGED
+  /* 
+  #2(A) COMMENT-INPUT
+  - WHEN FIELD CHANGED
+  */
   commentInput.addEventListener("input", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    if (!commentInput.value) {
-      validateCommentInput(commentInput); // invoking validate-comment-input
-    } else {
-      commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
-      document.querySelector(".input-elements__comment-warning-msg").innerText =
-        ""; // removing warning-msg
-    }
+    validateCommentInput(commentInput);
   });
 
-  // WHEN USER LEAVE INPUT FIELD
-  commentInput.addEventListener("blur", (event) => {
+  /* 
+  #3(B) COMMENT-INPUT
+  - WHEN USER LEAVE INPUT FIELD 
+  */ commentInput.addEventListener("blur", (event) => {
     event.stopPropagation(); // stoping bubbling-effect
-    if (!commentInput.value) {
-      validateCommentInput(commentInput); // invoking validate-comment-input
-    } else {
-      commentInput.classList.remove("input-elements__pink-border"); // removing pink-border class
-      document.querySelector(".input-elements__comment-warning-msg").innerText =
-        ""; // removing warning-msg
-    }
+    validateCommentInput(commentInput);
   });
 };
 
