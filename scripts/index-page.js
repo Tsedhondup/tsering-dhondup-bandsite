@@ -135,7 +135,7 @@ const displayComment = () => {
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
         nameEl.innerText = commentObj.name;
-        timeEl.innerText = commentObj.timestamp;
+        timeEl.innerText = new Date(commentObj.timestamp).toLocaleDateString();
         commentEl.innerText = commentObj.comment;
 
         likeCount.innerText = commentObj.likes;
@@ -263,12 +263,9 @@ let validateFormOnSubmit = (nameInput, nameVal, commentInput, commentVal) => {
 let onSubmit = (event) => {
   event.preventDefault(); // stoping form from submitting
 
-  // VARIABLES TO STORE NAME, COMMENTS & IMG
   let nameVal; // name
   let commentVal; // comment
-  let imgSrc; // image-source
 
-  // STORING FORM VALUES
   let nameInput = document.querySelector("#name");
   nameVal = nameInput.value; // name-input value
 
@@ -348,7 +345,7 @@ let onSubmit = (event) => {
         /*--------------- ADDING CONTENTS/VALUES ---------------*/
 
         nameEl.innerText = response.data.name;
-        timeEl.innerText = response.data.timestamp;
+        timeEl.innerText = new Date(response.data.timestamp).toLocaleDateString();
         commentEl.innerText = response.data.comment;
 
         likeCount.innerText = response.data.likes;
