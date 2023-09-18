@@ -1,6 +1,6 @@
 // API KEY
 let myApiKey = () => {
-  return "85204702-0307-4f2b-8c6f-98a3fd6d0b2e";
+  return "bb098d40-0dd4-4d04-9669-63e9129c59e4";
 };
 
 /*------------------------------------------------------------------------------------------*/
@@ -8,17 +8,21 @@ let myApiKey = () => {
 
 // ADDING EVENT-LISTENER TO DELETE BUTTONS
 let addListenerToDeleteButtons = () => {
+  // GETTING DELETE BUTTON NODE LISTS FROM DOM
   let deleteBtns = document.querySelectorAll(
     ".like-delete-container__btns-wrapper--delete"
   );
   deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener("click", (event) => {
-      event.stopPropagation(); // stop bubbling-effect
+      event.stopPropagation();
+      // GETTING CLICKED BUTTON = TARGET ELEMENT
       let eventTarget = event.target;
+      // GETTING CLOSEST PARENT WITH MATCHED SELECTOR (EXPECTED PARENT = SIGNLE COMMENT OBJECT/ELEMENT)
       let closestParent = eventTarget.closest(".comment-content");
+      // GETTING CLOSEST PARENT-ID
       let closestParentId = closestParent.id;
 
-      // SENDING DELETE REQUEST
+      // SENDING DELETE REQUEST WITH THE 'CLOSEST PARTENT-ID'
       axios
         .delete(
           `https://project-1-api.herokuapp.com/comments/${closestParentId}?api_key=${myApiKey()}`
@@ -26,16 +30,18 @@ let addListenerToDeleteButtons = () => {
         .then((response) => {
           // GETTING DELETED COMMENT-ID FROM RESPONSE-DATA
           let deleteCommentId = response.data.id;
-          // GETTING COMMENT NODE-LISTS
-          document.querySelectorAll(".comment-content").forEach((comment) => {
-            // GETTING ID FROM CURRENT COMMENT-NODE
-            let currentCommentNodeId = comment.id;
-            // IF CURRENT COMMENT-ID = DELELTED COMMENT-ID
-            if (currentCommentNodeId === deleteCommentId) {
-              // REMOVED CURRENT COMMENT-ELEMENT
-              comment.remove();
-            }
-          });
+          // GETTING AND LOOPING THROUGH COMMENT-OBJECT NODE LISTS
+          document
+            .querySelectorAll(".comment-content")
+            .forEach((commentNode) => {
+              // GETTING ID FROM CURRENT COMMENT-NODE
+              let currentCommentNodeId = commentNode.id;
+              // IF CURRENT COMMENT-NODE-ID = DELELTED COMMENT-ID
+              if (currentCommentNodeId === deleteCommentId) {
+                // REMOVED CURRENT COMMENT-NODE FROM DOM
+                commentNode.remove();
+              }
+            });
         });
     });
   });
@@ -46,26 +52,36 @@ let addListenerToLikeButtons = () => {
   let likeBtns = document.querySelectorAll(
     ".like-delete-container__btns-wrapper--like"
   );
-  let eventTarget; // to use on multiple scope or subsequent pomise methods
+  // EVENT-TARGET ***
+  let eventTarget;
+
   likeBtns.forEach((likeBtn) => {
     likeBtn.addEventListener("click", (event) => {
       event.stopPropagation(); // stop bubbling-effect
-      // INCREMENT LIKE COUNT BY ONE EVERY 'CLICK'
+      // SETTING EVENT-TARGET
       eventTarget = event.target;
+      /*
+       GETTING CLOSEST PARENT OF TARGET-ELEMENT WITH MATCHED SELECTOR 
+       EXPECTED PARENT = (SIGNLE COMMENT OBJECT/ELEMENT)
+       */
       let closestParent = eventTarget.closest(".comment-content");
+      // GETTING CLOSEST PARENT-ID
       let closestParentId = closestParent.id;
 
-      // SENDING LIKE REQUEST
+      // SENDING LIKE REQUEST WITHD THE 'CLOSEST PARENT-ID'
       axios
         .put(
           `https://project-1-api.herokuapp.com/comments/${closestParentId}/like?api_key=${myApiKey()}`
         )
         .then((response) => {
-          // GET THE CLOSEST PARENT WITH MATCHED SELECTOR
+          /*
+           GET THE CLOSEST PARENT WITH MATCHED SELECTOR 
+           EXPECTED PARENT - (LIKE-DELETE-CONTAINER ELEMENT)
+           */
           let closestParent = eventTarget.closest(".like-delete-container");
-          // GET FIRST-CHILD OF CLOSEST PARENT = WHICH IS LIKE COUNT IN THIS CASE
+          // GET FIRST-CHILD OF CLOSEST PARENT = WHICH IS <p> TAG THAT DISPLAY LIKE COUNT
           let firstChild = closestParent.firstElementChild;
-          // UPDATE TEXT-CONTENT OF FIRST-CHILD
+          // UPDATE TEXT-CONTENT/INNER-TEXT OF <P> TAG = LIKE COUNT CONTAINER
           firstChild.innerText = response.data.likes;
         });
     });
@@ -455,13 +471,3 @@ let addingEventHandlerToFormEls = () => {
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 addingEventHandlerToFormEls();
-
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-axios
-  .get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey()}`)
-  .then((response) => {
-    console.log(response.data);
-  });
-
-// ADDING EVENT HANDLER TO DELETE BUTTONS
