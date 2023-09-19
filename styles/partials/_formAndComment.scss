@@ -1,0 +1,14 @@
+@use "./mixins";
+@use "./formTitle" as *;
+@use "./form" as *;
+@use "./comments" as *;
+
+.comments {
+  padding: 0px 16px;
+}
+//  MEDIA = TABLET = [ ] = 768PX
+.comments {
+  @include mixins.tablet {
+    padding: 0px 36px;
+  }
+}

@@ -1,193 +1,8 @@
 @use "./mixins";
 @use "./colors";
 
+// COMMENTS ADDS DYNAMICALLY BY JavaScript
 .comments {
-  padding: 0px 16px;
-  // TITLE
-  &__title {
-    padding-top: 24px;
-    @include mixins.sectionHeader320;
-  }
-  // MEDIA = TABLET = [ ] = 768PX
-  &__title {
-    padding-top: 48px;
-    @include mixins.tablet {
-      @include mixins.sectionHeader768;
-    }
-  }
-  //  MEDIA = DESKTOP = [ ] = 1280PX
-  &__title {
-    @include mixins.desktop {
-      max-width: 1040px;
-      margin: auto;
-    }
-  }
-  /*----------------------------------------------------------*/
-  // FORM
-  &__form {
-    display: flex;
-    padding: 16px 0px;
-    border-bottom: 1px solid colors.$mercury;
-    gap: 16px;
-    // IMAGE CONTAINER
-    .profile-image-container {
-      padding-top: 16px;
-      // IMAGE-WRAPPER
-      &__img-wrapper {
-        @include mixins.profileImageMobile;
-        overflow: hidden;
-        // IMAGE
-        &--img {
-          height: 100%;
-          margin-left: -5px;
-        }
-      }
-
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__img-wrapper {
-        @include mixins.tablet {
-          @include mixins.profileImageTablet;
-        }
-      }
-    }
-    /*----------------------------------------------------------*/
-
-    // INPUT-SECTION
-    .input-elements {
-      width: 100%;
-      // LABEL
-      &__label {
-        display: block;
-        width: 100%;
-        font-size: 10px;
-        text-transform: uppercase;
-        color: colors.$silver;
-        padding-bottom: 4px;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__label {
-        @include mixins.tablet {
-          font-size: 12px;
-          text-align: left;
-        }
-      }
-      // LABEL-COMMENT
-      #label-comment {
-        padding-top: 20px;
-      }
-      // NAME-INPUT
-      &__name-input {
-        display: block;
-        width: 100%;
-        height: 36px;
-        padding: 12px;
-        border: 1px solid colors.$mercury;
-        border-radius: 4px;
-        color: colors.$badnSiteDarkBlack;
-        background-color: colors.$alabaster;
-        font-size: 12px;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__name-input {
-        @include mixins.tablet {
-          height: 48px;
-          padding: 16px;
-        }
-      }
-      &__name-input::placeholder {
-        color: colors.$bandSiteBlack;
-        font-size: 12px;
-      }
-      // COMMENT-INPUT
-      &__comments-input {
-        display: block;
-        width: 100%;
-        height: 80px;
-        padding: 12px;
-        border: 1px solid colors.$mercury;
-        border-radius: 4px;
-        text-align: left;
-        color: colors.$badnSiteDarkBlack;
-        background-color: colors.$alabaster;
-        font-size: 12px;
-        resize: none;
-      }
-      //  MEDIA = TABLET = [ ] = 768PX
-      &__comments-input {
-        @include mixins.tablet {
-          padding: 16px;
-          height: 92px;
-        }
-      }
-      &__comments-input::placeholder {
-        color: colors.$bandSiteBlack;
-        font-size: 12px;
-      }
-
-      // STYLES FOR WARNING MESSAGES
-
-      // FOR NAME
-      &__name-warning-msg {
-        color: colors.$pink;
-        font-size: 12px;
-        text-align: left;
-        padding-top: 4px;
-        display: none;
-      }
-      // FOR COMMENT
-      &__comment-warning-msg {
-        color: colors.$pink;
-        font-size: 12px;
-        text-align: left;
-        padding-top: 4px;
-        display: none;
-      }
-      // THIS CLASS WILL BE ADDED DYNAMICALLY VIA DOM MANIPULATION
-      &__warning-msg-display {
-        display: block;
-      }
-      // WARNING BORDER-COLOR FOR FORM INPUTS - ADDED VIA DYNAMIC DOM MANIPULATION
-      &__pink-border {
-        border: 1px solid colors.$pink;
-      }
-      // SUBMIT-BUTTON
-      &__submit-btn {
-        @include mixins.buttonMobile;
-      }
-      &__submit-btn:hover {
-        background-color: colors.$badnSiteDarkBlack;
-      }
-      &__submit-btn {
-        @include mixins.tablet {
-          width: 150px;
-          padding: 11.67px 32px;
-        }
-      }
-    }
-    //  MEDIA = TABLET = [ ] = 768PX
-    .input-elements {
-      @include mixins.tablet {
-        // style is only meant for submit-btn
-        // rest of the inputs elements are being align-left
-        text-align: right;
-      }
-    }
-  }
-  //  MEDIA = TABLET = [ ] = 768PX
-  &__form {
-    @include mixins.tablet {
-      max-width: 585px;
-      margin: auto;
-    }
-  }
-  //  MEDIA = DESKTOP = [ ] = 1280PX
-  &__form {
-    @include mixins.desktop {
-      max-width: 562px;
-    }
-  }
-  /*----------------------------------------------------------*/
-  // COMMENTS ADDS DYNAMICALLY BY JavaScript
   &__comments-container {
     // COMMENTS-CONTENT
     padding-bottom: 16px;
@@ -239,7 +54,6 @@
           }
         }
         // COMMENT-TEXT
-        // COMMENT-TEXT
         &--comments {
           font-size: 13px;
           line-height: 18px;
@@ -257,33 +71,30 @@
             font-size: 13px;
             color: colors.$bandSiteBlack;
             line-height: 18px;
-            padding: 16px 0px 5px 0px;
+            padding: 25px 0px 5px 0px;
           }
           // LIKE & DELETE BUTTON WRAPPER
           &__btns-wrapper {
             display: flex;
             justify-content: space-between;
-            gap: 4px;
             // LIKE BUTTON
             &--like {
-              width: 100%;
-              padding: 11.67px 32px;
-              font-size: 14px;
-              border-radius: 4px;
+              // width: 100%;
+              font-size: 12px;
+              font-weight: 600;
               border-width: 0px;
               text-transform: uppercase;
-              color: colors.$white;
-              background-color: colors.$bandSiteBlack;
+              color: colors.$bandSiteBlack;
+              background-color: colors.$white;
             }
             // WHEN HOVER
             &--like:hover {
-              background-color: colors.$silver;
               color: colors.$badnSiteDarkBlack;
             }
             // MEDIA = TABLET = [ ] = 768PX
             &--like {
               @include mixins.tablet {
-                width: 150px;
+                // width: 150px;
               }
             }
 
@@ -293,8 +104,7 @@
             }
             // WHEN HOVER
             &--delete:hover {
-              background-color: colors.$pink;
-              color: colors.$white;
+              color: colors.$pink;
             }
           }
         }
@@ -314,18 +124,5 @@
       margin: auto;
       padding-bottom: 36px;
     }
-  }
-  /** CHECK CAREFULLY BEFORE DELETING THIS **/
-  //  MEDIA = DESKTOP = [ ] = 1280PX
-  // &__comments-container {
-  //   @include mixins.tablet {
-  //     max-width: 562px;
-  //   }
-  // }
-}
-//  MEDIA = TABLET = [ ] = 768PX
-.comments {
-  @include mixins.tablet {
-    padding: 0px 36px;
   }
 }

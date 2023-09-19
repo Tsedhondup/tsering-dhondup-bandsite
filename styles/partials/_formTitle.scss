@@ -1,0 +1,22 @@
+@use "./mixins";
+@use "./colors";
+.comments {
+  &__title {
+    padding-top: 24px;
+    @include mixins.sectionHeader320;
+  }
+  // MEDIA = TABLET = [ ] = 768PX
+  &__title {
+    padding-top: 48px;
+    @include mixins.tablet {
+      @include mixins.sectionHeader768;
+    }
+  }
+  //  MEDIA = DESKTOP = [ ] = 1280PX
+  &__title {
+    @include mixins.desktop {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
+}

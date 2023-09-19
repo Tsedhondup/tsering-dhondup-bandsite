@@ -378,12 +378,6 @@
   }
 }
 
-.comments {
-  padding: 0px 16px;
-  /*----------------------------------------------------------*/
-  /*----------------------------------------------------------*/
-  /** CHECK CAREFULLY BEFORE DELETING THIS **/
-}
 .comments__title {
   padding-top: 24px;
   font-size: 24px;
@@ -406,6 +400,7 @@
     margin: auto;
   }
 }
+
 .comments__form {
   display: flex;
   padding: 16px 0px;
@@ -561,6 +556,7 @@
     max-width: 562px;
   }
 }
+
 .comments__comments-container {
   padding-bottom: 16px;
 }
@@ -619,35 +615,25 @@
   font-size: 13px;
   color: #323232;
   line-height: 18px;
-  padding: 16px 0px 5px 0px;
+  padding: 25px 0px 5px 0px;
 }
 .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 4px;
 }
 .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete {
-  width: 100%;
-  padding: 11.67px 32px;
-  font-size: 14px;
-  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
   border-width: 0px;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #323232;
+  color: #323232;
+  background-color: #ffffff;
 }
 .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like:hover, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete:hover {
-  background-color: #afafaf;
   color: #000000;
 }
-@media (min-width: 768px) {
-  .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--like, .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete {
-    width: 150px;
-  }
-}
 .comments__comments-container .comment-content__texts-and-buttons .like-delete-container__btns-wrapper--delete:hover {
-  background-color: #d22d2d;
-  color: #ffffff;
+  color: #d22d2d;
 }
 @media (min-width: 768px) {
   .comments__comments-container .comment-content {
@@ -660,6 +646,10 @@
     margin: auto;
     padding-bottom: 36px;
   }
+}
+
+.comments {
+  padding: 0px 16px;
 }
 
 @media (min-width: 768px) {
