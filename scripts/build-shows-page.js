@@ -4,6 +4,99 @@ let myApiKey = () => {
 };
 
 /*------------------------------------------------------------------------------------------*/
+let formateDate = (dates) => {
+  let newDate = new Date(dates);
+  let showDay = newDate.getDay();
+  let showMonth = newDate.getMonth();
+  let showDate = newDate.getDate();
+  let showYear = newDate.getFullYear();
+
+  // DAYS
+  let day;
+  let date;
+  switch (showDay) {
+    case 0:
+      day = "Sun";
+      break;
+    case 1:
+      day = "Mon";
+      break;
+    case 2:
+      day = "Tue";
+      break;
+    case 3:
+      day = "Wed";
+      break;
+    case 4:
+      day = "Thu";
+      break;
+    case 5:
+      day = "Fri";
+      break;
+    case 6:
+      day = "Sat";
+      break;
+  }
+  // MONTHS
+  let month;
+  switch (showMonth) {
+    case 0:
+      month = "Jan";
+      break;
+    case 1:
+      month = "Feb";
+      break;
+    case 2:
+      month = "Mar";
+      break;
+    case 3:
+      month = "Apr";
+      break;
+    case 4:
+      month = "May";
+      break;
+    case 5:
+      month = "Jun";
+      break;
+    case 6:
+      month = "Jul";
+      break;
+    case 7:
+      month = "Aug";
+      break;
+    case 8:
+      month = "Sept";
+      break;
+    case 9:
+      month = "Oct";
+      break;
+    case 10:
+      month = "Nov";
+      break;
+    case 11:
+      month = "Dec";
+      break;
+  }
+  // DATES - ADDING ZERO AT THE BEGINNING OF DATE IF IT IS SINGLE NUMBER e.g '01, 02, 06'
+  showDate.toString().length > 1 ? (date = showDate) : (date = `0${showDate}`);
+  // DATE-OBTAINED
+  let finalDate = `${day} ${month} ${date} ${showYear}`;
+  return finalDate;
+};
+
+/*------------------------------------------------------------------------------------------*/
+
+// (1) ADDING AND REMOVING CLASSES
+let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
+  // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
+  tableRowList.forEach((element) => {
+    element.classList.remove("shows-table-data-container__content-selected");
+  });
+  // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
+  closestParent.classList.add("shows-table-data-container__content-selected");
+};
+
+/*------------------------------------------------------------------------------------------*/
 
 /* 
 # CREATING SHOW-DATE ELEMENTS
@@ -12,8 +105,9 @@ let myApiKey = () => {
 (1) CREATES SHOW-DATE TITLE ELEMENT
 (2) CREATES SHOW-DATE HEADER ELEMENTS TO PLACE ON TOP OF TABLE
 (3) CREATES SHOW-DATE HEADER ELEMENTS TO PLACE WITHIN THE TABLE ALSO CALLED : INLINE HEADERS
-(4) SHOW-DATES FUNCTION TO GET DATA USING AXIOS & DOES TWO THINGS
-   (a) GETS SHOW-DATES (b) INVOKES OTHER FUNCTIONS AND RENDER SHOW ELEMENTS INTO DOM 
+(4) SHOW-DATES FUNCTION 
+   (a) GETS SHOW-DATES FROM SERVER 
+   (b) INVOKES OTHER FUNCTIONS AND RENDER SHOW ELEMENTS INTO DOM 
 */
 
 // (1) - CREATING SHOW-DATE TITLE ELMENTS
@@ -66,7 +160,7 @@ let createShowHeaderElements = () => {
 
 /*------------------------------------------------------------------------------------------*/
 
-// CREATING SHOWS-DATE HEADER ELEMENTS TO USE WITHIN THE SHOW-DATE TABLE
+// CREATING SHOWS-DATE HEADER ELEMENTS TO USE WITHIN THE SHOW-DATE TABLE - INLINE-HEADERS
 let createInlineShowHeadersElements = () => {
   // ARRAYS TO STORE INLINE-SHOWS-TABLE HEADERS
   let inlineShowHeaders = [];
@@ -122,7 +216,7 @@ let getShowDates = () => {
         // DATE
         let dateEl = document.createElement("p");
         dateEl.classList.add("shows-table-data-container__content--date");
-        dateEl.innerText = element.date; // adding date
+        dateEl.innerText = formateDate(element.date); // invoking format-date function ***
         tableDateContentEl.appendChild(dateEl); // appending to shows-table-data-content
 
         // INLINE-HEADER - VENUE
@@ -195,15 +289,3 @@ let getShowDates = () => {
 
 /** INVOKES IMMEDIATELY AFTER PAGE LOADING IS FINISHED **/
 getShowDates();
-
-/*------------------------------------------------------------------------------------------*/
-
-// (1) ADDING AND REMOVING CLASSES
-let togglingConcertTableRowClasses = (tableRowList, closestParent) => {
-  // REMOVING JS_TABLE-ROW-SELECTED CLASS FROM TABLE-ROW LIST
-  tableRowList.forEach((element) => {
-    element.classList.remove("shows-table-data-container__content-selected");
-  });
-  // ADDING JS_TABLE-ROW-SELECTED CLASS TO CLOSEST-PARENT OF TARGET ELEMENT
-  closestParent.classList.add("shows-table-data-container__content-selected");
-};
