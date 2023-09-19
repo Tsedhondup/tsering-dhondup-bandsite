@@ -13,7 +13,11 @@ let formateDate = (dates) => {
 
   // DAYS
   let day;
+  let month;
   let date;
+  let finalDate;
+
+  // GETTING WEEK-DAYS NAME
   switch (showDay) {
     case 0:
       day = "Sun";
@@ -37,8 +41,8 @@ let formateDate = (dates) => {
       day = "Sat";
       break;
   }
-  // MONTHS
-  let month;
+
+  // GETTING MONTHS NAME
   switch (showMonth) {
     case 0:
       month = "Jan";
@@ -77,10 +81,12 @@ let formateDate = (dates) => {
       month = "Dec";
       break;
   }
+
   // DATES - ADDING ZERO AT THE BEGINNING OF DATE IF IT IS SINGLE NUMBER e.g '01, 02, 06'
   showDate.toString().length > 1 ? (date = showDate) : (date = `0${showDate}`);
+
   // DATE-OBTAINED
-  let finalDate = `${day} ${month} ${date} ${showYear}`;
+  finalDate = `${day} ${month} ${date} ${showYear}`;
   return finalDate;
 };
 
