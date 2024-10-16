@@ -2,7 +2,7 @@
 # [Bandsite](https://github.com/Tsedhondup/tsering-dhondup-bandsite) 
 
 
-Bandsite is a static website built as a part of the School Project at BrainStation's Software Engineering Bootcamp.
+Bandsite is a static website built as a part of the School Project at BrainStation's Software Engineering Bootcamp. [Open App](https://tseringdhondup-bandsite.netlify.app/)
 ## Features
 
 - music playback functionality
